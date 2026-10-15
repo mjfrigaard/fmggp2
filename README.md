@@ -27,6 +27,11 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_toysrus()` | Toys”R”Us | Treemaps (1998 toy sales) |
+| `theme_lisafrank()` | Lisa Frank school supplies | Pie charts (Trapper Keeper designs) |
+| `theme_titanic()` | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
+| `theme_netscape()` | Netscape Navigator | Stacked filled densities (modem speeds) |
+| `theme_encarta()` | Microsoft Encarta / Britannica | Diverging bar graphs (encyclopedia survey) |
 | `theme_walkman()` | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
 | `theme_pogs()` | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
 | `theme_freshprince()` | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |

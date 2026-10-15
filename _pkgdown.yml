@@ -46,6 +46,11 @@ reference:
   - theme_freshprince
   - theme_pogs
   - theme_walkman
+  - theme_encarta
+  - theme_netscape
+  - theme_titanic
+  - theme_lisafrank
+  - theme_toysrus
   - theme_fmggp2
 - title: Book helpers
   contents:

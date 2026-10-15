@@ -248,6 +248,83 @@ ggplot(walkman, aes(x = hours, y = model)) +
   theme_walkman(base_size = 13)
 ```
 
+## Encarta and Britannica
+
+`theme_encarta()`: Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy, parchment, gold, blue, and maroon and a Georgia title.
+
+```{r}
+#| label: encarta
+p_encarta <- 0.8 * plogis(-2 + 0.6 * (0:6))
+enc <- data.frame(year = factor(rep(1993:1999, 2)),
+  choice = rep(c("Encarta", "Britannica"), each = 7),
+  share = c(p_encarta, -(0.8 - p_encarta)))
+ggplot(enc, aes(x = year, y = share, fill = choice)) +
+  geom_col(width = 0.5) +
+  labs(title = "Encarta vs. Britannica (simulated)", x = NULL, y = "Share", fill = NULL) +
+  theme_encarta(base_size = 13)
+```
+
+## Netscape
+
+`theme_netscape()`: the Netscape Navigator night sky with star yellow, teal, magenta, and meteor orange and a Times New Roman title.
+
+```{r}
+#| label: netscape
+set.seed(1996)
+modem <- sample(c("14.4k", "28.8k", "56k"), 600, replace = TRUE, prob = c(0.25, 0.45, 0.30))
+speeds <- data.frame(modem = modem,
+  kbps = rnorm(600, c(`14.4k` = 13, `28.8k` = 26, `56k` = 44)[modem], c(`14.4k` = 1.2, `28.8k` = 2.5, `56k` = 5)[modem]))
+ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
+  geom_density(position = "fill") +
+  labs(title = "Dial up speeds (simulated)", x = "Speed (kbps)", fill = "Modem") +
+  theme_netscape(base_size = 13)
+```
+
+## Titanic
+
+`theme_titanic()`: Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel red with a Big Caslon title.
+
+```{r}
+#| label: titanic
+set.seed(1997)
+fans <- data.frame(age_group = sample(c("Teen", "Adult"), 300, replace = TRUE),
+  viewings = sample(c("Once", "Twice", "3+ times"), 300, replace = TRUE))
+ggplot(fans, aes(x = age_group, fill = viewings)) +
+  geom_bar(position = "fill") +
+  labs(title = "Titanic (simulated)", x = NULL, y = "Share", fill = "Viewings") +
+  theme_titanic(base_size = 13)
+```
+
+## Lisa Frank
+
+`theme_lisafrank()`: Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+
+```{r}
+#| label: lisafrank
+set.seed(1993)
+keepers <- data.frame(design = sample(c("Rainbow leopards", "Unicorns", "Dolphins", "Pandas"),
+  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)))
+ggplot(keepers, aes(x = design, fill = design)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Trapper Keepers (simulated)", x = NULL, y = "Sold") +
+  theme_lisafrank(base_size = 13)
+```
+
+## Toys"R"Us
+
+`theme_toysrus()`: Toys"R"Us white and blue with the multicolored logo letters as marks and a Phosphate title.
+
+```{r}
+#| label: toysrus
+set.seed(1999)
+toys <- data.frame(toy = c("Furby", "Beanie Babies", "Game Boy Color", "Nintendo 64"),
+  units = rpois(4, c(1800, 2400, 1200, 1000)))
+ggplot(toys, aes(x = toy, y = units, fill = toy)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Toys\"R\"Us 1998 (simulated)", x = NULL, y = "Units sold") +
+  theme_toysrus(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows:   
@@ -263,6 +340,11 @@ ggplot(walkman, aes(x = hours, y = model)) +
       * Arial Black (`theme_freshprince()`)  
       * Bradley Hand (`theme_pogs()`)  
       * DIN Condensed (`theme_walkman()`) 
+      * Georgia (`theme_encarta()`)
+      * Times New Roman (`theme_netscape()`)
+      * Big Caslon (`theme_titanic()`)
+      * Chalkboard (`theme_lisafrank()`)
+      * Phosphate (`theme_toysrus()`)
   
   When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
