@@ -250,7 +250,21 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ## Fonts
 
-`theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), Arial and Arial Black (`theme_n64()`), and Arial with a display title font in the rest: Herculanum (`theme_jurassic()`), Arial Rounded (`theme_happymeal()`), Chalkduster (`theme_friends()`), Arial Black (`theme_freshprince()`), Bradley Hand (`theme_pogs()`), and DIN Condensed (`theme_walkman()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
+`theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows:   
+  * Tahoma (`theme_win98()`)
+  * Verdana (`theme_napster()`)
+  * Arial and Impact (`theme_blockbuster()`)
+  * Trebuchet MS (`theme_spice()`) 
+  * Comic Sans MS (`theme_beanie()`)
+  * Arial and Arial Black (`theme_n64()`), and Arial with a display title font in the rest:   
+      * Herculanum (`theme_jurassic()`) 
+      * Arial Rounded (`theme_happymeal()`) 
+      * Chalkduster (`theme_friends()`)   
+      * Arial Black (`theme_freshprince()`)  
+      * Bradley Hand (`theme_pogs()`)  
+      * DIN Condensed (`theme_walkman()`) 
+  
+  When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
 ```{r}
 #| label: family
