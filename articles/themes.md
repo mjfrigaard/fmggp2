@@ -395,42 +395,48 @@ ggplot(toys, aes(x = toy, y = units, fill = toy)) +
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
 uses Press Start 2P, which ships with `fmggp2`. The other themes use
-fonts that ship with macOS and Windows:  
-\* Tahoma
-([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md))
-\* Verdana
-([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md))
-\* Arial and Impact
-([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md))
-\* Trebuchet MS
-([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md))
-\* Comic Sans MS
-([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md))
-\* Arial and Arial Black
-([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)),
-and Arial with a display title font in the rest:  
-\* Herculanum
-([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md))
-\* Arial Rounded
-([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md))
-\* Chalkduster
-([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md))  
-\* Arial Black
-([`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md))  
-\* Bradley Hand
-([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md))  
-\* DIN Condensed
-([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md))
-\* Georgia
-([`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md))
-\* Times New Roman
-([`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md))
-\* Big Caslon
-([`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md))
-\* Chalkboard
-([`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md))
-\* Phosphate
-([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
+fonts that ship with macOS and Windows.
+
+These themes use a single font family:
+
+- Tahoma
+  ([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md))
+- Verdana
+  ([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md))
+- Trebuchet MS
+  ([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md))
+- Comic Sans MS
+  ([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md))
+
+These themes use Arial for the body text and a display font for the
+title:
+
+- Impact
+  ([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md))
+- Arial Black
+  ([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
+  and
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md))
+- Herculanum
+  ([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md))
+- Arial Rounded
+  ([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md))
+- Chalkduster
+  ([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md))
+- Bradley Hand
+  ([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md))
+- DIN Condensed
+  ([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md))
+- Georgia
+  ([`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md))
+- Times New Roman
+  ([`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md))
+- Big Caslon
+  ([`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md))
+- Chalkboard
+  ([`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md))
+- Phosphate
+  ([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
 
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family

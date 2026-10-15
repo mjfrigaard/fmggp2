@@ -455,12 +455,29 @@
 </div>
 </section><section class="level2"><h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
 </h2>
-<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows:<br>
-* Tahoma (<code><a href="../reference/theme_win98.html">theme_win98()</a></code>) * Verdana (<code><a href="../reference/theme_napster.html">theme_napster()</a></code>) * Arial and Impact (<code><a href="../reference/theme_blockbuster.html">theme_blockbuster()</a></code>) * Trebuchet MS (<code><a href="../reference/theme_spice.html">theme_spice()</a></code>) * Comic Sans MS (<code><a href="../reference/theme_beanie.html">theme_beanie()</a></code>) * Arial and Arial Black (<code><a href="../reference/theme_n64.html">theme_n64()</a></code>), and Arial with a display title font in the rest:<br>
-* Herculanum (<code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code>) * Arial Rounded (<code><a href="../reference/theme_happymeal.html">theme_happymeal()</a></code>) * Chalkduster (<code><a href="../reference/theme_friends.html">theme_friends()</a></code>)<br>
-* Arial Black (<code><a href="../reference/theme_freshprince.html">theme_freshprince()</a></code>)<br>
-* Bradley Hand (<code><a href="../reference/theme_pogs.html">theme_pogs()</a></code>)<br>
-* DIN Condensed (<code><a href="../reference/theme_walkman.html">theme_walkman()</a></code>) * Georgia (<code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>) * Times New Roman (<code><a href="../reference/theme_netscape.html">theme_netscape()</a></code>) * Big Caslon (<code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>) * Chalkboard (<code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>) * Phosphate (<code><a href="../reference/theme_toysrus.html">theme_toysrus()</a></code>)</p>
+<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows.</p>
+<p>These themes use a single font family:</p>
+<ul>
+<li>Tahoma (<code><a href="../reference/theme_win98.html">theme_win98()</a></code>)</li>
+<li>Verdana (<code><a href="../reference/theme_napster.html">theme_napster()</a></code>)</li>
+<li>Trebuchet MS (<code><a href="../reference/theme_spice.html">theme_spice()</a></code>)</li>
+<li>Comic Sans MS (<code><a href="../reference/theme_beanie.html">theme_beanie()</a></code>)</li>
+</ul>
+<p>These themes use Arial for the body text and a display font for the title:</p>
+<ul>
+<li>Impact (<code><a href="../reference/theme_blockbuster.html">theme_blockbuster()</a></code>)</li>
+<li>Arial Black (<code><a href="../reference/theme_n64.html">theme_n64()</a></code> and <code><a href="../reference/theme_freshprince.html">theme_freshprince()</a></code>)</li>
+<li>Herculanum (<code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code>)</li>
+<li>Arial Rounded (<code><a href="../reference/theme_happymeal.html">theme_happymeal()</a></code>)</li>
+<li>Chalkduster (<code><a href="../reference/theme_friends.html">theme_friends()</a></code>)</li>
+<li>Bradley Hand (<code><a href="../reference/theme_pogs.html">theme_pogs()</a></code>)</li>
+<li>DIN Condensed (<code><a href="../reference/theme_walkman.html">theme_walkman()</a></code>)</li>
+<li>Georgia (<code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>)</li>
+<li>Times New Roman (<code><a href="../reference/theme_netscape.html">theme_netscape()</a></code>)</li>
+<li>Big Caslon (<code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>)</li>
+<li>Chalkboard (<code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>)</li>
+<li>Phosphate (<code><a href="../reference/theme_toysrus.html">theme_toysrus()</a></code>)</li>
+</ul>
 <p>When a font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
