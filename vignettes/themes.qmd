@@ -430,6 +430,21 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
   theme_oregontrail(base_size = 13)
 ```
 
+## AIM
+
+`theme_aim()`: the yellow running man, AOL blue, and a white chat window. Below we simulate buddy list sizes with different shapes.
+
+```{r}
+#| label: aim
+set.seed(1997)
+buddies <- data.frame(school = rep(c("Middle school", "College"), each = 150))
+buddies$n <- ifelse(buddies$school == "Middle school", rpois(300, 20), ifelse(runif(300) < 0.7, rnorm(300, 60, 10), rnorm(300, 150, 20)))
+ggplot(buddies, aes(x = school, y = n, fill = school)) +
+  geom_violin(alpha = 2/3, show.legend = FALSE) +
+  labs(title = "AIM buddy lists (simulated)", x = NULL, y = "Buddies") +
+  theme_aim(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.

@@ -1,3 +1,7 @@
+# fmggp2 0.25.0
+
+* New `theme_aim()`: AOL Instant Messenger yellow and blue with a white chat window and an Arial Rounded title.
+
 # fmggp2 0.24.0
 
 * New `theme_oregontrail()`: an Apple II black screen with phosphor green text and an Andale Mono title.
