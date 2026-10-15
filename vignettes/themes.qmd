@@ -96,6 +96,21 @@ ggplot(napster_downloads, aes(x = minutes)) +
   theme_napster(base_size = 13)
 ```
 
+## Blockbuster
+
+`theme_blockbuster()` uses Blockbuster Video blue and yellow. Below we simulate weekly rentals for 60 households from a Poisson distribution.
+
+```{r}
+#| label: blockbuster
+set.seed(1993)
+blockbuster_rentals <- data.frame(rentals = rpois(n = 60, lambda = 3))
+ggplot(blockbuster_rentals, aes(x = rentals)) +
+  geom_dotplot(binwidth = 1, dotsize = 0.3) +
+  labs(title = "Blockbuster Video (simulated)",
+       x = "Number of rentals") +
+  theme_blockbuster(base_size = 13)
+```
+
 ## Fonts
 
 Both themes use fonts that ship with macOS and Windows (Tahoma for `theme_win98()` and Verdana for `theme_napster()`). When the font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

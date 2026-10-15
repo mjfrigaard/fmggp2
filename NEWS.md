@@ -1,3 +1,7 @@
+# fmggp2 0.3.0
+
+* New `theme_blockbuster()`: Blockbuster Video blue and yellow with Arial text and an Impact title. Adds an internal `register_font()` helper for system fonts.
+
 # fmggp2 0.2.0
 
 * New `theme_gameboy()`: the original Game Boy screen palette with the bundled Press Start 2P pixel font.

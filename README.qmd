@@ -33,6 +33,7 @@ Every example in the book uses simulated data with a 90s throwback, and each dat
 
 | Theme | Reference | Chapter |
 |---|---|---|
+| `theme_blockbuster()` | Blockbuster Video | Dot plots (weekly rentals) |
 | `theme_gameboy()` | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | `theme_win98()` | Windows 98 desktop | Histograms (AOL dial up sessions) |
 | `theme_napster()` | 1999 Napster client | Frequency polygons (Napster downloads) |
