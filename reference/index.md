@@ -16,6 +16,18 @@
   : Beanie Babies theme
 - [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
   : Nintendo 64 theme
+- [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
+  : Jurassic Park theme
+- [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md)
+  : Happy Meal theme
+- [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
+  : Friends theme
+- [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+  : Fresh Prince theme
+- [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
+  : Pogs theme
+- [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
+  : Sony Walkman theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

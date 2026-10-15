@@ -178,6 +178,123 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
 
 ![](themes_files/figure-html/n64-1.png)
 
+## Jurassic Park
+
+[`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
+uses the park gate black, jungle green, and logo red and amber. Below we
+simulate the total weight of the dinosaurs in each paddock.
+
+``` r
+
+set.seed(1993)
+jp_paddocks <- data.frame(species = c("Brachiosaurus", "Triceratops", "Tyrannosaurus"),
+  total_tons = c(sum(rnorm(3, 40, 5)), sum(rnorm(5, 9, 1.2)), sum(rnorm(2, 8, 1))))
+ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Jurassic Park (simulated)", x = "Paddock", y = "Total weight (tons)") +
+  theme_jurassic(base_size = 13)
+```
+
+![](themes_files/figure-html/jurassic-1.png)
+
+## Happy Meals
+
+[`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md)
+uses the red and yellow of a Happy Meal box. Below we simulate average
+daily Happy Meal sales for four toy promotions.
+
+``` r
+
+set.seed(1997)
+happy_meals <- data.frame(promotion = c("Teenie Beanie Babies", "Furby", "Hot Wheels", "Inspector Gadget"),
+  avg_sold = sapply(c(420, 310, 220, 180), function(l) mean(rpois(28, l))))
+ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Happy Meals (simulated)", x = "Toy promotion", y = "Average sold per day") +
+  theme_happymeal(base_size = 13)
+```
+
+![](themes_files/figure-html/happymeal-1.png)
+
+## Friends
+
+[`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
+uses Monica’s purple walls, a yellow frame, and the logo dot colors.
+Below we simulate viewers per episode for three seasons.
+
+``` r
+
+set.seed(1994)
+friends_episodes <- data.frame(season = rep(c("Season 1", "Season 3", "Season 5"), each = 24))
+friends_episodes$viewers_m <- round(rnorm(72, rep(c(22, 27, 24), each = 24), 2.5))
+ggplot(friends_episodes, aes(x = viewers_m, fill = season)) +
+  geom_bar() +
+  labs(title = "Friends (simulated)", x = "Viewers (millions)", y = "Episodes", fill = "Season") +
+  theme_friends(base_size = 13)
+```
+
+![](themes_files/figure-html/friends-1.png)
+
+## Fresh Prince
+
+[`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+puts graffiti neon on deep purple, and its continuous fill runs from
+teal to hot pink. Below we simulate how often the Carlton dance shows up
+each season.
+
+``` r
+
+set.seed(1990)
+fp <- expand.grid(season = 1:6, gag = c("Will flirts", "Carlton dance"))
+fp$occurrences <- rbinom(12, 24, ifelse(fp$gag == "Will flirts", 0.9, plogis(-2.2 + 0.5 * (fp$season - 3.5))))
+ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
+  geom_tile() +
+  labs(title = "Fresh Prince (simulated)", x = "Season", y = NULL, fill = "Episodes") +
+  theme_freshprince(base_size = 13)
+```
+
+![](themes_files/figure-html/freshprince-1.png)
+
+## Pogs
+
+[`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
+uses a cardboard background and bright milk cap prints. Below we
+simulate a collection of 100 Pogs.
+
+``` r
+
+set.seed(1993)
+pogs <- data.frame(type = sample(c("Milk caps", "Printed pogs", "Holographic", "Slammers"),
+  100, replace = TRUE, prob = c(0.45, 0.30, 0.15, 0.10)))
+ggplot(pogs, aes(x = type, fill = type)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "A Pogs collection (simulated)", x = NULL, y = "Pieces") +
+  theme_pogs(base_size = 13)
+```
+
+![](themes_files/figure-html/pogs-1.png)
+
+## Sony Walkman
+
+[`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
+uses a silver body, a black tape window, and sports yellow and orange.
+Below we simulate median battery life for three models and two battery
+types.
+
+``` r
+
+set.seed(1979)
+walkman <- data.frame(model = rep(c("WM-2", "WM-F45 Sports", "WM-EX194 Mega Bass"), times = 2),
+  battery = rep(c("Alkaline", "Rechargeable"), each = 3), hours = c(10, 16, 22, 7, 12, 17) + rnorm(6, 0, 0.5))
+ggplot(walkman, aes(x = hours, y = model)) +
+  geom_line(aes(group = model)) +
+  geom_point(aes(color = battery), size = 3) +
+  labs(title = "Sony Walkman (simulated)", x = "Median battery life (hours)", y = NULL, color = "Battery") +
+  theme_walkman(base_size = 13)
+```
+
+![](themes_files/figure-html/walkman-1.png)
+
 ## Fonts
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
@@ -192,8 +309,20 @@ Trebuchet MS
 ([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)),
 Comic Sans MS
 ([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)),
-and Arial and Arial Black
-([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)).
+Arial and Arial Black
+([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)),
+and Arial with a display title font in the rest: Herculanum
+([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)),
+Arial Rounded
+([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md)),
+Chalkduster
+([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)),
+Arial Black
+([`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)),
+Bradley Hand
+([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)),
+and DIN Condensed
+([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)).
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family
 you’ve registered with

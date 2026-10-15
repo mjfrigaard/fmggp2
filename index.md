@@ -22,6 +22,12 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md) | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
+| [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md) | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
+| [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md) | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
+| [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md) | Friends (Monica’s apartment) | Overlapping bar graphs (viewers per episode) |
+| [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md) | McDonald’s Happy Meal box | Summary bar graphs (Happy Meals sold per promotion) |
+| [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md) | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md) | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md) | Beanie Babies heart tag | Violin plots (resale prices) |
 | [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md) | Spice Girls era pop | Density plots (Spice World tour fan ages) |

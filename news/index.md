@@ -1,5 +1,46 @@
 # Changelog
 
+## fmggp2 0.12.0
+
+- New
+  [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md):
+  Sony Walkman Sports silver and black with yellow and orange marks and
+  a DIN Condensed title.
+
+## fmggp2 0.11.0
+
+- New
+  [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md):
+  cardboard milk cap background with bright purple, orange, teal, and
+  yellow prints and a Bradley Hand title.
+
+## fmggp2 0.10.0
+
+- New
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md):
+  The Fresh Prince of Bel-Air graffiti neon on deep purple with an Arial
+  Black title and a teal to pink continuous fill.
+
+## fmggp2 0.9.0
+
+- New
+  [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md):
+  Monica’s purple apartment, the red, yellow, and blue logo dots, and a
+  Chalkduster title.
+
+## fmggp2 0.8.0
+
+- New
+  [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md):
+  McDonald’s Happy Meal box red and yellow with an Arial Rounded title.
+
+## fmggp2 0.7.0
+
+- New
+  [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md):
+  Jurassic Park black, jungle green, red, and amber with a Herculanum
+  title.
+
 ## fmggp2 0.6.0
 
 - New
