@@ -23,8 +23,9 @@ it's available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on a Sony Walkman Sports: brushed
-silver body, a black tape window, sports yellow and orange marks, and a
+A late 90s \code{ggplot2} theme modeled on the Sony Sports Walkman: a cobalt
+blue backdrop with white grid lines, a sports yellow frame and title,
+yellow, green, and beige button colors as marks, charcoal lines, and a
 DIN Condensed title.
 }
 \examples{

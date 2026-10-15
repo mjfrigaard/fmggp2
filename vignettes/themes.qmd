@@ -159,7 +159,7 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
 
 ## Jurassic Park
 
-`theme_jurassic()` uses the park gate black, jungle green, and logo red and amber. Below we simulate the total weight of the dinosaurs in each paddock.
+`theme_jurassic()` uses the Jurassic Park Post Office souvenir sheet: black, logo red, stamp yellow, and sunset orange. Below we simulate the total weight of the dinosaurs in each paddock.
 
 ```{r}
 #| label: jurassic
@@ -234,7 +234,7 @@ ggplot(pogs, aes(x = type, fill = type)) +
 
 ## Sony Walkman
 
-`theme_walkman()` uses a silver body, a black tape window, and sports yellow and orange. Below we simulate median battery life for three models and two battery types.
+`theme_walkman()` uses the Sports Walkman photo: a cobalt blue backdrop with white grid lines, sports yellow, and play button green. Below we simulate median battery life for three models and two battery types.
 
 ```{r}
 #| label: walkman
@@ -250,7 +250,7 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ## Encarta and Britannica
 
-`theme_encarta()`: Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy, parchment, gold, blue, and maroon and a Georgia title.
+`theme_encarta()`: MindMaze from Encarta 97, with slate stone, parchment, a carved brown frame, and gold, and a Georgia title.
 
 ```{r}
 #| label: encarta
@@ -282,7 +282,7 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
 
 ## Titanic
 
-`theme_titanic()`: Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel red with a Big Caslon title.
+`theme_titanic()`: the Titanic's original paint colors (hull black, hull stripe gold, canvas, antifouling red, White Star buff, and funnel gray) with a Big Caslon title.
 
 ```{r}
 #| label: titanic
@@ -297,7 +297,7 @@ ggplot(fans, aes(x = age_group, fill = viewings)) +
 
 ## Lisa Frank
 
-`theme_lisafrank()`: Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+`theme_lisafrank()`: the Lisa Frank folder palette (purple, magenta, orange, yellow, and white) with a Chalkboard title.
 
 ```{r}
 #| label: lisafrank

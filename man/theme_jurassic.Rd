@@ -23,9 +23,10 @@ it's available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Jurassic Park (1993): a black
-park gate frame, jungle green plot area, logo red and amber marks, and a
-Herculanum title.
+A late 90s \code{ggplot2} theme modeled on the Jurassic Park (1993) Post Office
+souvenir stamp sheet: a black sheet with a logo red frame, a dark jungle
+plot area, stamp yellow titles, red, yellow, sunset orange, cream, and tan
+marks, and a Herculanum title.
 }
 \examples{
 library(ggplot2)

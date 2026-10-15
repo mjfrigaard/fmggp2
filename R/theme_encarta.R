@@ -1,8 +1,9 @@
 #' Encarta theme
 #'
-#' A late 90s `ggplot2` theme modeled on Microsoft Encarta and Encyclopedia
-#' Britannica on CD-ROM: a midnight navy background, parchment text, gold
-#' accents, Encarta blue and Britannica maroon marks, and a Georgia title.
+#' A late 90s `ggplot2` theme modeled on MindMaze, the castle trivia game in
+#' Microsoft Encarta 97: a slate stone background, a carved brown frame, a
+#' gold title, a parchment plot area, stone blue, frame brown, and gold
+#' marks, and a Georgia title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -28,8 +29,8 @@ theme_encarta <- function(base_size = 11,
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["parchment"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["navy"]],
-                                              colour = cols[["gold"]],
+      plot.background = ggplot2::element_rect(fill = cols[["stone_dark"]],
+                                              colour = cols[["frame"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
@@ -38,37 +39,39 @@ theme_encarta <- function(base_size = 11,
                                          size = ggplot2::rel(1.4)),
       plot.subtitle = ggplot2::element_text(colour = cols[["parchment"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
-      panel.background = ggplot2::element_rect(fill = cols[["panel"]]),
+      panel.background = ggplot2::element_rect(fill = cols[["parchment"]]),
       panel.border = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = cols[["grid"]],
                                                linewidth = 0.4),
       panel.grid.minor = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = cols[["parchment"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["gold"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["navy"]], face = "bold"),
+      strip.background = ggplot2::element_rect(fill = cols[["sage"]], colour = NA),
+      strip.text = ggplot2::element_text(colour = cols[["wood"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
-      legend.key = ggplot2::element_rect(fill = cols[["navy"]], colour = NA),
-      # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("blue", "maroon", "gray")]),
-      palette.colour.discrete = unname(cols[c("blue", "maroon", "gray")]),
-      # default marks
-      geom = ggplot2::element_geom(ink = cols[["parchment"]],
-                                   paper = cols[["panel"]],
+      legend.key = ggplot2::element_rect(fill = cols[["stone_dark"]], colour = NA),
+      # stone blue, frame brown, and gold for discrete fills and colours
+      palette.fill.discrete = unname(cols[c("stone", "frame", "gold", "sage")]),
+      palette.colour.discrete = unname(cols[c("stone", "frame", "gold", "sage")]),
+      # stone blue fills with dark wood lines by default
+      geom = ggplot2::element_geom(ink = cols[["wood"]],
+                                   paper = cols[["parchment"]],
                                    accent = cols[["gold"]],
-                                   colour = cols[["gold"]],
-                                   fill = cols[["blue"]],
+                                   colour = cols[["wood"]],
+                                   fill = cols[["stone"]],
                                    family = base_family)
     )
 }
 
+# colors sampled from the MindMaze window in Encarta 97
 encarta_cols <- c(
-  navy = "#0B1F3A",
-  panel = "#132B4F",
-  grid = "#24426E",
-  parchment = "#F4E9C8",
-  gold = "#D4AF37",
-  blue = "#3FA9F5",
-  maroon = "#B03A2E",
-  gray = "#A8A29A"
+  stone = "#596B7C",
+  stone_dark = "#384557",
+  parchment = "#E1DFD2",
+  grid = "#CBC6B4",
+  frame = "#652E16",
+  copper = "#7F5432",
+  wood = "#381F15",
+  gold = "#CCB37B",
+  sage = "#8AB59B"
 )

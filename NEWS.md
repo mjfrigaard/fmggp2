@@ -1,3 +1,11 @@
+# fmggp2 0.17.1
+
+* `theme_walkman()` now uses the Sony Sports Walkman photo palette (cobalt blue backdrop, sports yellow, play button green, and beige).
+* `theme_jurassic()` now uses the Jurassic Park Post Office souvenir sheet palette (black, logo red, stamp yellow, sunset orange, cream, and tan).
+* `theme_lisafrank()` now uses the Lisa Frank folder palette (purple, magenta, orange, yellow, and white).
+* `theme_titanic()` now uses the Titanic's original paint colors (hull black, hull stripe gold, canvas, antifouling red, White Star buff, and funnel gray).
+* `theme_encarta()` now uses colors from MindMaze in Encarta 97 (slate stone, parchment, carved frame brown, and gold).
+
 # fmggp2 0.17.0
 
 * New `theme_toysrus()`: Toys"R"Us white and blue with the multicolored logo letters as marks and a Phosphate title.
