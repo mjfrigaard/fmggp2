@@ -340,6 +340,21 @@ ggplot(pets, aes(x = days, fill = care)) +
   theme_tamagotchi(base_size = 13)
 ```
 
+## Super Soaker
+
+`theme_supersoaker()`: neon orange plastic, water blue, and neon green. Below we simulate Super Soaker ranges for two models.
+
+```{r}
+#| label: supersoaker
+set.seed(1990)
+shots <- data.frame(model = rep(c("SS 50", "CPS 2000"), each = 200))
+shots$feet <- rnorm(400, ifelse(shots$model == "SS 50", 25, 45), ifelse(shots$model == "SS 50", 3, 5.4))
+ggplot(shots, aes(x = feet, color = model)) +
+  geom_freqpoly(binwidth = 2, linewidth = 1) +
+  labs(title = "Super Soaker range (simulated)", x = "Range (feet)", color = "Model") +
+  theme_supersoaker(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.

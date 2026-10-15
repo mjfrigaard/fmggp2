@@ -1,3 +1,7 @@
+# fmggp2 0.19.0
+
+* New `theme_supersoaker()`: neon orange plastic with a water blue plot area and an Arial Black title.
+
 # fmggp2 0.18.0
 
 * New `theme_tamagotchi()`: a lilac Tamagotchi egg with a gray green LCD plot area and a Futura title.
