@@ -142,6 +142,21 @@ ggplot(beanie_prices, aes(x = "", y = price)) +
   theme_beanie(base_size = 13)
 ```
 
+## Nintendo 64
+
+`theme_n64()` uses controller gray and the four logo colors. Below we simulate 200 Mario Kart 64 lap times from a heavy tailed t distribution.
+
+```{r}
+#| label: n64
+set.seed(64)
+mario_kart_laps <- data.frame(seconds = 45 + 2 * rt(n = 200, df = 3))
+ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
+  geom_boxplot() +
+  labs(title = "Mario Kart 64 (simulated)",
+       x = NULL, y = "Lap time (seconds)") +
+  theme_n64(base_size = 13)
+```
+
 ## Fonts
 
 Both themes use fonts that ship with macOS and Windows (Tahoma for `theme_win98()` and Verdana for `theme_napster()`). When the font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
