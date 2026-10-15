@@ -1,0 +1,61 @@
+---
+title: "Book helpers"
+vignette: >
+  %\VignetteIndexEntry{Book helpers}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+knitr:
+  opts_chunk:
+    collapse: true
+    comment: "#>"
+---
+
+The chapters in [*ggplot2: field manual*](https://mjfrigaard.github.io/fm-ggp2/) use a few small helpers for callout boxes and filtering. This vignette covers what each one returns and how to use it in a Quarto chunk.
+
+```{r}
+#| label: setup
+library(fmggp2)
+```
+
+## Callout boxes
+
+`co_box()` and `status()` print the markdown for a [Quarto callout](https://quarto.org/docs/authoring/callouts.html). They return nothing; the markdown is the side effect. That means you'll need `results: asis` in the chunk options, otherwise Quarto shows the raw markdown instead of the callout.
+
+### `co_box()`
+
+The `color` argument picks the callout type: `"b"` (note), `"g"` (tip), `"r"` (important), `"o"` (warning), or `"y"` (caution).
+
+```{r}
+#| label: co-box-markdown
+co_box(color = "b", header = "Note", contents = "Simulated data is reproducible with `set.seed()`.")
+```
+
+With `results: asis`, the same call renders as a callout:
+
+```{r}
+#| label: co-box-render
+#| echo: false
+#| results: asis
+co_box(color = "b", header = "Note", contents = "Simulated data is reproducible with `set.seed()`.")
+```
+
+Set `fold = TRUE` to collapse the callout and `look` to `"simple"` or `"minimal"` to change its appearance.
+
+### `status()`
+
+`status()` marks how complete a chapter is. The `type` argument is one of `"polish"`, `"dev"`, `"draft"`, or `"complete"`.
+
+```{r}
+#| label: status
+#| results: asis
+status("complete")
+```
+
+## Not in
+
+`%nin%` is the negation of `%in%`. I've found it reads more naturally than `!(x %in% y)` inside `dplyr::filter()`.
+
+```{r}
+#| label: nin
+c("AOL", "Napster", "Netscape") %nin% c("Napster")
+```

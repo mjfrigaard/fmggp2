@@ -1,0 +1,12 @@
+h1, h2, h3, .navbar-brand {
+  text-shadow: 0 0 6px #FF2A6D, 0 0 14px #FF2A6D;
+  letter-spacing: 0.04em;
+}
+.navbar {
+  border-bottom: 2px solid #05D9E8;
+  box-shadow: 0 0 12px #05D9E8;
+}
+pre {
+  border: 1px solid #39FF14;
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+}

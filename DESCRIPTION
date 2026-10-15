@@ -20,9 +20,10 @@ Imports:
     sysfonts
 Suggests: 
     knitr,
-    rmarkdown,
+    quarto,
     testthat (>= 3.0.0)
-VignetteBuilder: knitr
+VignetteBuilder: quarto
 Config/testthat/edition: 3
 URL: https://mjfrigaard.github.io/fmggp2/, https://github.com/mjfrigaard/fmggp2
+BugReports: https://github.com/mjfrigaard/fmggp2/issues
 Config/roxygen2/version: 8.1.1
