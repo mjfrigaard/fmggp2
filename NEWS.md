@@ -1,3 +1,7 @@
+# fmggp2 0.18.0
+
+* New `theme_tamagotchi()`: a lilac Tamagotchi egg with a gray green LCD plot area and a Futura title.
+
 # fmggp2 0.17.1
 
 * `theme_walkman()` now uses the Sony Sports Walkman photo palette (cobalt blue backdrop, sports yellow, play button green, and beige).

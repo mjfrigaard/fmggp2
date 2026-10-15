@@ -325,6 +325,21 @@ ggplot(toys, aes(x = toy, y = units, fill = toy)) +
   theme_toysrus(base_size = 13)
 ```
 
+## Tamagotchi
+
+`theme_tamagotchi()`: a lilac egg shell and a gray green LCD screen. Below we simulate Tamagotchi lifespans from a Weibull distribution.
+
+```{r}
+#| label: tamagotchi
+set.seed(1997)
+pets <- data.frame(care = rep(c("Neglected", "Pampered"), each = 150))
+pets$days <- rweibull(300, shape = 2.2, scale = ifelse(pets$care == "Neglected", 6, 21))
+ggplot(pets, aes(x = days, fill = care)) +
+  geom_histogram(alpha = 2/3, position = "identity", bins = 40) +
+  labs(title = "Tamagotchi lifespans (simulated)", x = "Days", fill = "Care") +
+  theme_tamagotchi(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
