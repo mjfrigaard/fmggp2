@@ -127,6 +127,21 @@ ggplot(spice_fans, aes(x = age)) +
   theme_spice(base_size = 13)
 ```
 
+## Beanie Babies
+
+`theme_beanie()` uses the red and gold of a Beanie Babies heart tag. Below we simulate 300 resale prices from a log normal distribution.
+
+```{r}
+#| label: beanie
+set.seed(1996)
+beanie_prices <- data.frame(price = rlnorm(n = 300, meanlog = log(15), sdlog = 0.8))
+ggplot(beanie_prices, aes(x = "", y = price)) +
+  geom_violin() +
+  labs(title = "Beanie Babies resale prices (simulated)",
+       x = NULL, y = "Price (USD)") +
+  theme_beanie(base_size = 13)
+```
+
 ## Fonts
 
 Both themes use fonts that ship with macOS and Windows (Tahoma for `theme_win98()` and Verdana for `theme_napster()`). When the font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

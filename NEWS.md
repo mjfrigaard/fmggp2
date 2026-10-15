@@ -1,3 +1,7 @@
+# fmggp2 0.5.0
+
+* New `theme_beanie()`: Beanie Babies heart tag red and gold with Comic Sans MS text.
+
 # fmggp2 0.4.0
 
 * New `theme_spice()`: Spice Girls era pinks, purple, and gold with Trebuchet MS text.
