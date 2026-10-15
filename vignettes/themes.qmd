@@ -327,26 +327,31 @@ ggplot(toys, aes(x = toy, y = units, fill = toy)) +
 
 ## Fonts
 
-`theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows:   
-  * Tahoma (`theme_win98()`)
-  * Verdana (`theme_napster()`)
-  * Arial and Impact (`theme_blockbuster()`)
-  * Trebuchet MS (`theme_spice()`) 
-  * Comic Sans MS (`theme_beanie()`)
-  * Arial and Arial Black (`theme_n64()`), and Arial with a display title font in the rest:   
-      * Herculanum (`theme_jurassic()`) 
-      * Arial Rounded (`theme_happymeal()`) 
-      * Chalkduster (`theme_friends()`)   
-      * Arial Black (`theme_freshprince()`)  
-      * Bradley Hand (`theme_pogs()`)  
-      * DIN Condensed (`theme_walkman()`) 
-      * Georgia (`theme_encarta()`)
-      * Times New Roman (`theme_netscape()`)
-      * Big Caslon (`theme_titanic()`)
-      * Chalkboard (`theme_lisafrank()`)
-      * Phosphate (`theme_toysrus()`)
-  
-  When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
+`theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
+
+These themes use a single font family:
+
+- Tahoma (`theme_win98()`)
+- Verdana (`theme_napster()`)
+- Trebuchet MS (`theme_spice()`)
+- Comic Sans MS (`theme_beanie()`)
+
+These themes use Arial for the body text and a display font for the title:
+
+- Impact (`theme_blockbuster()`)
+- Arial Black (`theme_n64()` and `theme_freshprince()`)
+- Herculanum (`theme_jurassic()`)
+- Arial Rounded (`theme_happymeal()`)
+- Chalkduster (`theme_friends()`)
+- Bradley Hand (`theme_pogs()`)
+- DIN Condensed (`theme_walkman()`)
+- Georgia (`theme_encarta()`)
+- Times New Roman (`theme_netscape()`)
+- Big Caslon (`theme_titanic()`)
+- Chalkboard (`theme_lisafrank()`)
+- Phosphate (`theme_toysrus()`)
+
+When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
 ```{r}
 #| label: family
