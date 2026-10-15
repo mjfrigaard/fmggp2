@@ -1,5 +1,39 @@
 # Changelog
 
+## fmggp2 0.17.0
+
+- New
+  [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md):
+  Toys”R”Us white and blue with the multicolored logo letters as marks
+  and a Phosphate title.
+
+## fmggp2 0.16.0
+
+- New
+  [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md):
+  Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+
+## fmggp2 0.15.0
+
+- New
+  [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md):
+  Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel
+  red with a Big Caslon title.
+
+## fmggp2 0.14.0
+
+- New
+  [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md):
+  the Netscape Navigator night sky with star yellow, teal, magenta, and
+  meteor orange and a Times New Roman title.
+
+## fmggp2 0.13.0
+
+- New
+  [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
+  Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy,
+  parchment, gold, blue, and maroon and a Georgia title.
+
 ## fmggp2 0.12.0
 
 - New

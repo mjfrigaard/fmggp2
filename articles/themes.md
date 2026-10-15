@@ -295,34 +295,143 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ![](themes_files/figure-html/walkman-1.png)
 
+## Encarta and Britannica
+
+[`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
+Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy,
+parchment, gold, blue, and maroon and a Georgia title.
+
+``` r
+
+p_encarta <- 0.8 * plogis(-2 + 0.6 * (0:6))
+enc <- data.frame(year = factor(rep(1993:1999, 2)),
+  choice = rep(c("Encarta", "Britannica"), each = 7),
+  share = c(p_encarta, -(0.8 - p_encarta)))
+ggplot(enc, aes(x = year, y = share, fill = choice)) +
+  geom_col(width = 0.5) +
+  labs(title = "Encarta vs. Britannica (simulated)", x = NULL, y = "Share", fill = NULL) +
+  theme_encarta(base_size = 13)
+```
+
+![](themes_files/figure-html/encarta-1.png)
+
+## Netscape
+
+[`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md):
+the Netscape Navigator night sky with star yellow, teal, magenta, and
+meteor orange and a Times New Roman title.
+
+``` r
+
+set.seed(1996)
+modem <- sample(c("14.4k", "28.8k", "56k"), 600, replace = TRUE, prob = c(0.25, 0.45, 0.30))
+speeds <- data.frame(modem = modem,
+  kbps = rnorm(600, c(`14.4k` = 13, `28.8k` = 26, `56k` = 44)[modem], c(`14.4k` = 1.2, `28.8k` = 2.5, `56k` = 5)[modem]))
+ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
+  geom_density(position = "fill") +
+  labs(title = "Dial up speeds (simulated)", x = "Speed (kbps)", fill = "Modem") +
+  theme_netscape(base_size = 13)
+```
+
+![](themes_files/figure-html/netscape-1.png)
+
+## Titanic
+
+[`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md):
+Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel
+red with a Big Caslon title.
+
+``` r
+
+set.seed(1997)
+fans <- data.frame(age_group = sample(c("Teen", "Adult"), 300, replace = TRUE),
+  viewings = sample(c("Once", "Twice", "3+ times"), 300, replace = TRUE))
+ggplot(fans, aes(x = age_group, fill = viewings)) +
+  geom_bar(position = "fill") +
+  labs(title = "Titanic (simulated)", x = NULL, y = "Share", fill = "Viewings") +
+  theme_titanic(base_size = 13)
+```
+
+![](themes_files/figure-html/titanic-1.png)
+
+## Lisa Frank
+
+[`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md):
+Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+
+``` r
+
+set.seed(1993)
+keepers <- data.frame(design = sample(c("Rainbow leopards", "Unicorns", "Dolphins", "Pandas"),
+  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)))
+ggplot(keepers, aes(x = design, fill = design)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Trapper Keepers (simulated)", x = NULL, y = "Sold") +
+  theme_lisafrank(base_size = 13)
+```
+
+![](themes_files/figure-html/lisafrank-1.png)
+
+## Toys”R”Us
+
+[`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md):
+Toys”R”Us white and blue with the multicolored logo letters as marks and
+a Phosphate title.
+
+``` r
+
+set.seed(1999)
+toys <- data.frame(toy = c("Furby", "Beanie Babies", "Game Boy Color", "Nintendo 64"),
+  units = rpois(4, c(1800, 2400, 1200, 1000)))
+ggplot(toys, aes(x = toy, y = units, fill = toy)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Toys\"R\"Us 1998 (simulated)", x = NULL, y = "Units sold") +
+  theme_toysrus(base_size = 13)
+```
+
+![](themes_files/figure-html/toysrus-1.png)
+
 ## Fonts
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
 uses Press Start 2P, which ships with `fmggp2`. The other themes use
-fonts that ship with macOS and Windows: Tahoma
-([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)),
-Verdana
-([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)),
-Arial and Impact
-([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)),
-Trebuchet MS
-([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)),
-Comic Sans MS
-([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)),
-Arial and Arial Black
+fonts that ship with macOS and Windows:  
+\* Tahoma
+([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md))
+\* Verdana
+([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md))
+\* Arial and Impact
+([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md))
+\* Trebuchet MS
+([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md))
+\* Comic Sans MS
+([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md))
+\* Arial and Arial Black
 ([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)),
-and Arial with a display title font in the rest: Herculanum
-([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)),
-Arial Rounded
-([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md)),
-Chalkduster
-([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)),
-Arial Black
-([`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)),
-Bradley Hand
-([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)),
-and DIN Condensed
-([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)).
+and Arial with a display title font in the rest:  
+\* Herculanum
+([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md))
+\* Arial Rounded
+([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md))
+\* Chalkduster
+([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md))  
+\* Arial Black
+([`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md))  
+\* Bradley Hand
+([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md))  
+\* DIN Condensed
+([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md))
+\* Georgia
+([`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md))
+\* Times New Roman
+([`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md))
+\* Big Caslon
+([`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md))
+\* Chalkboard
+([`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md))
+\* Phosphate
+([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
+
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family
 you’ve registered with

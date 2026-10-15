@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">fmggp2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.12.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -356,18 +356,121 @@
 </div>
 </div>
 </div>
-</section><section class="level2"><h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
+</section><section class="level2"><h2 id="encarta-and-britannica">Encarta and Britannica<a class="anchor" aria-label="anchor" href="#encarta-and-britannica"></a>
 </h2>
-<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows: Tahoma (<code><a href="../reference/theme_win98.html">theme_win98()</a></code>), Verdana (<code><a href="../reference/theme_napster.html">theme_napster()</a></code>), Arial and Impact (<code><a href="../reference/theme_blockbuster.html">theme_blockbuster()</a></code>), Trebuchet MS (<code><a href="../reference/theme_spice.html">theme_spice()</a></code>), Comic Sans MS (<code><a href="../reference/theme_beanie.html">theme_beanie()</a></code>), Arial and Arial Black (<code><a href="../reference/theme_n64.html">theme_n64()</a></code>), and Arial with a display title font in the rest: Herculanum (<code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code>), Arial Rounded (<code><a href="../reference/theme_happymeal.html">theme_happymeal()</a></code>), Chalkduster (<code><a href="../reference/theme_friends.html">theme_friends()</a></code>), Arial Black (<code><a href="../reference/theme_freshprince.html">theme_freshprince()</a></code>), Bradley Hand (<code><a href="../reference/theme_pogs.html">theme_pogs()</a></code>), and DIN Condensed (<code><a href="../reference/theme_walkman.html">theme_walkman()</a></code>). When a font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
+<p><code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>: Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy, parchment, gold, blue, and maroon and a Georgia title.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">p_encarta</span> <span class="op">&lt;-</span> <span class="fl">0.8</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Logistic.html" class="external-link">plogis</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">enc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">:</span><span class="fl">1999</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>  choice <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Encarta"</span>, <span class="st">"Britannica"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">7</span><span class="op">)</span>,</span>
+<span>  share <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">p_encarta</span>, <span class="op">-</span><span class="op">(</span><span class="fl">0.8</span> <span class="op">-</span> <span class="va">p_encarta</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">enc</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">share</span>, fill <span class="op">=</span> <span class="va">choice</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Encarta vs. Britannica (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Share"</span>, fill <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_encarta.html">theme_encarta</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/encarta-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="netscape">Netscape<a class="anchor" aria-label="anchor" href="#netscape"></a>
+</h2>
+<p><code><a href="../reference/theme_netscape.html">theme_netscape()</a></code>: the Netscape Navigator night sky with star yellow, teal, magenta, and meteor orange and a Times New Roman title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1996</span><span class="op">)</span></span>
+<span><span class="va">modem</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"14.4k"</span>, <span class="st">"28.8k"</span>, <span class="st">"56k"</span><span class="op">)</span>, <span class="fl">600</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.45</span>, <span class="fl">0.30</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">speeds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>modem <span class="op">=</span> <span class="va">modem</span>,</span>
+<span>  kbps <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">600</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>`14.4k` <span class="op">=</span> <span class="fl">13</span>, `28.8k` <span class="op">=</span> <span class="fl">26</span>, `56k` <span class="op">=</span> <span class="fl">44</span><span class="op">)</span><span class="op">[</span><span class="va">modem</span><span class="op">]</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>`14.4k` <span class="op">=</span> <span class="fl">1.2</span>, `28.8k` <span class="op">=</span> <span class="fl">2.5</span>, `56k` <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">[</span><span class="va">modem</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">speeds</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">kbps</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html" class="external-link">after_stat</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span>, fill <span class="op">=</span> <span class="va">modem</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Dial up speeds (simulated)"</span>, x <span class="op">=</span> <span class="st">"Speed (kbps)"</span>, fill <span class="op">=</span> <span class="st">"Modem"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_netscape.html">theme_netscape</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/netscape-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="titanic">Titanic<a class="anchor" aria-label="anchor" href="#titanic"></a>
+</h2>
+<p><code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>: Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel red with a Big Caslon title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
+<span><span class="va">fans</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>age_group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Teen"</span>, <span class="st">"Adult"</span><span class="op">)</span>, <span class="fl">300</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>  viewings <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Once"</span>, <span class="st">"Twice"</span>, <span class="st">"3+ times"</span><span class="op">)</span>, <span class="fl">300</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">fans</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age_group</span>, fill <span class="op">=</span> <span class="va">viewings</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"fill"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Titanic (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Share"</span>, fill <span class="op">=</span> <span class="st">"Viewings"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_titanic.html">theme_titanic</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/titanic-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="lisa-frank">Lisa Frank<a class="anchor" aria-label="anchor" href="#lisa-frank"></a>
+</h2>
+<p><code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>: Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
+<span><span class="va">keepers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>design <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Rainbow leopards"</span>, <span class="st">"Unicorns"</span>, <span class="st">"Dolphins"</span>, <span class="st">"Pandas"</span><span class="op">)</span>,</span>
+<span>  <span class="fl">200</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">4</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">8</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">keepers</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">design</span>, fill <span class="op">=</span> <span class="va">design</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Trapper Keepers (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Sold"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_lisafrank.html">theme_lisafrank</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/lisafrank-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="toysrus">Toys”R”Us<a class="anchor" aria-label="anchor" href="#toysrus"></a>
+</h2>
+<p><code><a href="../reference/theme_toysrus.html">theme_toysrus()</a></code>: Toys”R”Us white and blue with the multicolored logo letters as marks and a Phosphate title.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1999</span><span class="op">)</span></span>
+<span><span class="va">toys</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>toy <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Furby"</span>, <span class="st">"Beanie Babies"</span>, <span class="st">"Game Boy Color"</span>, <span class="st">"Nintendo 64"</span><span class="op">)</span>,</span>
+<span>  units <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1800</span>, <span class="fl">2400</span>, <span class="fl">1200</span>, <span class="fl">1000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">toys</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">toy</span>, y <span class="op">=</span> <span class="va">units</span>, fill <span class="op">=</span> <span class="va">toy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Toys\"R\"Us 1998 (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Units sold"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_toysrus.html">theme_toysrus</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/toysrus-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
+</h2>
+<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows:<br>
+* Tahoma (<code><a href="../reference/theme_win98.html">theme_win98()</a></code>) * Verdana (<code><a href="../reference/theme_napster.html">theme_napster()</a></code>) * Arial and Impact (<code><a href="../reference/theme_blockbuster.html">theme_blockbuster()</a></code>) * Trebuchet MS (<code><a href="../reference/theme_spice.html">theme_spice()</a></code>) * Comic Sans MS (<code><a href="../reference/theme_beanie.html">theme_beanie()</a></code>) * Arial and Arial Black (<code><a href="../reference/theme_n64.html">theme_n64()</a></code>), and Arial with a display title font in the rest:<br>
+* Herculanum (<code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code>) * Arial Rounded (<code><a href="../reference/theme_happymeal.html">theme_happymeal()</a></code>) * Chalkduster (<code><a href="../reference/theme_friends.html">theme_friends()</a></code>)<br>
+* Arial Black (<code><a href="../reference/theme_freshprince.html">theme_freshprince()</a></code>)<br>
+* Bradley Hand (<code><a href="../reference/theme_pogs.html">theme_pogs()</a></code>)<br>
+* DIN Condensed (<code><a href="../reference/theme_walkman.html">theme_walkman()</a></code>) * Georgia (<code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>) * Times New Roman (<code><a href="../reference/theme_netscape.html">theme_netscape()</a></code>) * Big Caslon (<code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>) * Chalkboard (<code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>) * Phosphate (<code><a href="../reference/theme_toysrus.html">theme_toysrus()</a></code>)</p>
+<p>When a font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><section class="level2"><h2 id="using-a-theme-for-a-whole-chapter">Using a theme for a whole chapter<a class="anchor" aria-label="anchor" href="#using-a-theme-for-a-whole-chapter"></a>
 </h2>
 <p>Each chapter sets its theme once in the setup chunk with <code><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set()</a></code>, so the plotting code in the chapter doesn’t need a <code>theme_*()</code> call.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu">fmggp2</span><span class="fu">::</span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><script id="quarto-html-after-body" type="application/javascript">

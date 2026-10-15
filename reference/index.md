@@ -28,6 +28,16 @@
   : Pogs theme
 - [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
   : Sony Walkman theme
+- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
+  : Encarta theme
+- [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md)
+  : Netscape theme
+- [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
+  : Titanic theme
+- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
+  : Lisa Frank theme
+- [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
+  : Toys R Us theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

@@ -22,6 +22,11 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md) | Toys”R”Us | Treemaps (1998 toy sales) |
+| [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md) | Lisa Frank school supplies | Pie charts (Trapper Keeper designs) |
+| [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md) | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
+| [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md) | Netscape Navigator | Stacked filled densities (modem speeds) |
+| [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md) | Microsoft Encarta / Britannica | Diverging bar graphs (encyclopedia survey) |
 | [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md) | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
 | [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md) | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
 | [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md) | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
@@ -119,6 +124,16 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
   : Pogs theme
 - [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
   : Sony Walkman theme
+- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
+  : Encarta theme
+- [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md)
+  : Netscape theme
+- [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
+  : Titanic theme
+- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
+  : Lisa Frank theme
+- [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
+  : Toys R Us theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 
