@@ -1,3 +1,7 @@
+# fmggp2 0.11.0
+
+* New `theme_pogs()`: cardboard milk cap background with bright purple, orange, teal, and yellow prints and a Bradley Hand title.
+
 # fmggp2 0.10.0
 
 * New `theme_freshprince()`: The Fresh Prince of Bel-Air graffiti neon on deep purple with an Arial Black title and a teal to pink continuous fill.

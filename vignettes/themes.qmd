@@ -217,6 +217,21 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
   theme_freshprince(base_size = 13)
 ```
 
+## Pogs
+
+`theme_pogs()` uses a cardboard background and bright milk cap prints. Below we simulate a collection of 100 Pogs.
+
+```{r}
+#| label: pogs
+set.seed(1993)
+pogs <- data.frame(type = sample(c("Milk caps", "Printed pogs", "Holographic", "Slammers"),
+  100, replace = TRUE, prob = c(0.45, 0.30, 0.15, 0.10)))
+ggplot(pogs, aes(x = type, fill = type)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "A Pogs collection (simulated)", x = NULL, y = "Pieces") +
+  theme_pogs(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
