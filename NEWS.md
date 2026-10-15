@@ -1,3 +1,7 @@
+# fmggp2 0.23.0
+
+* New `theme_trl()`: MTV's Total Request Live black studio, MTV yellow, and neon marks with an Impact title.
+
 # fmggp2 0.22.0
 
 * New `theme_furby()`: purple Furby fur with a soft white plot area and a Chalkboard SE title.

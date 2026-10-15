@@ -400,6 +400,21 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
   theme_furby(base_size = 13)
 ```
 
+## MTV TRL
+
+`theme_trl()`: a black studio, MTV yellow, and neon colors. Below we simulate days on the countdown from a gamma distribution.
+
+```{r}
+#| label: trl
+set.seed(1998)
+videos <- data.frame(genre = rep(c("Rock", "Rap", "Boy bands"), each = 60))
+videos$days <- rgamma(180, shape = 2.5, scale = c(Rock = 12, Rap = 22, `Boy bands` = 40)[videos$genre] / 2.5)
+ggplot(videos, aes(x = days, fill = genre)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "MTV TRL (simulated)", x = "Days on the countdown", fill = "Genre") +
+  theme_trl(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
