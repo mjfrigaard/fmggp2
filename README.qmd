@@ -33,6 +33,7 @@ Every example in the book uses simulated data with a 90s throwback, and each dat
 
 | Theme | Reference | Chapter |
 |---|---|---|
+| `theme_magiceye()` | Magic Eye | Raincloud plots (seconds to see the hidden image) |
 | `theme_aim()` | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
 | `theme_oregontrail()` | The Oregon Trail | Grouped box plots (days to reach Oregon) |
 | `theme_trl()` | MTV TRL | Ridgeline plots (days on the countdown) |

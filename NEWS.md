@@ -1,3 +1,7 @@
+# fmggp2 0.26.0
+
+* New `theme_magiceye()`: a deep indigo Magic Eye poster with psychedelic magenta, teal, and orange marks and a Skia title.
+
 # fmggp2 0.25.0
 
 * New `theme_aim()`: AOL Instant Messenger yellow and blue with a white chat window and an Arial Rounded title.

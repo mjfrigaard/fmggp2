@@ -445,6 +445,21 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
   theme_aim(base_size = 13)
 ```
 
+## Magic Eye
+
+`theme_magiceye()`: deep indigo and psychedelic magenta, teal, and orange. Below we simulate seconds to see the hidden image on two tries.
+
+```{r}
+#| label: magiceye
+set.seed(1993)
+tries <- data.frame(try = rep(c("First", "Second"), each = 100))
+tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
+ggplot(tries, aes(x = seconds, y = try, fill = try)) +
+  geom_boxplot(width = 0.3, show.legend = FALSE) +
+  labs(title = "Magic Eye (simulated)", x = "Seconds", y = NULL) +
+  theme_magiceye(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
