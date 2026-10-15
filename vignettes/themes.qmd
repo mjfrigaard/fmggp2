@@ -355,6 +355,21 @@ ggplot(shots, aes(x = feet, color = model)) +
   theme_supersoaker(base_size = 13)
 ```
 
+## Goosebumps
+
+`theme_goosebumps()`: haunted purple and slime green. Below we simulate Goosebumps books read by two grades.
+
+```{r}
+#| label: goosebumps
+set.seed(1992)
+readers <- data.frame(grade = rep(c("3rd grade", "5th grade"), each = 40))
+readers$books <- rpois(80, ifelse(readers$grade == "3rd grade", 3, 9))
+ggplot(readers, aes(x = books, fill = grade)) +
+  geom_dotplot(method = "histodot", binwidth = 1, stackgroups = TRUE, binpositions = "all") +
+  labs(title = "Goosebumps (simulated)", x = "Books read", fill = "Grade") +
+  theme_goosebumps(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.

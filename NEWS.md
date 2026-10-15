@@ -1,3 +1,7 @@
+# fmggp2 0.20.0
+
+* New `theme_goosebumps()`: a haunted purple background with slime green drips and a Trattatello title.
+
 # fmggp2 0.19.0
 
 * New `theme_supersoaker()`: neon orange plastic with a water blue plot area and an Arial Black title.
