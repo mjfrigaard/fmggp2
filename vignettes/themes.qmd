@@ -415,6 +415,21 @@ ggplot(videos, aes(x = days, fill = genre)) +
   theme_trl(base_size = 13)
 ```
 
+## Oregon Trail
+
+`theme_oregontrail()`: an Apple II screen with phosphor green text. Below we simulate days to reach Oregon from a log normal distribution.
+
+```{r}
+#| label: oregontrail
+set.seed(1985)
+trips <- data.frame(profession = rep(c("Banker", "Carpenter", "Farmer"), each = 100))
+trips$days <- rlnorm(300, log(c(Banker = 140, Carpenter = 155, Farmer = 170)[trips$profession]), 0.2)
+ggplot(trips, aes(x = profession, y = days, fill = profession)) +
+  geom_boxplot(alpha = 2/3, show.legend = FALSE) +
+  labs(title = "The Oregon Trail (simulated)", x = NULL, y = "Days") +
+  theme_oregontrail(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.

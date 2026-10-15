@@ -1,3 +1,7 @@
+# fmggp2 0.24.0
+
+* New `theme_oregontrail()`: an Apple II black screen with phosphor green text and an Andale Mono title.
+
 # fmggp2 0.23.0
 
 * New `theme_trl()`: MTV's Total Request Live black studio, MTV yellow, and neon marks with an Impact title.
