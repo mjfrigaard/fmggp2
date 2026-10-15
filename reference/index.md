@@ -8,6 +8,14 @@
   : Windows 98 theme
 - [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
   : Napster theme
+- [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
+  : Blockbuster theme
+- [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
+  : Spice Girls theme
+- [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
+  : Beanie Babies theme
+- [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
+  : Nintendo 64 theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

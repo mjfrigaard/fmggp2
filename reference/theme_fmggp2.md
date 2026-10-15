@@ -76,7 +76,6 @@ text, axis, panel, and legend formatting:
 ``` r
 # Apply the theme to a ggplot object
 require(ggplot2)
-#> Loading required package: ggplot2
 ggplot(data = mpg, aes(x = class, fill = class)) +
   geom_bar() +
   theme_fmggp2(base_size = 15)

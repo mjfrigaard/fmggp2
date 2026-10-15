@@ -1,5 +1,31 @@
 # Changelog
 
+## fmggp2 0.6.0
+
+- New
+  [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md):
+  Nintendo 64 controller gray with the red, green, blue, and yellow logo
+  colors and an Arial Black title.
+
+## fmggp2 0.5.0
+
+- New
+  [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md):
+  Beanie Babies heart tag red and gold with Comic Sans MS text.
+
+## fmggp2 0.4.0
+
+- New
+  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md):
+  Spice Girls era pinks, purple, and gold with Trebuchet MS text.
+
+## fmggp2 0.3.0
+
+- New
+  [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md):
+  Blockbuster Video blue and yellow with Arial text and an Impact title.
+  Adds an internal `register_font()` helper for system fonts.
+
 ## fmggp2 0.2.0
 
 - New

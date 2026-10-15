@@ -101,13 +101,100 @@ ggplot(napster_downloads, aes(x = minutes)) +
 
 ![](themes_files/figure-html/napster-1.png)
 
+## Blockbuster
+
+[`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
+uses Blockbuster Video blue and yellow. Below we simulate weekly rentals
+for 60 households from a Poisson distribution.
+
+``` r
+
+set.seed(1993)
+blockbuster_rentals <- data.frame(rentals = rpois(n = 60, lambda = 3))
+ggplot(blockbuster_rentals, aes(x = rentals)) +
+  geom_dotplot(binwidth = 1, dotsize = 0.3) +
+  labs(title = "Blockbuster Video (simulated)",
+       x = "Number of rentals") +
+  theme_blockbuster(base_size = 13)
+```
+
+![](themes_files/figure-html/blockbuster-1.png)
+
+## Spice Girls
+
+[`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
+uses hot pink, purple, and gold. Below we simulate the ages of 400 fans
+at a 1998 concert as a mix of kids and parents.
+
+``` r
+
+set.seed(1998)
+kid <- runif(400) < 0.65
+spice_fans <- data.frame(age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
+ggplot(spice_fans, aes(x = age)) +
+  geom_density() +
+  labs(title = "Spice World tour (simulated)",
+       x = "Age (years)") +
+  theme_spice(base_size = 13)
+```
+
+![](themes_files/figure-html/spice-1.png)
+
+## Beanie Babies
+
+[`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
+uses the red and gold of a Beanie Babies heart tag. Below we simulate
+300 resale prices from a log normal distribution.
+
+``` r
+
+set.seed(1996)
+beanie_prices <- data.frame(price = rlnorm(n = 300, meanlog = log(15), sdlog = 0.8))
+ggplot(beanie_prices, aes(x = "", y = price)) +
+  geom_violin() +
+  labs(title = "Beanie Babies resale prices (simulated)",
+       x = NULL, y = "Price (USD)") +
+  theme_beanie(base_size = 13)
+```
+
+![](themes_files/figure-html/beanie-1.png)
+
+## Nintendo 64
+
+[`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
+uses controller gray and the four logo colors. Below we simulate 200
+Mario Kart 64 lap times from a heavy tailed t distribution.
+
+``` r
+
+set.seed(64)
+mario_kart_laps <- data.frame(seconds = 45 + 2 * rt(n = 200, df = 3))
+ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
+  geom_boxplot() +
+  labs(title = "Mario Kart 64 (simulated)",
+       x = NULL, y = "Lap time (seconds)") +
+  theme_n64(base_size = 13)
+```
+
+![](themes_files/figure-html/n64-1.png)
+
 ## Fonts
 
-Both themes use fonts that ship with macOS and Windows (Tahoma for
-[`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
-and Verdana for
-[`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)).
-When the font file can’t be found, the theme falls back to `"sans"`, so
+[`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+uses Press Start 2P, which ships with `fmggp2`. The other themes use
+fonts that ship with macOS and Windows: Tahoma
+([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)),
+Verdana
+([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)),
+Arial and Impact
+([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)),
+Trebuchet MS
+([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)),
+Comic Sans MS
+([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)),
+and Arial and Arial Black
+([`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)).
+When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family
 you’ve registered with
 [`sysfonts::font_add()`](https://rdrr.io/pkg/sysfonts/man/font_add.html):

@@ -22,6 +22,10 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md) | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
+| [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md) | Beanie Babies heart tag | Violin plots (resale prices) |
+| [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md) | Spice Girls era pop | Density plots (Spice World tour fan ages) |
+| [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md) | Blockbuster Video | Dot plots (weekly rentals) |
 | [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md) | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md) | Windows 98 desktop | Histograms (AOL dial up sessions) |
 | [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md) | 1999 Napster client | Frequency polygons (Napster downloads) |
