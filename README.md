@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_gameboy()` | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | `theme_win98()` | Windows 98 desktop | Histograms (AOL dial up sessions) |
 | `theme_napster()` | 1999 Napster client | Frequency polygons (Napster downloads) |
 | `theme_fmggp2()` | Original book theme | Chapters not yet converted |
@@ -73,10 +74,10 @@ that distribution to the graph in a “Distribution” section. The section
 follows the concrete, pictorial, abstract sequence from [Singapore
 math](https://en.wikipedia.org/wiki/Singapore_math):
 
-1.  **Concrete**: print a handful of simulated values and a small count
-    table.
-2.  **Pictorial**: draw a bar model (parts of a whole), then the graph
-    with reference lines.
-3.  **Abstract**: state the generating distribution (e.g.,
+1.  **Count it** (concrete): print a handful of simulated values and a
+    small count table.
+2.  **Draw it** (pictorial): draw a bar model (parts of a whole), then
+    the graph with reference lines.
+3.  **Name it** (abstract): state the generating distribution (e.g.,
     $X \sim \text{Normal}(45, 12)$) and show how each parameter maps to
     the graph.

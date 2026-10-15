@@ -33,6 +33,7 @@ navbar:
 reference:
 - title: 90s themes
   contents:
+  - theme_gameboy
   - theme_win98
   - theme_napster
   - theme_fmggp2

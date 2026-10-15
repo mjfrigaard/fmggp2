@@ -6,3 +6,4 @@
 ^README\.qmd$
 ^\.github$
 ^\.quarto$
+^vignettes/\.quarto$

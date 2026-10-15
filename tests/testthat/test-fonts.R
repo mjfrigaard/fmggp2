@@ -6,7 +6,8 @@ test_that("list_fonts returns the bundled Ubuntu fonts", {
   fnts <- list_fonts()
   expect_true("Ubuntu-Regular.ttf" %in% fnts)
   expect_true(all(grepl("\\.ttf$", fnts)))
-  expect_true(all(grepl("^/Ubuntu/", list_fonts(include_path = TRUE))))
+  expect_true("/Ubuntu/Ubuntu-Regular.ttf" %in% list_fonts(include_path = TRUE))
+  expect_true("PressStart2P-Regular.ttf" %in% fnts)
 })
 
 test_that("add_fonts aborts for a missing font", {
