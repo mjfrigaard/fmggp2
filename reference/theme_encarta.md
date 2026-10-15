@@ -1,8 +1,9 @@
 # Encarta theme
 
-A late 90s `ggplot2` theme modeled on Microsoft Encarta and Encyclopedia
-Britannica on CD-ROM: a midnight navy background, parchment text, gold
-accents, Encarta blue and Britannica maroon marks, and a Georgia title.
+A late 90s `ggplot2` theme modeled on MindMaze, the castle trivia game
+in Microsoft Encarta 97: a slate stone background, a carved brown frame,
+a gold title, a parchment plot area, stone blue, frame brown, and gold
+marks, and a Georgia title.
 
 ## Usage
 

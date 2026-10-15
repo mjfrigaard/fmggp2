@@ -181,8 +181,9 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
 ## Jurassic Park
 
 [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
-uses the park gate black, jungle green, and logo red and amber. Below we
-simulate the total weight of the dinosaurs in each paddock.
+uses the Jurassic Park Post Office souvenir sheet: black, logo red,
+stamp yellow, and sunset orange. Below we simulate the total weight of
+the dinosaurs in each paddock.
 
 ``` r
 
@@ -277,9 +278,9 @@ ggplot(pogs, aes(x = type, fill = type)) +
 ## Sony Walkman
 
 [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
-uses a silver body, a black tape window, and sports yellow and orange.
-Below we simulate median battery life for three models and two battery
-types.
+uses the Sports Walkman photo: a cobalt blue backdrop with white grid
+lines, sports yellow, and play button green. Below we simulate median
+battery life for three models and two battery types.
 
 ``` r
 
@@ -298,8 +299,8 @@ ggplot(walkman, aes(x = hours, y = model)) +
 ## Encarta and Britannica
 
 [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
-Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy,
-parchment, gold, blue, and maroon and a Georgia title.
+MindMaze from Encarta 97, with slate stone, parchment, a carved brown
+frame, and gold, and a Georgia title.
 
 ``` r
 
@@ -338,8 +339,9 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
 ## Titanic
 
 [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md):
-Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel
-red with a Big Caslon title.
+the Titanic’s original paint colors (hull black, hull stripe gold,
+canvas, antifouling red, White Star buff, and funnel gray) with a Big
+Caslon title.
 
 ``` r
 
@@ -357,7 +359,8 @@ ggplot(fans, aes(x = age_group, fill = viewings)) +
 ## Lisa Frank
 
 [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md):
-Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+the Lisa Frank folder palette (purple, magenta, orange, yellow, and
+white) with a Chalkboard title.
 
 ``` r
 
@@ -391,10 +394,201 @@ ggplot(toys, aes(x = toy, y = units, fill = toy)) +
 
 ![](themes_files/figure-html/toysrus-1.png)
 
+## Tamagotchi
+
+[`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md):
+a lilac egg shell and a gray green LCD screen. Below we simulate
+Tamagotchi lifespans from a Weibull distribution.
+
+``` r
+
+set.seed(1997)
+pets <- data.frame(care = rep(c("Neglected", "Pampered"), each = 150))
+pets$days <- rweibull(300, shape = 2.2, scale = ifelse(pets$care == "Neglected", 6, 21))
+ggplot(pets, aes(x = days, fill = care)) +
+  geom_histogram(alpha = 2/3, position = "identity", bins = 40) +
+  labs(title = "Tamagotchi lifespans (simulated)", x = "Days", fill = "Care") +
+  theme_tamagotchi(base_size = 13)
+```
+
+![](themes_files/figure-html/tamagotchi-1.png)
+
+## Super Soaker
+
+[`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md):
+neon orange plastic, water blue, and neon green. Below we simulate Super
+Soaker ranges for two models.
+
+``` r
+
+set.seed(1990)
+shots <- data.frame(model = rep(c("SS 50", "CPS 2000"), each = 200))
+shots$feet <- rnorm(400, ifelse(shots$model == "SS 50", 25, 45), ifelse(shots$model == "SS 50", 3, 5.4))
+ggplot(shots, aes(x = feet, color = model)) +
+  geom_freqpoly(binwidth = 2, linewidth = 1) +
+  labs(title = "Super Soaker range (simulated)", x = "Range (feet)", color = "Model") +
+  theme_supersoaker(base_size = 13)
+```
+
+![](themes_files/figure-html/supersoaker-1.png)
+
+## Goosebumps
+
+[`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
+haunted purple and slime green. Below we simulate Goosebumps books read
+by two grades.
+
+``` r
+
+set.seed(1992)
+readers <- data.frame(grade = rep(c("3rd grade", "5th grade"), each = 40))
+readers$books <- rpois(80, ifelse(readers$grade == "3rd grade", 3, 9))
+ggplot(readers, aes(x = books, fill = grade)) +
+  geom_dotplot(method = "histodot", binwidth = 1, stackgroups = TRUE, binpositions = "all") +
+  labs(title = "Goosebumps (simulated)", x = "Books read", fill = "Grade") +
+  theme_goosebumps(base_size = 13)
+```
+
+![](themes_files/figure-html/goosebumps-1.png)
+
+## Tetris
+
+[`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md):
+a black well and the seven tetromino colors. Below we simulate lines
+cleared from a negative binomial distribution.
+
+``` r
+
+set.seed(1989)
+games <- data.frame(player = rep(c("Casual", "Expert"), each = 80))
+games$lines <- rnbinom(160, size = 5, mu = ifelse(games$player == "Casual", 25, 120))
+ggplot(games, aes(x = player, y = lines, color = player)) +
+  geom_jitter(width = 0.2, show.legend = FALSE) +
+  labs(title = "Tetris (simulated)", x = NULL, y = "Lines cleared") +
+  theme_tetris(base_size = 13)
+```
+
+![](themes_files/figure-html/tetris-1.png)
+
+## Furby
+
+[`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
+purple fur, teal, orange, and pink. Below we simulate Furby chatter in
+two languages.
+
+``` r
+
+set.seed(1998)
+chatter <- data.frame(language = rep(c("Furbish", "English"), times = c(180, 120)))
+chatter$words <- rnorm(300, ifelse(chatter$language == "Furbish", 45, 30), ifelse(chatter$language == "Furbish", 8, 10))
+ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
+  geom_density(alpha = 1/2) +
+  labs(title = "Furby chatter (simulated)", x = "Words per hour", fill = "Language") +
+  theme_furby(base_size = 13)
+```
+
+![](themes_files/figure-html/furby-1.png)
+
+## MTV TRL
+
+[`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
+a black studio, MTV yellow, and neon colors. Below we simulate days on
+the countdown from a gamma distribution.
+
+``` r
+
+set.seed(1998)
+videos <- data.frame(genre = rep(c("Rock", "Rap", "Boy bands"), each = 60))
+videos$days <- rgamma(180, shape = 2.5, scale = c(Rock = 12, Rap = 22, `Boy bands` = 40)[videos$genre] / 2.5)
+ggplot(videos, aes(x = days, fill = genre)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "MTV TRL (simulated)", x = "Days on the countdown", fill = "Genre") +
+  theme_trl(base_size = 13)
+```
+
+![](themes_files/figure-html/trl-1.png)
+
+## Oregon Trail
+
+[`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
+an Apple II screen with phosphor green text. Below we simulate days to
+reach Oregon from a log normal distribution.
+
+``` r
+
+set.seed(1985)
+trips <- data.frame(profession = rep(c("Banker", "Carpenter", "Farmer"), each = 100))
+trips$days <- rlnorm(300, log(c(Banker = 140, Carpenter = 155, Farmer = 170)[trips$profession]), 0.2)
+ggplot(trips, aes(x = profession, y = days, fill = profession)) +
+  geom_boxplot(alpha = 2/3, show.legend = FALSE) +
+  labs(title = "The Oregon Trail (simulated)", x = NULL, y = "Days") +
+  theme_oregontrail(base_size = 13)
+```
+
+![](themes_files/figure-html/oregontrail-1.png)
+
+## AIM
+
+[`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md):
+the yellow running man, AOL blue, and a white chat window. Below we
+simulate buddy list sizes with different shapes.
+
+``` r
+
+set.seed(1997)
+buddies <- data.frame(school = rep(c("Middle school", "College"), each = 150))
+buddies$n <- ifelse(buddies$school == "Middle school", rpois(300, 20), ifelse(runif(300) < 0.7, rnorm(300, 60, 10), rnorm(300, 150, 20)))
+ggplot(buddies, aes(x = school, y = n, fill = school)) +
+  geom_violin(alpha = 2/3, show.legend = FALSE) +
+  labs(title = "AIM buddy lists (simulated)", x = NULL, y = "Buddies") +
+  theme_aim(base_size = 13)
+```
+
+![](themes_files/figure-html/aim-1.png)
+
+## Magic Eye
+
+[`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md):
+deep indigo and psychedelic magenta, teal, and orange. Below we simulate
+seconds to see the hidden image on two tries.
+
+``` r
+
+set.seed(1993)
+tries <- data.frame(try = rep(c("First", "Second"), each = 100))
+tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
+ggplot(tries, aes(x = seconds, y = try, fill = try)) +
+  geom_boxplot(width = 0.3, show.legend = FALSE) +
+  labs(title = "Magic Eye (simulated)", x = "Seconds", y = NULL) +
+  theme_magiceye(base_size = 13)
+```
+
+![](themes_files/figure-html/magiceye-1.png)
+
+## Batman
+
+[`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md):
+the Batman (1989) palette: black, gold, orange, and steel. Below we
+simulate bat signal sightings over a week.
+
+``` r
+
+set.seed(1989)
+signals <- data.frame(night = factor(c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), levels = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")), sightings = rpois(7, 12))
+ggplot(signals, aes(x = night, y = sightings)) +
+  geom_col() +
+  labs(title = "Bat signal sightings (simulated)", x = NULL, y = "Sightings") +
+  theme_batman(base_size = 13)
+```
+
+![](themes_files/figure-html/batman-1.png)
+
 ## Fonts
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
-uses Press Start 2P, which ships with `fmggp2`. The other themes use
+and
+[`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
+use Press Start 2P, which ships with `fmggp2`. The other themes use
 fonts that ship with macOS and Windows.
 
 These themes use a single font family:
@@ -437,6 +631,24 @@ title:
   ([`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md))
 - Phosphate
   ([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
+- Futura
+  ([`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md))
+- Arial Black
+  ([`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md))
+- Trattatello
+  ([`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md))
+- Chalkboard SE
+  ([`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md))
+- Impact
+  ([`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md))
+- Andale Mono
+  ([`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md))
+- Arial Rounded
+  ([`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md))
+- Skia
+  ([`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md))
+- DIN Condensed
+  ([`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md))
 
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family

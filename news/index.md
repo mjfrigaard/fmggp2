@@ -1,5 +1,93 @@
 # Changelog
 
+## fmggp2 0.27.0
+
+- New
+  [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md):
+  the Batman (1989) palette, with a black background, a gold frame and
+  title, orange and gold marks, and a DIN Condensed title.
+
+## fmggp2 0.26.0
+
+- New
+  [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md):
+  a deep indigo Magic Eye poster with psychedelic magenta, teal, and
+  orange marks and a Skia title.
+
+## fmggp2 0.25.0
+
+- New
+  [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md):
+  AOL Instant Messenger yellow and blue with a white chat window and an
+  Arial Rounded title.
+
+## fmggp2 0.24.0
+
+- New
+  [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
+  an Apple II black screen with phosphor green text and an Andale Mono
+  title.
+
+## fmggp2 0.23.0
+
+- New
+  [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
+  MTV’s Total Request Live black studio, MTV yellow, and neon marks with
+  an Impact title.
+
+## fmggp2 0.22.0
+
+- New
+  [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
+  purple Furby fur with a soft white plot area and a Chalkboard SE
+  title.
+
+## fmggp2 0.21.0
+
+- New
+  [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md):
+  a black well with the seven tetromino colors and the bundled Press
+  Start 2P title font.
+
+## fmggp2 0.20.0
+
+- New
+  [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
+  a haunted purple background with slime green drips and a Trattatello
+  title.
+
+## fmggp2 0.19.0
+
+- New
+  [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md):
+  neon orange plastic with a water blue plot area and an Arial Black
+  title.
+
+## fmggp2 0.18.0
+
+- New
+  [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md):
+  a lilac Tamagotchi egg with a gray green LCD plot area and a Futura
+  title.
+
+## fmggp2 0.17.1
+
+- [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
+  now uses the Sony Sports Walkman photo palette (cobalt blue backdrop,
+  sports yellow, play button green, and beige).
+- [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
+  now uses the Jurassic Park Post Office souvenir sheet palette (black,
+  logo red, stamp yellow, sunset orange, cream, and tan).
+- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
+  now uses the Lisa Frank folder palette (purple, magenta, orange,
+  yellow, and white).
+- [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
+  now uses the Titanic’s original paint colors (hull black, hull stripe
+  gold, canvas, antifouling red, White Star buff, and funnel gray).
+- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
+  now uses colors from MindMaze in Encarta 97 (slate stone, parchment,
+  carved frame brown, and gold).
+
 ## fmggp2 0.17.0
 
 - New

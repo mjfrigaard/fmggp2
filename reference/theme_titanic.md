@@ -1,8 +1,10 @@
 # Titanic theme
 
-A late 90s `ggplot2` theme modeled on Titanic (1997): a deep ocean
-background, an iceberg white plot area, steel blue, gold, and funnel red
-marks, and a Big Caslon title.
+A late 90s `ggplot2` theme modeled on Titanic (1997), using the ship's
+original paint colors: a hull black background, a gold hull stripe frame
+and title, a canvas plot area with deck planking grid lines, antifouling
+red, White Star buff, funnel gray, and mast brown marks, and a Big
+Caslon title.
 
 ## Usage
 

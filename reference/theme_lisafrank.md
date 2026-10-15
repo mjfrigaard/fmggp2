@@ -1,8 +1,8 @@
 # Lisa Frank theme
 
-A late 90s `ggplot2` theme modeled on Lisa Frank school supplies: a hot
-pink background, a pale pink plot area, rainbow neon marks, and a
-Chalkboard title.
+A late 90s `ggplot2` theme modeled on a Lisa Frank folder: a purple
+background with a yellow frame and title, a white plot area, magenta,
+orange, yellow, and purple marks, and a Chalkboard title.
 
 ## Usage
 

@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">fmggp2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.17.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.27.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -243,7 +243,7 @@
 </div>
 </section><section class="level2"><h2 id="jurassic-park">Jurassic Park<a class="anchor" aria-label="anchor" href="#jurassic-park"></a>
 </h2>
-<p><code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code> uses the park gate black, jungle green, and logo red and amber. Below we simulate the total weight of the dinosaurs in each paddock.</p>
+<p><code><a href="../reference/theme_jurassic.html">theme_jurassic()</a></code> uses the Jurassic Park Post Office souvenir sheet: black, logo red, stamp yellow, and sunset orange. Below we simulate the total weight of the dinosaurs in each paddock.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
@@ -338,7 +338,7 @@
 </div>
 </section><section class="level2"><h2 id="sony-walkman">Sony Walkman<a class="anchor" aria-label="anchor" href="#sony-walkman"></a>
 </h2>
-<p><code><a href="../reference/theme_walkman.html">theme_walkman()</a></code> uses a silver body, a black tape window, and sports yellow and orange. Below we simulate median battery life for three models and two battery types.</p>
+<p><code><a href="../reference/theme_walkman.html">theme_walkman()</a></code> uses the Sports Walkman photo: a cobalt blue backdrop with white grid lines, sports yellow, and play button green. Below we simulate median battery life for three models and two battery types.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1979</span><span class="op">)</span></span>
@@ -358,7 +358,7 @@
 </div>
 </section><section class="level2"><h2 id="encarta-and-britannica">Encarta and Britannica<a class="anchor" aria-label="anchor" href="#encarta-and-britannica"></a>
 </h2>
-<p><code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>: Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy, parchment, gold, blue, and maroon and a Georgia title.</p>
+<p><code><a href="../reference/theme_encarta.html">theme_encarta()</a></code>: MindMaze from Encarta 97, with slate stone, parchment, a carved brown frame, and gold, and a Georgia title.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">p_encarta</span> <span class="op">&lt;-</span> <span class="fl">0.8</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Logistic.html" class="external-link">plogis</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span></span>
@@ -398,7 +398,7 @@
 </div>
 </section><section class="level2"><h2 id="titanic">Titanic<a class="anchor" aria-label="anchor" href="#titanic"></a>
 </h2>
-<p><code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>: Titanic (1997) ocean navy, iceberg white, steel blue, gold, and funnel red with a Big Caslon title.</p>
+<p><code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>: the Titanic’s original paint colors (hull black, hull stripe gold, canvas, antifouling red, White Star buff, and funnel gray) with a Big Caslon title.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
@@ -417,7 +417,7 @@
 </div>
 </section><section class="level2"><h2 id="lisa-frank">Lisa Frank<a class="anchor" aria-label="anchor" href="#lisa-frank"></a>
 </h2>
-<p><code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>: Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.</p>
+<p><code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>: the Lisa Frank folder palette (purple, magenta, orange, yellow, and white) with a Chalkboard title.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
@@ -453,9 +453,198 @@
 </div>
 </div>
 </div>
+</section><section class="level2"><h2 id="tamagotchi">Tamagotchi<a class="anchor" aria-label="anchor" href="#tamagotchi"></a>
+</h2>
+<p><code><a href="../reference/theme_tamagotchi.html">theme_tamagotchi()</a></code>: a lilac egg shell and a gray green LCD screen. Below we simulate Tamagotchi lifespans from a Weibull distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
+<span><span class="va">pets</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>care <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Neglected"</span>, <span class="st">"Pampered"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">150</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">pets</span><span class="op">$</span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Weibull.html" class="external-link">rweibull</a></span><span class="op">(</span><span class="fl">300</span>, shape <span class="op">=</span> <span class="fl">2.2</span>, scale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">pets</span><span class="op">$</span><span class="va">care</span> <span class="op">==</span> <span class="st">"Neglected"</span>, <span class="fl">6</span>, <span class="fl">21</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">pets</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">days</span>, fill <span class="op">=</span> <span class="va">care</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_histogram</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span>, position <span class="op">=</span> <span class="st">"identity"</span>, bins <span class="op">=</span> <span class="fl">40</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Tamagotchi lifespans (simulated)"</span>, x <span class="op">=</span> <span class="st">"Days"</span>, fill <span class="op">=</span> <span class="st">"Care"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_tamagotchi.html">theme_tamagotchi</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/tamagotchi-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="super-soaker">Super Soaker<a class="anchor" aria-label="anchor" href="#super-soaker"></a>
+</h2>
+<p><code><a href="../reference/theme_supersoaker.html">theme_supersoaker()</a></code>: neon orange plastic, water blue, and neon green. Below we simulate Super Soaker ranges for two models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">)</span></span>
+<span><span class="va">shots</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SS 50"</span>, <span class="st">"CPS 2000"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">200</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">shots</span><span class="op">$</span><span class="va">feet</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">$</span><span class="va">model</span> <span class="op">==</span> <span class="st">"SS 50"</span>, <span class="fl">25</span>, <span class="fl">45</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">$</span><span class="va">model</span> <span class="op">==</span> <span class="st">"SS 50"</span>, <span class="fl">3</span>, <span class="fl">5.4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">shots</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">feet</span>, color <span class="op">=</span> <span class="va">model</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html" class="external-link">geom_freqpoly</a></span><span class="op">(</span>binwidth <span class="op">=</span> <span class="fl">2</span>, linewidth <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Super Soaker range (simulated)"</span>, x <span class="op">=</span> <span class="st">"Range (feet)"</span>, color <span class="op">=</span> <span class="st">"Model"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_supersoaker.html">theme_supersoaker</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/supersoaker-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="goosebumps">Goosebumps<a class="anchor" aria-label="anchor" href="#goosebumps"></a>
+</h2>
+<p><code><a href="../reference/theme_goosebumps.html">theme_goosebumps()</a></code>: haunted purple and slime green. Below we simulate Goosebumps books read by two grades.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1992</span><span class="op">)</span></span>
+<span><span class="va">readers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>grade <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"3rd grade"</span>, <span class="st">"5th grade"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">40</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">readers</span><span class="op">$</span><span class="va">books</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">80</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">readers</span><span class="op">$</span><span class="va">grade</span> <span class="op">==</span> <span class="st">"3rd grade"</span>, <span class="fl">3</span>, <span class="fl">9</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">readers</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">books</span>, fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_dotplot.html" class="external-link">geom_dotplot</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"histodot"</span>, binwidth <span class="op">=</span> <span class="fl">1</span>, stackgroups <span class="op">=</span> <span class="cn">TRUE</span>, binpositions <span class="op">=</span> <span class="st">"all"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Goosebumps (simulated)"</span>, x <span class="op">=</span> <span class="st">"Books read"</span>, fill <span class="op">=</span> <span class="st">"Grade"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_goosebumps.html">theme_goosebumps</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/goosebumps-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="tetris">Tetris<a class="anchor" aria-label="anchor" href="#tetris"></a>
+</h2>
+<p><code><a href="../reference/theme_tetris.html">theme_tetris()</a></code>: a black well and the seven tetromino colors. Below we simulate lines cleared from a negative binomial distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1989</span><span class="op">)</span></span>
+<span><span class="va">games</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>player <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Casual"</span>, <span class="st">"Expert"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">80</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">games</span><span class="op">$</span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/NegBinomial.html" class="external-link">rnbinom</a></span><span class="op">(</span><span class="fl">160</span>, size <span class="op">=</span> <span class="fl">5</span>, mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">games</span><span class="op">$</span><span class="va">player</span> <span class="op">==</span> <span class="st">"Casual"</span>, <span class="fl">25</span>, <span class="fl">120</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">games</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">player</span>, y <span class="op">=</span> <span class="va">lines</span>, color <span class="op">=</span> <span class="va">player</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html" class="external-link">geom_jitter</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.2</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Tetris (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Lines cleared"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_tetris.html">theme_tetris</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/tetris-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="furby">Furby<a class="anchor" aria-label="anchor" href="#furby"></a>
+</h2>
+<p><code><a href="../reference/theme_furby.html">theme_furby()</a></code>: purple fur, teal, orange, and pink. Below we simulate Furby chatter in two languages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
+<span><span class="va">chatter</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>language <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Furbish"</span>, <span class="st">"English"</span><span class="op">)</span>, times <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">180</span>, <span class="fl">120</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">chatter</span><span class="op">$</span><span class="va">words</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">chatter</span><span class="op">$</span><span class="va">language</span> <span class="op">==</span> <span class="st">"Furbish"</span>, <span class="fl">45</span>, <span class="fl">30</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">chatter</span><span class="op">$</span><span class="va">language</span> <span class="op">==</span> <span class="st">"Furbish"</span>, <span class="fl">8</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">chatter</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">words</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes_eval.html" class="external-link">after_stat</a></span><span class="op">(</span><span class="va">count</span><span class="op">)</span>, fill <span class="op">=</span> <span class="va">language</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">1</span><span class="op">/</span><span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Furby chatter (simulated)"</span>, x <span class="op">=</span> <span class="st">"Words per hour"</span>, fill <span class="op">=</span> <span class="st">"Language"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_furby.html">theme_furby</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/furby-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="mtv-trl">MTV TRL<a class="anchor" aria-label="anchor" href="#mtv-trl"></a>
+</h2>
+<p><code><a href="../reference/theme_trl.html">theme_trl()</a></code>: a black studio, MTV yellow, and neon colors. Below we simulate days on the countdown from a gamma distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
+<span><span class="va">videos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>genre <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Rock"</span>, <span class="st">"Rap"</span>, <span class="st">"Boy bands"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">60</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">videos</span><span class="op">$</span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span><span class="fl">180</span>, shape <span class="op">=</span> <span class="fl">2.5</span>, scale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Rock <span class="op">=</span> <span class="fl">12</span>, Rap <span class="op">=</span> <span class="fl">22</span>, `Boy bands` <span class="op">=</span> <span class="fl">40</span><span class="op">)</span><span class="op">[</span><span class="va">videos</span><span class="op">$</span><span class="va">genre</span><span class="op">]</span> <span class="op">/</span> <span class="fl">2.5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">videos</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">days</span>, fill <span class="op">=</span> <span class="va">genre</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"MTV TRL (simulated)"</span>, x <span class="op">=</span> <span class="st">"Days on the countdown"</span>, fill <span class="op">=</span> <span class="st">"Genre"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_trl.html">theme_trl</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/trl-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="oregon-trail">Oregon Trail<a class="anchor" aria-label="anchor" href="#oregon-trail"></a>
+</h2>
+<p><code><a href="../reference/theme_oregontrail.html">theme_oregontrail()</a></code>: an Apple II screen with phosphor green text. Below we simulate days to reach Oregon from a log normal distribution.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1985</span><span class="op">)</span></span>
+<span><span class="va">trips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>profession <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Banker"</span>, <span class="st">"Carpenter"</span>, <span class="st">"Farmer"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">trips</span><span class="op">$</span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Banker <span class="op">=</span> <span class="fl">140</span>, Carpenter <span class="op">=</span> <span class="fl">155</span>, Farmer <span class="op">=</span> <span class="fl">170</span><span class="op">)</span><span class="op">[</span><span class="va">trips</span><span class="op">$</span><span class="va">profession</span><span class="op">]</span><span class="op">)</span>, <span class="fl">0.2</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">trips</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">profession</span>, y <span class="op">=</span> <span class="va">days</span>, fill <span class="op">=</span> <span class="va">profession</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"The Oregon Trail (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Days"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_oregontrail.html">theme_oregontrail</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/oregontrail-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="aim">AIM<a class="anchor" aria-label="anchor" href="#aim"></a>
+</h2>
+<p><code><a href="../reference/theme_aim.html">theme_aim()</a></code>: the yellow running man, AOL blue, and a white chat window. Below we simulate buddy list sizes with different shapes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
+<span><span class="va">buddies</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>school <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Middle school"</span>, <span class="st">"College"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">150</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">buddies</span><span class="op">$</span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">buddies</span><span class="op">$</span><span class="va">school</span> <span class="op">==</span> <span class="st">"Middle school"</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">20</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">300</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.7</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">60</span>, <span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fl">150</span>, <span class="fl">20</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">buddies</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">school</span>, y <span class="op">=</span> <span class="va">n</span>, fill <span class="op">=</span> <span class="va">school</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_violin.html" class="external-link">geom_violin</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"AIM buddy lists (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Buddies"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_aim.html">theme_aim</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/aim-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="magic-eye">Magic Eye<a class="anchor" aria-label="anchor" href="#magic-eye"></a>
+</h2>
+<p><code><a href="../reference/theme_magiceye.html">theme_magiceye()</a></code>: deep indigo and psychedelic magenta, teal, and orange. Below we simulate seconds to see the hidden image on two tries.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
+<span><span class="va">tries</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>try <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"First"</span>, <span class="st">"Second"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">tries</span><span class="op">$</span><span class="va">seconds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">tries</span><span class="op">$</span><span class="va">try</span> <span class="op">==</span> <span class="st">"First"</span>, <span class="fl">40</span>, <span class="fl">20</span><span class="op">)</span><span class="op">)</span>, <span class="fl">0.5</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">tries</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">seconds</span>, y <span class="op">=</span> <span class="va">try</span>, fill <span class="op">=</span> <span class="va">try</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.3</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Magic Eye (simulated)"</span>, x <span class="op">=</span> <span class="st">"Seconds"</span>, y <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_magiceye.html">theme_magiceye</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/magiceye-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="batman">Batman<a class="anchor" aria-label="anchor" href="#batman"></a>
+</h2>
+<p><code><a href="../reference/theme_batman.html">theme_batman()</a></code>: the Batman (1989) palette: black, gold, orange, and steel. Below we simulate bat signal sightings over a week.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1989</span><span class="op">)</span></span>
+<span><span class="va">signals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>night <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Mon"</span>, <span class="st">"Tue"</span>, <span class="st">"Wed"</span>, <span class="st">"Thu"</span>, <span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span><span class="op">)</span>, sightings <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">7</span>, <span class="fl">12</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">signals</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">night</span>, y <span class="op">=</span> <span class="va">sightings</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Bat signal sightings (simulated)"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Sightings"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_batman.html">theme_batman</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/batman-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section class="level2"><h2 id="fonts">Fonts<a class="anchor" aria-label="anchor" href="#fonts"></a>
 </h2>
-<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows.</p>
+<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> and <code><a href="../reference/theme_tetris.html">theme_tetris()</a></code> use Press Start 2P, which ships with <code>fmggp2</code>. The other themes use fonts that ship with macOS and Windows.</p>
 <p>These themes use a single font family:</p>
 <ul>
 <li>Tahoma (<code><a href="../reference/theme_win98.html">theme_win98()</a></code>)</li>
@@ -477,17 +666,26 @@
 <li>Big Caslon (<code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>)</li>
 <li>Chalkboard (<code><a href="../reference/theme_lisafrank.html">theme_lisafrank()</a></code>)</li>
 <li>Phosphate (<code><a href="../reference/theme_toysrus.html">theme_toysrus()</a></code>)</li>
+<li>Futura (<code><a href="../reference/theme_tamagotchi.html">theme_tamagotchi()</a></code>)</li>
+<li>Arial Black (<code><a href="../reference/theme_supersoaker.html">theme_supersoaker()</a></code>)</li>
+<li>Trattatello (<code><a href="../reference/theme_goosebumps.html">theme_goosebumps()</a></code>)</li>
+<li>Chalkboard SE (<code><a href="../reference/theme_furby.html">theme_furby()</a></code>)</li>
+<li>Impact (<code><a href="../reference/theme_trl.html">theme_trl()</a></code>)</li>
+<li>Andale Mono (<code><a href="../reference/theme_oregontrail.html">theme_oregontrail()</a></code>)</li>
+<li>Arial Rounded (<code><a href="../reference/theme_aim.html">theme_aim()</a></code>)</li>
+<li>Skia (<code><a href="../reference/theme_magiceye.html">theme_magiceye()</a></code>)</li>
+<li>DIN Condensed (<code><a href="../reference/theme_batman.html">theme_batman()</a></code>)</li>
 </ul>
 <p>When a font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><section class="level2"><h2 id="using-a-theme-for-a-whole-chapter">Using a theme for a whole chapter<a class="anchor" aria-label="anchor" href="#using-a-theme-for-a-whole-chapter"></a>
 </h2>
 <p>Each chapter sets its theme once in the setup chunk with <code><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set()</a></code>, so the plotting code in the chapter doesn’t need a <code>theme_*()</code> call.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu">fmggp2</span><span class="fu">::</span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><script id="quarto-html-after-body" type="application/javascript">

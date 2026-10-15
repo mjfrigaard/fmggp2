@@ -38,6 +38,26 @@
   : Lisa Frank theme
 - [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
   : Toys R Us theme
+- [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md)
+  : Tamagotchi theme
+- [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md)
+  : Super Soaker theme
+- [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md)
+  : Goosebumps theme
+- [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
+  : Tetris theme
+- [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
+  : Furby theme
+- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
+  : MTV TRL theme
+- [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
+  : Oregon Trail theme
+- [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md)
+  : AIM theme
+- [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md)
+  : Magic Eye theme
+- [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
+  : Batman theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

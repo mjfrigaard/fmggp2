@@ -22,6 +22,16 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md) | Batman (1989) | Not yet assigned to a chapter |
+| [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md) | Magic Eye | Raincloud plots (seconds to see the hidden image) |
+| [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md) | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
+| [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md) | The Oregon Trail | Grouped box plots (days to reach Oregon) |
+| [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md) | MTV TRL | Ridgeline plots (days on the countdown) |
+| [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md) | Furby | Overlapping and stacked densities (Furby chatter) |
+| [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md) | Tetris | Beeswarm plots (lines cleared by player) |
+| [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md) | Goosebumps books | Overlapping dot plots (books read by grade) |
+| [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md) | Super Soaker | Overlapping frequency polygons (range by model) |
+| [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md) | Tamagotchi | Overlapping histograms (virtual pet lifespans) |
 | [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md) | Toys”R”Us | Treemaps (1998 toy sales) |
 | [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md) | Lisa Frank school supplies | Pie charts (Trapper Keeper designs) |
 | [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md) | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
@@ -134,6 +144,26 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
   : Lisa Frank theme
 - [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
   : Toys R Us theme
+- [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md)
+  : Tamagotchi theme
+- [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md)
+  : Super Soaker theme
+- [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md)
+  : Goosebumps theme
+- [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
+  : Tetris theme
+- [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
+  : Furby theme
+- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
+  : MTV TRL theme
+- [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
+  : Oregon Trail theme
+- [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md)
+  : AIM theme
+- [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md)
+  : Magic Eye theme
+- [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
+  : Batman theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 
