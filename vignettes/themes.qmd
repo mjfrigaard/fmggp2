@@ -476,7 +476,7 @@ ggplot(signals, aes(x = night, y = sightings)) +
 
 ## Fonts
 
-`theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
+`theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
 
 These themes use a single font family:
 
@@ -499,6 +499,15 @@ These themes use Arial for the body text and a display font for the title:
 - Big Caslon (`theme_titanic()`)
 - Chalkboard (`theme_lisafrank()`)
 - Phosphate (`theme_toysrus()`)
+- Futura (`theme_tamagotchi()`)
+- Arial Black (`theme_supersoaker()`)
+- Trattatello (`theme_goosebumps()`)
+- Chalkboard SE (`theme_furby()`)
+- Impact (`theme_trl()`)
+- Andale Mono (`theme_oregontrail()`)
+- Arial Rounded (`theme_aim()`)
+- Skia (`theme_magiceye()`)
+- DIN Condensed (`theme_batman()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

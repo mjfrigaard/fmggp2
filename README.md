@@ -27,6 +27,16 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_batman()` | Batman (1989) | Not yet assigned to a chapter |
+| `theme_magiceye()` | Magic Eye | Raincloud plots (seconds to see the hidden image) |
+| `theme_aim()` | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
+| `theme_oregontrail()` | The Oregon Trail | Grouped box plots (days to reach Oregon) |
+| `theme_trl()` | MTV TRL | Ridgeline plots (days on the countdown) |
+| `theme_furby()` | Furby | Overlapping and stacked densities (Furby chatter) |
+| `theme_tetris()` | Tetris | Beeswarm plots (lines cleared by player) |
+| `theme_goosebumps()` | Goosebumps books | Overlapping dot plots (books read by grade) |
+| `theme_supersoaker()` | Super Soaker | Overlapping frequency polygons (range by model) |
+| `theme_tamagotchi()` | Tamagotchi | Overlapping histograms (virtual pet lifespans) |
 | `theme_toysrus()` | Toys”R”Us | Treemaps (1998 toy sales) |
 | `theme_lisafrank()` | Lisa Frank school supplies | Pie charts (Trapper Keeper designs) |
 | `theme_titanic()` | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
