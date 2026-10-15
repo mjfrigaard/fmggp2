@@ -1,3 +1,7 @@
+# fmggp2 0.27.0
+
+* New `theme_batman()`: the Batman (1989) palette, with a black background, a gold frame and title, orange and gold marks, and a DIN Condensed title.
+
 # fmggp2 0.26.0
 
 * New `theme_magiceye()`: a deep indigo Magic Eye poster with psychedelic magenta, teal, and orange marks and a Skia title.

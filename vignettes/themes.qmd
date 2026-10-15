@@ -460,6 +460,20 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
   theme_magiceye(base_size = 13)
 ```
 
+## Batman
+
+`theme_batman()`: the Batman (1989) palette: black, gold, orange, and steel. Below we simulate bat signal sightings over a week.
+
+```{r}
+#| label: batman
+set.seed(1989)
+signals <- data.frame(night = factor(c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), levels = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")), sightings = rpois(7, 12))
+ggplot(signals, aes(x = night, y = sightings)) +
+  geom_col() +
+  labs(title = "Bat signal sightings (simulated)", x = NULL, y = "Sightings") +
+  theme_batman(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
