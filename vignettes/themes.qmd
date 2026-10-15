@@ -157,6 +157,21 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
   theme_n64(base_size = 13)
 ```
 
+## Jurassic Park
+
+`theme_jurassic()` uses the park gate black, jungle green, and logo red and amber. Below we simulate the total weight of the dinosaurs in each paddock.
+
+```{r}
+#| label: jurassic
+set.seed(1993)
+jp_paddocks <- data.frame(species = c("Brachiosaurus", "Triceratops", "Tyrannosaurus"),
+  total_tons = c(sum(rnorm(3, 40, 5)), sum(rnorm(5, 9, 1.2)), sum(rnorm(2, 8, 1))))
+ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Jurassic Park (simulated)", x = "Paddock", y = "Total weight (tons)") +
+  theme_jurassic(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

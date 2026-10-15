@@ -33,6 +33,7 @@ Every example in the book uses simulated data with a 90s throwback, and each dat
 
 | Theme | Reference | Chapter |
 |---|---|---|
+| `theme_jurassic()` | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | `theme_n64()` | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | `theme_beanie()` | Beanie Babies heart tag | Violin plots (resale prices) |
 | `theme_spice()` | Spice Girls era pop | Density plots (Spice World tour fan ages) |

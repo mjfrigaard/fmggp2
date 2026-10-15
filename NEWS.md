@@ -1,3 +1,7 @@
+# fmggp2 0.7.0
+
+* New `theme_jurassic()`: Jurassic Park black, jungle green, red, and amber with a Herculanum title.
+
 # fmggp2 0.6.0
 
 * New `theme_n64()`: Nintendo 64 controller gray with the red, green, blue, and yellow logo colors and an Arial Black title.
