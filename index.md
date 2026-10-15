@@ -1,0 +1,79 @@
+# fmggp2
+
+`fmggp2` is the support package for [*ggplot2: field
+manual*](https://mjfrigaard.github.io/fm-ggp2/). It holds the late 90s
+`ggplot2` themes and the small helpers the book uses, so every chapter
+loads the same tested code.
+
+## Installation
+
+Install the development version from GitHub:
+
+``` r
+
+# install.packages("pak")
+pak::pak("mjfrigaard/fmggp2")
+```
+
+## Themes
+
+Every example in the book uses simulated data with a 90s throwback, and
+each dataset gets a theme to match.
+
+| Theme | Reference | Chapter |
+|----|----|----|
+| [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md) | Windows 98 desktop | Histograms (AOL dial up sessions) |
+| [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md) | 1999 Napster client | Frequency polygons (Napster downloads) |
+| [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md) | Original book theme | Chapters not yet converted |
+
+``` r
+
+library(fmggp2)
+library(ggplot2)
+showtext::showtext_auto()
+set.seed(1014)
+aol_sessions <- data.frame(minutes = round(rnorm(300, mean = 45, sd = 12)))
+ggplot(aol_sessions, aes(x = minutes)) +
+  geom_histogram(bins = 30) +
+  labs(title = "AOL dial up sessions (simulated)",
+       x = "Session length (minutes)") +
+  theme_win98(base_size = 13)
+```
+
+![](reference/figures/README-readme-win98-1.png)
+
+``` r
+
+set.seed(1999)
+napster_downloads <- data.frame(minutes = round(rgamma(300, shape = 4, rate = 0.5), 1))
+ggplot(napster_downloads, aes(x = minutes)) +
+  geom_freqpoly(bins = 30) +
+  labs(title = "Napster MP3 downloads (simulated)",
+       x = "Download time (minutes)") +
+  theme_napster(base_size = 13)
+```
+
+![](reference/figures/README-readme-napster-1.png)
+
+## Book helpers
+
+| Function | What it does |
+|----|----|
+| [`co_box()`](https://mjfrigaard.github.io/fmggp2/reference/co_box.md) | Prints a Quarto callout box (use with `results: asis`) |
+| [`status()`](https://mjfrigaard.github.io/fmggp2/reference/status.md) | Prints a chapter status callout |
+| `%nin%` | The negation of `%in%` |
+
+## How the chapters teach distributions
+
+Each chapter simulates its data from a known distribution, then connects
+that distribution to the graph in a “Distribution” section. The section
+follows the concrete, pictorial, abstract sequence from [Singapore
+math](https://en.wikipedia.org/wiki/Singapore_math):
+
+1.  **Concrete**: print a handful of simulated values and a small count
+    table.
+2.  **Pictorial**: draw a bar model (parts of a whole), then the graph
+    with reference lines.
+3.  **Abstract**: state the generating distribution (e.g.,
+    $`X \sim \text{Normal}(45, 12)`$) and show how each parameter maps
+    to the graph.
