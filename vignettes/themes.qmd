@@ -111,6 +111,22 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
   theme_blockbuster(base_size = 13)
 ```
 
+## Spice Girls
+
+`theme_spice()` uses hot pink, purple, and gold. Below we simulate the ages of 400 fans at a 1998 concert as a mix of kids and parents.
+
+```{r}
+#| label: spice
+set.seed(1998)
+kid <- runif(400) < 0.65
+spice_fans <- data.frame(age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
+ggplot(spice_fans, aes(x = age)) +
+  geom_density() +
+  labs(title = "Spice World tour (simulated)",
+       x = "Age (years)") +
+  theme_spice(base_size = 13)
+```
+
 ## Fonts
 
 Both themes use fonts that ship with macOS and Windows (Tahoma for `theme_win98()` and Verdana for `theme_napster()`). When the font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
