@@ -202,6 +202,21 @@ ggplot(friends_episodes, aes(x = viewers_m, fill = season)) +
   theme_friends(base_size = 13)
 ```
 
+## Fresh Prince
+
+`theme_freshprince()` puts graffiti neon on deep purple, and its continuous fill runs from teal to hot pink. Below we simulate how often the Carlton dance shows up each season.
+
+```{r}
+#| label: freshprince
+set.seed(1990)
+fp <- expand.grid(season = 1:6, gag = c("Will flirts", "Carlton dance"))
+fp$occurrences <- rbinom(12, 24, ifelse(fp$gag == "Will flirts", 0.9, plogis(-2.2 + 0.5 * (fp$season - 3.5))))
+ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
+  geom_tile() +
+  labs(title = "Fresh Prince (simulated)", x = "Season", y = NULL, fill = "Episodes") +
+  theme_freshprince(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

@@ -1,3 +1,7 @@
+# fmggp2 0.10.0
+
+* New `theme_freshprince()`: The Fresh Prince of Bel-Air graffiti neon on deep purple with an Arial Black title and a teal to pink continuous fill.
+
 # fmggp2 0.9.0
 
 * New `theme_friends()`: Monica's purple apartment, the red, yellow, and blue logo dots, and a Chalkduster title.
