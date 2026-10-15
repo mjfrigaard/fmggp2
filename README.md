@@ -27,6 +27,10 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_n64()` | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
+| `theme_beanie()` | Beanie Babies heart tag | Violin plots (resale prices) |
+| `theme_spice()` | Spice Girls era pop | Density plots (Spice World tour fan ages) |
+| `theme_blockbuster()` | Blockbuster Video | Dot plots (weekly rentals) |
 | `theme_gameboy()` | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | `theme_win98()` | Windows 98 desktop | Histograms (AOL dial up sessions) |
 | `theme_napster()` | 1999 Napster client | Frequency polygons (Napster downloads) |
