@@ -187,6 +187,21 @@ ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
   theme_happymeal(base_size = 13)
 ```
 
+## Friends
+
+`theme_friends()` uses Monica's purple walls, a yellow frame, and the logo dot colors. Below we simulate viewers per episode for three seasons.
+
+```{r}
+#| label: friends
+set.seed(1994)
+friends_episodes <- data.frame(season = rep(c("Season 1", "Season 3", "Season 5"), each = 24))
+friends_episodes$viewers_m <- round(rnorm(72, rep(c(22, 27, 24), each = 24), 2.5))
+ggplot(friends_episodes, aes(x = viewers_m, fill = season)) +
+  geom_bar() +
+  labs(title = "Friends (simulated)", x = "Viewers (millions)", y = "Episodes", fill = "Season") +
+  theme_friends(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

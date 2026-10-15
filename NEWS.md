@@ -1,3 +1,7 @@
+# fmggp2 0.9.0
+
+* New `theme_friends()`: Monica's purple apartment, the red, yellow, and blue logo dots, and a Chalkduster title.
+
 # fmggp2 0.8.0
 
 * New `theme_happymeal()`: McDonald's Happy Meal box red and yellow with an Arial Rounded title.
