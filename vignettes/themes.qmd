@@ -172,6 +172,21 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
   theme_jurassic(base_size = 13)
 ```
 
+## Happy Meals
+
+`theme_happymeal()` uses the red and yellow of a Happy Meal box. Below we simulate average daily Happy Meal sales for four toy promotions.
+
+```{r}
+#| label: happymeal
+set.seed(1997)
+happy_meals <- data.frame(promotion = c("Teenie Beanie Babies", "Furby", "Hot Wheels", "Inspector Gadget"),
+  avg_sold = sapply(c(420, 310, 220, 180), function(l) mean(rpois(28, l))))
+ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Happy Meals (simulated)", x = "Toy promotion", y = "Average sold per day") +
+  theme_happymeal(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:

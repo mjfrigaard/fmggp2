@@ -1,3 +1,7 @@
+# fmggp2 0.8.0
+
+* New `theme_happymeal()`: McDonald's Happy Meal box red and yellow with an Arial Rounded title.
+
 # fmggp2 0.7.0
 
 * New `theme_jurassic()`: Jurassic Park black, jungle green, red, and amber with a Herculanum title.
