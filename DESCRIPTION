@@ -1,0 +1,28 @@
+Package: fmggp2
+Title: Support package for ggplot2: field manual
+Version: 0.1.0
+Author: Martin Frigaard <mjfrigaard@pm.me> [aut, cre]
+Maintainer: Martin Frigaard <mjfrigaard@pm.me>
+Description: Utility functions and helpers for the fm-ggp2 book.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+LazyData: true
+Depends: 
+    R (>= 2.10)
+Imports: 
+    cli,
+    extrafont,
+    ggplot2 (>= 4.0.0),
+    ggtext,
+    glue,
+    showtext,
+    sysfonts
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+URL: https://mjfrigaard.github.io/fmggp2/, https://github.com/mjfrigaard/fmggp2
+Config/roxygen2/version: 8.1.1
