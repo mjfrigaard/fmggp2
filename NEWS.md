@@ -1,3 +1,7 @@
+# fmggp2 0.12.0
+
+* New `theme_walkman()`: Sony Walkman Sports silver and black with yellow and orange marks and a DIN Condensed title.
+
 # fmggp2 0.11.0
 
 * New `theme_pogs()`: cardboard milk cap background with bright purple, orange, teal, and yellow prints and a Bradley Hand title.

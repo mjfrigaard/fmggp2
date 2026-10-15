@@ -232,6 +232,22 @@ ggplot(pogs, aes(x = type, fill = type)) +
   theme_pogs(base_size = 13)
 ```
 
+## Sony Walkman
+
+`theme_walkman()` uses a silver body, a black tape window, and sports yellow and orange. Below we simulate median battery life for three models and two battery types.
+
+```{r}
+#| label: walkman
+set.seed(1979)
+walkman <- data.frame(model = rep(c("WM-2", "WM-F45 Sports", "WM-EX194 Mega Bass"), times = 2),
+  battery = rep(c("Alkaline", "Rechargeable"), each = 3), hours = c(10, 16, 22, 7, 12, 17) + rnorm(6, 0, 0.5))
+ggplot(walkman, aes(x = hours, y = model)) +
+  geom_line(aes(group = model)) +
+  geom_point(aes(color = battery), size = 3) +
+  labs(title = "Sony Walkman (simulated)", x = "Median battery life (hours)", y = NULL, color = "Battery") +
+  theme_walkman(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows: Tahoma (`theme_win98()`), Verdana (`theme_napster()`), Arial and Impact (`theme_blockbuster()`), Trebuchet MS (`theme_spice()`), Comic Sans MS (`theme_beanie()`), and Arial and Arial Black (`theme_n64()`). When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
