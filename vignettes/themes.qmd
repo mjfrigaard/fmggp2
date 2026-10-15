@@ -385,6 +385,21 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
   theme_tetris(base_size = 13)
 ```
 
+## Furby
+
+`theme_furby()`: purple fur, teal, orange, and pink. Below we simulate Furby chatter in two languages.
+
+```{r}
+#| label: furby
+set.seed(1998)
+chatter <- data.frame(language = rep(c("Furbish", "English"), times = c(180, 120)))
+chatter$words <- rnorm(300, ifelse(chatter$language == "Furbish", 45, 30), ifelse(chatter$language == "Furbish", 8, 10))
+ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
+  geom_density(alpha = 1/2) +
+  labs(title = "Furby chatter (simulated)", x = "Words per hour", fill = "Language") +
+  theme_furby(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.

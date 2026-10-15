@@ -1,3 +1,7 @@
+# fmggp2 0.22.0
+
+* New `theme_furby()`: purple Furby fur with a soft white plot area and a Chalkboard SE title.
+
 # fmggp2 0.21.0
 
 * New `theme_tetris()`: a black well with the seven tetromino colors and the bundled Press Start 2P title font.
