@@ -27,6 +27,12 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_walkman()` | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
+| `theme_pogs()` | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
+| `theme_freshprince()` | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
+| `theme_friends()` | Friends (Monica’s apartment) | Overlapping bar graphs (viewers per episode) |
+| `theme_happymeal()` | McDonald’s Happy Meal box | Summary bar graphs (Happy Meals sold per promotion) |
+| `theme_jurassic()` | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | `theme_n64()` | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | `theme_beanie()` | Beanie Babies heart tag | Violin plots (resale prices) |
 | `theme_spice()` | Spice Girls era pop | Density plots (Spice World tour fan ages) |
