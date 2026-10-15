@@ -1,3 +1,7 @@
+# fmggp2 0.21.0
+
+* New `theme_tetris()`: a black well with the seven tetromino colors and the bundled Press Start 2P title font.
+
 # fmggp2 0.20.0
 
 * New `theme_goosebumps()`: a haunted purple background with slime green drips and a Trattatello title.

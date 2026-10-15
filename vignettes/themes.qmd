@@ -370,6 +370,21 @@ ggplot(readers, aes(x = books, fill = grade)) +
   theme_goosebumps(base_size = 13)
 ```
 
+## Tetris
+
+`theme_tetris()`: a black well and the seven tetromino colors. Below we simulate lines cleared from a negative binomial distribution.
+
+```{r}
+#| label: tetris
+set.seed(1989)
+games <- data.frame(player = rep(c("Casual", "Expert"), each = 80))
+games$lines <- rnbinom(160, size = 5, mu = ifelse(games$player == "Casual", 25, 120))
+ggplot(games, aes(x = player, y = lines, color = player)) +
+  geom_jitter(width = 0.2, show.legend = FALSE) +
+  labs(title = "Tetris (simulated)", x = NULL, y = "Lines cleared") +
+  theme_tetris(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` uses Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
