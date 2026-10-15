@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">fmggp2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,11 +78,34 @@
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="fu">showtext</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/showtext/man/showtext_auto.html" class="external-link">showtext_auto</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 </div>
-<section class="level2"><h2 id="windows-98">Windows 98<a class="anchor" aria-label="anchor" href="#windows-98"></a>
+<section class="level2"><h2 id="game-boy">Game Boy<a class="anchor" aria-label="anchor" href="#game-boy"></a>
+</h2>
+<p><code><a href="../reference/theme_gameboy.html">theme_gameboy()</a></code> uses the four shades of green from the original Game Boy screen and the pixel font Press Start 2P, which ships with <code>fmggp2</code>. Below we simulate the starter chosen by 300 <em>Pokémon Red and Blue</em> players.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
+<span><span class="va">pokemon_starters</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
+<span>  starter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bulbasaur"</span>, <span class="st">"Charmander"</span>, <span class="st">"Squirtle"</span><span class="op">)</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">300</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.30</span>, <span class="fl">0.42</span>, <span class="fl">0.28</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">pokemon_starters</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">starter</span>, fill <span class="op">=</span> <span class="va">starter</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Pokemon Red and Blue (simulated)"</span>,</span>
+<span>       subtitle <span class="op">=</span> <span class="st">"Starter chosen by 300 players"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Starter"</span>, y <span class="op">=</span> <span class="st">"Count"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_gameboy.html">theme_gameboy</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/gameboy-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+</section><section class="level2"><h2 id="windows-98">Windows 98<a class="anchor" aria-label="anchor" href="#windows-98"></a>
 </h2>
 <p><code><a href="../reference/theme_win98.html">theme_win98()</a></code> draws the plot as a Windows 98 window sitting on the teal desktop. The title sits in a navy title bar, the plot area is white, and bars and lines are navy by default. Below we simulate 300 AOL dial up sessions (in minutes) from a normal distribution.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1014</span><span class="op">)</span></span>
 <span><span class="va">aol_sessions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  minutes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">300</span>, mean <span class="op">=</span> <span class="fl">45</span>, sd <span class="op">=</span> <span class="fl">12</span><span class="op">)</span><span class="op">)</span></span>
@@ -102,7 +125,7 @@
 </div>
 <p>Discrete fills follow the desktop palette (gray, navy, then teal).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">aol_ranges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  range <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"under 33"</span>, <span class="st">"33 to 56"</span>, <span class="st">"57 and over"</span><span class="op">)</span>,</span>
 <span>                 levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"under 33"</span>, <span class="st">"33 to 56"</span>, <span class="st">"57 and over"</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -123,7 +146,7 @@
 </h2>
 <p><code><a href="../reference/theme_napster.html">theme_napster()</a></code> borrows the dark 1999 Napster client: a near black window, white text, a dotted gray grid, and lime marks. Below we simulate 300 MP3 downloads over a 56k modem from a right skewed gamma distribution.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1999</span><span class="op">)</span></span>
 <span><span class="va">napster_downloads</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  minutes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">300</span>, shape <span class="op">=</span> <span class="fl">4</span>, rate <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span></span>
@@ -145,14 +168,14 @@
 </h2>
 <p>Both themes use fonts that ship with macOS and Windows (Tahoma for <code><a href="../reference/theme_win98.html">theme_win98()</a></code> and Verdana for <code><a href="../reference/theme_napster.html">theme_napster()</a></code>). When the font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><section class="level2"><h2 id="using-a-theme-for-a-whole-chapter">Using a theme for a whole chapter<a class="anchor" aria-label="anchor" href="#using-a-theme-for-a-whole-chapter"></a>
 </h2>
 <p>Each chapter sets its theme once in the setup chunk with <code><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set()</a></code>, so the plotting code in the chapter doesn’t need a <code>theme_*()</code> call.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu">fmggp2</span><span class="fu">::</span><span class="fu"><a href="../reference/theme_win98.html">theme_win98</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><script id="quarto-html-after-body" type="application/javascript">

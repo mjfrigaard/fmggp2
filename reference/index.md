@@ -2,6 +2,8 @@
 
 ## 90s themes
 
+- [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+  : Game Boy theme
 - [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
   : Windows 98 theme
 - [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)

@@ -13,6 +13,30 @@ library(ggplot2)
 showtext::showtext_auto()
 ```
 
+## Game Boy
+
+[`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+uses the four shades of green from the original Game Boy screen and the
+pixel font Press Start 2P, which ships with `fmggp2`. Below we simulate
+the starter chosen by 300 *Pokémon Red and Blue* players.
+
+``` r
+
+set.seed(1998)
+pokemon_starters <- data.frame(
+  starter = sample(c("Bulbasaur", "Charmander", "Squirtle"),
+    size = 300, replace = TRUE, prob = c(0.30, 0.42, 0.28))
+)
+ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Pokemon Red and Blue (simulated)",
+       subtitle = "Starter chosen by 300 players",
+       x = "Starter", y = "Count") +
+  theme_gameboy(base_size = 13)
+```
+
+![](themes_files/figure-html/gameboy-1.png)
+
 ## Windows 98
 
 [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)

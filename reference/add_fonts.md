@@ -29,4 +29,5 @@ and the function is aborted.
 
 ``` r
 add_fonts("Ubuntu")
+#> Ubuntu already installed
 ```

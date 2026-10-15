@@ -24,13 +24,19 @@ include_path is TRUE, the paths will be included.
 
 ``` r
 list_fonts()
-#> [1] "Ubuntu-Bold.ttf"         "Ubuntu-BoldItalic.ttf"  
-#> [3] "Ubuntu-Italic.ttf"       "Ubuntu-Light.ttf"       
-#> [5] "Ubuntu-LightItalic.ttf"  "Ubuntu-Medium.ttf"      
-#> [7] "Ubuntu-MediumItalic.ttf" "Ubuntu-Regular.ttf"     
+#> [1] "PressStart2P-Regular.ttf" "Ubuntu-Bold.ttf"         
+#> [3] "Ubuntu-BoldItalic.ttf"    "Ubuntu-Italic.ttf"       
+#> [5] "Ubuntu-Light.ttf"         "Ubuntu-LightItalic.ttf"  
+#> [7] "Ubuntu-Medium.ttf"        "Ubuntu-MediumItalic.ttf" 
+#> [9] "Ubuntu-Regular.ttf"      
 list_fonts(include_path = TRUE)
-#> [1] "/Ubuntu/Ubuntu-Bold.ttf"         "/Ubuntu/Ubuntu-BoldItalic.ttf"  
-#> [3] "/Ubuntu/Ubuntu-Italic.ttf"       "/Ubuntu/Ubuntu-Light.ttf"       
-#> [5] "/Ubuntu/Ubuntu-LightItalic.ttf"  "/Ubuntu/Ubuntu-Medium.ttf"      
-#> [7] "/Ubuntu/Ubuntu-MediumItalic.ttf" "/Ubuntu/Ubuntu-Regular.ttf"     
+#> [1] "/PressStart2P/PressStart2P-Regular.ttf"
+#> [2] "/Ubuntu/Ubuntu-Bold.ttf"               
+#> [3] "/Ubuntu/Ubuntu-BoldItalic.ttf"         
+#> [4] "/Ubuntu/Ubuntu-Italic.ttf"             
+#> [5] "/Ubuntu/Ubuntu-Light.ttf"              
+#> [6] "/Ubuntu/Ubuntu-LightItalic.ttf"        
+#> [7] "/Ubuntu/Ubuntu-Medium.ttf"             
+#> [8] "/Ubuntu/Ubuntu-MediumItalic.ttf"       
+#> [9] "/Ubuntu/Ubuntu-Regular.ttf"            
 ```
