@@ -1,8 +1,8 @@
 #' Oregon Trail theme
 #'
-#' A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II: a
-#' black screen, phosphor green text and marks in three shades, and an Andale
-#' Mono title.
+#' A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II
+#' emulator: a gray window frame, a black screen, phosphor green text and
+#' marks in three shades, and an Andale Mono title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -29,7 +29,7 @@ theme_oregontrail <- function(base_size = 11,
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["green"]]),
       plot.background = ggplot2::element_rect(fill = cols[["black"]],
-                                              colour = cols[["green"]],
+                                              colour = cols[["window"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
@@ -63,11 +63,12 @@ theme_oregontrail <- function(base_size = 11,
 }
 
 oregontrail_cols <- c(
-  black = "#010101",
-  panel = "#062007",
-  grid = "#094709",
-  green = "#00FE00",
-  mid = "#0AB90B",
-  pale = "#B8FFB8",
-  dim = "#0A8B0B"
+  black = "#010201",
+  panel = "#143913",
+  grid = "#1D5E1D",
+  green = "#32FE33",
+  mid = "#33A233",
+  pale = "#4CDF4C",
+  dim = "#278027",
+  window = "#B9B9B9"
 )

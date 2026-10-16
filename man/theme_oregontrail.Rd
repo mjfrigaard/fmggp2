@@ -23,9 +23,9 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on The Oregon Trail on an Apple II: a
-black screen, phosphor green text and marks in three shades, and an Andale
-Mono title.
+A late 90s \code{ggplot2} theme modeled on The Oregon Trail on an Apple II
+emulator: a gray window frame, a black screen, phosphor green text and
+marks in three shades, and an Andale Mono title.
 }
 \examples{
 library(ggplot2)

@@ -1,3 +1,13 @@
+# fmggp2 0.56.0
+
+* Removed `theme_win98()`, `theme_napster()`, `theme_spice()`, `theme_encarta()`, `theme_lisafrank()`, `theme_magiceye()`, `theme_rugrats()`, and `theme_trl()`, which had no freely licensed reference image. The book chapters that used them now use `theme_oksoda()`, `theme_talkboy()`, `theme_crystalpepsi()`, `theme_orbitz()`, `theme_koosh()`, `theme_rzone()`, `theme_gushers()`, and `theme_squeezit()`. `ggtext` is no longer a dependency.
+
+* `theme_oregontrail()` has a new palette and a gray window frame sampled from "Nicole has dysentary" by The Pug Father (CC BY 2.0), which the vignette now shows.
+
+* `theme_goosebumps()` has new slime green and purple colors sampled from the Goosebumps book covers, plus pale green and orchid marks.
+
+* The README and themes vignette show the new themes with their reference images.
+
 # fmggp2 0.55.0
 
 * New `theme_squeezit()`: Squeezit bottles on gravel, with a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. The palette is sampled from "Squeezeit flavours" by ZolHaj (CC BY-SA 4.0).

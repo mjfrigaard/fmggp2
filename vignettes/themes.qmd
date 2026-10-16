@@ -44,58 +44,44 @@ ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
   theme_gameboy(base_size = 13)
 ```
 
-## Windows 98
+## OK Soda
 
-`theme_win98()` draws the plot as a Windows 98 window sitting on the teal desktop. The title sits in a navy title bar, the plot area is white, and bars and lines are navy by default. Below we simulate 300 AOL dial up sessions (in minutes) from a normal distribution.
+`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars and title, and slate and brick accents, with a Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
+
+![Image: TeemPlayer, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg), CC BY-SA 3.0.](../man/figures/theme_oksoda/ok-soda-original-4.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: win98
-#| message: false
+#| label: oksoda
 set.seed(1014)
-aol_sessions <- data.frame(
-  minutes = round(rnorm(n = 300, mean = 45, sd = 12))
+ok_soda_sales <- data.frame(
+  cans = round(rnorm(n = 300, mean = 45, sd = 12))
 )
-ggplot(aol_sessions, aes(x = minutes)) +
+ggplot(ok_soda_sales, aes(x = cans)) +
   geom_histogram(bins = 30) +
-  labs(title = "AOL dial up sessions (simulated)",
-       subtitle = "Distribution of session length",
-       x = "Session length (minutes)") +
-  theme_win98(base_size = 13)
+  labs(title = "OK Soda", caption = "Simulated data",
+       subtitle = "Cans sold per store in one day",
+       x = "Cans sold") +
+  theme_oksoda(base_size = 13)
 ```
 
-Discrete fills follow the desktop icons (teal, screen blue, folder yellow, then gray).
+## Talkboy
+
+`theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Brush Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
+
+![Image: Y2kcrazyjoker4, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg), CC BY-SA 4.0.](../man/figures/theme_talkboy/deluxe-talkboy-on-table.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: win98-discrete
-#| fig-asp: 0.45
-aol_ranges <- data.frame(
-  range = factor(c("under 33", "33 to 56", "57 and over"),
-                 levels = c("under 33", "33 to 56", "57 and over")),
-  n = c(47, 193, 60)
-)
-ggplot(aol_ranges, aes(x = n, y = "300 sessions", fill = range)) +
-  geom_col(position = position_stack(reverse = TRUE)) +
-  labs(x = "Number of sessions", y = NULL, fill = "Minutes") +
-  theme_win98(base_size = 13)
-```
-
-## Napster
-
-`theme_napster()` borrows the 1999 Napster client: a gray window, a black chat area with a dotted gray grid, and cyan, red, lime, and yellow chat marks. Below we simulate 300 MP3 downloads over a 56k modem from a right skewed gamma distribution.
-
-```{r}
-#| label: napster
-#| message: false
+#| label: talkboy
 set.seed(1999)
-napster_downloads <- data.frame(
-  minutes = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
+talkboy_clips <- data.frame(
+  seconds = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
 )
-ggplot(napster_downloads, aes(x = minutes)) +
+ggplot(talkboy_clips, aes(x = seconds)) +
   geom_freqpoly(bins = 30) +
-  labs(title = "Napster MP3 downloads (simulated)",
-       subtitle = "Download time over a 56k modem",
-       x = "Download time (minutes)") +
-  theme_napster(base_size = 13)
+  labs(title = "Talkboy", caption = "Simulated data",
+       subtitle = "Length of 300 recorded messages",
+       x = "Message length (seconds)") +
+  theme_talkboy(base_size = 13)
 ```
 
 ## Blockbuster
@@ -115,20 +101,23 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
   theme_blockbuster(base_size = 13)
 ```
 
-## Spice Girls
+## Crystal Pepsi
 
-`theme_spice()` uses the Spice World tour poster: black, tour red, and the mint, pink, orange, gold, and blue letters. Below we simulate the ages of 400 fans at a 1998 concert as a mix of kids and parents.
+`theme_crystalpepsi()` uses the clear bottle and its label: a cream background, a navy frame, Pepsi red and navy marks, and a Futura title. Below we simulate the ages of 400 people at a 1992 mall taste test as a mix of kids and parents.
+
+![Image: Mike Mozart, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg), CC BY 2.0.](../man/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: spice
+#| label: crystalpepsi
 set.seed(1998)
 kid <- runif(400) < 0.65
-spice_fans <- data.frame(age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
-ggplot(spice_fans, aes(x = age)) +
-  geom_density() +
-  labs(title = "Spice World tour (simulated)",
-       x = "Age (years)") +
-  theme_spice(base_size = 13)
+tasters <- data.frame(group = ifelse(kid, "Kid", "Parent"),
+  age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
+ggplot(tasters, aes(x = age, fill = group)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "Crystal Pepsi", caption = "Simulated data",
+       x = "Age (years)", fill = NULL) +
+  theme_crystalpepsi(base_size = 13)
 ```
 
 ## Beanie Babies
@@ -268,20 +257,23 @@ ggplot(walkman, aes(x = hours, y = model)) +
   theme_walkman(base_size = 13)
 ```
 
-## Encarta and Britannica
+## Orbitz
 
-`theme_encarta()`: MindMaze from Encarta 97, with dark stone, parchment, a carved wood frame, gold, copper, and moss, and a Georgia title.
+`theme_orbitz()` uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black background, a gold frame, gold and magenta marks, and a Marker Felt title. Below we compare the share of kids buying Orbitz and Surge each week after Orbitz arrived.
+
+![Image: Jesse! S?, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg), CC BY 2.0.](../man/figures/theme_orbitz/bottle-of-orbitz-drink.jpg){width="40%" fig-align="center"}
 
 ```{r}
-#| label: encarta
-p_encarta <- 0.8 * plogis(-2 + 0.6 * (0:6))
-enc <- data.frame(year = factor(rep(1993:1999, 2)),
-  choice = rep(c("Encarta", "Britannica"), each = 7),
-  share = c(p_encarta, -(0.8 - p_encarta)))
-ggplot(enc, aes(x = year, y = share, fill = choice)) +
+#| label: orbitz
+p_surge <- 0.8 * plogis(-2 + 0.6 * (0:6))
+drinks <- data.frame(week = factor(rep(1:7, 2)),
+  choice = factor(rep(c("Surge", "Orbitz"), each = 7), levels = c("Surge", "Orbitz")),
+  share = c(p_surge, -(0.8 - p_surge)))
+ggplot(drinks, aes(x = week, y = share, fill = choice)) +
   geom_col(width = 0.5) +
-  labs(title = "Encarta vs. Britannica (simulated)", x = NULL, y = "Share", fill = NULL) +
-  theme_encarta(base_size = 13)
+  labs(title = "Orbitz vs. Surge", caption = "Simulated data",
+       x = "Week", y = "Share of kids", fill = NULL) +
+  theme_orbitz(base_size = 13)
 ```
 
 ## Netscape
@@ -319,19 +311,22 @@ ggplot(fans, aes(x = age_group, fill = viewings)) +
   theme_titanic(base_size = 13)
 ```
 
-## Lisa Frank
+## Koosh ball
 
-`theme_lisafrank()`: the Lisa Frank folder palette (purple, magenta, orange, yellow, and white) with a Chalkboard title.
+`theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
+
+![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg), public domain.](../man/figures/theme_koosh/koosh-ball-tricolor.jpg){width="50%" fig-align="center"}
 
 ```{r}
-#| label: lisafrank
+#| label: koosh
 set.seed(1993)
-keepers <- data.frame(design = sample(c("Rainbow leopards", "Unicorns", "Dolphins", "Pandas"),
-  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)))
-ggplot(keepers, aes(x = design, fill = design)) +
+koosh_balls <- data.frame(style = factor(sample(c("Tri color", "Rainbow", "Neon", "Glow"),
+  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)),
+  levels = c("Tri color", "Rainbow", "Neon", "Glow")))
+ggplot(koosh_balls, aes(x = style, fill = style)) +
   geom_bar(show.legend = FALSE) +
-  labs(title = "Trapper Keepers (simulated)", x = NULL, y = "Sold") +
-  theme_lisafrank(base_size = 13)
+  labs(title = "Koosh balls", caption = "Simulated data", x = NULL, y = "Sold") +
+  theme_koosh(base_size = 13)
 ```
 
 ## Toys"R"Us
@@ -387,7 +382,7 @@ ggplot(shots, aes(x = feet, color = model)) +
 
 ## Goosebumps
 
-`theme_goosebumps()`: slime green and drip purple on black. Below we simulate Goosebumps books read by two grades.
+`theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.
 
 ```{r}
 #| label: goosebumps
@@ -434,26 +429,31 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
   theme_furby(base_size = 13)
 ```
 
-## MTV TRL
+## Squeezit
 
-`theme_trl()`: a black studio, TRL yellow, and the MTV logo orange, red, and blue. Below we simulate days on the countdown from a gamma distribution.
+`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we simulate the seconds it took to squeeze out three flavors from a gamma distribution.
 
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:MTV_logo.png), CC0.](../man/figures/theme_trl/mtv-logo.png){width="60%" fig-align="center"}
+![Image: ZolHaj, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg), CC BY-SA 4.0.](../man/figures/theme_squeezit/squeezeit-flavours.jpg){width="40%" fig-align="center"}
 
 ```{r}
-#| label: trl
+#| label: squeezit
 set.seed(1998)
-videos <- data.frame(genre = rep(c("Rock", "Rap", "Boy bands"), each = 60))
-videos$days <- rgamma(180, shape = 2.5, scale = c(Rock = 12, Rap = 22, `Boy bands` = 40)[videos$genre] / 2.5)
-ggplot(videos, aes(x = days, fill = genre)) +
+bottles <- data.frame(flavor = factor(rep(c("Cherry", "Orange", "Green punch"), each = 60),
+  levels = c("Cherry", "Orange", "Green punch")))
+bottles$seconds <- rgamma(180, shape = 2.5,
+  scale = c(Cherry = 12, Orange = 18, `Green punch` = 22)[as.character(bottles$flavor)] / 2.5)
+ggplot(bottles, aes(x = seconds, fill = flavor)) +
   geom_density(alpha = 2/3) +
-  labs(title = "MTV TRL (simulated)", x = "Days on the countdown", fill = "Genre") +
-  theme_trl(base_size = 13)
+  labs(title = "Squeezit", caption = "Simulated data",
+       x = "Seconds to finish", fill = "Flavor") +
+  theme_squeezit(base_size = 13)
 ```
 
 ## Oregon Trail
 
-`theme_oregontrail()`: an Apple II screen with three shades of phosphor green. Below we simulate days to reach Oregon from a log normal distribution.
+`theme_oregontrail()`: The Oregon Trail running in an Apple II emulator, with a gray window frame, a black screen, and three shades of phosphor green. Below we simulate days to reach Oregon from a log normal distribution.
+
+![Image: The Pug Father, [Flickr](https://www.flickr.com/photos/fleur-design/1155468051), CC BY 2.0.](../man/figures/theme_oregontrail/nicole-has-dysentary.jpg){width="60%" fig-align="center"}
 
 ```{r}
 #| label: oregontrail
@@ -483,19 +483,22 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
   theme_aim(base_size = 13)
 ```
 
-## Magic Eye
+## Tiger R-Zone
 
-`theme_magiceye()`: a deep sea blue with coral, sky, sand, and sea green. Below we simulate seconds to see the hidden image on two tries.
+`theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Arial Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
+
+![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg), public domain.](../man/figures/theme_rzone/tiger-rzone-headset.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: magiceye
+#| label: rzone
 set.seed(1993)
 tries <- data.frame(try = rep(c("First", "Second"), each = 100))
 tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
 ggplot(tries, aes(x = seconds, y = try, fill = try)) +
   geom_boxplot(width = 0.3, show.legend = FALSE) +
-  labs(title = "Magic Eye (simulated)", x = "Seconds", y = NULL) +
-  theme_magiceye(base_size = 13)
+  labs(title = "Tiger R-Zone", caption = "Simulated data",
+       x = "Seconds to clear the first level", y = NULL) +
+  theme_rzone(base_size = 13)
 ```
 
 ## Batman
@@ -630,19 +633,21 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
   theme_y2k(base_size = 13)
 ```
 
-## Rugrats
+## Fruit Gushers
 
-`theme_rugrats()`: playpen yellow with the logo's purple, yellow, red, and green. Below we simulate babies named after three characters.
+`theme_gushers()` uses a pile of Fruit Gushers on a white plate: a red frame and title, red, green, teal, orange, and pink marks, and a Chalkboard title. Below we simulate fruit snack trades at one lunch table before and after Gushers arrived in 1991.
+
+![Image: Thomson200, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg), CC0.](../man/figures/theme_gushers/betty-crocker-fruit-gushers-pieces.jpg){width="50%" fig-align="center"}
 
 ```{r}
-#| label: rugrats
+#| label: gushers
 set.seed(1993)
-babies <- expand.grid(year = 1985:2000, name = c("Tommy", "Chuckie", "Angelica"))
-babies$n <- rpois(nrow(babies), ifelse(babies$year < 1991, 0.5, 3))
-ggplot(subset(babies, n > 0), aes(x = year, y = name, color = name, alpha = n)) +
+trades <- expand.grid(year = 1985:2000, flavor = c("Strawberry", "Lime", "Blue raspberry"))
+trades$n <- rpois(nrow(trades), ifelse(trades$year < 1991, 0.5, 3))
+ggplot(subset(trades, n > 0), aes(x = year, y = flavor, color = flavor, alpha = n)) +
   geom_point(shape = 124, size = 6, show.legend = FALSE) +
-  labs(title = "Rugrats names (simulated)", x = NULL, y = NULL) +
-  theme_rugrats(base_size = 13)
+  labs(title = "Fruit Gushers", caption = "Simulated data", x = NULL, y = NULL) +
+  theme_gushers(base_size = 13)
 ```
 
 ## Doom
@@ -787,11 +792,8 @@ ggplot(teens, aes(x = cans, y = hours)) +
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
 
-These themes use a single font family:
+`theme_beanie()` uses a single font family:
 
-- Tahoma (`theme_win98()`)
-- Verdana (`theme_napster()`)
-- Trebuchet MS (`theme_spice()`)
 - Comic Sans MS (`theme_beanie()`)
 
 These themes use Arial for the body text and a display font for the title:
@@ -803,26 +805,29 @@ These themes use Arial for the body text and a display font for the title:
 - Chalkduster (`theme_friends()`)
 - Bradley Hand (`theme_pogs()`)
 - DIN Condensed (`theme_walkman()`)
-- Georgia (`theme_encarta()`)
+- Courier New (`theme_oksoda()`)
+- Brush Script (`theme_talkboy()`)
+- Futura (`theme_crystalpepsi()`)
+- Marker Felt (`theme_orbitz()`)
 - Times New Roman (`theme_netscape()`)
 - Big Caslon (`theme_titanic()`)
-- Chalkboard (`theme_lisafrank()`)
+- Arial Rounded (`theme_koosh()`)
 - Phosphate (`theme_toysrus()`)
 - Futura (`theme_tamagotchi()`)
 - Arial Black (`theme_supersoaker()`)
 - Trattatello (`theme_goosebumps()`)
 - Chalkboard SE (`theme_furby()`)
-- Impact (`theme_trl()`)
+- Skia (`theme_squeezit()`)
 - Andale Mono (`theme_oregontrail()`)
 - Arial Rounded (`theme_aim()`)
-- Skia (`theme_magiceye()`)
+- Arial Narrow (`theme_rzone()`)
 - DIN Condensed (`theme_batman()`)
 - Arial Black (`theme_snick()`)
 - Silom (`theme_boyband()`)
 - SignPainter (`theme_savedbythebell()`)
 - Gill Sans (`theme_hypercolor()`)
 - PT Mono (`theme_y2k()`)
-- Marker Felt (`theme_rugrats()`)
+- Chalkboard (`theme_gushers()`)
 - Impact (`theme_doom()`)
 - Krungthep (`theme_consolewars()`)
 - American Typewriter (`theme_seinfeld()`)
@@ -837,7 +842,7 @@ When a font file can't be found, the theme falls back to `"sans"`, so the plots 
 ```{r}
 #| label: family
 #| eval: false
-theme_win98(base_family = "sans")
+theme_oksoda(base_family = "sans", title_family = "sans")
 ```
 
 ## Using a theme for a whole chapter
@@ -847,5 +852,5 @@ Each chapter sets its theme once in the setup chunk with `theme_set()`, so the p
 ```{r}
 #| label: theme-set
 #| eval: false
-ggplot2::theme_set(fmggp2::theme_win98(base_size = 15))
+ggplot2::theme_set(fmggp2::theme_oksoda(base_size = 15))
 ```
