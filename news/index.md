@@ -1,5 +1,11 @@
 # Changelog
 
+## fmggp2 0.56.1
+
+- [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md)
+  puts pale green before moss in its discrete palette, so a third group
+  stands out on the dark purple panel.
+
 ## fmggp2 0.56.0
 
 - Removed `theme_win98()`, `theme_napster()`, `theme_spice()`,
