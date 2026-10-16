@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_savedbythebell()` | Saved by the Bell | Slope graphs (Bayside quiz averages) |
 | `theme_boyband()` | Boy bands | Bump charts (weekly radio spins) |
 | `theme_snick()` | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
 | `theme_batman()` | Batman (1989) | Not yet assigned to a chapter |

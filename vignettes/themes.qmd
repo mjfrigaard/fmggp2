@@ -504,6 +504,23 @@ ggplot(spins, aes(x = band, y = spins, fill = band)) +
   theme_boyband(base_size = 13)
 ```
 
+## Saved by the Bell
+
+`theme_savedbythebell()`: Memphis style teal, magenta, and yellow on black. Below we simulate fall and spring quiz averages for three students.
+
+```{r}
+#| label: savedbythebell
+set.seed(1989)
+grades <- data.frame(student = rep(c("Zack", "Kelly", "Screech"), 2),
+                     semester = rep(c("Fall", "Spring"), each = 3))
+grades$score <- c(70, 82, 93, 80, 82, 95) + rnorm(6, 0, 2)
+ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
+  geom_line(linewidth = 2) +
+  geom_point(size = 4) +
+  labs(title = "Bayside quizzes (simulated)", x = NULL, y = "Average score", color = NULL) +
+  theme_savedbythebell(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -540,6 +557,7 @@ These themes use Arial for the body text and a display font for the title:
 - DIN Condensed (`theme_batman()`)
 - Arial Black (`theme_snick()`)
 - Silom (`theme_boyband()`)
+- SignPainter (`theme_savedbythebell()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

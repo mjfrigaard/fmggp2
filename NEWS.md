@@ -1,3 +1,7 @@
+# fmggp2 0.30.0
+
+* New `theme_savedbythebell()`: the Saved by the Bell opening credits, with a black background, a hot pink frame, a white panel, Memphis style teal, magenta, yellow, purple, red, and blue marks, and a SignPainter title.
+
 # fmggp2 0.29.0
 
 * New `theme_boyband()`: late 90s boy band album covers, with a midnight navy background, a chrome frame, ice blue, hot pink, gold, lavender, and mint marks, and a Silom title.
