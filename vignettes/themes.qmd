@@ -631,6 +631,21 @@ ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
   theme_powerrangers(base_size = 13)
 ```
 
+## Clueless
+
+`theme_clueless()`: yellow plaid with black, red, and tartan green. Below we simulate the styles in three cliques.
+
+```{r}
+#| label: clueless
+set.seed(1995)
+students <- data.frame(clique = sample(c("Popular", "Skaters", "Drama"), 200, replace = TRUE))
+students$style <- ifelse(students$clique == "Skaters", sample(c("Grunge", "Plaid"), 200, TRUE, c(0.8, 0.2)), sample(c("Grunge", "Plaid"), 200, TRUE, c(0.2, 0.8)))
+ggplot(students, aes(x = clique, fill = style)) +
+  geom_bar() +
+  labs(title = "Bronson Alcott High", caption = "Simulated data", x = NULL, y = "Students", fill = NULL) +
+  theme_clueless(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -675,6 +690,7 @@ These themes use Arial for the body text and a display font for the title:
 - Krungthep (`theme_consolewars()`)
 - American Typewriter (`theme_seinfeld()`)
 - Copperplate (`theme_powerrangers()`)
+- Didot (`theme_clueless()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

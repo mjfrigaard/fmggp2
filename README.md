@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_clueless()` | Clueless | Parallel sets (Bronson Alcott cliques) |
 | `theme_powerrangers()` | Power Rangers | Grouped bubble charts (putties defeated) |
 | `theme_seinfeld()` | Seinfeld | Bubble charts (Seinfeld episodes) |
 | `theme_consolewars()` | Console wars | Grouped scatter plots (Sega vs. Nintendo) |

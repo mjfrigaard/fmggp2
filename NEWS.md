@@ -1,3 +1,7 @@
+# fmggp2 0.38.0
+
+* New `theme_clueless()`: Cher's yellow plaid, with a black frame, a cornsilk panel, black, red, tartan green, navy, and gray marks, and a Didot title.
+
 # fmggp2 0.37.0
 
 * New `theme_powerrangers()`: the Mighty Morphin Power Rangers, with a light gray background, a lightning gold frame, a red Copperplate title, and red, blue, yellow, pink, black, and green Ranger marks.
