@@ -1,7 +1,9 @@
 #' AIM theme
 #'
-#' A late 90s `ggplot2` theme modeled on AOL Instant Messenger: the yellow
-#' running man, AOL blue, a white chat window, and an Arial Rounded title.
+#' A late 90s `ggplot2` theme modeled on the AOL Instant Messenger sign on
+#' window: a gray window, an AOL blue frame and title, a white chat panel,
+#' blue, sky, running man yellow, and slate marks, and an Arial Rounded
+#' title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -27,7 +29,7 @@ theme_aim <- function(base_size = 11,
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["ink"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["yellow"]],
+      plot.background = ggplot2::element_rect(fill = cols[["window_gray"]],
                                               colour = cols[["blue"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
@@ -47,10 +49,10 @@ theme_aim <- function(base_size = 11,
       strip.background = ggplot2::element_rect(fill = cols[["blue"]], colour = NA),
       strip.text = ggplot2::element_text(colour = cols[["yellow"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
-      legend.key = ggplot2::element_rect(fill = cols[["yellow"]], colour = NA),
+      legend.key = ggplot2::element_rect(fill = cols[["window_gray"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("blue", "sky", "red")]),
-      palette.colour.discrete = unname(cols[c("blue", "sky", "red")]),
+      palette.fill.discrete = unname(cols[c("blue", "sky", "yellow", "slate")]),
+      palette.colour.discrete = unname(cols[c("blue", "sky", "yellow", "slate")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["window"]],
@@ -62,11 +64,12 @@ theme_aim <- function(base_size = 11,
 }
 
 aim_cols <- c(
-  yellow = "#FFD200",
-  blue = "#0B3D91",
+  window_gray = "#CBCBCC",
+  blue = "#021BA1",
   window = "#FFFFFF",
-  grid = "#E5E9F2",
-  ink = "#1A1A1A",
-  sky = "#4A90E2",
-  red = "#D0021B"
+  grid = "#E1E8F5",
+  ink = "#13151D",
+  sky = "#396AE1",
+  yellow = "#F1D359",
+  slate = "#525F71"
 )

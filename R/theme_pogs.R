@@ -1,8 +1,8 @@
 #' Pogs theme
 #'
 #' A late 90s `ggplot2` theme modeled on Pogs: a cardboard milk cap
-#' background, a purple frame and title, orange, blue, purple, green, rust,
-#' and tan prints, and a Bradley Hand title.
+#' background, a plum frame and title, red, blue, plum, green, rust, and tan
+#' prints, and a Bradley Hand title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -50,12 +50,12 @@ theme_pogs <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["cardboard"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("orange", "blue", "purple", "green", "rust", "tan")]),
-      palette.colour.discrete = unname(cols[c("orange", "blue", "purple", "green", "rust", "tan")]),
+      palette.fill.discrete = unname(cols[c("red", "blue", "purple", "green", "rust", "tan")]),
+      palette.colour.discrete = unname(cols[c("red", "blue", "purple", "green", "rust", "tan")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["orange"]],
+                                   accent = cols[["red"]],
                                    colour = cols[["ink"]],
                                    fill = cols[["purple"]],
                                    family = base_family)
@@ -66,11 +66,11 @@ pogs_cols <- c(
   cardboard = "#E9D8B4",
   panel = "#F6EDDA",
   grid = "#D8C49A",
-  ink = "#3B2A14",
-  purple = "#41358D",
-  orange = "#F27137",
-  blue = "#2E9DBB",
-  green = "#2F7C39",
-  rust = "#BF4423",
-  tan = "#F1B969"
+  ink = "#311B22",
+  purple = "#7E3E64",
+  red = "#D94345",
+  blue = "#549BAC",
+  green = "#4F5D41",
+  rust = "#943C29",
+  tan = "#E3AB6C"
 )

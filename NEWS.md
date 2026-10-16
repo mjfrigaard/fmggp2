@@ -1,3 +1,9 @@
+# fmggp2 0.45.0
+
+* The themes vignette shows reference images again for 22 themes.
+
+* New palettes for `theme_aim()` (the sign on window) and `theme_pogs()`.
+
 # fmggp2 0.44.0
 
 * New palettes for `theme_encarta()`, `theme_netscape()`, `theme_titanic()`, `theme_goosebumps()`, `theme_tetris()`, `theme_furby()`, `theme_trl()`, `theme_oregontrail()`, `theme_magiceye()`, `theme_savedbythebell()`, and `theme_rugrats()`, sampled from new reference images.
