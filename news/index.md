@@ -1,5 +1,13 @@
 # Changelog
 
+## fmggp2 0.47.1
+
+- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
+  adds white as a sixth discrete color and
+  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md)
+  adds Tommy blue and orange for eight, so the book’s ridgeline plot and
+  instance chart have enough colors again.
+
 ## fmggp2 0.47.0
 
 - Removed copyrighted reference images from the themes vignette. Themes
