@@ -1,3 +1,7 @@
+# fmggp2 0.34.0
+
+* New `theme_doom()`: Doom (1993), with a scorched brown background, a hellfire red frame and title, orange, red, gunmetal, armor green, and keycard marks, and an Impact title.
+
 # fmggp2 0.33.0
 
 * New `theme_rugrats()`: a pale yellow Rugrats playpen with an orange frame, a purple Marker Felt title, and Tommy blue, Angelica pink, Reptar green, orange, purple, red, teal, and yellow marks.

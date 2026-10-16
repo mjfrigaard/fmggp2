@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_doom()` | Doom | Scatter plots (frame rate by CPU speed) |
 | `theme_rugrats()` | Rugrats | Instance charts (baby names by year) |
 | `theme_y2k()` | Y2K | Alluvial charts (Y2K prep surveys) |
 | `theme_hypercolor()` | Hypercolor | Stream plots (90s fad sales) |
