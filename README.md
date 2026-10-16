@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_consolewars()` | Console wars | Grouped scatter plots (Sega vs. Nintendo) |
 | `theme_doom()` | Doom | Scatter plots (frame rate by CPU speed) |
 | `theme_rugrats()` | Rugrats | Instance charts (baby names by year) |
 | `theme_y2k()` | Y2K | Alluvial charts (Y2K prep surveys) |

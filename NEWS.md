@@ -1,3 +1,7 @@
+# fmggp2 0.35.0
+
+* New `theme_consolewars()`: the Sega vs. Nintendo console wars, with a charcoal background, a Sega blue frame, a Nintendo red title, blue, red, purple, gray, and gold marks, and a Krungthep title.
+
 # fmggp2 0.34.0
 
 * New `theme_doom()`: Doom (1993), with a scorched brown background, a hellfire red frame and title, orange, red, gunmetal, armor green, and keycard marks, and an Impact title.

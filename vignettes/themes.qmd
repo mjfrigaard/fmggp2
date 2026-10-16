@@ -586,6 +586,21 @@ ggplot(pcs, aes(x = mhz, y = fps)) +
   theme_doom(base_size = 13)
 ```
 
+## Console wars
+
+`theme_consolewars()`: Sega blue vs. Nintendo red on charcoal. Below we simulate games owned and hours played for two consoles.
+
+```{r}
+#| label: consolewars
+set.seed(1991)
+kids <- data.frame(console = rep(c("Genesis", "SNES"), each = 60), games = rnorm(120, 11, 3))
+kids$hours <- 2 + 0.6 * kids$games + ifelse(kids$console == "SNES", 2, 0) + rnorm(120, 0, 2)
+ggplot(kids, aes(x = games, y = hours, color = console)) +
+  geom_point() +
+  labs(title = "The console wars", caption = "Simulated data", x = "Games owned", y = "Hours per week", color = NULL) +
+  theme_consolewars(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -627,6 +642,7 @@ These themes use Arial for the body text and a display font for the title:
 - PT Mono (`theme_y2k()`)
 - Marker Felt (`theme_rugrats()`)
 - Impact (`theme_doom()`)
+- Krungthep (`theme_consolewars()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
