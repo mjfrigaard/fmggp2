@@ -1,3 +1,7 @@
+# fmggp2 0.50.0
+
+* New `theme_crystalpepsi()`: Crystal Pepsi, with a clear bottle cream background, a navy frame, Pepsi red and navy marks, and a Futura title. The palette is sampled from "Crystal Pepsi" by Mike Mozart (CC BY 2.0).
+
 # fmggp2 0.49.0
 
 * New `theme_talkboy()`: the Deluxe Talkboy, with a walnut background, a silver frame and panel, button blue marks, and a Brush Script title. The palette is sampled from "Deluxe Talkboy on table" by Y2kcrazyjoker4 (CC BY-SA 4.0).
