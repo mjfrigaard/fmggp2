@@ -58,6 +58,34 @@
   : Magic Eye theme
 - [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
   : Batman theme
+- [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md)
+  : SNICK theme
+- [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md)
+  : Boy band theme
+- [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md)
+  : Saved by the Bell theme
+- [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md)
+  : Hypercolor theme
+- [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md)
+  : Y2K theme
+- [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md)
+  : Rugrats theme
+- [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md)
+  : Doom theme
+- [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md)
+  : Console wars theme
+- [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md)
+  : Seinfeld theme
+- [`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md)
+  : Power Rangers theme
+- [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md)
+  : Clueless theme
+- [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md)
+  : Bop It theme
+- [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md)
+  : GeoCities theme
+- [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md)
+  : Surge theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

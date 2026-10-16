@@ -583,6 +583,279 @@ ggplot(signals, aes(x = night, y = sightings)) +
 
 ![](themes_files/figure-html/batman-1.png)
 
+## SNICK
+
+[`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md):
+Nickelodeon orange and slime green on a night purple sky. Below we
+simulate 20 weeks of ratings for three nights.
+
+``` r
+
+set.seed(1992)
+nights <- expand.grid(week = 1:20, night = c("Fri", "Sat", "Sun"))
+nights$rating <- c(Fri = 2.8, Sat = 4.2, Sun = 3.0)[as.character(nights$night)] + rnorm(60, 0, 0.3)
+ggplot(nights, aes(x = week, y = rating, color = night)) +
+  geom_line(linewidth = 1) +
+  labs(title = "SNICK ratings (simulated)", x = "Week", y = "Rating", color = NULL) +
+  theme_snick(base_size = 13)
+```
+
+![](themes_files/figure-html/snick-1.png)
+
+## Boy bands
+
+[`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md):
+midnight navy, chrome, and frosted tip colors. Below we simulate a week
+of radio spins for four bands.
+
+``` r
+
+set.seed(1999)
+spins <- data.frame(band = c("Backstreet Boys", "*NSYNC", "98 Degrees", "LFO"))
+spins$spins <- rpois(4, c(420, 380, 330, 300))
+ggplot(spins, aes(x = band, y = spins, fill = band)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Boy band spins (simulated)", x = NULL, y = "Spins") +
+  theme_boyband(base_size = 13)
+```
+
+![](themes_files/figure-html/boyband-1.png)
+
+## Saved by the Bell
+
+[`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md):
+Memphis style teal, magenta, and yellow on black. Below we simulate fall
+and spring quiz averages for three students.
+
+``` r
+
+set.seed(1989)
+grades <- data.frame(student = rep(c("Zack", "Kelly", "Screech"), 2),
+                     semester = rep(c("Fall", "Spring"), each = 3))
+grades$score <- c(70, 82, 93, 80, 82, 95) + rnorm(6, 0, 2)
+ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
+  geom_line(linewidth = 2) +
+  geom_point(size = 4) +
+  labs(title = "Bayside quizzes (simulated)", x = NULL, y = "Average score", color = NULL) +
+  theme_savedbythebell(base_size = 13)
+```
+
+![](themes_files/figure-html/savedbythebell-1.png)
+
+## Hypercolor
+
+[`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md):
+heat changing magenta, orange, purple, and blue. Below we simulate
+monthly sales for two fads.
+
+``` r
+
+months <- seq(1990, 1995, by = 1 / 12)
+fads <- data.frame(month = rep(months, 2),
+                   fad = rep(c("Hypercolor", "Slap bracelets"), each = length(months)))
+fads$sales <- ifelse(fads$fad == "Hypercolor",
+                     4000 * dnorm(fads$month, 1991.5, 0.6),
+                     3000 * dnorm(fads$month, 1990.8, 0.4)) / 12
+ggplot(fads, aes(x = month, y = sales, fill = fad)) +
+  geom_area(alpha = 0.8) +
+  labs(title = "90s fads (simulated)", x = NULL, y = "Sales (thousands)", fill = NULL) +
+  theme_hypercolor(base_size = 13)
+```
+
+![](themes_files/figure-html/hypercolor-1.png)
+
+## Y2K
+
+[`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md):
+LED red, terminal amber and green on black. Below we show how 300
+households prepared for Y2K across three surveys.
+
+``` r
+
+prep <- data.frame(
+  survey = factor(rep(c("Jan", "Jul", "Dec"), each = 3), levels = c("Jan", "Jul", "Dec")),
+  level = factor(rep(c("Not worried", "Some supplies", "Bunker ready"), 3),
+                 levels = c("Not worried", "Some supplies", "Bunker ready")),
+  households = c(163, 100, 37, 124, 119, 57, 108, 117, 75))
+ggplot(prep, aes(x = survey, y = households, fill = level)) +
+  geom_col() +
+  labs(title = "Y2K prep (simulated)", x = NULL, y = "Households", fill = NULL) +
+  theme_y2k(base_size = 13)
+```
+
+![](themes_files/figure-html/y2k-1.png)
+
+## Rugrats
+
+[`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
+playpen yellow with Tommy blue, Angelica pink, and Reptar green. Below
+we simulate babies named after three characters.
+
+``` r
+
+set.seed(1993)
+babies <- expand.grid(year = 1985:2000, name = c("Tommy", "Chuckie", "Angelica"))
+babies$n <- rpois(nrow(babies), ifelse(babies$year < 1991, 0.5, 3))
+ggplot(subset(babies, n > 0), aes(x = year, y = name, color = name, alpha = n)) +
+  geom_point(shape = 124, size = 6, show.legend = FALSE) +
+  labs(title = "Rugrats names (simulated)", x = NULL, y = NULL) +
+  theme_rugrats(base_size = 13)
+```
+
+![](themes_files/figure-html/rugrats-1.png)
+
+## Doom
+
+[`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md):
+hellfire red and orange on scorched brown. Below we simulate Doom frame
+rates by processor speed.
+
+``` r
+
+set.seed(1993)
+pcs <- data.frame(mhz = runif(100, 25, 100))
+pcs$fps <- pmin(35, 0.45 * pcs$mhz + rnorm(100, 0, 3))
+ggplot(pcs, aes(x = mhz, y = fps)) +
+  geom_point() +
+  labs(title = "Doom frame rates", caption = "Simulated data", x = "CPU (MHz)", y = "Frames per second") +
+  theme_doom(base_size = 13)
+```
+
+![](themes_files/figure-html/doom-1.png)
+
+## Console wars
+
+[`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md):
+Sega blue vs. Nintendo red on charcoal. Below we simulate games owned
+and hours played for two consoles.
+
+``` r
+
+set.seed(1991)
+kids <- data.frame(console = rep(c("Genesis", "SNES"), each = 60), games = rnorm(120, 11, 3))
+kids$hours <- 2 + 0.6 * kids$games + ifelse(kids$console == "SNES", 2, 0) + rnorm(120, 0, 2)
+ggplot(kids, aes(x = games, y = hours, color = console)) +
+  geom_point() +
+  labs(title = "The console wars", caption = "Simulated data", x = "Games owned", y = "Hours per week", color = NULL) +
+  theme_consolewars(base_size = 13)
+```
+
+![](themes_files/figure-html/consolewars-1.png)
+
+## Seinfeld
+
+[`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md):
+comedy club brick with the logo colors. Below we simulate laughs and
+viewers for 60 episodes.
+
+``` r
+
+set.seed(1989)
+eps <- data.frame(kramer = rgamma(60, 6, 1.5), viewers = rlnorm(60, log(20), 0.3))
+eps$laughs <- 2 + 0.3 * eps$kramer + rnorm(60, 0, 0.5)
+ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
+  geom_point(alpha = 1 / 2) +
+  labs(title = "Seinfeld episodes", caption = "Simulated data", x = "Kramer minutes", y = "Laughs per minute", size = "Viewers") +
+  theme_seinfeld(base_size = 13)
+```
+
+![](themes_files/figure-html/seinfeld-1.png)
+
+## Power Rangers
+
+[`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md):
+the six Ranger suits on light gray. Below we simulate putties defeated
+by each Ranger.
+
+``` r
+
+set.seed(1993)
+fights <- data.frame(ranger = factor(rep(c("Red", "Blue", "Yellow", "Pink", "Black"), each = 20), levels = c("Red", "Blue", "Yellow", "Pink", "Black")), minutes = rgamma(100, 4, 1))
+fights$putties <- rpois(100, 1.6 * fights$minutes)
+ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
+  geom_point(shape = 21, size = 3, color = "#000000") +
+  labs(title = "Power Rangers", caption = "Simulated data", x = "Fight minutes", y = "Putties defeated", fill = NULL) +
+  theme_powerrangers(base_size = 13)
+```
+
+![](themes_files/figure-html/powerrangers-1.png)
+
+## Clueless
+
+[`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md):
+yellow plaid with black, red, and tartan green. Below we simulate the
+styles in three cliques.
+
+``` r
+
+set.seed(1995)
+students <- data.frame(clique = sample(c("Popular", "Skaters", "Drama"), 200, replace = TRUE))
+students$style <- ifelse(students$clique == "Skaters", sample(c("Grunge", "Plaid"), 200, TRUE, c(0.8, 0.2)), sample(c("Grunge", "Plaid"), 200, TRUE, c(0.2, 0.8)))
+ggplot(students, aes(x = clique, fill = style)) +
+  geom_bar() +
+  labs(title = "Bronson Alcott High", caption = "Simulated data", x = NULL, y = "Students", fill = NULL) +
+  theme_clueless(base_size = 13)
+```
+
+![](themes_files/figure-html/clueless-1.png)
+
+## Bop It
+
+[`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md):
+Bop It yellow on deep purple, with a purple to yellow continuous scale.
+Below we simulate reaction times to two commands.
+
+``` r
+
+set.seed(1996)
+players <- data.frame(bop = rnorm(300, 450, 60))
+players$twist <- 60 + 0.9 * players$bop + rnorm(300, 0, 40)
+ggplot(players, aes(x = bop, y = twist)) +
+  geom_point(aes(color = twist), show.legend = FALSE) +
+  labs(title = "Bop It reaction times", caption = "Simulated data", x = "Bop it! (ms)", y = "Twist it! (ms)") +
+  theme_bopit(base_size = 13)
+```
+
+![](themes_files/figure-html/bopit-1.png)
+
+## GeoCities
+
+[`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md):
+lime text and a yellow Comic Sans title on a dark navy panel. Below we
+simulate GeoCities page loads.
+
+``` r
+
+set.seed(1997)
+pages <- data.frame(kb = rlnorm(2000, log(60), 0.45))
+pages$seconds <- 2 + pages$kb * 8 / 44 + rnorm(2000, 0, 1.5)
+ggplot(pages, aes(x = kb, y = seconds)) +
+  geom_bin2d(bins = 25) +
+  labs(title = "GeoCities page loads", caption = "Simulated data", x = "Page size (KB)", y = "Seconds to load") +
+  theme_geocities(base_size = 13)
+```
+
+![](themes_files/figure-html/geocities-1.png)
+
+## Surge
+
+[`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md):
+Surge green on black, with a dark to bright green continuous scale.
+Below we simulate cans of Surge and hours of video games.
+
+``` r
+
+set.seed(1996)
+teens <- data.frame(cans = rgamma(2000, 2, 0.5))
+teens$hours <- 3 + 1.5 * teens$cans + rnorm(2000, 0, 3)
+ggplot(teens, aes(x = cans, y = hours)) +
+  geom_bin2d(bins = 20) +
+  labs(title = "Surge and video games", caption = "Simulated data", x = "Cans per week", y = "Gaming hours") +
+  theme_surge(base_size = 13)
+```
+
+![](themes_files/figure-html/surge-1.png)
+
 ## Fonts
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
@@ -649,6 +922,34 @@ title:
   ([`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md))
 - DIN Condensed
   ([`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md))
+- Arial Black
+  ([`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md))
+- Silom
+  ([`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md))
+- SignPainter
+  ([`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md))
+- Gill Sans
+  ([`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md))
+- PT Mono
+  ([`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md))
+- Marker Felt
+  ([`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md))
+- Impact
+  ([`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md))
+- Krungthep
+  ([`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md))
+- American Typewriter
+  ([`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md))
+- Copperplate
+  ([`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md))
+- Didot
+  ([`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md))
+- Rockwell
+  ([`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md))
+- Comic Sans MS
+  ([`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md))
+- DIN Alternate
+  ([`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md))
 
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family

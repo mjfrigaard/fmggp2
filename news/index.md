@@ -1,5 +1,116 @@
 # Changelog
 
+## fmggp2 0.41.0
+
+- New
+  [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md):
+  Surge soda, with a black background, a Surge green frame and title,
+  green, red, orange, yellow, and white marks, a dark to bright green
+  continuous scale, and a DIN Alternate title.
+
+## fmggp2 0.40.0
+
+- New
+  [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md):
+  a GeoCities home page, with a black background, a web gray frame, a
+  dark navy panel, lime green text, a yellow Comic Sans title, web safe
+  marks, and a blue to yellow continuous scale.
+
+## fmggp2 0.39.0
+
+- New
+  [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md):
+  the Bop It toy, with a deep purple background, a yellow frame and
+  title, yellow, blue, green, orange, and pink marks, a purple to yellow
+  continuous scale, and a Rockwell title.
+
+## fmggp2 0.38.0
+
+- New
+  [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md):
+  Cher’s yellow plaid, with a black frame, a cornsilk panel, black, red,
+  tartan green, navy, and gray marks, and a Didot title.
+
+## fmggp2 0.37.0
+
+- New
+  [`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md):
+  the Mighty Morphin Power Rangers, with a light gray background, a
+  lightning gold frame, a red Copperplate title, and red, blue, yellow,
+  pink, black, and green Ranger marks.
+
+## fmggp2 0.36.0
+
+- New
+  [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md):
+  a Seinfeld comedy club, with a brick background, a yellow frame and
+  title, the yellow, red, blue, and green logo colors, and an American
+  Typewriter title.
+
+## fmggp2 0.35.0
+
+- New
+  [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md):
+  the Sega vs. Nintendo console wars, with a charcoal background, a Sega
+  blue frame, a Nintendo red title, blue, red, purple, gray, and gold
+  marks, and a Krungthep title.
+
+## fmggp2 0.34.0
+
+- New
+  [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md):
+  Doom (1993), with a scorched brown background, a hellfire red frame
+  and title, orange, red, gunmetal, armor green, and keycard marks, and
+  an Impact title.
+
+## fmggp2 0.33.0
+
+- New
+  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
+  a pale yellow Rugrats playpen with an orange frame, a purple Marker
+  Felt title, and Tommy blue, Angelica pink, Reptar green, orange,
+  purple, red, teal, and yellow marks.
+
+## fmggp2 0.32.0
+
+- New
+  [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md):
+  the Y2K countdown, with a black terminal background, a red LED frame
+  and title, red, amber, green, silver, and blue screen marks, and a PT
+  Mono title.
+
+## fmggp2 0.31.0
+
+- New
+  [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md):
+  Generra Hypercolor shirts, with a deep purple background, a magenta
+  frame, heat changing magenta, orange, purple, blue, green, and yellow
+  marks, and a Gill Sans title.
+
+## fmggp2 0.30.0
+
+- New
+  [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md):
+  the Saved by the Bell opening credits, with a black background, a hot
+  pink frame, a white panel, Memphis style teal, magenta, yellow,
+  purple, red, and blue marks, and a SignPainter title.
+
+## fmggp2 0.29.0
+
+- New
+  [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md):
+  late 90s boy band album covers, with a midnight navy background, a
+  chrome frame, ice blue, hot pink, gold, lavender, and mint marks, and
+  a Silom title.
+
+## fmggp2 0.28.0
+
+- New
+  [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md):
+  Nickelodeon’s Saturday night block, with a night purple background, an
+  orange frame and title, slime green, purple, blue, yellow, and pink
+  marks, and an Arial Black title.
+
 ## fmggp2 0.27.0
 
 - New
