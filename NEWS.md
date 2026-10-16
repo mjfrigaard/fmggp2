@@ -1,3 +1,7 @@
+# fmggp2 0.37.0
+
+* New `theme_powerrangers()`: the Mighty Morphin Power Rangers, with a light gray background, a lightning gold frame, a red Copperplate title, and red, blue, yellow, pink, black, and green Ranger marks.
+
 # fmggp2 0.36.0
 
 * New `theme_seinfeld()`: a Seinfeld comedy club, with a brick background, a yellow frame and title, the yellow, red, blue, and green logo colors, and an American Typewriter title.

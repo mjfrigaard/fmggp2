@@ -616,6 +616,21 @@ ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
   theme_seinfeld(base_size = 13)
 ```
 
+## Power Rangers
+
+`theme_powerrangers()`: the six Ranger suits on light gray. Below we simulate putties defeated by each Ranger.
+
+```{r}
+#| label: powerrangers
+set.seed(1993)
+fights <- data.frame(ranger = factor(rep(c("Red", "Blue", "Yellow", "Pink", "Black"), each = 20), levels = c("Red", "Blue", "Yellow", "Pink", "Black")), minutes = rgamma(100, 4, 1))
+fights$putties <- rpois(100, 1.6 * fights$minutes)
+ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
+  geom_point(shape = 21, size = 3, color = "#000000") +
+  labs(title = "Power Rangers", caption = "Simulated data", x = "Fight minutes", y = "Putties defeated", fill = NULL) +
+  theme_powerrangers(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -659,6 +674,7 @@ These themes use Arial for the body text and a display font for the title:
 - Impact (`theme_doom()`)
 - Krungthep (`theme_consolewars()`)
 - American Typewriter (`theme_seinfeld()`)
+- Copperplate (`theme_powerrangers()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
