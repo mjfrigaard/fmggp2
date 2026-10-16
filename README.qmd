@@ -104,6 +104,10 @@ ggplot(talkboy_clips, aes(x = seconds)) +
   theme_talkboy(base_size = 13)
 ```
 
+## Reference images
+
+Each theme's palette is sampled from a photo or screenshot of its 90s reference. The [themes vignette](https://mjfrigaard.github.io/fmggp2/articles/themes.html) shows each image with its author and license, and only images licensed for reuse (public domain, CC0, CC BY, or CC BY-SA) are included. A few themes, like `theme_goosebumps()`, don't have a freely licensed image yet, so the vignette shows their graphs without one.
+
 ## Book helpers
 
 | Function | What it does |
