@@ -646,6 +646,21 @@ ggplot(students, aes(x = clique, fill = style)) +
   theme_clueless(base_size = 13)
 ```
 
+## Bop It
+
+`theme_bopit()`: Bop It yellow on deep purple, with a purple to yellow continuous scale. Below we simulate reaction times to two commands.
+
+```{r}
+#| label: bopit
+set.seed(1996)
+players <- data.frame(bop = rnorm(300, 450, 60))
+players$twist <- 60 + 0.9 * players$bop + rnorm(300, 0, 40)
+ggplot(players, aes(x = bop, y = twist)) +
+  geom_point(aes(color = twist), show.legend = FALSE) +
+  labs(title = "Bop It reaction times", caption = "Simulated data", x = "Bop it! (ms)", y = "Twist it! (ms)") +
+  theme_bopit(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -691,6 +706,7 @@ These themes use Arial for the body text and a display font for the title:
 - American Typewriter (`theme_seinfeld()`)
 - Copperplate (`theme_powerrangers()`)
 - Didot (`theme_clueless()`)
+- Rockwell (`theme_bopit()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

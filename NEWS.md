@@ -1,3 +1,7 @@
+# fmggp2 0.39.0
+
+* New `theme_bopit()`: the Bop It toy, with a deep purple background, a yellow frame and title, yellow, blue, green, orange, and pink marks, a purple to yellow continuous scale, and a Rockwell title.
+
 # fmggp2 0.38.0
 
 * New `theme_clueless()`: Cher's yellow plaid, with a black frame, a cornsilk panel, black, red, tartan green, navy, and gray marks, and a Didot title.
