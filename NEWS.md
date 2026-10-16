@@ -1,3 +1,7 @@
+# fmggp2 0.43.0
+
+* New reference images and palettes for `theme_win98()`, `theme_napster()`, `theme_spice()`, `theme_beanie()`, `theme_jurassic()`, `theme_happymeal()`, `theme_friends()`, `theme_freshprince()`, `theme_pogs()`, and `theme_walkman()`. `theme_napster()` now uses the gray client window with a black chat area, `theme_spice()` the Spice World tour poster, `theme_freshprince()` the show logo, and `theme_walkman()` a sports yellow body with blue buttons.
+
 # fmggp2 0.42.0
 
 * `theme_batman()` gains a `version` argument: `"movie"` (Batman 1989, the default), `"classic"` (the 1966 TV series), and `"darknight"` (The Dark Knight).

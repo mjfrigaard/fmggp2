@@ -62,10 +62,10 @@ theme_happymeal <- function(base_size = 11,
 }
 
 happymeal_cols <- c(
-  red = "#DA291C",
-  yellow = "#FFC72C",
+  red = "#A0372B",
+  yellow = "#E5C049",
   cream = "#FFF7E0",
-  brown = "#5B3A1E",
+  brown = "#631D19",
   blush = "#F6D7A7",
   orange = "#F7941D",
   green = "#2E8B57",

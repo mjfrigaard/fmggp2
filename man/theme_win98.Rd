@@ -17,8 +17,9 @@ A \code{ggplot2} theme object.
 }
 \description{
 A late 90s \code{ggplot2} theme modeled on a Windows 98 window sitting on the
-teal desktop: silver window frame, navy title bar, white plot area, and
-navy marks.
+teal desktop: silver window frame, navy title bar, white plot area, navy
+marks, and desktop icon colors (teal, screen blue, folder yellow, and
+gray) for discrete fills.
 }
 \examples{
 library(ggplot2)

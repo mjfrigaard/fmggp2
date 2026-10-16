@@ -23,9 +23,10 @@ it's available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on The Fresh Prince of Bel-Air opening:
-deep purple background, graffiti neon green, pink, teal, and yellow, and an
-Arial Black title. Continuous fills run from teal to hot pink.
+A late 90s \code{ggplot2} theme modeled on The Fresh Prince of Bel-Air logo: a
+pink glow background, a graffiti green frame and title, green, teal, lime,
+and olive marks, and an Arial Black title. Continuous fills run from teal
+to lime.
 }
 \examples{
 library(ggplot2)

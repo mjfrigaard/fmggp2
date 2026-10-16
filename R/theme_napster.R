@@ -1,7 +1,8 @@
 #' Napster theme
 #'
-#' A late 90s `ggplot2` theme modeled on the dark 1999 Napster client: near
-#' black window, white text, dark gray grid, and bright lime marks.
+#' A late 90s `ggplot2` theme modeled on the 1999 Napster client: a gray
+#' window, black text, a black chat area with a dotted gray grid, and cyan,
+#' red, lime, and yellow chat marks.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Verdana when it's
@@ -26,7 +27,8 @@ theme_napster <- function(base_size = 11, base_family = napster_font()) {
                                               colour = cols[["window"]]),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
-      plot.title = ggplot2::element_text(face = "bold", size = ggplot2::rel(1.1)),
+      plot.title = ggplot2::element_text(face = "bold", colour = cols[["navy"]],
+                                         size = ggplot2::rel(1.1)),
       plot.subtitle = ggplot2::element_text(colour = cols[["gray"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
       panel.background = ggplot2::element_rect(fill = cols[["panel"]]),
@@ -39,25 +41,29 @@ theme_napster <- function(base_size = 11, base_family = napster_font()) {
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["window"]],
                                          colour = NA),
-      # lime first, then gray and white for discrete fills and colours
-      palette.fill.discrete = unname(cols[c("lime", "gray", "text")]),
-      palette.colour.discrete = unname(cols[c("lime", "gray", "text")]),
-      # lime marks by default
-      geom = ggplot2::element_geom(ink = cols[["text"]],
+      # the chat colors for discrete fills and colours
+      palette.fill.discrete = unname(cols[c("cyan", "red", "lime", "yellow")]),
+      palette.colour.discrete = unname(cols[c("cyan", "red", "lime", "yellow")]),
+      # cyan marks by default
+      geom = ggplot2::element_geom(ink = cols[["cyan"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["lime"]],
-                                   colour = cols[["lime"]],
-                                   fill = cols[["lime"]])
+                                   accent = cols[["red"]],
+                                   colour = cols[["cyan"]],
+                                   fill = cols[["cyan"]])
     )
 }
 
 napster_cols <- c(
-  window = "#1C1C1C",
-  panel = "#262626",
+  window = "#C6C6C6",
+  panel = "#000000",
   grid = "#4A4A4A",
-  gray = "#8C8C8C",
-  text = "#F2F2F2",
-  lime = "#7CFC00"
+  gray = "#3E3E3E",
+  text = "#000000",
+  navy = "#0B2187",
+  cyan = "#00FFFF",
+  red = "#FF0000",
+  lime = "#00FF00",
+  yellow = "#FFFF00"
 )
 
 # Verdana ships with macOS and Windows; fall back to sans when it's missing

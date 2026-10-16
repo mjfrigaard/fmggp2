@@ -21,7 +21,8 @@ A \code{ggplot2} theme object.
 }
 \description{
 A late 90s \code{ggplot2} theme modeled on a Beanie Babies heart tag: cream
-background, red heart marks with a gold border, and Comic Sans MS text.
+background, red heart marks with a gold border, plush blue and navy
+accents, and Comic Sans MS text.
 }
 \examples{
 library(ggplot2)

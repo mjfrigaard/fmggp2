@@ -1,8 +1,8 @@
 #' Pogs theme
 #'
 #' A late 90s `ggplot2` theme modeled on Pogs: a cardboard milk cap
-#' background, bright purple, orange, teal, and yellow prints, and a
-#' Bradley Hand title.
+#' background, a purple frame and title, orange, blue, purple, green, rust,
+#' and tan prints, and a Bradley Hand title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -50,8 +50,8 @@ theme_pogs <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["cardboard"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("purple", "orange", "teal", "yellow")]),
-      palette.colour.discrete = unname(cols[c("purple", "orange", "teal", "yellow")]),
+      palette.fill.discrete = unname(cols[c("orange", "blue", "purple", "green", "rust", "tan")]),
+      palette.colour.discrete = unname(cols[c("orange", "blue", "purple", "green", "rust", "tan")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["panel"]],
@@ -67,8 +67,10 @@ pogs_cols <- c(
   panel = "#F6EDDA",
   grid = "#D8C49A",
   ink = "#3B2A14",
-  purple = "#6A1B9A",
-  orange = "#FF6F00",
-  teal = "#00897B",
-  yellow = "#FDD835"
+  purple = "#41358D",
+  orange = "#F27137",
+  blue = "#2E9DBB",
+  green = "#2F7C39",
+  rust = "#BF4423",
+  tan = "#F1B969"
 )

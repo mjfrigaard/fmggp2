@@ -23,9 +23,10 @@ it's available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Friends (1994 to 2004): Monica's
-purple apartment walls, a yellow peephole frame, the red, yellow, and blue
-logo dots, and a Central Perk chalkboard (Chalkduster) title.
+A late 90s \code{ggplot2} theme modeled on the Friends (1994 to 2004) color
+palette: Monica's purple apartment walls, a Central Perk latte frame and
+title, a cream plot area, red, teal, olive, orange, rose, and mocha marks,
+and a Central Perk chalkboard (Chalkduster) title.
 }
 \examples{
 library(ggplot2)

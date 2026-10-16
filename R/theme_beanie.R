@@ -1,7 +1,8 @@
 #' Beanie Babies theme
 #'
 #' A late 90s `ggplot2` theme modeled on a Beanie Babies heart tag: cream
-#' background, red heart marks with a gold border, and Comic Sans MS text.
+#' background, red heart marks with a gold border, plush blue and navy
+#' accents, and Comic Sans MS text.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Comic Sans MS when it's
@@ -43,9 +44,9 @@ theme_beanie <- function(base_size = 11,
       axis.ticks = ggplot2::element_blank(),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["cream"]], colour = NA),
-      # red, gold, then navy for discrete fills and colours
-      palette.fill.discrete = unname(cols[c("red", "gold", "navy")]),
-      palette.colour.discrete = unname(cols[c("red", "gold", "navy")]),
+      # red, plush blue, gold, then navy for discrete fills and colours
+      palette.fill.discrete = unname(cols[c("red", "blue", "gold", "navy")]),
+      palette.colour.discrete = unname(cols[c("red", "blue", "gold", "navy")]),
       # red marks with a gold outline by default
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["white"]],
@@ -57,11 +58,12 @@ theme_beanie <- function(base_size = 11,
 }
 
 beanie_cols <- c(
-  cream = "#FFF8E7",
-  red = "#E2231A",
-  gold = "#E8B828",
+  cream = "#F6E8D7",
+  red = "#EB0716",
+  gold = "#DEB443",
   blush = "#F9D6D3",
-  navy = "#1B2A6B",
+  navy = "#05437C",
+  blue = "#599BBF",
   ink = "#3A1A1A",
   white = "#FFFFFF"
 )

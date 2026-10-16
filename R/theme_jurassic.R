@@ -64,11 +64,11 @@ theme_jurassic <- function(base_size = 11,
 }
 
 jurassic_cols <- c(
-  black = "#141314",
+  black = "#101011",
   panel = "#1F1A17",
   grid = "#431F14",
-  red = "#B51D29",
-  yellow = "#EED50F",
+  red = "#B3142A",
+  yellow = "#F2D900",
   orange = "#C38F32",
   cream = "#F2E7D8",
   tan = "#D0BC94"

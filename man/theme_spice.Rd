@@ -20,9 +20,9 @@ available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Spice Girls era pop: pale pink
-background, hot pink titles, purple marks, gold accents, and Trebuchet MS
-text.
+A late 90s \code{ggplot2} theme modeled on the Spice World tour poster: a
+black background with a tour red frame, a pink title, cream text, mint,
+pink, orange, gold, and blue letter marks, and Trebuchet MS text.
 }
 \examples{
 library(ggplot2)

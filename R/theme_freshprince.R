@@ -1,8 +1,9 @@
 #' Fresh Prince theme
 #'
-#' A late 90s `ggplot2` theme modeled on The Fresh Prince of Bel-Air opening:
-#' deep purple background, graffiti neon green, pink, teal, and yellow, and an
-#' Arial Black title. Continuous fills run from teal to hot pink.
+#' A late 90s `ggplot2` theme modeled on The Fresh Prince of Bel-Air logo: a
+#' pink glow background, a graffiti green frame and title, green, teal, lime,
+#' and olive marks, and an Arial Black title. Continuous fills run from teal
+#' to lime.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -27,50 +28,51 @@ theme_freshprince <- function(base_size = 11,
   cols <- freshprince_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
-      text = ggplot2::element_text(colour = cols[["white"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["purple"]],
-                                              colour = cols[["pink"]],
+      text = ggplot2::element_text(colour = cols[["olive"]]),
+      plot.background = ggplot2::element_rect(fill = cols[["glow"]],
+                                              colour = cols[["green"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
                                          colour = cols[["green"]],
                                          size = ggplot2::rel(1.4)),
-      plot.subtitle = ggplot2::element_text(colour = cols[["yellow"]],
+      plot.subtitle = ggplot2::element_text(colour = cols[["teal"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
       panel.background = ggplot2::element_rect(fill = cols[["panel"]]),
       panel.border = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = cols[["grid"]],
                                                linewidth = 0.4),
       panel.grid.minor = ggplot2::element_blank(),
-      axis.text = ggplot2::element_text(colour = cols[["white"]]),
+      axis.text = ggplot2::element_text(colour = cols[["olive"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["pink"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["purple"]], face = "bold"),
+      strip.background = ggplot2::element_rect(fill = cols[["green"]], colour = NA),
+      strip.text = ggplot2::element_text(colour = cols[["panel"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
-      legend.key = ggplot2::element_rect(fill = cols[["purple"]], colour = NA),
+      legend.key = ggplot2::element_rect(fill = cols[["glow"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("pink", "teal", "yellow", "green")]),
-      palette.colour.discrete = unname(cols[c("pink", "teal", "yellow", "green")]),
-      # teal to hot pink for continuous fills
-      palette.fill.continuous = unname(cols[c("teal", "pink")]),
+      palette.fill.discrete = unname(cols[c("green", "teal", "lime", "olive")]),
+      palette.colour.discrete = unname(cols[c("green", "teal", "lime", "olive")]),
+      # teal to lime for continuous fills
+      palette.fill.continuous = unname(cols[c("teal", "lime")]),
       # default marks
-      geom = ggplot2::element_geom(ink = cols[["white"]],
+      geom = ggplot2::element_geom(ink = cols[["olive"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["pink"]],
-                                   colour = cols[["green"]],
-                                   fill = cols[["pink"]],
+                                   accent = cols[["teal"]],
+                                   colour = cols[["olive"]],
+                                   fill = cols[["green"]],
                                    family = base_family)
     )
 }
 
+# the Fresh Prince of Bel-Air logo: graffiti greens, a cyan Bel-Air, and a
+# pink glow
 freshprince_cols <- c(
-  purple = "#2B0F3A",
-  panel = "#3D1652",
-  grid = "#5A2A73",
-  green = "#7CFF4F",
-  pink = "#FF3EA5",
-  teal = "#16D1C4",
-  yellow = "#FFE14D",
-  white = "#FFFFFF"
+  glow = "#FBD5F0",
+  panel = "#FFFFFF",
+  grid = "#F4BDE3",
+  green = "#28C525",
+  lime = "#BCF22A",
+  teal = "#33B6B7",
+  olive = "#3A4D21"
 )

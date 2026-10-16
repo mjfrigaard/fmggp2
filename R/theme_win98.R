@@ -1,8 +1,9 @@
 #' Windows 98 theme
 #'
 #' A late 90s `ggplot2` theme modeled on a Windows 98 window sitting on the
-#' teal desktop: silver window frame, navy title bar, white plot area, and
-#' navy marks.
+#' teal desktop: silver window frame, navy title bar, white plot area, navy
+#' marks, and desktop icon colors (teal, screen blue, folder yellow, and
+#' gray) for discrete fills.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Tahoma when it's
@@ -51,8 +52,8 @@ theme_win98 <- function(base_size = 11, base_family = win98_font()) {
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["silver"]]),
       # desktop colors for discrete fills and colours
-      palette.fill.discrete = unname(cols[c("shadow", "navy", "desktop")]),
-      palette.colour.discrete = unname(cols[c("shadow", "navy", "desktop")]),
+      palette.fill.discrete = unname(cols[c("desktop", "screen", "folder", "shadow")]),
+      palette.colour.discrete = unname(cols[c("desktop", "screen", "folder", "shadow")]),
       # navy marks by default
       geom = ggplot2::element_geom(ink = cols[["black"]],
                                    paper = cols[["white"]],
@@ -63,10 +64,12 @@ theme_win98 <- function(base_size = 11, base_family = win98_font()) {
 }
 
 win98_cols <- c(
-  desktop = "#008080",
+  desktop = "#117E80",
   silver = "#C0C0C0",
   shadow = "#808080",
   navy = "#000080",
+  screen = "#8BC6D4",
+  folder = "#EEE6A3",
   white = "#FFFFFF",
   black = "#000000"
 )

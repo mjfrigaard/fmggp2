@@ -1,9 +1,9 @@
 #' Sony Walkman theme
 #'
-#' A late 90s `ggplot2` theme modeled on the Sony Sports Walkman: a cobalt
-#' blue backdrop with white grid lines, a sports yellow frame and title,
-#' yellow, green, and beige button colors as marks, charcoal lines, and a
-#' DIN Condensed title.
+#' A late 90s `ggplot2` theme modeled on the Sony Sports Walkman: a sports
+#' yellow body with a blue button frame, a silver plot area, a charcoal
+#' title and text, blue, charcoal, orange, gold, and silver marks, and a DIN
+#' Condensed title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -28,50 +28,49 @@ theme_walkman <- function(base_size = 11,
   cols <- walkman_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
-      text = ggplot2::element_text(colour = cols[["white"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["cobalt"]],
-                                              colour = cols[["yellow"]],
+      text = ggplot2::element_text(colour = cols[["charcoal"]]),
+      plot.background = ggplot2::element_rect(fill = cols[["yellow"]],
+                                              colour = cols[["blue"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
-                                         colour = cols[["yellow"]],
+                                         colour = cols[["charcoal"]],
                                          size = ggplot2::rel(1.5)),
-      plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
+      plot.subtitle = ggplot2::element_text(colour = cols[["charcoal"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
       panel.background = ggplot2::element_rect(fill = cols[["panel"]]),
       panel.border = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = cols[["grid"]],
                                                linewidth = 0.5),
       panel.grid.minor = ggplot2::element_blank(),
-      axis.text = ggplot2::element_text(colour = cols[["white"]]),
+      axis.text = ggplot2::element_text(colour = cols[["charcoal"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["yellow"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["charcoal"]], face = "bold"),
+      strip.background = ggplot2::element_rect(fill = cols[["blue"]], colour = NA),
+      strip.text = ggplot2::element_text(colour = cols[["panel"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
-      legend.key = ggplot2::element_rect(fill = cols[["cobalt"]], colour = NA),
-      # yellow body, green play button, and beige buttons for discrete
-      # fills and colours
-      palette.fill.discrete = unname(cols[c("yellow", "green", "beige", "sky")]),
-      palette.colour.discrete = unname(cols[c("yellow", "green", "beige", "sky")]),
-      # yellow fills with charcoal (button pad) lines by default
+      legend.key = ggplot2::element_rect(fill = cols[["yellow"]], colour = NA),
+      # blue buttons, charcoal display, orange SPORTS label, gold trim, and
+      # silver for discrete fills and colours
+      palette.fill.discrete = unname(cols[c("blue", "charcoal", "orange", "gold", "silver")]),
+      palette.colour.discrete = unname(cols[c("blue", "charcoal", "orange", "gold", "silver")]),
+      # blue fills with charcoal lines by default
       geom = ggplot2::element_geom(ink = cols[["charcoal"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["green"]],
+                                   accent = cols[["orange"]],
                                    colour = cols[["charcoal"]],
-                                   fill = cols[["yellow"]],
+                                   fill = cols[["blue"]],
                                    family = base_family)
     )
 }
 
 walkman_cols <- c(
-  cobalt = "#0276BB",
-  panel = "#036AA9",
-  grid = "#7FB6DD",
-  yellow = "#FBC803",
-  charcoal = "#1A1A1C",
-  green = "#4EC375",
-  sky = "#0498BF",
-  beige = "#DFD1AA",
-  white = "#FFFFFF"
+  yellow = "#F8CE00",
+  panel = "#F6F6F4",
+  grid = "#E4E2DB",
+  blue = "#3351C6",
+  charcoal = "#3A3A36",
+  orange = "#C55C35",
+  gold = "#D9A308",
+  silver = "#B2AD9C"
 )

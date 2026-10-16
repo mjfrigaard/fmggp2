@@ -16,8 +16,9 @@ available on the system, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on the dark 1999 Napster client: near
-black window, white text, dark gray grid, and bright lime marks.
+A late 90s \code{ggplot2} theme modeled on the 1999 Napster client: a gray
+window, black text, a black chat area with a dotted gray grid, and cyan,
+red, lime, and yellow chat marks.
 }
 \examples{
 library(ggplot2)

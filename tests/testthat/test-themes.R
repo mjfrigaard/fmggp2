@@ -2,14 +2,14 @@ test_that("theme_win98 returns a complete theme", {
   thm <- theme_win98(base_family = "sans")
   expect_s3_class(thm, "theme")
   expect_equal(thm$panel.background$fill, "#FFFFFF")
-  expect_equal(thm$plot.background$colour, "#008080")
+  expect_equal(thm$plot.background$colour, "#117E80")
 })
 
 test_that("theme_napster returns a complete theme", {
   thm <- theme_napster(base_family = "sans")
   expect_s3_class(thm, "theme")
-  expect_equal(thm$plot.background$fill, "#1C1C1C")
-  expect_equal(thm$geom$fill, "#7CFC00")
+  expect_equal(thm$plot.background$fill, "#C6C6C6")
+  expect_equal(thm$geom$fill, "#00FFFF")
 })
 
 test_that("themes build a plot", {
