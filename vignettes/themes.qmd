@@ -474,6 +474,21 @@ ggplot(signals, aes(x = night, y = sightings)) +
   theme_batman(base_size = 13)
 ```
 
+## SNICK
+
+`theme_snick()`: Nickelodeon orange and slime green on a night purple sky. Below we simulate 20 weeks of ratings for three nights.
+
+```{r}
+#| label: snick
+set.seed(1992)
+nights <- expand.grid(week = 1:20, night = c("Fri", "Sat", "Sun"))
+nights$rating <- c(Fri = 2.8, Sat = 4.2, Sun = 3.0)[as.character(nights$night)] + rnorm(60, 0, 0.3)
+ggplot(nights, aes(x = week, y = rating, color = night)) +
+  geom_line(linewidth = 1) +
+  labs(title = "SNICK ratings (simulated)", x = "Week", y = "Rating", color = NULL) +
+  theme_snick(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -508,6 +523,7 @@ These themes use Arial for the body text and a display font for the title:
 - Arial Rounded (`theme_aim()`)
 - Skia (`theme_magiceye()`)
 - DIN Condensed (`theme_batman()`)
+- Arial Black (`theme_snick()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

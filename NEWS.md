@@ -1,3 +1,7 @@
+# fmggp2 0.28.0
+
+* New `theme_snick()`: Nickelodeon's Saturday night block, with a night purple background, an orange frame and title, slime green, purple, blue, yellow, and pink marks, and an Arial Black title.
+
 # fmggp2 0.27.0
 
 * New `theme_batman()`: the Batman (1989) palette, with a black background, a gold frame and title, orange and gold marks, and a DIN Condensed title.

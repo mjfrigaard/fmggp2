@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_snick()` | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
 | `theme_batman()` | Batman (1989) | Not yet assigned to a chapter |
 | `theme_magiceye()` | Magic Eye | Raincloud plots (seconds to see the hidden image) |
 | `theme_aim()` | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
