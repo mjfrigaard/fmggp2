@@ -33,7 +33,7 @@ each dataset gets a theme to match.
 | `theme_savedbythebell()` | Saved by the Bell | Slope graphs (Bayside quiz averages) |
 | `theme_boyband()` | Boy bands | Bump charts (weekly radio spins) |
 | `theme_snick()` | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
-| `theme_batman()` | Batman (1989) | Not yet assigned to a chapter |
+| `theme_batman()` | Batman (1989) | Line graphs (weekly box office) |
 | `theme_magiceye()` | Magic Eye | Raincloud plots (seconds to see the hidden image) |
 | `theme_aim()` | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
 | `theme_oregontrail()` | The Oregon Trail | Grouped box plots (days to reach Oregon) |
