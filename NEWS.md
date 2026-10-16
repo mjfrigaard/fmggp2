@@ -1,3 +1,7 @@
+# fmggp2 0.33.0
+
+* New `theme_rugrats()`: a pale yellow Rugrats playpen with an orange frame, a purple Marker Felt title, and Tommy blue, Angelica pink, Reptar green, orange, purple, red, teal, and yellow marks.
+
 # fmggp2 0.32.0
 
 * New `theme_y2k()`: the Y2K countdown, with a black terminal background, a red LED frame and title, red, amber, green, silver, and blue screen marks, and a PT Mono title.

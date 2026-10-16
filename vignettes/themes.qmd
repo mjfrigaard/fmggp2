@@ -556,6 +556,21 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
   theme_y2k(base_size = 13)
 ```
 
+## Rugrats
+
+`theme_rugrats()`: playpen yellow with Tommy blue, Angelica pink, and Reptar green. Below we simulate babies named after three characters.
+
+```{r}
+#| label: rugrats
+set.seed(1993)
+babies <- expand.grid(year = 1985:2000, name = c("Tommy", "Chuckie", "Angelica"))
+babies$n <- rpois(nrow(babies), ifelse(babies$year < 1991, 0.5, 3))
+ggplot(subset(babies, n > 0), aes(x = year, y = name, color = name, alpha = n)) +
+  geom_point(shape = 124, size = 6, show.legend = FALSE) +
+  labs(title = "Rugrats names (simulated)", x = NULL, y = NULL) +
+  theme_rugrats(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -595,6 +610,7 @@ These themes use Arial for the body text and a display font for the title:
 - SignPainter (`theme_savedbythebell()`)
 - Gill Sans (`theme_hypercolor()`)
 - PT Mono (`theme_y2k()`)
+- Marker Felt (`theme_rugrats()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
