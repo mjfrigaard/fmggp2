@@ -1,3 +1,7 @@
+# fmggp2 0.49.0
+
+* New `theme_talkboy()`: the Deluxe Talkboy, with a walnut background, a silver frame and panel, button blue marks, and a Brush Script title. The palette is sampled from "Deluxe Talkboy on table" by Y2kcrazyjoker4 (CC BY-SA 4.0).
+
 # fmggp2 0.48.0
 
 * New `theme_oksoda()`: OK Soda cans, with a brushed silver background, a black frame, a gray comic panel, OK red marks and title, slate and brick accents, and a Courier New title. The palette is sampled from "OK Soda Original 4" by TeemPlayer (CC BY-SA 3.0).
