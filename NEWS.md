@@ -1,3 +1,7 @@
+# fmggp2 0.31.0
+
+* New `theme_hypercolor()`: Generra Hypercolor shirts, with a deep purple background, a magenta frame, heat changing magenta, orange, purple, blue, green, and yellow marks, and a Gill Sans title.
+
 # fmggp2 0.30.0
 
 * New `theme_savedbythebell()`: the Saved by the Bell opening credits, with a black background, a hot pink frame, a white panel, Memphis style teal, magenta, yellow, purple, red, and blue marks, and a SignPainter title.
