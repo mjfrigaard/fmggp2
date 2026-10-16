@@ -676,6 +676,21 @@ ggplot(pages, aes(x = kb, y = seconds)) +
   theme_geocities(base_size = 13)
 ```
 
+## Surge
+
+`theme_surge()`: Surge green on black, with a dark to bright green continuous scale. Below we simulate cans of Surge and hours of video games.
+
+```{r}
+#| label: surge
+set.seed(1996)
+teens <- data.frame(cans = rgamma(2000, 2, 0.5))
+teens$hours <- 3 + 1.5 * teens$cans + rnorm(2000, 0, 3)
+ggplot(teens, aes(x = cans, y = hours)) +
+  geom_bin2d(bins = 20) +
+  labs(title = "Surge and video games", caption = "Simulated data", x = "Cans per week", y = "Gaming hours") +
+  theme_surge(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -723,6 +738,7 @@ These themes use Arial for the body text and a display font for the title:
 - Didot (`theme_clueless()`)
 - Rockwell (`theme_bopit()`)
 - Comic Sans MS (`theme_geocities()`)
+- DIN Alternate (`theme_surge()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

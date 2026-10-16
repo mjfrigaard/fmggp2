@@ -1,3 +1,7 @@
+# fmggp2 0.41.0
+
+* New `theme_surge()`: Surge soda, with a black background, a Surge green frame and title, green, red, orange, yellow, and white marks, a dark to bright green continuous scale, and a DIN Alternate title.
+
 # fmggp2 0.40.0
 
 * New `theme_geocities()`: a GeoCities home page, with a black background, a web gray frame, a dark navy panel, lime green text, a yellow Comic Sans title, web safe marks, and a blue to yellow continuous scale.

@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_surge()` | Surge | Hexagon bins (cans vs. gaming hours) |
 | `theme_geocities()` | GeoCities | 2D histograms (page load times) |
 | `theme_bopit()` | Bop It | Density contours (reaction times) |
 | `theme_clueless()` | Clueless | Parallel sets (Bronson Alcott cliques) |
