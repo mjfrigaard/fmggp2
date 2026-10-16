@@ -1,9 +1,9 @@
 #' Friends theme
 #'
-#' A late 90s `ggplot2` theme modeled on the Friends (1994 to 2004) color
-#' palette: Monica's purple apartment walls, a Central Perk latte frame and
-#' title, a cream plot area, red, teal, olive, orange, rose, and mocha marks,
-#' and a Central Perk chalkboard (Chalkduster) title.
+#' A late 90s `ggplot2` theme modeled on Monica's apartment in Friends (1994
+#' to 2004): purple walls, a sofa cream plot area, a latte frame and title,
+#' poppy red, navy, wood, rust, and rose marks, and a Central Perk chalkboard
+#' (Chalkduster) title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -51,28 +51,27 @@ theme_friends <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["purple"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("red", "teal", "olive", "orange", "rose", "mocha")]),
-      palette.colour.discrete = unname(cols[c("red", "teal", "olive", "orange", "rose", "mocha")]),
+      palette.fill.discrete = unname(cols[c("red", "navy", "wood", "rust", "rose")]),
+      palette.colour.discrete = unname(cols[c("red", "navy", "wood", "rust", "rose")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["purple"]],
                                    paper = cols[["cream"]],
                                    accent = cols[["red"]],
                                    colour = cols[["purple"]],
-                                   fill = cols[["teal"]],
+                                   fill = cols[["red"]],
                                    family = base_family)
     )
 }
 
 friends_cols <- c(
-  purple = "#655C8B",
-  latte = "#C8A07D",
-  cream = "#F2EBDE",
-  lilac = "#D3C4BA",
-  red = "#A81213",
-  teal = "#264D52",
-  olive = "#766D2A",
-  orange = "#B27033",
-  rose = "#BA7A8A",
-  mocha = "#8A6958",
+  purple = "#596086",
+  latte = "#C5B3A4",
+  cream = "#F9F6F0",
+  lilac = "#DCD8E6",
+  red = "#942833",
+  navy = "#383F67",
+  wood = "#784D38",
+  rust = "#965E47",
+  rose = "#B67A66",
   white = "#FFFFFF"
 )
