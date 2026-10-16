@@ -1,3 +1,7 @@
+# fmggp2 0.52.0
+
+* New `theme_koosh()`: a tri color Koosh ball, with a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. The palette is sampled from "Koosh Ball TriColor" by Evan-Amos (public domain).
+
 # fmggp2 0.51.0
 
 * New `theme_orbitz()`: Orbitz, the drink with floating balls, with a black background, a gold frame, gold and magenta marks, and a Marker Felt title. The palette is sampled from "Bottle of Orbitz drink" by Jesse! S? (CC BY 2.0).
