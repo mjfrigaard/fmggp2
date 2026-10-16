@@ -1,5 +1,18 @@
 # Changelog
 
+## fmggp2 0.47.0
+
+- Removed copyrighted reference images from the themes vignette. Themes
+  without a freely licensed image no longer show one.
+
+- [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
+  has a new palette sampled from “Remember Pogs?” by MTSOfan (CC
+  BY-NC-SA 2.0), which the vignette now shows.
+
+- [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
+  has a new palette sampled from “Beanie Baby” by ajay_suresh (CC BY
+  2.0), which the vignette now shows.
+
 ## fmggp2 0.46.0
 
 - The themes vignette uses freely licensed Wikimedia Commons images for

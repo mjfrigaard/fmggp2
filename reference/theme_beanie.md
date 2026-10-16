@@ -1,8 +1,9 @@
 # Beanie Babies theme
 
-A late 90s `ggplot2` theme modeled on a Beanie Babies heart tag: cream
-background, red heart marks with a gold border, plush blue and navy
-accents, and Comic Sans MS text.
+A late 90s `ggplot2` theme modeled on a Ty Beanie with its heart tag: a
+pale aqua blanket background, a tag red frame and title, a white plot
+area, red, teal, gold, pink, plum, and orange marks, and Comic Sans MS
+text.
 
 ## Usage
 

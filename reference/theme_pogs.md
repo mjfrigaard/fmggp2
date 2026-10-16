@@ -1,8 +1,8 @@
 # Pogs theme
 
 A late 90s `ggplot2` theme modeled on Pogs: a cardboard milk cap
-background, a plum frame and title, red, blue, plum, green, rust, and
-tan prints, and a Bradley Hand title.
+background, a navy frame and title, red, sky blue, yellow, teal, purple,
+and rust prints, and a Bradley Hand title.
 
 ## Usage
 

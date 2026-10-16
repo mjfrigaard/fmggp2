@@ -51,8 +51,6 @@ title sits in a navy title bar, the plot area is white, and bars and
 lines are navy by default. Below we simulate 300 AOL dial up sessions
 (in minutes) from a normal distribution.
 
-![](../reference/figures/theme_win98/win98.png)
-
 ``` r
 
 set.seed(1014)
@@ -94,8 +92,6 @@ borrows the 1999 Napster client: a gray window, a black chat area with a
 dotted gray grid, and cyan, red, lime, and yellow chat marks. Below we
 simulate 300 MP3 downloads over a 56k modem from a right skewed gamma
 distribution.
-
-![](../reference/figures/theme_napster/napster.png)
 
 ``` r
 
@@ -145,8 +141,6 @@ uses the Spice World tour poster: black, tour red, and the mint, pink,
 orange, gold, and blue letters. Below we simulate the ages of 400 fans
 at a 1998 concert as a mix of kids and parents.
 
-![](../reference/figures/theme_spice/spice.png)
-
 ``` r
 
 set.seed(1998)
@@ -164,11 +158,15 @@ ggplot(spice_fans, aes(x = age)) +
 ## Beanie Babies
 
 [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-uses the red and gold of a Beanie Babies heart tag, with plush blue and
-navy. Below we simulate 300 resale prices from a log normal
+uses a Ty heart tag red with the blanket teal and fur colors of a
+Beanie. Below we simulate 300 resale prices from a log normal
 distribution.
 
-![](../reference/figures/theme_beanie/beanie.png)
+![](../reference/figures/theme_beanie/beanie-baby.jpg)
+
+Image: “[Beanie
+Baby](https://www.flickr.com/photos/ajay_suresh/51819429583)” by
+ajay_suresh, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 ``` r
 
@@ -266,8 +264,6 @@ uses the show’s palette: Monica’s purple walls, a Central Perk latte
 frame, and red, teal, olive, orange, rose, and mocha marks. Below we
 simulate viewers per episode for three seasons.
 
-![](../reference/figures/theme_friends/friends.png)
-
 ``` r
 
 set.seed(1994)
@@ -310,10 +306,14 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 ## Pogs
 
 [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
-uses a cardboard background and the red, blue, plum, green, rust, and
-tan milk cap prints. Below we simulate a collection of 100 Pogs.
+uses a cardboard background and the red, sky blue, yellow, teal, purple,
+and rust milk cap prints. Below we simulate a collection of 100 Pogs.
 
-![](../reference/figures/theme_pogs/pogs.png)
+![](../reference/figures/theme_pogs/remember-pogs.jpg)
+
+Image: “[Remember
+Pogs?](https://www.flickr.com/photos/mtsofan/6077181975/)” by MTSOfan,
+[CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/).
 
 ``` r
 
@@ -360,8 +360,6 @@ ggplot(walkman, aes(x = hours, y = model)) +
 [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
 MindMaze from Encarta 97, with dark stone, parchment, a carved wood
 frame, gold, copper, and moss, and a Georgia title.
-
-![](../reference/figures/theme_encarta/encarta.png)
 
 ``` r
 
@@ -529,8 +527,6 @@ ggplot(shots, aes(x = feet, color = model)) +
 slime green and drip purple on black. Below we simulate Goosebumps books
 read by two grades.
 
-![](../reference/figures/theme_goosebumps/goosebumps.png)
-
 ``` r
 
 set.seed(1992)
@@ -575,8 +571,6 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 the Sherbet Furby’s red fur, belly blue, beak yellow, and pink. Below we
 simulate Furby chatter in two languages.
 
-![](../reference/figures/theme_furby/furby.png)
-
 ``` r
 
 set.seed(1998)
@@ -595,8 +589,6 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
 [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
 a black studio, TRL yellow, and the MTV logo orange, red, and blue.
 Below we simulate days on the countdown from a gamma distribution.
-
-![](../reference/figures/theme_trl/trl.png)
 
 ![](../reference/figures/theme_trl/mtv-logo.png)
 
@@ -621,8 +613,6 @@ ggplot(videos, aes(x = days, fill = genre)) +
 [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
 an Apple II screen with three shades of phosphor green. Below we
 simulate days to reach Oregon from a log normal distribution.
-
-![](../reference/figures/theme_oregontrail/oregon_trail.png)
 
 ``` r
 
@@ -668,8 +658,6 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
 a deep sea blue with coral, sky, sand, and sea green. Below we simulate
 seconds to see the hidden image on two tries.
 
-![](../reference/figures/theme_magiceye/magic_eye.png)
-
 ``` r
 
 set.seed(1993)
@@ -690,7 +678,11 @@ comes in three versions. The default, `version = "movie"`, uses the
 Batman (1989) palette: black, gold, orange, and steel. Below we simulate
 bat signal sightings over a week.
 
-![](../reference/figures/theme_batman/movie.png)
+![](../reference/figures/theme_batman/pop-culture-library-batman-conference.jpg)
+
+Image: Mbrickn, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Pop_Culture_Library_Batman_Conference.jpg),
+CC BY-SA 4.0.
 
 ``` r
 
@@ -871,8 +863,6 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
 [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
 playpen yellow with the logo’s purple, yellow, red, and green. Below we
 simulate babies named after three characters.
-
-![](../reference/figures/theme_rugrats/rugrats.png)
 
 ``` r
 
