@@ -1,8 +1,8 @@
 # Magic Eye theme
 
-A late 90s `ggplot2` theme modeled on a Magic Eye stereogram poster: a
-deep indigo background, psychedelic magenta, teal, and orange marks, and
-a Skia title.
+A late 90s `ggplot2` theme modeled on a Magic Eye stereogram: a deep sea
+blue background, a coral frame, a sky blue title, and coral, sky, sand,
+and sea green marks, and a Skia title.
 
 ## Usage
 

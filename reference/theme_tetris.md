@@ -1,8 +1,8 @@
 # Tetris theme
 
-A late 90s `ggplot2` theme modeled on Tetris: a black well, the seven
-tetromino colors as marks, and the pixel font Press Start 2P (bundled
-with the package) for the title.
+A late 90s `ggplot2` theme modeled on Tetris: a black well, the
+tetromino block colors as marks, and the pixel font Press Start 2P
+(bundled with the package) for the title.
 
 ## Usage
 

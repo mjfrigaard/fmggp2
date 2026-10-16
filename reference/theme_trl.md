@@ -1,7 +1,7 @@
 # MTV TRL theme
 
 A late 90s `ggplot2` theme modeled on MTV's Total Request Live: a black
-studio, MTV yellow and hot red, Times Square neon marks, and an Impact
+studio, TRL yellow, the MTV logo orange, red, and blue, and an Impact
 title.
 
 ## Usage

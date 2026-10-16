@@ -1,9 +1,9 @@
 # Encarta theme
 
 A late 90s `ggplot2` theme modeled on MindMaze, the castle trivia game
-in Microsoft Encarta 97: a slate stone background, a carved brown frame,
-a gold title, a parchment plot area, stone blue, frame brown, and gold
-marks, and a Georgia title.
+in Microsoft Encarta 97: a dark stone background, a carved wood frame, a
+gold banner title, a parchment plot area, stone gray, copper, gold, and
+moss marks, and a Georgia title.
 
 ## Usage
 

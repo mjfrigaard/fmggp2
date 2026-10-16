@@ -51,7 +51,8 @@ title sits in a navy title bar, the plot area is white, and bars and
 lines are navy by default. Below we simulate 300 AOL dial up sessions
 (in minutes) from a normal distribution.
 
-![](../reference/figures/theme_win98/win98-desktop-icons.png)
+Reference image:
+[Redbubble](https://ih1.redbubble.net/image.896126084.7094/gbrf,10x10,f,540x540-pad,450x450,f8f8f8.webp).
 
 ``` r
 
@@ -95,7 +96,8 @@ dotted gray grid, and cyan, red, lime, and yellow chat marks. Below we
 simulate 300 MP3 downloads over a 56k modem from a right skewed gamma
 distribution.
 
-![](../reference/figures/theme_napster/napster-client.png)
+Reference image:
+[Medium](https://miro.medium.com/v2/resize:fit:1334/0*4MzxqgaA1n5eQQvB.gif).
 
 ``` r
 
@@ -145,7 +147,8 @@ uses the Spice World tour poster: black, tour red, and the mint, pink,
 orange, gold, and blue letters. Below we simulate the ages of 400 fans
 at a 1998 concert as a mix of kids and parents.
 
-![](../reference/figures/theme_spice/spice-world-tour.jpg)
+Reference image:
+[eBay](https://i.ebayimg.com/images/g/I6AAAOSw5bRgFd9h/s-l400.jpg).
 
 ``` r
 
@@ -168,7 +171,8 @@ uses the red and gold of a Beanie Babies heart tag, with plush blue and
 navy. Below we simulate 300 resale prices from a log normal
 distribution.
 
-![](../reference/figures/theme_beanie/beanie-babies.jpg)
+Reference image:
+[Walmart](https://i5.walmartimages.com/asr/b53967d8-f808-4b2f-b93b-30df63bc3029.222ca3a230e89243031c9b7cbeac6241.jpeg).
 
 ``` r
 
@@ -215,7 +219,8 @@ uses the Jurassic Park Post Office souvenir sheet: black, logo red,
 stamp yellow, and sunset orange. Below we simulate the total weight of
 the dinosaurs in each paddock.
 
-![](../reference/figures/theme_jurassic/jurassic-park-stamps.jpg)
+Reference image: [Jurassic
+Toys](https://jurassictoys.net/wp-content/uploads/jurassic-park-stamp-set-1.jpg).
 
 ``` r
 
@@ -236,7 +241,8 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
 uses the red and yellow of a Happy Meal box. Below we simulate average
 daily Happy Meal sales for four toy promotions.
 
-![](../reference/figures/theme_happymeal/happy-meal-box.jpg)
+Reference image:
+[Pinterest](https://i.pinimg.com/474x/66/78/9d/66789d436b4ea3d0adecb90398765b42.jpg).
 
 ``` r
 
@@ -258,7 +264,8 @@ uses the show’s palette: Monica’s purple walls, a Central Perk latte
 frame, and red, teal, olive, orange, rose, and mocha marks. Below we
 simulate viewers per episode for three seasons.
 
-![](../reference/figures/theme_friends/friends-palette.jpg)
+Reference image:
+[Pinterest](https://i.pinimg.com/736x/2b/58/1c/2b581cddf63b330b549f22ab18b8825a.jpg).
 
 ``` r
 
@@ -280,7 +287,8 @@ uses the logo: graffiti greens on a pink glow, and its continuous fill
 runs from teal to lime. Below we simulate how often the Carlton dance
 shows up each season.
 
-![](../reference/figures/theme_freshprince/fresh-prince-logo.jpg)
+Reference image: [Logos
+World](https://logos-world.net/wp-content/uploads/2023/12/Fresh-Prince-Logo.jpg).
 
 ``` r
 
@@ -301,7 +309,8 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 uses a cardboard background and the orange, blue, purple, green, rust,
 and tan milk cap prints. Below we simulate a collection of 100 Pogs.
 
-![](../reference/figures/theme_pogs/pogs.jpg)
+Reference image:
+[Alamy](https://c8.alamy.com/comp/M6F0K8/collection-of-the-mid-90s-game-of-pogs-M6F0K8.jpg).
 
 ``` r
 
@@ -323,7 +332,8 @@ uses the Sports Walkman: a sports yellow body, blue buttons, a charcoal
 display, and an orange SPORTS label. Below we simulate median battery
 life for three models and two battery types.
 
-![](../reference/figures/theme_walkman/sports-walkman.jpg)
+Reference image:
+[Etsy](https://i.etsystatic.com/6017061/r/il/fcda14/3943289314/il_fullxfull.3943289314_ckx2.jpg).
 
 ``` r
 
@@ -342,14 +352,11 @@ ggplot(walkman, aes(x = hours, y = model)) +
 ## Encarta and Britannica
 
 [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
-MindMaze from Encarta 97, with slate stone, parchment, a carved brown
-frame, and gold, and a Georgia title.
+MindMaze from Encarta 97, with dark stone, parchment, a carved wood
+frame, gold, copper, and moss, and a Georgia title.
 
-![](../reference/figures/theme_encarta/encarta-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Encarta_logo.svg),
-public domain.
+Reference image:
+[Eurogamer](https://assetsio.gnwcdn.com/hyp_mindmaze.jpg).
 
 ``` r
 
@@ -368,14 +375,11 @@ ggplot(enc, aes(x = year, y = share, fill = choice)) +
 ## Netscape
 
 [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md):
-the Netscape Navigator night sky with star yellow, teal, magenta, and
-meteor orange and a Times New Roman title.
+the Netscape Navigator logo, with a night sky and teal, aurora green,
+sea glass, and deep teal marks, and a Times New Roman title.
 
-![](../reference/figures/theme_netscape/netscape-navigator-3-screenshot.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png),
-CC0.
+Reference image: [The Retro
+Hour](https://theretrohour.com/wp-content/uploads/2024/10/Netscape_Hero.png).
 
 ``` r
 
@@ -394,15 +398,12 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
 ## Titanic
 
 [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md):
-the Titanic’s original paint colors (hull black, hull stripe gold,
-canvas, antifouling red, White Star buff, and funnel gray) with a Big
-Caslon title.
+the Vallejo Titanic Colors paint set (black, yellow, canvas,
+anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon
+title.
 
-![](../reference/figures/theme_titanic/rms-titanic-3.jpg)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:RMS_Titanic_3.jpg),
-public domain.
+Reference image: [Airbrush
+Fengda](https://www.airbrush-fengda.co.uk/environment/cache/images/productGfx_9410_0_0/5a800ec3d3b72145a63956b4fcf51ffa.jpg).
 
 ``` r
 
@@ -514,14 +515,11 @@ ggplot(shots, aes(x = feet, color = model)) +
 ## Goosebumps
 
 [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
-haunted purple and slime green. Below we simulate Goosebumps books read
-by two grades.
+slime green and drip purple on black. Below we simulate Goosebumps books
+read by two grades.
 
-![](../reference/figures/theme_goosebumps/goosebumps-book-series-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Goosebumps_(book_series)_logo.svg),
-public domain.
+Reference image:
+[Redbubble](https://ih1.redbubble.net/image.5477697498.9668/flat,750x,075,f-pad,750x1000,f8f8f8.jpg).
 
 ``` r
 
@@ -539,14 +537,11 @@ ggplot(readers, aes(x = books, fill = grade)) +
 ## Tetris
 
 [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md):
-a black well and the seven tetromino colors. Below we simulate lines
+a black well and the tetromino block colors. Below we simulate lines
 cleared from a negative binomial distribution.
 
-![](../reference/figures/theme_tetris/game-boy-with-tetris-cartridge.jpg)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Game_Boy_with_Tetris_cartridge.jpg),
-CC0.
+Reference image: [How to
+Tetris](https://howtotetris.com/wp-content/uploads/2026/01/image-237.png).
 
 ``` r
 
@@ -564,14 +559,11 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 ## Furby
 
 [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
-purple fur, teal, orange, and pink. Below we simulate Furby chatter in
-two languages.
+the Sherbet Furby’s red fur, belly blue, beak yellow, and pink. Below we
+simulate Furby chatter in two languages.
 
-![](../reference/figures/theme_furby/furby-brand-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Furby_brand_logo.svg),
-public domain.
+Reference image: [Official Furby
+Wiki](https://static.wikia.nocookie.net/official-furby/images/7/72/SherbetFurby.JPG/).
 
 ``` r
 
@@ -589,14 +581,13 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
 ## MTV TRL
 
 [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
-a black studio, MTV yellow, and neon colors. Below we simulate days on
-the countdown from a gamma distribution.
+a black studio, TRL yellow, and the MTV logo orange, red, and blue.
+Below we simulate days on the countdown from a gamma distribution.
 
-![](../reference/figures/theme_trl/trl-studios-in-times-square-in-2006.jpg)
-
-Image: Diogo Almeida, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:TRL_studios_in_Times_Square_in_2006.jpg),
-CC BY-SA 2.5.
+Reference image:
+[Seeklogo](https://images.seeklogo.com/logo-png/32/1/mtv-trl-logo-png_seeklogo-329262.png),
+[Logos
+World](https://logos-world.net/wp-content/uploads/2020/09/MTV-Emblem.png).
 
 ``` r
 
@@ -614,14 +605,11 @@ ggplot(videos, aes(x = days, fill = genre)) +
 ## Oregon Trail
 
 [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
-an Apple II screen with phosphor green text. Below we simulate days to
-reach Oregon from a log normal distribution.
+an Apple II screen with three shades of phosphor green. Below we
+simulate days to reach Oregon from a log normal distribution.
 
-![](../reference/figures/theme_oregontrail/the-oregon-trail-apple-ii-screenshot.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:The_Oregon_Trail_(Apple_II)_screenshot.png),
-public domain.
+Reference image: [Smithsonian
+Magazine](https://th-thumbnailer.cdn-si-edu.com/C4swxJCbQ99AYghsj5raYu30nhI=/1280x1280/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/42/54/4254a590-f18f-4cde-b772-64a2043f1610/the-oregon-trail.jpg).
 
 ``` r
 
@@ -642,8 +630,6 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
 the yellow running man, AOL blue, and a white chat window. Below we
 simulate buddy list sizes with different shapes.
 
-![](../reference/figures/theme_aim/on-may-1-1997-aol-instant-messenger-aim-was-released-i-v0-zgwnb3e6xhxa1.webp)
-
 ``` r
 
 set.seed(1997)
@@ -660,15 +646,11 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
 ## Magic Eye
 
 [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md):
-deep indigo and psychedelic magenta, teal, and orange. Below we simulate
+a deep sea blue with coral, sky, sand, and sea green. Below we simulate
 seconds to see the hidden image on two tries.
 
-![](../reference/figures/theme_magiceye/stereogram-tut-random-dot-shark.png)
-
-Image: No machine-readable author provided. Fred Hsu assumed (based on
-copyright claims)., [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Stereogram_Tut_Random_Dot_Shark.png),
-CC BY-SA 3.0.
+Reference image: [AIGA Eye on
+Design](https://eyeondesign.aiga.org/wp-content/uploads/2019/04/aiga-eod-magiceye1.jpg).
 
 ``` r
 
@@ -689,8 +671,6 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
 comes in three versions. The default, `version = "movie"`, uses the
 Batman (1989) palette: black, gold, orange, and steel. Below we simulate
 bat signal sightings over a week.
-
-![](../reference/figures/theme_batman/movie.jpeg)
 
 ``` r
 
@@ -787,13 +767,13 @@ ggplot(spins, aes(x = band, y = spins, fill = band)) +
 ## Saved by the Bell
 
 [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md):
-Memphis style teal, magenta, and yellow on black. Below we simulate fall
-and spring quiz averages for three students.
+the logo’s sky blue, pink, yellow, and orange on black. Below we
+simulate fall and spring quiz averages for three students.
 
-![](../reference/figures/theme_savedbythebell/saved-by-the-bell-original-series-logo.png)
+![](../reference/figures/theme_savedbythebell/saved-by-the-bell-original-series-logo-2.png)
 
 Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo.svg),
+Commons](https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo_(2).svg),
 public domain.
 
 ``` r
@@ -869,14 +849,11 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
 ## Rugrats
 
 [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
-playpen yellow with Tommy blue, Angelica pink, and Reptar green. Below
-we simulate babies named after three characters.
+playpen yellow with the logo’s purple, yellow, red, and green. Below we
+simulate babies named after three characters.
 
-![](../reference/figures/theme_rugrats/rugrats-logo2.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Rugrats_logo2.png),
-public domain.
+Reference image: [1000
+Logos](https://1000logos.net/wp-content/uploads/2020/11/Rugrats-Logo.jpg).
 
 ``` r
 

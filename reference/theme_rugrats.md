@@ -1,8 +1,8 @@
 # Rugrats theme
 
-A `ggplot2` theme built from Rugrats: a pale yellow playpen background,
-an orange frame, a purple Marker Felt title, and Tommy blue, Angelica
-pink, Reptar green, orange, purple, red, teal, and yellow marks.
+A `ggplot2` theme built from the Rugrats logo: a pale yellow playpen
+background, a purple frame and Marker Felt title, and purple, yellow,
+red, green, plum, and gold marks.
 
 ## Usage
 

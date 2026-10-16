@@ -1,8 +1,8 @@
 # Saved by the Bell theme
 
-A `ggplot2` theme built from the Saved by the Bell opening credits: a
-black background with a hot pink frame, a white classroom panel, teal,
-magenta, yellow, purple, red, and blue Memphis style marks, and a
+A `ggplot2` theme built from the Saved by the Bell logo: a black
+background with a royal blue frame, a yellow title, a white classroom
+panel, sky blue, pink, yellow, orange, royal blue, and navy marks, and a
 SignPainter title.
 
 ## Usage

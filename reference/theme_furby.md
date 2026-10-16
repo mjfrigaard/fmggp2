@@ -1,7 +1,8 @@
 # Furby theme
 
-A late 90s `ggplot2` theme modeled on a Furby: purple fur, a soft white
-plot area, teal, orange, and pink marks, and a Chalkboard SE title.
+A late 90s `ggplot2` theme modeled on the Sherbet Furby: red fur, a beak
+yellow frame, a pale blue belly plot area, and belly blue, beak yellow,
+pink, and eye blue marks, and a Chalkboard SE title.
 
 ## Usage
 

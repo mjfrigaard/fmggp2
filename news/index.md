@@ -1,5 +1,25 @@
 # Changelog
 
+## fmggp2 0.44.0
+
+- New palettes for
+  [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md),
+  [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md),
+  [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md),
+  [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md),
+  [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md),
+  [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md),
+  [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md),
+  [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md),
+  [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md),
+  [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md),
+  and
+  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md),
+  sampled from new reference images.
+
+- The themes vignette links to reference images that are not licensed
+  for reuse instead of hosting them.
+
 ## fmggp2 0.43.0
 
 - New reference images and palettes for
