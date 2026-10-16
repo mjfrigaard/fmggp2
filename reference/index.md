@@ -4,14 +4,14 @@
 
 - [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
   : Game Boy theme
-- [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
-  : Windows 98 theme
-- [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-  : Napster theme
+- [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md)
+  : OK Soda theme
+- [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md)
+  : Talkboy theme
 - [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
   : Blockbuster theme
-- [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
-  : Spice Girls theme
+- [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
+  : Crystal Pepsi theme
 - [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
   : Beanie Babies theme
 - [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
@@ -28,14 +28,14 @@
   : Pogs theme
 - [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
   : Sony Walkman theme
-- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
-  : Encarta theme
+- [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md)
+  : Orbitz theme
 - [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md)
   : Netscape theme
 - [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
   : Titanic theme
-- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
-  : Lisa Frank theme
+- [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md)
+  : Koosh ball theme
 - [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
   : Toys R Us theme
 - [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md)
@@ -48,14 +48,14 @@
   : Tetris theme
 - [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
   : Furby theme
-- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
-  : MTV TRL theme
+- [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md)
+  : Squeezit theme
 - [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
   : Oregon Trail theme
 - [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md)
   : AIM theme
-- [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md)
-  : Magic Eye theme
+- [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md)
+  : Tiger R-Zone theme
 - [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
   : Batman theme
 - [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md)
@@ -68,8 +68,8 @@
   : Hypercolor theme
 - [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md)
   : Y2K theme
-- [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md)
-  : Rugrats theme
+- [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md)
+  : Fruit Gushers theme
 - [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md)
   : Doom theme
 - [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md)

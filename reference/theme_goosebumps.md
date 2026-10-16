@@ -1,8 +1,9 @@
 # Goosebumps theme
 
-A late 90s `ggplot2` theme modeled on the Goosebumps logo: a black
+A late 90s `ggplot2` theme modeled on the Goosebumps books: a black
 background, a slime green frame and title, a dark purple plot area,
-slime green, drip purple, and moss marks, and a Trattatello title.
+slime green, purple, moss, pale green, and orchid marks, and a
+Trattatello title.
 
 ## Usage
 

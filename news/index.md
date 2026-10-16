@@ -1,12 +1,109 @@
 # Changelog
 
+## fmggp2 0.56.0
+
+- Removed `theme_win98()`, `theme_napster()`, `theme_spice()`,
+  `theme_encarta()`, `theme_lisafrank()`, `theme_magiceye()`,
+  `theme_rugrats()`, and `theme_trl()`, which had no freely licensed
+  reference image. The book chapters that used them now use
+  [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md),
+  [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md),
+  [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md),
+  [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md),
+  [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md),
+  [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md),
+  [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md),
+  and
+  [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md).
+  `ggtext` is no longer a dependency.
+
+- [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
+  has a new palette and a gray window frame sampled from “Nicole has
+  dysentary” by The Pug Father (CC BY 2.0), which the vignette now
+  shows.
+
+- [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md)
+  has new slime green and purple colors sampled from the Goosebumps book
+  covers, plus pale green and orchid marks.
+
+- The README and themes vignette show the new themes with their
+  reference images.
+
+## fmggp2 0.55.0
+
+- New
+  [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md):
+  Squeezit bottles on gravel, with a gravel background, a red frame and
+  title, red, orange, green, pink, blue, and gold marks, and a Skia
+  title. The palette is sampled from “Squeezeit flavours” by ZolHaj (CC
+  BY-SA 4.0).
+
+## fmggp2 0.54.0
+
+- New
+  [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md):
+  Fruit Gushers, with a white plate background, a red frame and title,
+  eight fruit snack marks (red, green, teal, orange, pink, maroon, moss,
+  and gray), and a Chalkboard title. The palette is sampled from “Betty
+  Crocker Fruit Gushers pieces” by Thomson200 (CC0).
+
+## fmggp2 0.53.0
+
+- New
+  [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md):
+  the Tiger R-Zone headset, with black plastic, a red frame and title,
+  red, purple, and pink marks, pale blue visor text, and an Arial Narrow
+  title. The palette is sampled from “Tiger RZone Headset” by Evan-Amos
+  (public domain).
+
+## fmggp2 0.52.0
+
+- New
+  [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md):
+  a tri color Koosh ball, with a white background, an orange frame,
+  orange, purple, and black marks, and an Arial Rounded title. The
+  palette is sampled from “Koosh Ball TriColor” by Evan-Amos (public
+  domain).
+
+## fmggp2 0.51.0
+
+- New
+  [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md):
+  Orbitz, the drink with floating balls, with a black background, a gold
+  frame, gold and magenta marks, and a Marker Felt title. The palette is
+  sampled from “Bottle of Orbitz drink” by Jesse! S? (CC BY 2.0).
+
+## fmggp2 0.50.0
+
+- New
+  [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md):
+  Crystal Pepsi, with a clear bottle cream background, a navy frame,
+  Pepsi red and navy marks, and a Futura title. The palette is sampled
+  from “Crystal Pepsi” by Mike Mozart (CC BY 2.0).
+
+## fmggp2 0.49.0
+
+- New
+  [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md):
+  the Deluxe Talkboy, with a walnut background, a silver frame and
+  panel, button blue marks, and a Brush Script title. The palette is
+  sampled from “Deluxe Talkboy on table” by Y2kcrazyjoker4 (CC BY-SA
+  4.0).
+
+## fmggp2 0.48.0
+
+- New
+  [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md):
+  OK Soda cans, with a brushed silver background, a black frame, a gray
+  comic panel, OK red marks and title, slate and brick accents, and a
+  Courier New title. The palette is sampled from “OK Soda Original 4” by
+  TeemPlayer (CC BY-SA 3.0).
+
 ## fmggp2 0.47.1
 
-- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
-  adds white as a sixth discrete color and
-  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md)
-  adds Tommy blue and orange for eight, so the book’s ridgeline plot and
-  instance chart have enough colors again.
+- `theme_trl()` adds white as a sixth discrete color and
+  `theme_rugrats()` adds Tommy blue and orange for eight, so the book’s
+  ridgeline plot and instance chart have enough colors again.
 
 ## fmggp2 0.47.0
 
@@ -46,30 +143,25 @@
 
 ## fmggp2 0.44.0
 
-- New palettes for
-  [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md),
+- New palettes for `theme_encarta()`,
   [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md),
   [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md),
   [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md),
   [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md),
   [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md),
-  [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md),
+  `theme_trl()`,
   [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md),
-  [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md),
+  `theme_magiceye()`,
   [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md),
-  and
-  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md),
-  sampled from new reference images.
+  and `theme_rugrats()`, sampled from new reference images.
 
 - The themes vignette links to reference images that are not licensed
   for reuse instead of hosting them.
 
 ## fmggp2 0.43.0
 
-- New reference images and palettes for
-  [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md),
-  [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md),
-  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md),
+- New reference images and palettes for `theme_win98()`,
+  `theme_napster()`, `theme_spice()`,
   [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md),
   [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md),
   [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md),
@@ -78,10 +170,8 @@
   [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md),
   and
   [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md).
-  [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-  now uses the gray client window with a black chat area,
-  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
-  the Spice World tour poster,
+  `theme_napster()` now uses the gray client window with a black chat
+  area, `theme_spice()` the Spice World tour poster,
   [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
   the show logo, and
   [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
@@ -161,11 +251,9 @@
 
 ## fmggp2 0.33.0
 
-- New
-  [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
-  a pale yellow Rugrats playpen with an orange frame, a purple Marker
-  Felt title, and Tommy blue, Angelica pink, Reptar green, orange,
-  purple, red, teal, and yellow marks.
+- New `theme_rugrats()`: a pale yellow Rugrats playpen with an orange
+  frame, a purple Marker Felt title, and Tommy blue, Angelica pink,
+  Reptar green, orange, purple, red, teal, and yellow marks.
 
 ## fmggp2 0.32.0
 
@@ -216,10 +304,8 @@
 
 ## fmggp2 0.26.0
 
-- New
-  [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md):
-  a deep indigo Magic Eye poster with psychedelic magenta, teal, and
-  orange marks and a Skia title.
+- New `theme_magiceye()`: a deep indigo Magic Eye poster with
+  psychedelic magenta, teal, and orange marks and a Skia title.
 
 ## fmggp2 0.25.0
 
@@ -237,10 +323,8 @@
 
 ## fmggp2 0.23.0
 
-- New
-  [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
-  MTV’s Total Request Live black studio, MTV yellow, and neon marks with
-  an Impact title.
+- New `theme_trl()`: MTV’s Total Request Live black studio, MTV yellow,
+  and neon marks with an Impact title.
 
 ## fmggp2 0.22.0
 
@@ -285,15 +369,13 @@
 - [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
   now uses the Jurassic Park Post Office souvenir sheet palette (black,
   logo red, stamp yellow, sunset orange, cream, and tan).
-- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
-  now uses the Lisa Frank folder palette (purple, magenta, orange,
-  yellow, and white).
+- `theme_lisafrank()` now uses the Lisa Frank folder palette (purple,
+  magenta, orange, yellow, and white).
 - [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
   now uses the Titanic’s original paint colors (hull black, hull stripe
   gold, canvas, antifouling red, White Star buff, and funnel gray).
-- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
-  now uses colors from MindMaze in Encarta 97 (slate stone, parchment,
-  carved frame brown, and gold).
+- `theme_encarta()` now uses colors from MindMaze in Encarta 97 (slate
+  stone, parchment, carved frame brown, and gold).
 
 ## fmggp2 0.17.0
 
@@ -304,9 +386,8 @@
 
 ## fmggp2 0.16.0
 
-- New
-  [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md):
-  Lisa Frank hot pink with rainbow neon marks and a Chalkboard title.
+- New `theme_lisafrank()`: Lisa Frank hot pink with rainbow neon marks
+  and a Chalkboard title.
 
 ## fmggp2 0.15.0
 
@@ -324,10 +405,9 @@
 
 ## fmggp2 0.13.0
 
-- New
-  [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
-  Encarta and Encyclopedia Britannica on CD-ROM, with midnight navy,
-  parchment, gold, blue, and maroon and a Georgia title.
+- New `theme_encarta()`: Encarta and Encyclopedia Britannica on CD-ROM,
+  with midnight navy, parchment, gold, blue, and maroon and a Georgia
+  title.
 
 ## fmggp2 0.12.0
 
@@ -385,9 +465,8 @@
 
 ## fmggp2 0.4.0
 
-- New
-  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md):
-  Spice Girls era pinks, purple, and gold with Trebuchet MS text.
+- New `theme_spice()`: Spice Girls era pinks, purple, and gold with
+  Trebuchet MS text.
 
 ## fmggp2 0.3.0
 
@@ -405,10 +484,7 @@
 
 ## fmggp2 0.1.0
 
-- [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
-  and
-  [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-  late 90s themes.
+- `theme_win98()` and `theme_napster()` late 90s themes.
 - Book helpers
   [`co_box()`](https://mjfrigaard.github.io/fmggp2/reference/co_box.md),
   [`status()`](https://mjfrigaard.github.io/fmggp2/reference/status.md),

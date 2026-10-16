@@ -43,71 +43,65 @@ ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
 
 ![](themes_files/figure-html/gameboy-1.png)
 
-## Windows 98
+## OK Soda
 
-[`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
-draws the plot as a Windows 98 window sitting on the teal desktop. The
-title sits in a navy title bar, the plot area is white, and bars and
-lines are navy by default. Below we simulate 300 AOL dial up sessions
-(in minutes) from a normal distribution.
+[`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md)
+uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed
+silver, black ink, OK red bars and title, and slate and brick accents,
+with a Courier New title. Below we simulate one day of sales at 300 test
+market stores from a normal distribution.
+
+![](../reference/figures/theme_oksoda/ok-soda-original-4.jpg)
+
+Image: TeemPlayer, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg),
+CC BY-SA 3.0.
 
 ``` r
 
 set.seed(1014)
-aol_sessions <- data.frame(
-  minutes = round(rnorm(n = 300, mean = 45, sd = 12))
+ok_soda_sales <- data.frame(
+  cans = round(rnorm(n = 300, mean = 45, sd = 12))
 )
-ggplot(aol_sessions, aes(x = minutes)) +
+ggplot(ok_soda_sales, aes(x = cans)) +
   geom_histogram(bins = 30) +
-  labs(title = "AOL dial up sessions (simulated)",
-       subtitle = "Distribution of session length",
-       x = "Session length (minutes)") +
-  theme_win98(base_size = 13)
+  labs(title = "OK Soda", caption = "Simulated data",
+       subtitle = "Cans sold per store in one day",
+       x = "Cans sold") +
+  theme_oksoda(base_size = 13)
 ```
 
-![](themes_files/figure-html/win98-1.png)
+![](themes_files/figure-html/oksoda-1.png)
 
-Discrete fills follow the desktop icons (teal, screen blue, folder
-yellow, then gray).
+## Talkboy
 
-``` r
-
-aol_ranges <- data.frame(
-  range = factor(c("under 33", "33 to 56", "57 and over"),
-                 levels = c("under 33", "33 to 56", "57 and over")),
-  n = c(47, 193, 60)
-)
-ggplot(aol_ranges, aes(x = n, y = "300 sessions", fill = range)) +
-  geom_col(position = position_stack(reverse = TRUE)) +
-  labs(x = "Number of sessions", y = NULL, fill = "Minutes") +
-  theme_win98(base_size = 13)
-```
-
-![](themes_files/figure-html/win98-discrete-1.png)
-
-## Napster
-
-[`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-borrows the 1999 Napster client: a gray window, a black chat area with a
-dotted gray grid, and cyan, red, lime, and yellow chat marks. Below we
-simulate 300 MP3 downloads over a 56k modem from a right skewed gamma
+[`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md)
+uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a
+silver panel, button blue marks, and a Brush Script title. Below we
+simulate the length of 300 recorded messages from a right skewed gamma
 distribution.
+
+![](../reference/figures/theme_talkboy/deluxe-talkboy-on-table.jpg)
+
+Image: Y2kcrazyjoker4, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg),
+CC BY-SA 4.0.
 
 ``` r
 
 set.seed(1999)
-napster_downloads <- data.frame(
-  minutes = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
+talkboy_clips <- data.frame(
+  seconds = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
 )
-ggplot(napster_downloads, aes(x = minutes)) +
+ggplot(talkboy_clips, aes(x = seconds)) +
   geom_freqpoly(bins = 30) +
-  labs(title = "Napster MP3 downloads (simulated)",
-       subtitle = "Download time over a 56k modem",
-       x = "Download time (minutes)") +
-  theme_napster(base_size = 13)
+  labs(title = "Talkboy", caption = "Simulated data",
+       subtitle = "Length of 300 recorded messages",
+       x = "Message length (seconds)") +
+  theme_talkboy(base_size = 13)
 ```
 
-![](themes_files/figure-html/napster-1.png)
+![](themes_files/figure-html/talkboy-1.png)
 
 ## Blockbuster
 
@@ -134,26 +128,33 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
 
 ![](themes_files/figure-html/blockbuster-1.png)
 
-## Spice Girls
+## Crystal Pepsi
 
-[`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
-uses the Spice World tour poster: black, tour red, and the mint, pink,
-orange, gold, and blue letters. Below we simulate the ages of 400 fans
-at a 1998 concert as a mix of kids and parents.
+[`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
+uses the clear bottle and its label: a cream background, a navy frame,
+Pepsi red and navy marks, and a Futura title. Below we simulate the ages
+of 400 people at a 1992 mall taste test as a mix of kids and parents.
+
+![](../reference/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg)
+
+Image: Mike Mozart, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg),
+CC BY 2.0.
 
 ``` r
 
 set.seed(1998)
 kid <- runif(400) < 0.65
-spice_fans <- data.frame(age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
-ggplot(spice_fans, aes(x = age)) +
-  geom_density() +
-  labs(title = "Spice World tour (simulated)",
-       x = "Age (years)") +
-  theme_spice(base_size = 13)
+tasters <- data.frame(group = ifelse(kid, "Kid", "Parent"),
+  age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
+ggplot(tasters, aes(x = age, fill = group)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "Crystal Pepsi", caption = "Simulated data",
+       x = "Age (years)", fill = NULL) +
+  theme_crystalpepsi(base_size = 13)
 ```
 
-![](themes_files/figure-html/spice-1.png)
+![](themes_files/figure-html/crystalpepsi-1.png)
 
 ## Beanie Babies
 
@@ -361,25 +362,34 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ![](themes_files/figure-html/walkman-1.png)
 
-## Encarta and Britannica
+## Orbitz
 
-[`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
-MindMaze from Encarta 97, with dark stone, parchment, a carved wood
-frame, gold, copper, and moss, and a Georgia title.
+[`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md)
+uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black
+background, a gold frame, gold and magenta marks, and a Marker Felt
+title. Below we compare the share of kids buying Orbitz and Surge each
+week after Orbitz arrived.
+
+![](../reference/figures/theme_orbitz/bottle-of-orbitz-drink.jpg)
+
+Image: Jesse! S?, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg),
+CC BY 2.0.
 
 ``` r
 
-p_encarta <- 0.8 * plogis(-2 + 0.6 * (0:6))
-enc <- data.frame(year = factor(rep(1993:1999, 2)),
-  choice = rep(c("Encarta", "Britannica"), each = 7),
-  share = c(p_encarta, -(0.8 - p_encarta)))
-ggplot(enc, aes(x = year, y = share, fill = choice)) +
+p_surge <- 0.8 * plogis(-2 + 0.6 * (0:6))
+drinks <- data.frame(week = factor(rep(1:7, 2)),
+  choice = factor(rep(c("Surge", "Orbitz"), each = 7), levels = c("Surge", "Orbitz")),
+  share = c(p_surge, -(0.8 - p_surge)))
+ggplot(drinks, aes(x = week, y = share, fill = choice)) +
   geom_col(width = 0.5) +
-  labs(title = "Encarta vs. Britannica (simulated)", x = NULL, y = "Share", fill = NULL) +
-  theme_encarta(base_size = 13)
+  labs(title = "Orbitz vs. Surge", caption = "Simulated data",
+       x = "Week", y = "Share of kids", fill = NULL) +
+  theme_orbitz(base_size = 13)
 ```
 
-![](themes_files/figure-html/encarta-1.png)
+![](themes_files/figure-html/orbitz-1.png)
 
 ## Netscape
 
@@ -433,24 +443,32 @@ ggplot(fans, aes(x = age_group, fill = viewings)) +
 
 ![](themes_files/figure-html/titanic-1.png)
 
-## Lisa Frank
+## Koosh ball
 
-[`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md):
-the Lisa Frank folder palette (purple, magenta, orange, yellow, and
-white) with a Chalkboard title.
+[`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md)
+uses a tri color Koosh ball: a white background, an orange frame,
+orange, purple, and black marks, and an Arial Rounded title. Below we
+simulate the styles of 200 Koosh balls sold at a toy store.
+
+![](../reference/figures/theme_koosh/koosh-ball-tricolor.jpg)
+
+Image: Evan-Amos, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg),
+public domain.
 
 ``` r
 
 set.seed(1993)
-keepers <- data.frame(design = sample(c("Rainbow leopards", "Unicorns", "Dolphins", "Pandas"),
-  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)))
-ggplot(keepers, aes(x = design, fill = design)) +
+koosh_balls <- data.frame(style = factor(sample(c("Tri color", "Rainbow", "Neon", "Glow"),
+  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)),
+  levels = c("Tri color", "Rainbow", "Neon", "Glow")))
+ggplot(koosh_balls, aes(x = style, fill = style)) +
   geom_bar(show.legend = FALSE) +
-  labs(title = "Trapper Keepers (simulated)", x = NULL, y = "Sold") +
-  theme_lisafrank(base_size = 13)
+  labs(title = "Koosh balls", caption = "Simulated data", x = NULL, y = "Sold") +
+  theme_koosh(base_size = 13)
 ```
 
-![](themes_files/figure-html/lisafrank-1.png)
+![](themes_files/figure-html/koosh-1.png)
 
 ## Toys”R”Us
 
@@ -530,8 +548,9 @@ ggplot(shots, aes(x = feet, color = model)) +
 ## Goosebumps
 
 [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
-slime green and drip purple on black. Below we simulate Goosebumps books
-read by two grades.
+the slime green logo and purple covers of the Goosebumps books on black,
+with a Trattatello title. Below we simulate Goosebumps books read by two
+grades.
 
 ``` r
 
@@ -596,35 +615,48 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
 
 ![](themes_files/figure-html/furby-1.png)
 
-## MTV TRL
+## Squeezit
 
-[`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md):
-a black studio, TRL yellow, and the MTV logo orange, red, and blue.
-Below we simulate days on the countdown from a gamma distribution.
+[`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md)
+uses Squeezit bottles standing in gravel: a gravel background, a red
+frame and title, red, orange, green, pink, blue, and gold marks, and a
+Skia title. Below we simulate the seconds it took to squeeze out three
+flavors from a gamma distribution.
 
-![](../reference/figures/theme_trl/mtv-logo.png)
+![](../reference/figures/theme_squeezit/squeezeit-flavours.jpg)
 
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:MTV_logo.png), CC0.
+Image: ZolHaj, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg),
+CC BY-SA 4.0.
 
 ``` r
 
 set.seed(1998)
-videos <- data.frame(genre = rep(c("Rock", "Rap", "Boy bands"), each = 60))
-videos$days <- rgamma(180, shape = 2.5, scale = c(Rock = 12, Rap = 22, `Boy bands` = 40)[videos$genre] / 2.5)
-ggplot(videos, aes(x = days, fill = genre)) +
+bottles <- data.frame(flavor = factor(rep(c("Cherry", "Orange", "Green punch"), each = 60),
+  levels = c("Cherry", "Orange", "Green punch")))
+bottles$seconds <- rgamma(180, shape = 2.5,
+  scale = c(Cherry = 12, Orange = 18, `Green punch` = 22)[as.character(bottles$flavor)] / 2.5)
+ggplot(bottles, aes(x = seconds, fill = flavor)) +
   geom_density(alpha = 2/3) +
-  labs(title = "MTV TRL (simulated)", x = "Days on the countdown", fill = "Genre") +
-  theme_trl(base_size = 13)
+  labs(title = "Squeezit", caption = "Simulated data",
+       x = "Seconds to finish", fill = "Flavor") +
+  theme_squeezit(base_size = 13)
 ```
 
-![](themes_files/figure-html/trl-1.png)
+![](themes_files/figure-html/squeezit-1.png)
 
 ## Oregon Trail
 
 [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
-an Apple II screen with three shades of phosphor green. Below we
+The Oregon Trail running in an Apple II emulator, with a gray window
+frame, a black screen, and three shades of phosphor green. Below we
 simulate days to reach Oregon from a log normal distribution.
+
+![](../reference/figures/theme_oregontrail/nicole-has-dysentary.jpg)
+
+Image: The Pug Father,
+[Flickr](https://www.flickr.com/photos/fleur-design/1155468051), CC BY
+2.0.
 
 ``` r
 
@@ -664,11 +696,19 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
 
 ![](themes_files/figure-html/aim-1.png)
 
-## Magic Eye
+## Tiger R-Zone
 
-[`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md):
-a deep sea blue with coral, sky, sand, and sea green. Below we simulate
-seconds to see the hidden image on two tries.
+[`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md)
+uses Tiger’s 1995 R-Zone headset: black plastic, a red frame and title,
+red LCD, purple, and pink marks, pale blue visor text, and an Arial
+Narrow title. Below we simulate the seconds 100 players needed to clear
+the first level on two tries.
+
+![](../reference/figures/theme_rzone/tiger-rzone-headset.jpg)
+
+Image: Evan-Amos, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg),
+public domain.
 
 ``` r
 
@@ -677,11 +717,12 @@ tries <- data.frame(try = rep(c("First", "Second"), each = 100))
 tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
 ggplot(tries, aes(x = seconds, y = try, fill = try)) +
   geom_boxplot(width = 0.3, show.legend = FALSE) +
-  labs(title = "Magic Eye (simulated)", x = "Seconds", y = NULL) +
-  theme_magiceye(base_size = 13)
+  labs(title = "Tiger R-Zone", caption = "Simulated data",
+       x = "Seconds to clear the first level", y = NULL) +
+  theme_rzone(base_size = 13)
 ```
 
-![](themes_files/figure-html/magiceye-1.png)
+![](themes_files/figure-html/rzone-1.png)
 
 ## Batman
 
@@ -870,24 +911,32 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
 
 ![](themes_files/figure-html/y2k-1.png)
 
-## Rugrats
+## Fruit Gushers
 
-[`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md):
-playpen yellow with the logo’s purple, yellow, red, and green. Below we
-simulate babies named after three characters.
+[`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md)
+uses a pile of Fruit Gushers on a white plate: a red frame and title,
+red, green, teal, orange, and pink marks, and a Chalkboard title. Below
+we simulate fruit snack trades at one lunch table before and after
+Gushers arrived in 1991.
+
+![](../reference/figures/theme_gushers/betty-crocker-fruit-gushers-pieces.jpg)
+
+Image: Thomson200, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg),
+CC0.
 
 ``` r
 
 set.seed(1993)
-babies <- expand.grid(year = 1985:2000, name = c("Tommy", "Chuckie", "Angelica"))
-babies$n <- rpois(nrow(babies), ifelse(babies$year < 1991, 0.5, 3))
-ggplot(subset(babies, n > 0), aes(x = year, y = name, color = name, alpha = n)) +
+trades <- expand.grid(year = 1985:2000, flavor = c("Strawberry", "Lime", "Blue raspberry"))
+trades$n <- rpois(nrow(trades), ifelse(trades$year < 1991, 0.5, 3))
+ggplot(subset(trades, n > 0), aes(x = year, y = flavor, color = flavor, alpha = n)) +
   geom_point(shape = 124, size = 6, show.legend = FALSE) +
-  labs(title = "Rugrats names (simulated)", x = NULL, y = NULL) +
-  theme_rugrats(base_size = 13)
+  labs(title = "Fruit Gushers", caption = "Simulated data", x = NULL, y = NULL) +
+  theme_gushers(base_size = 13)
 ```
 
-![](themes_files/figure-html/rugrats-1.png)
+![](themes_files/figure-html/gushers-1.png)
 
 ## Doom
 
@@ -1103,14 +1152,9 @@ and
 use Press Start 2P, which ships with `fmggp2`. The other themes use
 fonts that ship with macOS and Windows.
 
-These themes use a single font family:
+[`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
+uses a single font family:
 
-- Tahoma
-  ([`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md))
-- Verdana
-  ([`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md))
-- Trebuchet MS
-  ([`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md))
 - Comic Sans MS
   ([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md))
 
@@ -1133,14 +1177,20 @@ title:
   ([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md))
 - DIN Condensed
   ([`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md))
-- Georgia
-  ([`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md))
+- Courier New
+  ([`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md))
+- Brush Script
+  ([`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md))
+- Futura
+  ([`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md))
+- Marker Felt
+  ([`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md))
 - Times New Roman
   ([`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md))
 - Big Caslon
   ([`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md))
-- Chalkboard
-  ([`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md))
+- Arial Rounded
+  ([`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md))
 - Phosphate
   ([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
 - Futura
@@ -1151,14 +1201,14 @@ title:
   ([`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md))
 - Chalkboard SE
   ([`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md))
-- Impact
-  ([`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md))
+- Skia
+  ([`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md))
 - Andale Mono
   ([`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md))
 - Arial Rounded
   ([`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md))
-- Skia
-  ([`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md))
+- Arial Narrow
+  ([`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md))
 - DIN Condensed
   ([`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md))
 - Arial Black
@@ -1171,8 +1221,8 @@ title:
   ([`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md))
 - PT Mono
   ([`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md))
-- Marker Felt
-  ([`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md))
+- Chalkboard
+  ([`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md))
 - Impact
   ([`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md))
 - Krungthep
@@ -1197,7 +1247,7 @@ you’ve registered with
 
 ``` r
 
-theme_win98(base_family = "sans")
+theme_oksoda(base_family = "sans", title_family = "sans")
 ```
 
 ## Using a theme for a whole chapter
@@ -1208,5 +1258,5 @@ so the plotting code in the chapter doesn’t need a `theme_*()` call.
 
 ``` r
 
-ggplot2::theme_set(fmggp2::theme_win98(base_size = 15))
+ggplot2::theme_set(fmggp2::theme_oksoda(base_size = 15))
 ```

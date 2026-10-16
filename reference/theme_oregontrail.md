@@ -1,8 +1,8 @@
 # Oregon Trail theme
 
-A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II: a
-black screen, phosphor green text and marks in three shades, and an
-Andale Mono title.
+A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II
+emulator: a gray window frame, a black screen, phosphor green text and
+marks in three shades, and an Andale Mono title.
 
 ## Usage
 

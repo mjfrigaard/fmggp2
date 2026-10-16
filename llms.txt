@@ -30,27 +30,27 @@ each dataset gets a theme to match.
 | [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md) | Seinfeld | Bubble charts (Seinfeld episodes) |
 | [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md) | Console wars | Grouped scatter plots (Sega vs. Nintendo) |
 | [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md) | Doom | Scatter plots (frame rate by CPU speed) |
-| [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md) | Rugrats | Instance charts (baby names by year) |
+| [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md) | Fruit Gushers | Instance charts (lunch table trades by year) |
 | [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md) | Y2K | Alluvial charts (Y2K prep surveys) |
 | [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md) | Hypercolor | Stream plots (90s fad sales) |
 | [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md) | Saved by the Bell | Slope graphs (Bayside quiz averages) |
 | [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md) | Boy bands | Bump charts (weekly radio spins) |
 | [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md) | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
 | [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md) | Batman (1989) | Line graphs (weekly box office) |
-| [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md) | Magic Eye | Raincloud plots (seconds to see the hidden image) |
+| [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md) | Tiger R-Zone | Raincloud plots (seconds to clear the first level) |
 | [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md) | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
 | [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md) | The Oregon Trail | Grouped box plots (days to reach Oregon) |
-| [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md) | MTV TRL | Ridgeline plots (days on the countdown) |
+| [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md) | Squeezit | Ridgeline plots (seconds to finish a bottle) |
 | [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md) | Furby | Overlapping and stacked densities (Furby chatter) |
 | [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md) | Tetris | Beeswarm plots (lines cleared by player) |
 | [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md) | Goosebumps books | Overlapping dot plots (books read by grade) |
 | [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md) | Super Soaker | Overlapping frequency polygons (range by model) |
 | [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md) | Tamagotchi | Overlapping histograms (virtual pet lifespans) |
 | [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md) | Toys”R”Us | Treemaps (1998 toy sales) |
-| [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md) | Lisa Frank school supplies | Pie charts (Trapper Keeper designs) |
+| [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md) | Koosh ball | Pie charts (Koosh ball styles) |
 | [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md) | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
 | [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md) | Netscape Navigator | Stacked filled densities (modem speeds) |
-| [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md) | Microsoft Encarta / Britannica | Diverging bar graphs (encyclopedia survey) |
+| [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md) | Orbitz | Diverging bar graphs (Orbitz vs. Surge survey) |
 | [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md) | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
 | [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md) | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
 | [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md) | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
@@ -59,11 +59,11 @@ each dataset gets a theme to match.
 | [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md) | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md) | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md) | Beanie Babies heart tag | Violin plots (resale prices) |
-| [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md) | Spice Girls era pop | Density plots (Spice World tour fan ages) |
+| [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md) | Crystal Pepsi | Density plots (taste test ages) |
 | [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md) | Blockbuster Video | Dot plots (weekly rentals) |
 | [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md) | Original Game Boy screen | Bar graphs (Pokémon starters) |
-| [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md) | Windows 98 desktop | Histograms (AOL dial up sessions) |
-| [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md) | 1999 Napster client | Frequency polygons (Napster downloads) |
+| [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md) | OK Soda | Histograms (cans sold per store) |
+| [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md) | Talkboy | Frequency polygons (recorded message lengths) |
 | [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md) | Original book theme | Chapters not yet converted |
 
 ``` r
@@ -72,28 +72,28 @@ library(fmggp2)
 library(ggplot2)
 showtext::showtext_auto()
 set.seed(1014)
-aol_sessions <- data.frame(minutes = round(rnorm(300, mean = 45, sd = 12)))
-ggplot(aol_sessions, aes(x = minutes)) +
+ok_soda_sales <- data.frame(cans = round(rnorm(300, mean = 45, sd = 12)))
+ggplot(ok_soda_sales, aes(x = cans)) +
   geom_histogram(bins = 30) +
-  labs(title = "AOL dial up sessions (simulated)",
-       x = "Session length (minutes)") +
-  theme_win98(base_size = 13)
+  labs(title = "OK Soda", caption = "Simulated data",
+       x = "Cans sold per store") +
+  theme_oksoda(base_size = 13)
 ```
 
-![](reference/figures/README-readme-win98-1.png)
+![](reference/figures/README-readme-oksoda-1.png)
 
 ``` r
 
 set.seed(1999)
-napster_downloads <- data.frame(minutes = round(rgamma(300, shape = 4, rate = 0.5), 1))
-ggplot(napster_downloads, aes(x = minutes)) +
+talkboy_clips <- data.frame(seconds = round(rgamma(300, shape = 4, rate = 0.5), 1))
+ggplot(talkboy_clips, aes(x = seconds)) +
   geom_freqpoly(bins = 30) +
-  labs(title = "Napster MP3 downloads (simulated)",
-       x = "Download time (minutes)") +
-  theme_napster(base_size = 13)
+  labs(title = "Talkboy", caption = "Simulated data",
+       x = "Message length (seconds)") +
+  theme_talkboy(base_size = 13)
 ```
 
-![](reference/figures/README-readme-napster-1.png)
+![](reference/figures/README-readme-talkboy-1.png)
 
 ## Book helpers
 
@@ -124,14 +124,14 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
 
 - [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
   : Game Boy theme
-- [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md)
-  : Windows 98 theme
-- [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-  : Napster theme
+- [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md)
+  : OK Soda theme
+- [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md)
+  : Talkboy theme
 - [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
   : Blockbuster theme
-- [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
-  : Spice Girls theme
+- [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
+  : Crystal Pepsi theme
 - [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
   : Beanie Babies theme
 - [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
@@ -148,14 +148,14 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
   : Pogs theme
 - [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
   : Sony Walkman theme
-- [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md)
-  : Encarta theme
+- [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md)
+  : Orbitz theme
 - [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md)
   : Netscape theme
 - [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md)
   : Titanic theme
-- [`theme_lisafrank()`](https://mjfrigaard.github.io/fmggp2/reference/theme_lisafrank.md)
-  : Lisa Frank theme
+- [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md)
+  : Koosh ball theme
 - [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
   : Toys R Us theme
 - [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md)
@@ -168,14 +168,14 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
   : Tetris theme
 - [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
   : Furby theme
-- [`theme_trl()`](https://mjfrigaard.github.io/fmggp2/reference/theme_trl.md)
-  : MTV TRL theme
+- [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md)
+  : Squeezit theme
 - [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
   : Oregon Trail theme
 - [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md)
   : AIM theme
-- [`theme_magiceye()`](https://mjfrigaard.github.io/fmggp2/reference/theme_magiceye.md)
-  : Magic Eye theme
+- [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md)
+  : Tiger R-Zone theme
 - [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
   : Batman theme
 - [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md)
@@ -188,8 +188,8 @@ math](https://en.wikipedia.org/wiki/Singapore_math):
   : Hypercolor theme
 - [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md)
   : Y2K theme
-- [`theme_rugrats()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rugrats.md)
-  : Rugrats theme
+- [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md)
+  : Fruit Gushers theme
 - [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md)
   : Doom theme
 - [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md)
