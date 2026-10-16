@@ -231,7 +231,9 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 
 ## Pogs
 
-`theme_pogs()` uses a cardboard background and the red, blue, plum, green, rust, and tan milk cap prints. Below we simulate a collection of 100 Pogs.
+`theme_pogs()` uses a cardboard background and the red, sky blue, yellow, teal, purple, and rust milk cap prints. Below we simulate a collection of 100 Pogs.
+
+![Image: "[Remember Pogs?](https://www.flickr.com/photos/mtsofan/6077181975/)" by MTSOfan, [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/).](../man/figures/theme_pogs/remember-pogs.jpg){width="60%" fig-align="center"}
 
 ```{r}
 #| label: pogs

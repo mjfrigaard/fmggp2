@@ -2,6 +2,8 @@
 
 * Removed copyrighted reference images from the themes vignette. Themes without a freely licensed image no longer show one.
 
+* `theme_pogs()` has a new palette sampled from "Remember Pogs?" by MTSOfan (CC BY-NC-SA 2.0), which the vignette now shows.
+
 # fmggp2 0.46.0
 
 * The themes vignette uses freely licensed Wikimedia Commons images for nine themes (aim, freshprince, happymeal, jurassic, netscape, tetris, titanic, trl, and walkman).
