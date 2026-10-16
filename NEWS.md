@@ -1,3 +1,7 @@
+# fmggp2 0.51.0
+
+* New `theme_orbitz()`: Orbitz, the drink with floating balls, with a black background, a gold frame, gold and magenta marks, and a Marker Felt title. The palette is sampled from "Bottle of Orbitz drink" by Jesse! S? (CC BY 2.0).
+
 # fmggp2 0.50.0
 
 * New `theme_crystalpepsi()`: Crystal Pepsi, with a clear bottle cream background, a navy frame, Pepsi red and navy marks, and a Futura title. The palette is sampled from "Crystal Pepsi" by Mike Mozart (CC BY 2.0).
