@@ -1,3 +1,7 @@
+# fmggp2 0.55.0
+
+* New `theme_squeezit()`: Squeezit bottles on gravel, with a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. The palette is sampled from "Squeezeit flavours" by ZolHaj (CC BY-SA 4.0).
+
 # fmggp2 0.54.0
 
 * New `theme_gushers()`: Fruit Gushers, with a white plate background, a red frame and title, eight fruit snack marks (red, green, teal, orange, pink, maroon, moss, and gray), and a Chalkboard title. The palette is sampled from "Betty Crocker Fruit Gushers pieces" by Thomson200 (CC0).
