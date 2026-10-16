@@ -260,9 +260,15 @@ ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
 ## Friends
 
 [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
-uses the show’s palette: Monica’s purple walls, a Central Perk latte
-frame, and red, teal, olive, orange, rose, and mocha marks. Below we
-simulate viewers per episode for three seasons.
+uses Monica’s apartment: purple walls, a cream sofa, a latte frame, and
+poppy red, navy, wood, rust, and rose marks. Below we simulate viewers
+per episode for three seasons.
+
+![](../reference/figures/theme_friends/monicas-apartment.jpg)
+
+Image: “[Monica’s Apartment,
+Friends](https://www.flickr.com/photos/rob-young/30987418062)” by Rob
+Young, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
 
 ``` r
 
@@ -568,8 +574,14 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 ## Furby
 
 [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
-the Sherbet Furby’s red fur, belly blue, beak yellow, and pink. Below we
+a 1998 Furby’s teal fur, gray belly, beak yellow, and pink. Below we
 simulate Furby chatter in two languages.
+
+![](../reference/figures/theme_furby/furby.jpg)
+
+Image: “[Furby](https://www.flickr.com/photos/66376272@N07/6137468129)”
+by Amanda (blamethecrane), [CC BY-ND
+2.0](https://creativecommons.org/licenses/by-nd/2.0/).
 
 ``` r
 

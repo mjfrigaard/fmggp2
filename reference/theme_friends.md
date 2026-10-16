@@ -1,9 +1,9 @@
 # Friends theme
 
-A late 90s `ggplot2` theme modeled on the Friends (1994 to 2004) color
-palette: Monica's purple apartment walls, a Central Perk latte frame and
-title, a cream plot area, red, teal, olive, orange, rose, and mocha
-marks, and a Central Perk chalkboard (Chalkduster) title.
+A late 90s `ggplot2` theme modeled on Monica's apartment in Friends
+(1994 to 2004): purple walls, a sofa cream plot area, a latte frame and
+title, poppy red, navy, wood, rust, and rose marks, and a Central Perk
+chalkboard (Chalkduster) title.
 
 ## Usage
 
