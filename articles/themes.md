@@ -53,9 +53,6 @@ lines are navy by default. Below we simulate 300 AOL dial up sessions
 
 ![](../reference/figures/theme_win98/win98.png)
 
-Source:
-[Redbubble](https://ih1.redbubble.net/image.896126084.7094/gbrf,10x10,f,540x540-pad,450x450,f8f8f8.webp).
-
 ``` r
 
 set.seed(1014)
@@ -99,9 +96,6 @@ simulate 300 MP3 downloads over a 56k modem from a right skewed gamma
 distribution.
 
 ![](../reference/figures/theme_napster/napster.png)
-
-Source:
-[Medium](https://miro.medium.com/v2/resize:fit:1334/0*4MzxqgaA1n5eQQvB.gif).
 
 ``` r
 
@@ -153,9 +147,6 @@ at a 1998 concert as a mix of kids and parents.
 
 ![](../reference/figures/theme_spice/spice.png)
 
-Source:
-[eBay](https://i.ebayimg.com/images/g/I6AAAOSw5bRgFd9h/s-l400.jpg).
-
 ``` r
 
 set.seed(1998)
@@ -178,9 +169,6 @@ navy. Below we simulate 300 resale prices from a log normal
 distribution.
 
 ![](../reference/figures/theme_beanie/beanie.png)
-
-Source:
-[Walmart](https://i5.walmartimages.com/asr/b53967d8-f808-4b2f-b93b-30df63bc3029.222ca3a230e89243031c9b7cbeac6241.jpeg).
 
 ``` r
 
@@ -227,10 +215,11 @@ uses the Jurassic Park Post Office souvenir sheet: black, logo red,
 stamp yellow, and sunset orange. Below we simulate the total weight of
 the dinosaurs in each paddock.
 
-![](../reference/figures/theme_jurassic/jurassic.png)
+![](../reference/figures/theme_jurassic/jurassic-park-icon.png)
 
-Source: [Jurassic
-Toys](https://jurassictoys.net/wp-content/uploads/jurassic-park-stamp-set-1.jpg).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Jurassic_Park_icon.svg),
+CC0.
 
 ``` r
 
@@ -251,10 +240,11 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
 uses the red and yellow of a Happy Meal box. Below we simulate average
 daily Happy Meal sales for four toy promotions.
 
-![](../reference/figures/theme_happymeal/happy.png)
+![](../reference/figures/theme_happymeal/happy-meal-6955434713.jpg)
 
-Source:
-[Pinterest](https://i.pinimg.com/474x/66/78/9d/66789d436b4ea3d0adecb90398765b42.jpg).
+Image: Newtown grafitti from Sydney, Australia, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Happy_meal_(6955434713).jpg),
+CC BY 2.0.
 
 ``` r
 
@@ -278,9 +268,6 @@ simulate viewers per episode for three seasons.
 
 ![](../reference/figures/theme_friends/friends.png)
 
-Source:
-[Pinterest](https://i.pinimg.com/736x/2b/58/1c/2b581cddf63b330b549f22ab18b8825a.jpg).
-
 ``` r
 
 set.seed(1994)
@@ -301,10 +288,11 @@ uses the logo: graffiti greens on a pink glow, and its continuous fill
 runs from teal to lime. Below we simulate how often the Carlton dance
 shows up each season.
 
-![](../reference/figures/theme_freshprince/fresh.png)
+![](../reference/figures/theme_freshprince/fresh-prince-bel-aire-logo.png)
 
-Source: [Logos
-World](https://logos-world.net/wp-content/uploads/2023/12/Fresh-Prince-Logo.jpg).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Fresh_Prince_Bel_Aire_logo.png),
+public domain.
 
 ``` r
 
@@ -347,10 +335,11 @@ uses the Sports Walkman: a sports yellow body, blue buttons, a charcoal
 display, and an orange SPORTS label. Below we simulate median battery
 life for three models and two battery types.
 
-![](../reference/figures/theme_walkman/walkman.png)
+![](../reference/figures/theme_walkman/sony-walkman02.jpg)
 
-Source:
-[Etsy](https://i.etsystatic.com/6017061/r/il/fcda14/3943289314/il_fullxfull.3943289314_ckx2.jpg).
+Image: Itsramon, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Sony_Walkman02.jpg), CC
+BY-SA 3.0.
 
 ``` r
 
@@ -374,8 +363,6 @@ frame, gold, copper, and moss, and a Georgia title.
 
 ![](../reference/figures/theme_encarta/encarta.png)
 
-Source: [Eurogamer](https://assetsio.gnwcdn.com/hyp_mindmaze.jpg).
-
 ``` r
 
 p_encarta <- 0.8 * plogis(-2 + 0.6 * (0:6))
@@ -396,10 +383,11 @@ ggplot(enc, aes(x = year, y = share, fill = choice)) +
 the Netscape Navigator logo, with a night sky and teal, aurora green,
 sea glass, and deep teal marks, and a Times New Roman title.
 
-![](../reference/figures/theme_netscape/netscape.png)
+![](../reference/figures/theme_netscape/netscape-navigator-icon.png)
 
-Source: [The Retro
-Hour](https://theretrohour.com/wp-content/uploads/2024/10/Netscape_Hero.png).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg),
+CC0.
 
 ``` r
 
@@ -422,10 +410,11 @@ the Vallejo Titanic Colors paint set (black, yellow, canvas,
 anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon
 title.
 
-![](../reference/figures/theme_titanic/titanic.png)
+![](../reference/figures/theme_titanic/titanic-in-color.png)
 
-Source: [Airbrush
-Fengda](https://www.airbrush-fengda.co.uk/environment/cache/images/productGfx_9410_0_0/5a800ec3d3b72145a63956b4fcf51ffa.jpg).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Titanic_in_color.png),
+public domain.
 
 ``` r
 
@@ -542,9 +531,6 @@ read by two grades.
 
 ![](../reference/figures/theme_goosebumps/goosebumps.png)
 
-Source:
-[Redbubble](https://ih1.redbubble.net/image.5477697498.9668/flat,750x,075,f-pad,750x1000,f8f8f8.jpg).
-
 ``` r
 
 set.seed(1992)
@@ -564,10 +550,11 @@ ggplot(readers, aes(x = books, fill = grade)) +
 a black well and the tetromino block colors. Below we simulate lines
 cleared from a negative binomial distribution.
 
-![](../reference/figures/theme_tetris/tetris.png)
+![](../reference/figures/theme_tetris/tetrominoes-ijlo-stz-worlds.png)
 
-Source: [How to
-Tetris](https://howtotetris.com/wp-content/uploads/2026/01/image-237.png).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Tetrominoes_IJLO_STZ_Worlds.svg),
+public domain.
 
 ``` r
 
@@ -590,9 +577,6 @@ simulate Furby chatter in two languages.
 
 ![](../reference/figures/theme_furby/furby.png)
 
-Source: [Official Furby
-Wiki](https://static.wikia.nocookie.net/official-furby/images/7/72/SherbetFurby.JPG/).
-
 ``` r
 
 set.seed(1998)
@@ -614,13 +598,10 @@ Below we simulate days on the countdown from a gamma distribution.
 
 ![](../reference/figures/theme_trl/trl.png)
 
-Source:
-[Seeklogo](https://images.seeklogo.com/logo-png/32/1/mtv-trl-logo-png_seeklogo-329262.png).
+![](../reference/figures/theme_trl/mtv-logo.png)
 
-![](../reference/figures/theme_trl/mtv.png)
-
-Source: [Logos
-World](https://logos-world.net/wp-content/uploads/2020/09/MTV-Emblem.png).
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:MTV_logo.png), CC0.
 
 ``` r
 
@@ -643,9 +624,6 @@ simulate days to reach Oregon from a log normal distribution.
 
 ![](../reference/figures/theme_oregontrail/oregon_trail.png)
 
-Source: [Smithsonian
-Magazine](https://th-thumbnailer.cdn-si-edu.com/C4swxJCbQ99AYghsj5raYu30nhI=/1280x1280/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/42/54/4254a590-f18f-4cde-b772-64a2043f1610/the-oregon-trail.jpg).
-
 ``` r
 
 set.seed(1985)
@@ -665,7 +643,11 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
 the sign on window’s gray, AOL blue, sky blue, and the yellow running
 man. Below we simulate buddy list sizes with different shapes.
 
-![](../reference/figures/theme_aim/aim.png)
+![](../reference/figures/theme_aim/aim-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:AIM_logo.svg), public
+domain.
 
 ``` r
 
@@ -687,9 +669,6 @@ a deep sea blue with coral, sky, sand, and sea green. Below we simulate
 seconds to see the hidden image on two tries.
 
 ![](../reference/figures/theme_magiceye/magic_eye.png)
-
-Source: [AIGA Eye on
-Design](https://eyeondesign.aiga.org/wp-content/uploads/2019/04/aiga-eod-magiceye1.jpg).
 
 ``` r
 
@@ -894,9 +873,6 @@ playpen yellow with the logo’s purple, yellow, red, and green. Below we
 simulate babies named after three characters.
 
 ![](../reference/figures/theme_rugrats/rugrats.png)
-
-Source: [1000
-Logos](https://1000logos.net/wp-content/uploads/2020/11/Rugrats-Logo.jpg).
 
 ``` r
 
