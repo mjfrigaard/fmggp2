@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_y2k()` | Y2K | Alluvial charts (Y2K prep surveys) |
 | `theme_hypercolor()` | Hypercolor | Stream plots (90s fad sales) |
 | `theme_savedbythebell()` | Saved by the Bell | Slope graphs (Bayside quiz averages) |
 | `theme_boyband()` | Boy bands | Bump charts (weekly radio spins) |

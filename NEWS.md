@@ -1,3 +1,7 @@
+# fmggp2 0.32.0
+
+* New `theme_y2k()`: the Y2K countdown, with a black terminal background, a red LED frame and title, red, amber, green, silver, and blue screen marks, and a PT Mono title.
+
 # fmggp2 0.31.0
 
 * New `theme_hypercolor()`: Generra Hypercolor shirts, with a deep purple background, a magenta frame, heat changing magenta, orange, purple, blue, green, and yellow marks, and a Gill Sans title.

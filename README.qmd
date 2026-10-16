@@ -33,6 +33,7 @@ Every example in the book uses simulated data with a 90s throwback, and each dat
 
 | Theme | Reference | Chapter |
 |---|---|---|
+| `theme_y2k()` | Y2K | Alluvial charts (Y2K prep surveys) |
 | `theme_hypercolor()` | Hypercolor | Stream plots (90s fad sales) |
 | `theme_savedbythebell()` | Saved by the Bell | Slope graphs (Bayside quiz averages) |
 | `theme_boyband()` | Boy bands | Bump charts (weekly radio spins) |

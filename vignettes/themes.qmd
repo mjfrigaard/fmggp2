@@ -539,6 +539,23 @@ ggplot(fads, aes(x = month, y = sales, fill = fad)) +
   theme_hypercolor(base_size = 13)
 ```
 
+## Y2K
+
+`theme_y2k()`: LED red, terminal amber and green on black. Below we show how 300 households prepared for Y2K across three surveys.
+
+```{r}
+#| label: y2k
+prep <- data.frame(
+  survey = factor(rep(c("Jan", "Jul", "Dec"), each = 3), levels = c("Jan", "Jul", "Dec")),
+  level = factor(rep(c("Not worried", "Some supplies", "Bunker ready"), 3),
+                 levels = c("Not worried", "Some supplies", "Bunker ready")),
+  households = c(163, 100, 37, 124, 119, 57, 108, 117, 75))
+ggplot(prep, aes(x = survey, y = households, fill = level)) +
+  geom_col() +
+  labs(title = "Y2K prep (simulated)", x = NULL, y = "Households", fill = NULL) +
+  theme_y2k(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -577,6 +594,7 @@ These themes use Arial for the body text and a display font for the title:
 - Silom (`theme_boyband()`)
 - SignPainter (`theme_savedbythebell()`)
 - Gill Sans (`theme_hypercolor()`)
+- PT Mono (`theme_y2k()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 
