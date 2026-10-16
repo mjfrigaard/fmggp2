@@ -1,5 +1,14 @@
 # Changelog
 
+## fmggp2 0.45.0
+
+- The themes vignette shows reference images again for 22 themes.
+
+- New palettes for
+  [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md)
+  (the sign on window) and
+  [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md).
+
 ## fmggp2 0.44.0
 
 - New palettes for

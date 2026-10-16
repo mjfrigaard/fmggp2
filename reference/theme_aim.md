@@ -1,7 +1,9 @@
 # AIM theme
 
-A late 90s `ggplot2` theme modeled on AOL Instant Messenger: the yellow
-running man, AOL blue, a white chat window, and an Arial Rounded title.
+A late 90s `ggplot2` theme modeled on the AOL Instant Messenger sign on
+window: a gray window, an AOL blue frame and title, a white chat panel,
+blue, sky, running man yellow, and slate marks, and an Arial Rounded
+title.
 
 ## Usage
 
