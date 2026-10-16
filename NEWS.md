@@ -1,3 +1,9 @@
+# fmggp2 0.42.0
+
+* `theme_batman()` gains a `version` argument: `"movie"` (Batman 1989, the default), `"classic"` (the 1966 TV series), and `"darknight"` (The Dark Knight).
+
+* The themes vignette shows a reference image for each theme, stored in `man/figures/theme_*/`.
+
 # fmggp2 0.41.0
 
 * New `theme_surge()`: Surge soda, with a black background, a Surge green frame and title, green, red, orange, yellow, and white marks, a dark to bright green continuous scale, and a DIN Alternate title.

@@ -7,7 +7,8 @@
 theme_batman(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf")
+  title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
+  version = c("movie", "classic", "darknight")
 )
 }
 \arguments{
@@ -18,20 +19,36 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to DIN Condensed when
 it's available, otherwise \code{"sans"}.}
+
+\item{version}{One of \code{"movie"}, \code{"classic"}, or \code{"darknight"}.}
 }
 \value{
 A \code{ggplot2} theme object.
 }
 \description{
-A \code{ggplot2} theme built from the Batman (1989) color palette: a black
-background, a gold bat signal frame and title, a dark brown plot area,
-silver text, orange, gold, steel, rust, and pale gold marks, and a DIN
-Condensed title.
+A \code{ggplot2} theme built from three Batman color palettes:
+}
+\details{
+\itemize{
+\item \code{"movie"}: Batman (1989), with a black background, a gold bat signal
+frame and title, a dark brown plot area, silver text, and orange, gold,
+steel, rust, and pale gold marks.
+\item \code{"classic"}: the 1966 TV series, with a gray background, a black frame,
+a blue title, a cream plot area, and blue, yellow, black, and gray marks.
+\item \code{"darknight"}: The Dark Knight, with a charcoal background, a yellow
+frame and title, a navy plot area, and yellow, olive, and slate marks.
+}
+
+All three use a DIN Condensed title.
 }
 \examples{
 library(ggplot2)
-ggplot(data.frame(x = c("a", "b", "b")), aes(x = x, fill = x)) +
+p <- ggplot(data.frame(x = c("a", "b", "b")), aes(x = x, fill = x)) +
   geom_bar() +
-  labs(title = "Batman") +
-  theme_batman(base_family = "sans", title_family = "sans")
+  labs(title = "Batman")
+p + theme_batman(base_family = "sans", title_family = "sans")
+p + theme_batman(base_family = "sans", title_family = "sans",
+                 version = "classic")
+p + theme_batman(base_family = "sans", title_family = "sans",
+                 version = "darknight")
 }
