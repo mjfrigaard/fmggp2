@@ -1,3 +1,7 @@
+# fmggp2 0.54.0
+
+* New `theme_gushers()`: Fruit Gushers, with a white plate background, a red frame and title, eight fruit snack marks (red, green, teal, orange, pink, maroon, moss, and gray), and a Chalkboard title. The palette is sampled from "Betty Crocker Fruit Gushers pieces" by Thomson200 (CC0).
+
 # fmggp2 0.53.0
 
 * New `theme_rzone()`: the Tiger R-Zone headset, with black plastic, a red frame and title, red, purple, and pink marks, pale blue visor text, and an Arial Narrow title. The palette is sampled from "Tiger RZone Headset" by Evan-Amos (public domain).
