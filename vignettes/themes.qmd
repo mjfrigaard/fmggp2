@@ -133,7 +133,9 @@ ggplot(spice_fans, aes(x = age)) +
 
 ## Beanie Babies
 
-`theme_beanie()` uses the red and gold of a Beanie Babies heart tag, with plush blue and navy. Below we simulate 300 resale prices from a log normal distribution.
+`theme_beanie()` uses a Ty heart tag red with the blanket teal and fur colors of a Beanie. Below we simulate 300 resale prices from a log normal distribution.
+
+![Image: "[Beanie Baby](https://www.flickr.com/photos/ajay_suresh/51819429583)" by ajay_suresh, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).](../man/figures/theme_beanie/beanie-baby.jpg){width="60%" fig-align="center"}
 
 ```{r}
 #| label: beanie
