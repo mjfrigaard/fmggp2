@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_geocities()` | GeoCities | 2D histograms (page load times) |
 | `theme_bopit()` | Bop It | Density contours (reaction times) |
 | `theme_clueless()` | Clueless | Parallel sets (Bronson Alcott cliques) |
 | `theme_powerrangers()` | Power Rangers | Grouped bubble charts (putties defeated) |

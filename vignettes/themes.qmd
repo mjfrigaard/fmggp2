@@ -661,6 +661,21 @@ ggplot(players, aes(x = bop, y = twist)) +
   theme_bopit(base_size = 13)
 ```
 
+## GeoCities
+
+`theme_geocities()`: lime text and a yellow Comic Sans title on a dark navy panel. Below we simulate GeoCities page loads.
+
+```{r}
+#| label: geocities
+set.seed(1997)
+pages <- data.frame(kb = rlnorm(2000, log(60), 0.45))
+pages$seconds <- 2 + pages$kb * 8 / 44 + rnorm(2000, 0, 1.5)
+ggplot(pages, aes(x = kb, y = seconds)) +
+  geom_bin2d(bins = 25) +
+  labs(title = "GeoCities page loads", caption = "Simulated data", x = "Page size (KB)", y = "Seconds to load") +
+  theme_geocities(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -707,6 +722,7 @@ These themes use Arial for the body text and a display font for the title:
 - Copperplate (`theme_powerrangers()`)
 - Didot (`theme_clueless()`)
 - Rockwell (`theme_bopit()`)
+- Comic Sans MS (`theme_geocities()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

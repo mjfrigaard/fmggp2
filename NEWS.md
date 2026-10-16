@@ -1,3 +1,7 @@
+# fmggp2 0.40.0
+
+* New `theme_geocities()`: a GeoCities home page, with a black background, a web gray frame, a dark navy panel, lime green text, a yellow Comic Sans title, web safe marks, and a blue to yellow continuous scale.
+
 # fmggp2 0.39.0
 
 * New `theme_bopit()`: the Bop It toy, with a deep purple background, a yellow frame and title, yellow, blue, green, orange, and pink marks, a purple to yellow continuous scale, and a Rockwell title.
