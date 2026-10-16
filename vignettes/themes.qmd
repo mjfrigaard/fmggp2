@@ -496,6 +496,8 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
 
 `theme_batman()` comes in three versions. The default, `version = "movie"`, uses the Batman (1989) palette: black, gold, orange, and steel. Below we simulate bat signal sightings over a week.
 
+![Image: Mbrickn, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pop_Culture_Library_Batman_Conference.jpg), CC BY-SA 4.0.](../man/figures/theme_batman/pop-culture-library-batman-conference.jpg){width="60%" fig-align="center"}
+
 ```{r}
 #| label: batman
 set.seed(1989)
