@@ -20,6 +20,12 @@ uses the four shades of green from the original Game Boy screen and the
 pixel font Press Start 2P, which ships with `fmggp2`. Below we simulate
 the starter chosen by 300 *Pokémon Red and Blue* players.
 
+![](../reference/figures/theme_gameboy/game-boy-fl.jpg)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg),
+public domain.
+
 ``` r
 
 set.seed(1998)
@@ -44,6 +50,12 @@ draws the plot as a Windows 98 window sitting on the teal desktop. The
 title sits in a navy title bar, the plot area is white, and bars and
 lines are navy by default. Below we simulate 300 AOL dial up sessions
 (in minutes) from a normal distribution.
+
+![](../reference/figures/theme_win98/microsoft-windows-98-logo-with-wordmark.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Microsoft_Windows_98_logo_with_wordmark.svg),
+public domain.
 
 ``` r
 
@@ -85,6 +97,12 @@ borrows the dark 1999 Napster client: a near black window, white text, a
 dotted gray grid, and lime marks. Below we simulate 300 MP3 downloads
 over a 56k modem from a right skewed gamma distribution.
 
+![](../reference/figures/theme_napster/napster-logo.png)
+
+Image: Jusore, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Napster_logo.svg),
+GPLv3.
+
 ``` r
 
 set.seed(1999)
@@ -107,6 +125,12 @@ ggplot(napster_downloads, aes(x = minutes)) +
 uses Blockbuster Video blue and yellow. Below we simulate weekly rentals
 for 60 households from a Poisson distribution.
 
+![](../reference/figures/theme_blockbuster/anchorage-blockbuster-video-store-sign-41219885734.jpg)
+
+Image: Jon Konrath from Oakland, USA, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Anchorage_Blockbuster_video_store_sign_(41219885734).jpg),
+CC BY 2.0.
+
 ``` r
 
 set.seed(1993)
@@ -125,6 +149,12 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
 [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
 uses hot pink, purple, and gold. Below we simulate the ages of 400 fans
 at a 1998 concert as a mix of kids and parents.
+
+![](../reference/figures/theme_spice/spice-girls.jpg)
+
+Image: Movie Stars and Rockets, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Spice_Girls.jpg), CC BY
+2.0.
 
 ``` r
 
@@ -146,6 +176,8 @@ ggplot(spice_fans, aes(x = age)) +
 uses the red and gold of a Beanie Babies heart tag. Below we simulate
 300 resale prices from a log normal distribution.
 
+![](../reference/figures/theme_beanie/beanie-babies.jpeg)
+
 ``` r
 
 set.seed(1996)
@@ -164,6 +196,12 @@ ggplot(beanie_prices, aes(x = "", y = price)) +
 [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
 uses controller gray and the four logo colors. Below we simulate 200
 Mario Kart 64 lap times from a heavy tailed t distribution.
+
+![](../reference/figures/theme_n64/n64-console-set.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:N64-Console-Set.png),
+public domain.
 
 ``` r
 
@@ -185,6 +223,12 @@ uses the Jurassic Park Post Office souvenir sheet: black, logo red,
 stamp yellow, and sunset orange. Below we simulate the total weight of
 the dinosaurs in each paddock.
 
+![](../reference/figures/theme_jurassic/jurassic-park-wordmark.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Jurassic_Park_wordmark.svg),
+public domain.
+
 ``` r
 
 set.seed(1993)
@@ -204,6 +248,12 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
 uses the red and yellow of a Happy Meal box. Below we simulate average
 daily Happy Meal sales for four toy promotions.
 
+![](../reference/figures/theme_happymeal/mcdonelds-happy-meal.jpg)
+
+Image: Praneeth kannegolla, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Mcdonelds_Happy_meal.jpg),
+CC BY-SA 4.0.
+
 ``` r
 
 set.seed(1997)
@@ -222,6 +272,12 @@ ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
 [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
 uses Monica’s purple walls, a yellow frame, and the logo dot colors.
 Below we simulate viewers per episode for three seasons.
+
+![](../reference/figures/theme_friends/the-central-perk-set-from-friends-7823245486.jpg)
+
+Image: Stuart Sevastos, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:The_Central_Perk_Set_from_Friends_(7823245486).jpg),
+CC BY 2.0.
 
 ``` r
 
@@ -243,6 +299,12 @@ puts graffiti neon on deep purple, and its continuous fill runs from
 teal to hot pink. Below we simulate how often the Carlton dance shows up
 each season.
 
+![](../reference/figures/theme_freshprince/the-fresh-prince-bel-air-text-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:The_Fresh_Prince_Bel-Air_text_logo.svg),
+public domain.
+
 ``` r
 
 set.seed(1990)
@@ -261,6 +323,12 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
 uses a cardboard background and bright milk cap prints. Below we
 simulate a collection of 100 Pogs.
+
+![](../reference/figures/theme_pogs/a-game-of-pogs-210633403.jpg)
+
+Image: hkboyee, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:A_game_of_Pogs_(210633403).jpg),
+CC BY 2.0.
 
 ``` r
 
@@ -282,6 +350,12 @@ uses the Sports Walkman photo: a cobalt blue backdrop with white grid
 lines, sports yellow, and play button green. Below we simulate median
 battery life for three models and two battery types.
 
+![](../reference/figures/theme_walkman/original-sony-walkman-tps-l2.jpg)
+
+Image: Binarysequence, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Original_Sony_Walkman_TPS-L2.JPG),
+CC BY-SA 4.0.
+
 ``` r
 
 set.seed(1979)
@@ -301,6 +375,12 @@ ggplot(walkman, aes(x = hours, y = model)) +
 [`theme_encarta()`](https://mjfrigaard.github.io/fmggp2/reference/theme_encarta.md):
 MindMaze from Encarta 97, with slate stone, parchment, a carved brown
 frame, and gold, and a Georgia title.
+
+![](../reference/figures/theme_encarta/encarta-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Encarta_logo.svg),
+public domain.
 
 ``` r
 
@@ -322,6 +402,12 @@ ggplot(enc, aes(x = year, y = share, fill = choice)) +
 the Netscape Navigator night sky with star yellow, teal, magenta, and
 meteor orange and a Times New Roman title.
 
+![](../reference/figures/theme_netscape/netscape-navigator-3-screenshot.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_3_Screenshot.png),
+CC0.
+
 ``` r
 
 set.seed(1996)
@@ -342,6 +428,12 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
 the Titanic’s original paint colors (hull black, hull stripe gold,
 canvas, antifouling red, White Star buff, and funnel gray) with a Big
 Caslon title.
+
+![](../reference/figures/theme_titanic/rms-titanic-3.jpg)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:RMS_Titanic_3.jpg),
+public domain.
 
 ``` r
 
@@ -381,6 +473,12 @@ ggplot(keepers, aes(x = design, fill = design)) +
 Toys”R”Us white and blue with the multicolored logo letters as marks and
 a Phosphate title.
 
+![](../reference/figures/theme_toysrus/logo-of-toys-r-us-1986-2007.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Logo_of_Toys_%22R%22_Us_(1986%E2%80%932007).png),
+public domain.
+
 ``` r
 
 set.seed(1999)
@@ -399,6 +497,12 @@ ggplot(toys, aes(x = toy, y = units, fill = toy)) +
 [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md):
 a lilac egg shell and a gray green LCD screen. Below we simulate
 Tamagotchi lifespans from a Weibull distribution.
+
+![](../reference/figures/theme_tamagotchi/various-tamagotchi-virtual-pet-devices.png)
+
+Image: Dex Vintage, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Various_Tamagotchi_virtual_pet_devices.png),
+CC BY 3.0.
 
 ``` r
 
@@ -419,6 +523,12 @@ ggplot(pets, aes(x = days, fill = care)) +
 neon orange plastic, water blue, and neon green. Below we simulate Super
 Soaker ranges for two models.
 
+![](../reference/figures/theme_supersoaker/cps2000front.jpg)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Cps2000front.jpg), CC
+BY-SA 3.0.
+
 ``` r
 
 set.seed(1990)
@@ -437,6 +547,12 @@ ggplot(shots, aes(x = feet, color = model)) +
 [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
 haunted purple and slime green. Below we simulate Goosebumps books read
 by two grades.
+
+![](../reference/figures/theme_goosebumps/goosebumps-book-series-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Goosebumps_(book_series)_logo.svg),
+public domain.
 
 ``` r
 
@@ -457,6 +573,12 @@ ggplot(readers, aes(x = books, fill = grade)) +
 a black well and the seven tetromino colors. Below we simulate lines
 cleared from a negative binomial distribution.
 
+![](../reference/figures/theme_tetris/game-boy-with-tetris-cartridge.jpg)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Game_Boy_with_Tetris_cartridge.jpg),
+CC0.
+
 ``` r
 
 set.seed(1989)
@@ -475,6 +597,12 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
 purple fur, teal, orange, and pink. Below we simulate Furby chatter in
 two languages.
+
+![](../reference/figures/theme_furby/furby-brand-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Furby_brand_logo.svg),
+public domain.
 
 ``` r
 
@@ -495,6 +623,12 @@ ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
 a black studio, MTV yellow, and neon colors. Below we simulate days on
 the countdown from a gamma distribution.
 
+![](../reference/figures/theme_trl/trl-studios-in-times-square-in-2006.jpg)
+
+Image: Diogo Almeida, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:TRL_studios_in_Times_Square_in_2006.jpg),
+CC BY-SA 2.5.
+
 ``` r
 
 set.seed(1998)
@@ -513,6 +647,12 @@ ggplot(videos, aes(x = days, fill = genre)) +
 [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
 an Apple II screen with phosphor green text. Below we simulate days to
 reach Oregon from a log normal distribution.
+
+![](../reference/figures/theme_oregontrail/the-oregon-trail-apple-ii-screenshot.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:The_Oregon_Trail_(Apple_II)_screenshot.png),
+public domain.
 
 ``` r
 
@@ -533,6 +673,8 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
 the yellow running man, AOL blue, and a white chat window. Below we
 simulate buddy list sizes with different shapes.
 
+![](../reference/figures/theme_aim/on-may-1-1997-aol-instant-messenger-aim-was-released-i-v0-zgwnb3e6xhxa1.webp)
+
 ``` r
 
 set.seed(1997)
@@ -552,6 +694,13 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
 deep indigo and psychedelic magenta, teal, and orange. Below we simulate
 seconds to see the hidden image on two tries.
 
+![](../reference/figures/theme_magiceye/stereogram-tut-random-dot-shark.png)
+
+Image: No machine-readable author provided. Fred Hsu assumed (based on
+copyright claims)., [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Stereogram_Tut_Random_Dot_Shark.png),
+CC BY-SA 3.0.
+
 ``` r
 
 set.seed(1993)
@@ -567,9 +716,12 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
 
 ## Batman
 
-[`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md):
-the Batman (1989) palette: black, gold, orange, and steel. Below we
-simulate bat signal sightings over a week.
+[`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
+comes in three versions. The default, `version = "movie"`, uses the
+Batman (1989) palette: black, gold, orange, and steel. Below we simulate
+bat signal sightings over a week.
+
+![](../reference/figures/theme_batman/movie.jpeg)
 
 ``` r
 
@@ -583,11 +735,47 @@ ggplot(signals, aes(x = night, y = sightings)) +
 
 ![](themes_files/figure-html/batman-1.png)
 
+`version = "classic"` uses the 1966 TV series palette: gray, blue,
+yellow, black, and cream.
+
+![](../reference/figures/theme_batman/classic-pal.png)
+
+``` r
+
+ggplot(signals, aes(x = night, y = sightings)) +
+  geom_col() +
+  labs(title = "Bat signal sightings (simulated)", x = NULL, y = "Sightings") +
+  theme_batman(base_size = 13, version = "classic")
+```
+
+![](themes_files/figure-html/batman-classic-1.png)
+
+`version = "darknight"` uses The Dark Knight palette: yellow, olive,
+charcoal, navy, and slate.
+
+![](../reference/figures/theme_batman/darknight-pal.png)
+
+``` r
+
+ggplot(signals, aes(x = night, y = sightings)) +
+  geom_col() +
+  labs(title = "Bat signal sightings (simulated)", x = NULL, y = "Sightings") +
+  theme_batman(base_size = 13, version = "darknight")
+```
+
+![](themes_files/figure-html/batman-darknight-1.png)
+
 ## SNICK
 
 [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md):
 Nickelodeon orange and slime green on a night purple sky. Below we
 simulate 20 weeks of ratings for three nights.
+
+![](../reference/figures/theme_snick/snick-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:SNICK_logo.svg), public
+domain.
 
 ``` r
 
@@ -608,6 +796,12 @@ ggplot(nights, aes(x = week, y = rating, color = night)) +
 midnight navy, chrome, and frosted tip colors. Below we simulate a week
 of radio spins for four bands.
 
+![](../reference/figures/theme_boyband/n-sync-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:%27N_Sync_Logo.svg),
+public domain.
+
 ``` r
 
 set.seed(1999)
@@ -626,6 +820,12 @@ ggplot(spins, aes(x = band, y = spins, fill = band)) +
 [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md):
 Memphis style teal, magenta, and yellow on black. Below we simulate fall
 and spring quiz averages for three students.
+
+![](../reference/figures/theme_savedbythebell/saved-by-the-bell-original-series-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo.svg),
+public domain.
 
 ``` r
 
@@ -647,6 +847,12 @@ ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
 [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md):
 heat changing magenta, orange, purple, and blue. Below we simulate
 monthly sales for two fads.
+
+![](../reference/figures/theme_hypercolor/generra-hypercolor-2.jpg)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Generra_Hypercolor_2.jpg),
+public domain.
 
 ``` r
 
@@ -670,6 +876,12 @@ ggplot(fads, aes(x = month, y = sales, fill = fad)) +
 LED red, terminal amber and green on black. Below we show how 300
 households prepared for Y2K across three surveys.
 
+![](../reference/figures/theme_y2k/bug-de-l-an-2000.jpg)
+
+Image: Bug de l’an 2000, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Bug_de_l%27an_2000.jpg),
+CC BY-SA 3.0.
+
 ``` r
 
 prep <- data.frame(
@@ -691,6 +903,12 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
 playpen yellow with Tommy blue, Angelica pink, and Reptar green. Below
 we simulate babies named after three characters.
 
+![](../reference/figures/theme_rugrats/rugrats-logo2.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Rugrats_logo2.png),
+public domain.
+
 ``` r
 
 set.seed(1993)
@@ -709,6 +927,12 @@ ggplot(subset(babies, n > 0), aes(x = year, y = name, color = name, alpha = n)) 
 [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md):
 hellfire red and orange on scorched brown. Below we simulate Doom frame
 rates by processor speed.
+
+![](../reference/figures/theme_doom/doom-classic-box-art.png)
+
+Image: Bethesda, Copyright Microsoft, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Doom_classic_box_art.png),
+CC BY 3.0.
 
 ``` r
 
@@ -729,6 +953,18 @@ ggplot(pcs, aes(x = mhz, y = fps)) +
 Sega blue vs. Nintendo red on charcoal. Below we simulate games owned
 and hours played for two consoles.
 
+![](../reference/figures/theme_consolewars/sega-genesis-na-mk2-console-set.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Sega-Genesis-NA-Mk2-Console-Set.png),
+public domain.
+
+![](../reference/figures/theme_consolewars/super-nintendo-7973380020.jpg)
+
+Image: Digital Game Museum, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Super_Nintendo_(7973380020).jpg),
+CC BY 2.0.
+
 ``` r
 
 set.seed(1991)
@@ -747,6 +983,12 @@ ggplot(kids, aes(x = games, y = hours, color = console)) +
 [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md):
 comedy club brick with the logo colors. Below we simulate laughs and
 viewers for 60 episodes.
+
+![](../reference/figures/theme_seinfeld/seinfeld.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Seinfeld.svg), public
+domain.
 
 ``` r
 
@@ -767,6 +1009,12 @@ ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
 the six Ranger suits on light gray. Below we simulate putties defeated
 by each Ranger.
 
+![](../reference/figures/theme_powerrangers/power-rangers-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Power_Rangers_logo.svg),
+public domain.
+
 ``` r
 
 set.seed(1993)
@@ -785,6 +1033,12 @@ ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
 [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md):
 yellow plaid with black, red, and tartan green. Below we simulate the
 styles in three cliques.
+
+![](../reference/figures/theme_clueless/clueless-1995-film-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Clueless_(1995_film)_logo.svg),
+public domain.
 
 ``` r
 
@@ -805,6 +1059,12 @@ ggplot(students, aes(x = clique, fill = style)) +
 Bop It yellow on deep purple, with a purple to yellow continuous scale.
 Below we simulate reaction times to two commands.
 
+![](../reference/figures/theme_bopit/bop-it-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Bop_It_logo.svg),
+public domain.
+
 ``` r
 
 set.seed(1996)
@@ -824,6 +1084,12 @@ ggplot(players, aes(x = bop, y = twist)) +
 lime text and a yellow Comic Sans title on a dark navy panel. Below we
 simulate GeoCities page loads.
 
+![](../reference/figures/theme_geocities/geocities-logo.png)
+
+Image: [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:GeoCities_logo.svg),
+public domain.
+
 ``` r
 
 set.seed(1997)
@@ -842,6 +1108,12 @@ ggplot(pages, aes(x = kb, y = seconds)) +
 [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md):
 Surge green on black, with a dark to bright green continuous scale.
 Below we simulate cans of Surge and hours of video games.
+
+![](../reference/figures/theme_surge/burger-king-frozen-surge-22789420399.jpg)
+
+Image: theimpulsivebuy, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Burger_King_Frozen_Surge_(22789420399).jpg),
+CC BY-SA 2.0.
 
 ``` r
 
