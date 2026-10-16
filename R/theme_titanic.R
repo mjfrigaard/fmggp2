@@ -1,10 +1,10 @@
 #' Titanic theme
 #'
-#' A late 90s `ggplot2` theme modeled on Titanic (1997), using the ship's
-#' original paint colors: a hull black background, a gold hull stripe frame
-#' and title, a canvas plot area with deck planking grid lines, antifouling
-#' red, White Star buff, funnel gray, and mast brown marks, and a Big Caslon
-#' title.
+#' A late 90s `ggplot2` theme modeled on Titanic (1997), using the Vallejo
+#' Titanic Colors paint set: a hull black background, a yellow hull stripe
+#' frame and title, a canvas plot area with deck planking grid lines,
+#' antifouling red, faded yellow, stone, and wood deck marks, and a Big
+#' Caslon title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -54,7 +54,7 @@ theme_titanic <- function(base_size = 11,
       # paint colors for discrete fills and colours
       palette.fill.discrete = unname(cols[c("antifouling", "buff", "funnel", "masts")]),
       palette.colour.discrete = unname(cols[c("antifouling", "buff", "funnel", "masts")]),
-      # buff fills with hull black lines by default
+      # faded yellow fills with hull black lines by default
       geom = ggplot2::element_geom(ink = cols[["hull_black"]],
                                    paper = cols[["canvas"]],
                                    accent = cols[["hull_stripe"]],
@@ -64,16 +64,16 @@ theme_titanic <- function(base_size = 11,
     )
 }
 
-# from the "Titanic paints" chart: antifouling (NARN42), canvas (RM07),
-# wooden deck planking (ARG01), White Star buff (US30), hull black (KM05),
-# hull stripe (ACJ19), masts (NARN44), funnel casings (NARN50)
+# from the Vallejo Titanic Colors set: anti-fouling red (71.442), faded
+# yellow (71.443), yellow (71.078), wood deck (71.444), black (71.057), and
+# stone, plus a canvas plot area
 titanic_cols <- c(
-  antifouling = "#8F3A2D",
+  antifouling = "#A0625E",
   canvas = "#F3EFE3",
   deck = "#DDCBA1",
-  buff = "#C18F62",
-  hull_black = "#2C3134",
-  hull_stripe = "#FFAB00",
-  masts = "#7C4B27",
-  funnel = "#686E67"
+  buff = "#CC9552",
+  hull_black = "#2A2C2B",
+  hull_stripe = "#D59E2D",
+  masts = "#9D7254",
+  funnel = "#B5B08E"
 )

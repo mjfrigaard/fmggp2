@@ -1,7 +1,8 @@
 #' Furby theme
 #'
-#' A late 90s `ggplot2` theme modeled on a Furby: purple fur, a soft white
-#' plot area, teal, orange, and pink marks, and a Chalkboard SE title.
+#' A late 90s `ggplot2` theme modeled on the Sherbet Furby: red fur, a beak
+#' yellow frame, a pale blue belly plot area, and belly blue, beak yellow,
+#' pink, and eye blue marks, and a Chalkboard SE title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -28,7 +29,7 @@ theme_furby <- function(base_size = 11,
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
       plot.background = ggplot2::element_rect(fill = cols[["fur"]],
-                                              colour = cols[["orange"]],
+                                              colour = cols[["beak"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
@@ -44,30 +45,31 @@ theme_furby <- function(base_size = 11,
       panel.grid.minor = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = cols[["white"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["orange"]], colour = NA),
+      strip.background = ggplot2::element_rect(fill = cols[["beak"]], colour = NA),
       strip.text = ggplot2::element_text(colour = cols[["fur"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["fur"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("teal", "orange", "pink")]),
-      palette.colour.discrete = unname(cols[c("teal", "orange", "pink")]),
+      palette.fill.discrete = unname(cols[c("blue", "beak", "pink", "eye")]),
+      palette.colour.discrete = unname(cols[c("blue", "beak", "pink", "eye")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["belly"]],
-                                   accent = cols[["orange"]],
+                                   accent = cols[["beak"]],
                                    colour = cols[["ink"]],
-                                   fill = cols[["teal"]],
+                                   fill = cols[["blue"]],
                                    family = base_family)
     )
 }
 
 furby_cols <- c(
-  fur = "#6A4C93",
-  belly = "#F7F1FF",
-  grid = "#E2D6F5",
-  ink = "#2D1B4E",
-  teal = "#1FB5AD",
-  orange = "#FF8C42",
-  pink = "#E05297",
+  fur = "#D61C42",
+  belly = "#EEF6FD",
+  grid = "#BFE0F8",
+  ink = "#3D3541",
+  blue = "#80C5F7",
+  beak = "#E3B329",
+  pink = "#F23971",
+  eye = "#4E87A4",
   white = "#FFFFFF"
 )

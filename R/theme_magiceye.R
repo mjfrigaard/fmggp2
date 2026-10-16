@@ -1,8 +1,8 @@
 #' Magic Eye theme
 #'
-#' A late 90s `ggplot2` theme modeled on a Magic Eye stereogram poster: a
-#' deep indigo background, psychedelic magenta, teal, and orange marks, and a
-#' Skia title.
+#' A late 90s `ggplot2` theme modeled on a Magic Eye stereogram: a deep sea
+#' blue background, a coral frame, a sky blue title, and coral, sky, sand,
+#' and sea green marks, and a Skia title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -28,13 +28,13 @@ theme_magiceye <- function(base_size = 11,
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["indigo"]],
-                                              colour = cols[["magenta"]],
+      plot.background = ggplot2::element_rect(fill = cols[["deep"]],
+                                              colour = cols[["coral"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
-                                         colour = cols[["teal"]],
+                                         colour = cols[["sky"]],
                                          size = ggplot2::rel(1.4)),
       plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
@@ -45,30 +45,30 @@ theme_magiceye <- function(base_size = 11,
       panel.grid.minor = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = cols[["white"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["magenta"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["indigo"]], face = "bold"),
+      strip.background = ggplot2::element_rect(fill = cols[["coral"]], colour = NA),
+      strip.text = ggplot2::element_text(colour = cols[["deep"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
-      legend.key = ggplot2::element_rect(fill = cols[["indigo"]], colour = NA),
+      legend.key = ggplot2::element_rect(fill = cols[["deep"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("magenta", "teal", "orange", "violet")]),
-      palette.colour.discrete = unname(cols[c("magenta", "teal", "orange", "violet")]),
+      palette.fill.discrete = unname(cols[c("coral", "sky", "sand", "sea")]),
+      palette.colour.discrete = unname(cols[c("coral", "sky", "sand", "sea")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["teal"]],
+                                   accent = cols[["sky"]],
                                    colour = cols[["white"]],
-                                   fill = cols[["magenta"]],
+                                   fill = cols[["coral"]],
                                    family = base_family)
     )
 }
 
 magiceye_cols <- c(
-  indigo = "#1B1446",
-  panel = "#261C5C",
-  grid = "#3B2F7A",
-  white = "#F2F0FF",
-  magenta = "#FF2E93",
-  teal = "#14D8C4",
-  orange = "#FF9F1C",
-  violet = "#9B5DE5"
+  deep = "#1E4A5A",
+  panel = "#245A6B",
+  grid = "#3B7A8A",
+  white = "#EAF4F6",
+  coral = "#E48C6E",
+  sky = "#6CBFDC",
+  sand = "#DEBB75",
+  sea = "#59B3B1"
 )

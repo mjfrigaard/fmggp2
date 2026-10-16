@@ -1,7 +1,7 @@
 test_that("theme_tetris returns a complete theme that builds a plot", {
   thm <- theme_tetris(base_family = "sans", title_family = "sans")
   expect_s3_class(thm, "theme")
-  expect_equal(thm$geom$fill, "#00F0F0")
+  expect_equal(thm$geom$fill, "#009999")
   p <- ggplot2::ggplot(data.frame(x = c("a", "b", "b")), ggplot2::aes(x = x, fill = x)) +
     ggplot2::geom_bar() +
     ggplot2::labs(title = "title")

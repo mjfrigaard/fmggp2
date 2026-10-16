@@ -1,8 +1,8 @@
 #' Netscape theme
 #'
 #' A late 90s `ggplot2` theme modeled on the Netscape Navigator logo: a night
-#' sky background, star yellow titles, teal, magenta, and meteor orange marks,
-#' and a Times New Roman title.
+#' sky background, a teal frame, a glowing teal title, and teal, aurora
+#' green, sea glass, and deep teal marks, and a Times New Roman title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -34,7 +34,7 @@ theme_netscape <- function(base_size = 11,
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
-                                         colour = cols[["star"]],
+                                         colour = cols[["glow"]],
                                          size = ggplot2::rel(1.4)),
       plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
@@ -50,12 +50,12 @@ theme_netscape <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["night"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("teal", "star", "magenta", "meteor")]),
-      palette.colour.discrete = unname(cols[c("teal", "star", "magenta", "meteor")]),
+      palette.fill.discrete = unname(cols[c("teal", "aurora", "sea", "deep")]),
+      palette.colour.discrete = unname(cols[c("teal", "aurora", "sea", "deep")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["star"]],
+                                   accent = cols[["glow"]],
                                    colour = cols[["white"]],
                                    fill = cols[["teal"]],
                                    family = base_family)
@@ -63,12 +63,13 @@ theme_netscape <- function(base_size = 11,
 }
 
 netscape_cols <- c(
-  night = "#0A1F44",
-  panel = "#13306B",
-  grid = "#24458C",
-  white = "#FFFFFF",
-  star = "#F4D35E",
-  teal = "#2EC4B6",
-  magenta = "#E71D73",
-  meteor = "#FF9F1C"
+  night = "#19171F",
+  panel = "#163040",
+  grid = "#2C4A4F",
+  white = "#EFF6F5",
+  glow = "#5EC0AF",
+  teal = "#38AAB0",
+  aurora = "#17986F",
+  sea = "#90B3A9",
+  deep = "#1F7275"
 )

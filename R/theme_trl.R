@@ -1,7 +1,7 @@
 #' MTV TRL theme
 #'
 #' A late 90s `ggplot2` theme modeled on MTV's Total Request Live: a black
-#' studio, MTV yellow and hot red, Times Square neon marks, and an Impact
+#' studio, TRL yellow, the MTV logo orange, red, and blue, and an Impact
 #' title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
@@ -50,8 +50,8 @@ theme_trl <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("red", "cyan", "magenta", "green", "orange", "yellow")]),
-      palette.colour.discrete = unname(cols[c("red", "cyan", "magenta", "green", "orange", "yellow")]),
+      palette.fill.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray")]),
+      palette.colour.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],
@@ -63,14 +63,13 @@ theme_trl <- function(base_size = 11,
 }
 
 trl_cols <- c(
-  black = "#111111",
-  panel = "#1E1E1E",
+  black = "#040707",
+  panel = "#161818",
   grid = "#333333",
   white = "#F5F5F5",
-  yellow = "#FFE600",
-  red = "#FF1744",
-  cyan = "#00E5FF",
-  magenta = "#E040FB",
-  green = "#76FF03",
-  orange = "#FF9100"
+  yellow = "#F3EC23",
+  red = "#DD141A",
+  blue = "#008BD7",
+  orange = "#FFB100",
+  gray = "#A09F9F"
 )

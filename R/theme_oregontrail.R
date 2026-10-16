@@ -1,7 +1,8 @@
 #' Oregon Trail theme
 #'
-#' A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II:
-#' a black screen, phosphor green text and marks, and an Andale Mono title.
+#' A late 90s `ggplot2` theme modeled on The Oregon Trail on an Apple II: a
+#' black screen, phosphor green text and marks in three shades, and an Andale
+#' Mono title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -49,12 +50,12 @@ theme_oregontrail <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("green", "amber", "white")]),
-      palette.colour.discrete = unname(cols[c("green", "amber", "white")]),
+      palette.fill.discrete = unname(cols[c("green", "mid", "pale")]),
+      palette.colour.discrete = unname(cols[c("green", "mid", "pale")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["green"]],
                                    paper = cols[["panel"]],
-                                   accent = cols[["amber"]],
+                                   accent = cols[["mid"]],
                                    colour = cols[["green"]],
                                    fill = cols[["dim"]],
                                    family = base_family)
@@ -62,11 +63,11 @@ theme_oregontrail <- function(base_size = 11,
 }
 
 oregontrail_cols <- c(
-  black = "#050505",
-  panel = "#0B0F0B",
-  grid = "#123312",
-  green = "#33FF33",
-  amber = "#FFB000",
-  white = "#E8FFE8",
-  dim = "#1F7A1F"
+  black = "#010101",
+  panel = "#062007",
+  grid = "#094709",
+  green = "#00FE00",
+  mid = "#0AB90B",
+  pale = "#B8FFB8",
+  dim = "#0A8B0B"
 )

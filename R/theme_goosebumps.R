@@ -1,7 +1,8 @@
 #' Goosebumps theme
 #'
-#' A late 90s `ggplot2` theme modeled on Goosebumps book covers: a
-#' haunted purple background, slime green drips, and a Trattatello title.
+#' A late 90s `ggplot2` theme modeled on the Goosebumps logo: a black
+#' background, a slime green frame and title, a dark purple plot area, slime
+#' green, drip purple, and moss marks, and a Trattatello title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -49,8 +50,8 @@ theme_goosebumps <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["night"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("slime", "orange", "red")]),
-      palette.colour.discrete = unname(cols[c("slime", "orange", "red")]),
+      palette.fill.discrete = unname(cols[c("slime", "purple", "moss")]),
+      palette.colour.discrete = unname(cols[c("slime", "purple", "moss")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["bone"]],
                                    paper = cols[["panel"]],
@@ -62,11 +63,11 @@ theme_goosebumps <- function(base_size = 11,
 }
 
 goosebumps_cols <- c(
-  night = "#2E0854",
-  panel = "#3F1470",
-  grid = "#5B2A91",
-  slime = "#7FD13B",
-  orange = "#FF8C1A",
-  bone = "#F2E8CF",
-  red = "#D7263D"
+  night = "#040304",
+  panel = "#1F0624",
+  grid = "#570761",
+  slime = "#32D638",
+  purple = "#9B2FA6",
+  moss = "#3C833B",
+  bone = "#F2E8CF"
 )

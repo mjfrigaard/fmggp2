@@ -1,8 +1,8 @@
 #' Tetris theme
 #'
-#' A late 90s `ggplot2` theme modeled on Tetris: a black well, the seven
-#' tetromino colors as marks, and the pixel font Press Start 2P (bundled with
-#' the package) for the title.
+#' A late 90s `ggplot2` theme modeled on Tetris: a black well, the tetromino
+#' block colors as marks, and the pixel font Press Start 2P (bundled with the
+#' package) for the title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -50,8 +50,8 @@ theme_tetris <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange")]),
-      palette.colour.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange")]),
+      palette.fill.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange", "gray", "pink", "lavender")]),
+      palette.colour.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange", "gray", "pink", "lavender")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],
@@ -63,15 +63,18 @@ theme_tetris <- function(base_size = 11,
 }
 
 tetris_cols <- c(
-  black = "#0B0B0B",
-  panel = "#141414",
-  grid = "#2A2A2A",
+  black = "#000000",
+  panel = "#0B0B0B",
+  grid = "#333333",
   white = "#F5F5F5",
-  cyan = "#00F0F0",
-  yellow = "#F0F000",
-  purple = "#A000F0",
-  green = "#00F000",
-  red = "#F00000",
-  blue = "#0050F0",
-  orange = "#F0A000"
+  cyan = "#009999",
+  yellow = "#999900",
+  purple = "#990099",
+  green = "#009900",
+  red = "#990000",
+  blue = "#0000BB",
+  orange = "#996600",
+  gray = "#999999",
+  pink = "#FF75A2",
+  lavender = "#8672CB"
 )

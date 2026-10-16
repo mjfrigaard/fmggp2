@@ -7,3 +7,4 @@
 ^\.github$
 ^\.quarto$
 ^vignettes/\.quarto$
+^_stash\.md$

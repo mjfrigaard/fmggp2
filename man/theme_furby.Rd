@@ -23,8 +23,9 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on a Furby: purple fur, a soft white
-plot area, teal, orange, and pink marks, and a Chalkboard SE title.
+A late 90s \code{ggplot2} theme modeled on the Sherbet Furby: red fur, a beak
+yellow frame, a pale blue belly plot area, and belly blue, beak yellow,
+pink, and eye blue marks, and a Chalkboard SE title.
 }
 \examples{
 library(ggplot2)

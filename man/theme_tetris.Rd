@@ -23,9 +23,9 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Tetris: a black well, the seven
-tetromino colors as marks, and the pixel font Press Start 2P (bundled with
-the package) for the title.
+A late 90s \code{ggplot2} theme modeled on Tetris: a black well, the tetromino
+block colors as marks, and the pixel font Press Start 2P (bundled with the
+package) for the title.
 }
 \examples{
 library(ggplot2)

@@ -23,9 +23,9 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on a Magic Eye stereogram poster: a
-deep indigo background, psychedelic magenta, teal, and orange marks, and a
-Skia title.
+A late 90s \code{ggplot2} theme modeled on a Magic Eye stereogram: a deep sea
+blue background, a coral frame, a sky blue title, and coral, sky, sand,
+and sea green marks, and a Skia title.
 }
 \examples{
 library(ggplot2)

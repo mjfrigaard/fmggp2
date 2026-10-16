@@ -24,8 +24,8 @@ A \code{ggplot2} theme object.
 }
 \description{
 A late 90s \code{ggplot2} theme modeled on the Netscape Navigator logo: a night
-sky background, star yellow titles, teal, magenta, and meteor orange marks,
-and a Times New Roman title.
+sky background, a teal frame, a glowing teal title, and teal, aurora
+green, sea glass, and deep teal marks, and a Times New Roman title.
 }
 \examples{
 library(ggplot2)

@@ -1,8 +1,8 @@
 #' Encarta theme
 #'
 #' A late 90s `ggplot2` theme modeled on MindMaze, the castle trivia game in
-#' Microsoft Encarta 97: a slate stone background, a carved brown frame, a
-#' gold title, a parchment plot area, stone blue, frame brown, and gold
+#' Microsoft Encarta 97: a dark stone background, a carved wood frame, a gold
+#' banner title, a parchment plot area, stone gray, copper, gold, and moss
 #' marks, and a Georgia title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
@@ -51,9 +51,9 @@ theme_encarta <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["stone_dark"]], colour = NA),
       # stone blue, frame brown, and gold for discrete fills and colours
-      palette.fill.discrete = unname(cols[c("stone", "frame", "gold", "sage")]),
-      palette.colour.discrete = unname(cols[c("stone", "frame", "gold", "sage")]),
-      # stone blue fills with dark wood lines by default
+      palette.fill.discrete = unname(cols[c("stone", "copper", "gold", "sage")]),
+      palette.colour.discrete = unname(cols[c("stone", "copper", "gold", "sage")]),
+      # stone gray fills with dark wood lines by default
       geom = ggplot2::element_geom(ink = cols[["wood"]],
                                    paper = cols[["parchment"]],
                                    accent = cols[["gold"]],
@@ -63,15 +63,15 @@ theme_encarta <- function(base_size = 11,
     )
 }
 
-# colors sampled from the MindMaze window in Encarta 97
+# colors sampled from the MindMaze castle art in Encarta 97
 encarta_cols <- c(
-  stone = "#596B7C",
-  stone_dark = "#384557",
-  parchment = "#E1DFD2",
-  grid = "#CBC6B4",
-  frame = "#652E16",
-  copper = "#7F5432",
-  wood = "#381F15",
-  gold = "#CCB37B",
-  sage = "#8AB59B"
+  stone = "#655F58",
+  stone_dark = "#3F3632",
+  parchment = "#E8DCC0",
+  grid = "#C0B89D",
+  frame = "#704E37",
+  copper = "#9B5337",
+  wood = "#2E2522",
+  gold = "#D0A86B",
+  sage = "#85826C"
 )

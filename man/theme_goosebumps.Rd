@@ -23,8 +23,9 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Goosebumps book covers: a
-haunted purple background, slime green drips, and a Trattatello title.
+A late 90s \code{ggplot2} theme modeled on the Goosebumps logo: a black
+background, a slime green frame and title, a dark purple plot area, slime
+green, drip purple, and moss marks, and a Trattatello title.
 }
 \examples{
 library(ggplot2)

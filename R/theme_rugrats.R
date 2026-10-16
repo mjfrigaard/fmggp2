@@ -1,8 +1,8 @@
 #' Rugrats theme
 #'
-#' A `ggplot2` theme built from Rugrats: a pale yellow playpen background,
-#' an orange frame, a purple Marker Felt title, and Tommy blue, Angelica
-#' pink, Reptar green, orange, purple, red, teal, and yellow marks.
+#' A `ggplot2` theme built from the Rugrats logo: a pale yellow playpen
+#' background, a purple frame and Marker Felt title, and purple, yellow, red,
+#' green, plum, and gold marks.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -30,7 +30,7 @@ theme_rugrats <- function(base_size = 11,
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["ink"]]),
       plot.background = ggplot2::element_rect(fill = cols[["playpen"]],
-                                              colour = cols[["orange"]],
+                                              colour = cols[["purple"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
@@ -51,31 +51,29 @@ theme_rugrats <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["playpen"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("blue", "pink", "green", "orange", "purple", "red", "teal", "yellow")]),
-      palette.colour.discrete = unname(cols[c("blue", "pink", "green", "orange", "purple", "red", "teal", "yellow")]),
+      palette.fill.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold")]),
+      palette.colour.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["white"]],
                                    accent = cols[["green"]],
                                    colour = cols[["purple"]],
-                                   fill = cols[["orange"]],
+                                   fill = cols[["red"]],
                                    family = base_family)
     )
 }
 
-# the Rugrats logo and the babies' clothes
+# the Rugrats logo
 rugrats_cols <- c(
   playpen = "#FFF3C4",
   white = "#FFFFFF",
   grid = "#F1E6BF",
   ink = "#3B2A1A",
-  blue = "#3D9BE9",
-  pink = "#FF5DA8",
-  green = "#43A047",
-  orange = "#F7941D",
-  purple = "#7B3FA0",
-  red = "#E53935",
-  teal = "#17A589",
-  yellow = "#F9C80E"
+  purple = "#4A3392",
+  yellow = "#FCD205",
+  red = "#EA4F47",
+  green = "#A7A04A",
+  plum = "#9C416A",
+  gold = "#D6AD26"
 )
 

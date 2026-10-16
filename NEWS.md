@@ -1,3 +1,9 @@
+# fmggp2 0.44.0
+
+* New palettes for `theme_encarta()`, `theme_netscape()`, `theme_titanic()`, `theme_goosebumps()`, `theme_tetris()`, `theme_furby()`, `theme_trl()`, `theme_oregontrail()`, `theme_magiceye()`, `theme_savedbythebell()`, and `theme_rugrats()`, sampled from new reference images.
+
+* The themes vignette links to reference images that are not licensed for reuse instead of hosting them.
+
 # fmggp2 0.43.0
 
 * New reference images and palettes for `theme_win98()`, `theme_napster()`, `theme_spice()`, `theme_beanie()`, `theme_jurassic()`, `theme_happymeal()`, `theme_friends()`, `theme_freshprince()`, `theme_pogs()`, and `theme_walkman()`. `theme_napster()` now uses the gray client window with a black chat area, `theme_spice()` the Spice World tour poster, `theme_freshprince()` the show logo, and `theme_walkman()` a sports yellow body with blue buttons.
