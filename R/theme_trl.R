@@ -50,8 +50,8 @@ theme_trl <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray")]),
-      palette.colour.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray")]),
+      palette.fill.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray", "white")]),
+      palette.colour.discrete = unname(cols[c("red", "blue", "orange", "yellow", "gray", "white")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],

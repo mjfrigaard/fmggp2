@@ -2,7 +2,7 @@
 #'
 #' A `ggplot2` theme built from the Rugrats logo: a pale yellow playpen
 #' background, a purple frame and Marker Felt title, and purple, yellow, red,
-#' green, plum, and gold marks.
+#' green, plum, gold, Tommy blue, and orange marks.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -51,8 +51,8 @@ theme_rugrats <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["playpen"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold")]),
-      palette.colour.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold")]),
+      palette.fill.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold", "blue", "orange")]),
+      palette.colour.discrete = unname(cols[c("purple", "yellow", "red", "green", "plum", "gold", "blue", "orange")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["white"]],
@@ -74,6 +74,8 @@ rugrats_cols <- c(
   red = "#EA4F47",
   green = "#A7A04A",
   plum = "#9C416A",
-  gold = "#D6AD26"
+  gold = "#D6AD26",
+  blue = "#3D9BE9",
+  orange = "#F7941D"
 )
 

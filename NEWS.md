@@ -1,3 +1,7 @@
+# fmggp2 0.47.1
+
+* `theme_trl()` adds white as a sixth discrete color and `theme_rugrats()` adds Tommy blue and orange for eight, so the book's ridgeline plot and instance chart have enough colors again.
+
 # fmggp2 0.47.0
 
 * Removed copyrighted reference images from the themes vignette. Themes without a freely licensed image no longer show one.
