@@ -1,8 +1,8 @@
 # Sony Walkman theme
 
-A late 90s `ggplot2` theme modeled on the Sony Sports Walkman: a cobalt
-blue backdrop with white grid lines, a sports yellow frame and title,
-yellow, green, and beige button colors as marks, charcoal lines, and a
+A late 90s `ggplot2` theme modeled on the Sony Sports Walkman: a sports
+yellow body with a blue button frame, a silver plot area, a charcoal
+title and text, blue, charcoal, orange, gold, and silver marks, and a
 DIN Condensed title.
 
 ## Usage

@@ -1,5 +1,28 @@
 # Changelog
 
+## fmggp2 0.43.0
+
+- New reference images and palettes for
+  [`theme_win98()`](https://mjfrigaard.github.io/fmggp2/reference/theme_win98.md),
+  [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md),
+  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md),
+  [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md),
+  [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md),
+  [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md),
+  [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md),
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md),
+  [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md),
+  and
+  [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md).
+  [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
+  now uses the gray client window with a black chat area,
+  [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
+  the Spice World tour poster,
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+  the show logo, and
+  [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
+  a sports yellow body with blue buttons.
+
 ## fmggp2 0.42.0
 
 - [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)

@@ -51,11 +51,7 @@ title sits in a navy title bar, the plot area is white, and bars and
 lines are navy by default. Below we simulate 300 AOL dial up sessions
 (in minutes) from a normal distribution.
 
-![](../reference/figures/theme_win98/microsoft-windows-98-logo-with-wordmark.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Microsoft_Windows_98_logo_with_wordmark.svg),
-public domain.
+![](../reference/figures/theme_win98/win98-desktop-icons.png)
 
 ``` r
 
@@ -73,7 +69,8 @@ ggplot(aol_sessions, aes(x = minutes)) +
 
 ![](themes_files/figure-html/win98-1.png)
 
-Discrete fills follow the desktop palette (gray, navy, then teal).
+Discrete fills follow the desktop icons (teal, screen blue, folder
+yellow, then gray).
 
 ``` r
 
@@ -93,15 +90,12 @@ ggplot(aol_ranges, aes(x = n, y = "300 sessions", fill = range)) +
 ## Napster
 
 [`theme_napster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_napster.md)
-borrows the dark 1999 Napster client: a near black window, white text, a
-dotted gray grid, and lime marks. Below we simulate 300 MP3 downloads
-over a 56k modem from a right skewed gamma distribution.
+borrows the 1999 Napster client: a gray window, a black chat area with a
+dotted gray grid, and cyan, red, lime, and yellow chat marks. Below we
+simulate 300 MP3 downloads over a 56k modem from a right skewed gamma
+distribution.
 
-![](../reference/figures/theme_napster/napster-logo.png)
-
-Image: Jusore, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Napster_logo.svg),
-GPLv3.
+![](../reference/figures/theme_napster/napster-client.png)
 
 ``` r
 
@@ -147,14 +141,11 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
 ## Spice Girls
 
 [`theme_spice()`](https://mjfrigaard.github.io/fmggp2/reference/theme_spice.md)
-uses hot pink, purple, and gold. Below we simulate the ages of 400 fans
+uses the Spice World tour poster: black, tour red, and the mint, pink,
+orange, gold, and blue letters. Below we simulate the ages of 400 fans
 at a 1998 concert as a mix of kids and parents.
 
-![](../reference/figures/theme_spice/spice-girls.jpg)
-
-Image: Movie Stars and Rockets, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Spice_Girls.jpg), CC BY
-2.0.
+![](../reference/figures/theme_spice/spice-world-tour.jpg)
 
 ``` r
 
@@ -173,10 +164,11 @@ ggplot(spice_fans, aes(x = age)) +
 ## Beanie Babies
 
 [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-uses the red and gold of a Beanie Babies heart tag. Below we simulate
-300 resale prices from a log normal distribution.
+uses the red and gold of a Beanie Babies heart tag, with plush blue and
+navy. Below we simulate 300 resale prices from a log normal
+distribution.
 
-![](../reference/figures/theme_beanie/beanie-babies.jpeg)
+![](../reference/figures/theme_beanie/beanie-babies.jpg)
 
 ``` r
 
@@ -223,11 +215,7 @@ uses the Jurassic Park Post Office souvenir sheet: black, logo red,
 stamp yellow, and sunset orange. Below we simulate the total weight of
 the dinosaurs in each paddock.
 
-![](../reference/figures/theme_jurassic/jurassic-park-wordmark.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Jurassic_Park_wordmark.svg),
-public domain.
+![](../reference/figures/theme_jurassic/jurassic-park-stamps.jpg)
 
 ``` r
 
@@ -248,11 +236,7 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
 uses the red and yellow of a Happy Meal box. Below we simulate average
 daily Happy Meal sales for four toy promotions.
 
-![](../reference/figures/theme_happymeal/mcdonelds-happy-meal.jpg)
-
-Image: Praneeth kannegolla, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Mcdonelds_Happy_meal.jpg),
-CC BY-SA 4.0.
+![](../reference/figures/theme_happymeal/happy-meal-box.jpg)
 
 ``` r
 
@@ -270,14 +254,11 @@ ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
 ## Friends
 
 [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
-uses Monica’s purple walls, a yellow frame, and the logo dot colors.
-Below we simulate viewers per episode for three seasons.
+uses the show’s palette: Monica’s purple walls, a Central Perk latte
+frame, and red, teal, olive, orange, rose, and mocha marks. Below we
+simulate viewers per episode for three seasons.
 
-![](../reference/figures/theme_friends/the-central-perk-set-from-friends-7823245486.jpg)
-
-Image: Stuart Sevastos, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:The_Central_Perk_Set_from_Friends_(7823245486).jpg),
-CC BY 2.0.
+![](../reference/figures/theme_friends/friends-palette.jpg)
 
 ``` r
 
@@ -295,15 +276,11 @@ ggplot(friends_episodes, aes(x = viewers_m, fill = season)) +
 ## Fresh Prince
 
 [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
-puts graffiti neon on deep purple, and its continuous fill runs from
-teal to hot pink. Below we simulate how often the Carlton dance shows up
-each season.
+uses the logo: graffiti greens on a pink glow, and its continuous fill
+runs from teal to lime. Below we simulate how often the Carlton dance
+shows up each season.
 
-![](../reference/figures/theme_freshprince/the-fresh-prince-bel-air-text-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:The_Fresh_Prince_Bel-Air_text_logo.svg),
-public domain.
+![](../reference/figures/theme_freshprince/fresh-prince-logo.jpg)
 
 ``` r
 
@@ -321,14 +298,10 @@ ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
 ## Pogs
 
 [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
-uses a cardboard background and bright milk cap prints. Below we
-simulate a collection of 100 Pogs.
+uses a cardboard background and the orange, blue, purple, green, rust,
+and tan milk cap prints. Below we simulate a collection of 100 Pogs.
 
-![](../reference/figures/theme_pogs/a-game-of-pogs-210633403.jpg)
-
-Image: hkboyee, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:A_game_of_Pogs_(210633403).jpg),
-CC BY 2.0.
+![](../reference/figures/theme_pogs/pogs.jpg)
 
 ``` r
 
@@ -346,15 +319,11 @@ ggplot(pogs, aes(x = type, fill = type)) +
 ## Sony Walkman
 
 [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md)
-uses the Sports Walkman photo: a cobalt blue backdrop with white grid
-lines, sports yellow, and play button green. Below we simulate median
-battery life for three models and two battery types.
+uses the Sports Walkman: a sports yellow body, blue buttons, a charcoal
+display, and an orange SPORTS label. Below we simulate median battery
+life for three models and two battery types.
 
-![](../reference/figures/theme_walkman/original-sony-walkman-tps-l2.jpg)
-
-Image: Binarysequence, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Original_Sony_Walkman_TPS-L2.JPG),
-CC BY-SA 4.0.
+![](../reference/figures/theme_walkman/sports-walkman.jpg)
 
 ``` r
 

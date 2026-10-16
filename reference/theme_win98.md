@@ -1,8 +1,9 @@
 # Windows 98 theme
 
 A late 90s `ggplot2` theme modeled on a Windows 98 window sitting on the
-teal desktop: silver window frame, navy title bar, white plot area, and
-navy marks.
+teal desktop: silver window frame, navy title bar, white plot area, navy
+marks, and desktop icon colors (teal, screen blue, folder yellow, and
+gray) for discrete fills.
 
 ## Usage
 

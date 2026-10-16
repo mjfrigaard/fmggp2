@@ -1,9 +1,9 @@
 # Fresh Prince theme
 
-A late 90s `ggplot2` theme modeled on The Fresh Prince of Bel-Air
-opening: deep purple background, graffiti neon green, pink, teal, and
-yellow, and an Arial Black title. Continuous fills run from teal to hot
-pink.
+A late 90s `ggplot2` theme modeled on The Fresh Prince of Bel-Air logo:
+a pink glow background, a graffiti green frame and title, green, teal,
+lime, and olive marks, and an Arial Black title. Continuous fills run
+from teal to lime.
 
 ## Usage
 

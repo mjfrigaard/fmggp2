@@ -1,7 +1,8 @@
 # Napster theme
 
-A late 90s `ggplot2` theme modeled on the dark 1999 Napster client: near
-black window, white text, dark gray grid, and bright lime marks.
+A late 90s `ggplot2` theme modeled on the 1999 Napster client: a gray
+window, black text, a black chat area with a dotted gray grid, and cyan,
+red, lime, and yellow chat marks.
 
 ## Usage
 
