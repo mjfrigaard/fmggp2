@@ -1,6 +1,6 @@
 Package: fmggp2
 Title: Support package for ggplot2: field manual
-Version: 0.56.0
+Version: 0.56.1
 Author: Martin Frigaard <mjfrigaard@pm.me> [aut, cre]
 Maintainer: Martin Frigaard <mjfrigaard@pm.me>
 Description: Utility functions and helpers for the fm-ggp2 book.

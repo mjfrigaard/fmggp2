@@ -25,7 +25,7 @@ A \code{ggplot2} theme object.
 \description{
 A late 90s \code{ggplot2} theme modeled on the Goosebumps books: a black
 background, a slime green frame and title, a dark purple plot area, slime
-green, purple, moss, pale green, and orchid marks, and a Trattatello title.
+green, purple, pale green, orchid, and moss marks, and a Trattatello title.
 }
 \examples{
 library(ggplot2)

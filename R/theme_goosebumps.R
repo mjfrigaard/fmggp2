@@ -2,7 +2,7 @@
 #'
 #' A late 90s `ggplot2` theme modeled on the Goosebumps books: a black
 #' background, a slime green frame and title, a dark purple plot area, slime
-#' green, purple, moss, pale green, and orchid marks, and a Trattatello title.
+#' green, purple, pale green, orchid, and moss marks, and a Trattatello title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -50,8 +50,8 @@ theme_goosebumps <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["night"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("slime", "purple", "moss", "pale", "orchid")]),
-      palette.colour.discrete = unname(cols[c("slime", "purple", "moss", "pale", "orchid")]),
+      palette.fill.discrete = unname(cols[c("slime", "purple", "pale", "orchid", "moss")]),
+      palette.colour.discrete = unname(cols[c("slime", "purple", "pale", "orchid", "moss")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["bone"]],
                                    paper = cols[["panel"]],

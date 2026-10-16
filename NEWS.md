@@ -1,3 +1,7 @@
+# fmggp2 0.56.1
+
+* `theme_goosebumps()` puts pale green before moss in its discrete palette, so a third group stands out on the dark purple panel.
+
 # fmggp2 0.56.0
 
 * Removed `theme_win98()`, `theme_napster()`, `theme_spice()`, `theme_encarta()`, `theme_lisafrank()`, `theme_magiceye()`, `theme_rugrats()`, and `theme_trl()`, which had no freely licensed reference image. The book chapters that used them now use `theme_oksoda()`, `theme_talkboy()`, `theme_crystalpepsi()`, `theme_orbitz()`, `theme_koosh()`, `theme_rzone()`, `theme_gushers()`, and `theme_squeezit()`. `ggtext` is no longer a dependency.
