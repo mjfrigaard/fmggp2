@@ -489,6 +489,21 @@ ggplot(nights, aes(x = week, y = rating, color = night)) +
   theme_snick(base_size = 13)
 ```
 
+## Boy bands
+
+`theme_boyband()`: midnight navy, chrome, and frosted tip colors. Below we simulate a week of radio spins for four bands.
+
+```{r}
+#| label: boyband
+set.seed(1999)
+spins <- data.frame(band = c("Backstreet Boys", "*NSYNC", "98 Degrees", "LFO"))
+spins$spins <- rpois(4, c(420, 380, 330, 300))
+ggplot(spins, aes(x = band, y = spins, fill = band)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Boy band spins (simulated)", x = NULL, y = "Spins") +
+  theme_boyband(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -524,6 +539,7 @@ These themes use Arial for the body text and a display font for the title:
 - Skia (`theme_magiceye()`)
 - DIN Condensed (`theme_batman()`)
 - Arial Black (`theme_snick()`)
+- Silom (`theme_boyband()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

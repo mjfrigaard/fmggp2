@@ -1,3 +1,7 @@
+# fmggp2 0.29.0
+
+* New `theme_boyband()`: late 90s boy band album covers, with a midnight navy background, a chrome frame, ice blue, hot pink, gold, lavender, and mint marks, and a Silom title.
+
 # fmggp2 0.28.0
 
 * New `theme_snick()`: Nickelodeon's Saturday night block, with a night purple background, an orange frame and title, slime green, purple, blue, yellow, and pink marks, and an Arial Black title.
