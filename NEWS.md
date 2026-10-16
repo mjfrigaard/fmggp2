@@ -1,3 +1,7 @@
+# fmggp2 0.53.0
+
+* New `theme_rzone()`: the Tiger R-Zone headset, with black plastic, a red frame and title, red, purple, and pink marks, pale blue visor text, and an Arial Narrow title. The palette is sampled from "Tiger RZone Headset" by Evan-Amos (public domain).
+
 # fmggp2 0.52.0
 
 * New `theme_koosh()`: a tri color Koosh ball, with a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. The palette is sampled from "Koosh Ball TriColor" by Evan-Amos (public domain).
