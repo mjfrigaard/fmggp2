@@ -1,3 +1,7 @@
+# fmggp2 0.46.0
+
+* The themes vignette uses freely licensed Wikimedia Commons images for nine themes (aim, freshprince, happymeal, jurassic, netscape, tetris, titanic, trl, and walkman).
+
 # fmggp2 0.45.0
 
 * The themes vignette shows reference images again for 22 themes.
