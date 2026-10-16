@@ -1,8 +1,8 @@
 #' Furby theme
 #'
-#' A late 90s `ggplot2` theme modeled on the Sherbet Furby: red fur, a beak
-#' yellow frame, a pale blue belly plot area, and belly blue, beak yellow,
-#' pink, and eye blue marks, and a Chalkboard SE title.
+#' A late 90s `ggplot2` theme modeled on a 1998 Furby: deep teal fur, a beak
+#' yellow frame, a gray belly plot area, teal, pink, beak yellow, wall green,
+#' and gray marks, and a Chalkboard SE title.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -50,8 +50,8 @@ theme_furby <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["fur"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("blue", "beak", "pink", "eye")]),
-      palette.colour.discrete = unname(cols[c("blue", "beak", "pink", "eye")]),
+      palette.fill.discrete = unname(cols[c("blue", "pink", "beak", "wall", "gray")]),
+      palette.colour.discrete = unname(cols[c("blue", "pink", "beak", "wall", "gray")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["belly"]],
@@ -63,13 +63,14 @@ theme_furby <- function(base_size = 11,
 }
 
 furby_cols <- c(
-  fur = "#D61C42",
-  belly = "#EEF6FD",
-  grid = "#BFE0F8",
-  ink = "#3D3541",
-  blue = "#80C5F7",
-  beak = "#E3B329",
-  pink = "#F23971",
-  eye = "#4E87A4",
+  fur = "#126378",
+  belly = "#EFEBE7",
+  grid = "#D3CAC2",
+  ink = "#23182B",
+  blue = "#26AACD",
+  pink = "#EE7175",
+  beak = "#FFDD44",
+  wall = "#87A55D",
+  gray = "#AC9E92",
   white = "#FFFFFF"
 )

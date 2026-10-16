@@ -4,6 +4,8 @@
 
 * `theme_pogs()` has a new palette sampled from "Remember Pogs?" by MTSOfan (CC BY-NC-SA 2.0), which the vignette now shows.
 
+* `theme_furby()` has a new palette sampled from "Furby" by Amanda (blamethecrane, CC BY-ND 2.0), which the vignette now shows.
+
 * `theme_friends()` has a new palette sampled from "Monica's Apartment, Friends" by Rob Young (CC BY 2.0), which the vignette now shows.
 
 * `theme_beanie()` has a new palette sampled from "Beanie Baby" by ajay_suresh (CC BY 2.0), which the vignette now shows.

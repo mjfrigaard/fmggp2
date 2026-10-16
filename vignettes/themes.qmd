@@ -419,7 +419,9 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 
 ## Furby
 
-`theme_furby()`: the Sherbet Furby's red fur, belly blue, beak yellow, and pink. Below we simulate Furby chatter in two languages.
+`theme_furby()`: a 1998 Furby's teal fur, gray belly, beak yellow, and pink. Below we simulate Furby chatter in two languages.
+
+![Image: "[Furby](https://www.flickr.com/photos/66376272@N07/6137468129)" by Amanda (blamethecrane), [CC BY-ND 2.0](https://creativecommons.org/licenses/by-nd/2.0/).](../man/figures/theme_furby/furby.jpg){width="60%" fig-align="center"}
 
 ```{r}
 #| label: furby
