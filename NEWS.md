@@ -1,3 +1,7 @@
+# fmggp2 0.48.0
+
+* New `theme_oksoda()`: OK Soda cans, with a brushed silver background, a black frame, a gray comic panel, OK red marks and title, slate and brick accents, and a Courier New title. The palette is sampled from "OK Soda Original 4" by TeemPlayer (CC BY-SA 3.0).
+
 # fmggp2 0.47.1
 
 * `theme_trl()` adds white as a sixth discrete color and `theme_rugrats()` adds Tommy blue and orange for eight, so the book's ridgeline plot and instance chart have enough colors again.
