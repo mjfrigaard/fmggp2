@@ -601,6 +601,21 @@ ggplot(kids, aes(x = games, y = hours, color = console)) +
   theme_consolewars(base_size = 13)
 ```
 
+## Seinfeld
+
+`theme_seinfeld()`: comedy club brick with the logo colors. Below we simulate laughs and viewers for 60 episodes.
+
+```{r}
+#| label: seinfeld
+set.seed(1989)
+eps <- data.frame(kramer = rgamma(60, 6, 1.5), viewers = rlnorm(60, log(20), 0.3))
+eps$laughs <- 2 + 0.3 * eps$kramer + rnorm(60, 0, 0.5)
+ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
+  geom_point(alpha = 1 / 2) +
+  labs(title = "Seinfeld episodes", caption = "Simulated data", x = "Kramer minutes", y = "Laughs per minute", size = "Viewers") +
+  theme_seinfeld(base_size = 13)
+```
+
 ## Fonts
 
 `theme_gameboy()` and `theme_tetris()` use Press Start 2P, which ships with `fmggp2`. The other themes use fonts that ship with macOS and Windows.
@@ -643,6 +658,7 @@ These themes use Arial for the body text and a display font for the title:
 - Marker Felt (`theme_rugrats()`)
 - Impact (`theme_doom()`)
 - Krungthep (`theme_consolewars()`)
+- American Typewriter (`theme_seinfeld()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

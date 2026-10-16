@@ -27,6 +27,7 @@ each dataset gets a theme to match.
 
 | Theme | Reference | Chapter |
 |----|----|----|
+| `theme_seinfeld()` | Seinfeld | Bubble charts (Seinfeld episodes) |
 | `theme_consolewars()` | Console wars | Grouped scatter plots (Sega vs. Nintendo) |
 | `theme_doom()` | Doom | Scatter plots (frame rate by CPU speed) |
 | `theme_rugrats()` | Rugrats | Instance charts (baby names by year) |

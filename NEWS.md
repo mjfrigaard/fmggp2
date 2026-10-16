@@ -1,3 +1,7 @@
+# fmggp2 0.36.0
+
+* New `theme_seinfeld()`: a Seinfeld comedy club, with a brick background, a yellow frame and title, the yellow, red, blue, and green logo colors, and an American Typewriter title.
+
 # fmggp2 0.35.0
 
 * New `theme_consolewars()`: the Sega vs. Nintendo console wars, with a charcoal background, a Sega blue frame, a Nintendo red title, blue, red, purple, gray, and gold marks, and a Krungthep title.
