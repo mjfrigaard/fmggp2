@@ -1,3 +1,7 @@
+# fmggp2 0.58.0
+
+* Removed `theme_beanie()`, `theme_friends()`, `theme_toysrus()`, `theme_furby()`, `theme_boyband()`, and `theme_clueless()`. The book chapters that used them now use `theme_microdrive()` (violin plots), `theme_netware()` (overlapping bar graphs), `theme_j2me()` (treemaps), `theme_pager()` (overlapping and stacked densities), `theme_visor()` (bump charts), and `theme_cuseeme()` (parallel sets).
+
 # fmggp2 0.57.0
 
 * New `theme_microdrive()`: the IBM Microdrive, with a tan desk background, a black frame, a red title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New Roman title. The palette is sampled from "IBM 340MB Microdrive and Hitachi 1GB Microdrive" by MiNe (CC BY 2.0).

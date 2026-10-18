@@ -30,7 +30,7 @@ each dataset gets a theme to match.
 | `theme_surge()` | Surge | Hexagon bins (cans vs. gaming hours) |
 | `theme_geocities()` | GeoCities | 2D histograms (page load times) |
 | `theme_bopit()` | Bop It | Density contours (reaction times) |
-| `theme_clueless()` | Clueless | Parallel sets (Bronson Alcott cliques) |
+| `theme_cuseeme()` | CU-SeeMe | Parallel sets (video calls by connection and outcome) |
 | `theme_powerrangers()` | Power Rangers | Grouped bubble charts (putties defeated) |
 | `theme_seinfeld()` | Seinfeld | Bubble charts (Seinfeld episodes) |
 | `theme_consolewars()` | Console wars | Grouped scatter plots (Sega vs. Nintendo) |
@@ -39,19 +39,19 @@ each dataset gets a theme to match.
 | `theme_y2k()` | Y2K | Alluvial charts (Y2K prep surveys) |
 | `theme_hypercolor()` | Hypercolor | Stream plots (90s fad sales) |
 | `theme_savedbythebell()` | Saved by the Bell | Slope graphs (Bayside quiz averages) |
-| `theme_boyband()` | Boy bands | Bump charts (weekly radio spins) |
+| `theme_visor()` | Handspring Visor | Bump charts (PDA sales rank by year) |
 | `theme_snick()` | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
 | `theme_batman()` | Batman (1989) | Line graphs (weekly box office) |
 | `theme_rzone()` | Tiger R-Zone | Raincloud plots (seconds to clear the first level) |
 | `theme_aim()` | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
 | `theme_oregontrail()` | The Oregon Trail | Grouped box plots (days to reach Oregon) |
 | `theme_squeezit()` | Squeezit | Ridgeline plots (seconds to finish a bottle) |
-| `theme_furby()` | Furby | Overlapping and stacked densities (Furby chatter) |
+| `theme_pager()` | Two-way pagers | Overlapping and stacked densities (message lengths by pager) |
 | `theme_tetris()` | Tetris | Beeswarm plots (lines cleared by player) |
 | `theme_goosebumps()` | Goosebumps books | Overlapping dot plots (books read by grade) |
 | `theme_supersoaker()` | Super Soaker | Overlapping frequency polygons (range by model) |
 | `theme_tamagotchi()` | Tamagotchi | Overlapping histograms (virtual pet lifespans) |
-| `theme_toysrus()` | Toys”R”Us | Treemaps (1998 toy sales) |
+| `theme_j2me()` | J2ME phone games | Treemaps (game downloads by carrier and genre) |
 | `theme_koosh()` | Koosh ball | Pie charts (Koosh ball styles) |
 | `theme_titanic()` | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
 | `theme_netscape()` | Netscape Navigator | Stacked filled densities (modem speeds) |
@@ -59,11 +59,11 @@ each dataset gets a theme to match.
 | `theme_walkman()` | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
 | `theme_pogs()` | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
 | `theme_freshprince()` | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
-| `theme_friends()` | Friends (Monica’s apartment) | Overlapping bar graphs (viewers per episode) |
+| `theme_netware()` | Novell NetWare | Overlapping bar graphs (LAN protocols by office) |
 | `theme_happymeal()` | McDonald’s Happy Meal box | Summary bar graphs (Happy Meals sold per promotion) |
 | `theme_jurassic()` | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | `theme_n64()` | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
-| `theme_beanie()` | Beanie Babies heart tag | Violin plots (resale prices) |
+| `theme_microdrive()` | IBM Microdrive | Violin plots (photo file sizes) |
 | `theme_crystalpepsi()` | Crystal Pepsi | Density plots (taste test ages) |
 | `theme_blockbuster()` | Blockbuster Video | Dot plots (weekly rentals) |
 | `theme_gameboy()` | Original Game Boy screen | Bar graphs (Pokémon starters) |
