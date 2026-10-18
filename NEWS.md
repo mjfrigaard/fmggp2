@@ -1,3 +1,17 @@
+# fmggp2 0.57.0
+
+* New `theme_microdrive()`: the IBM Microdrive, with a tan desk background, a black frame, a red title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New Roman title. The palette is sampled from "IBM 340MB Microdrive and Hitachi 1GB Microdrive" by MiNe (CC BY 2.0).
+* New `theme_netware()`: Novell NetWare, with a NetWare red background and white text, a maroon frame, maroon, red, rose, and blush marks, and a Gill Sans title. The palette is sampled from "Novell NetWare 2.0 packages" by diaper on Flickr (CC BY 2.0).
+* New `theme_j2me()`: J2ME phone apps, with a black phone background, a silver frame, a pale screen panel, Ushahidi red, tan, brown, and black marks, and an Arial Narrow title. The palette is sampled from "Ushahidi J2ME App" by Erik (HASH) Hersman (CC BY 2.0).
+* New `theme_palmpilot()`: the PalmPilot, with a charcoal case background, a HotSync teal frame, a white title, a green LCD panel, ink, LCD green, plum, and teal marks, and a Futura title. The palette is sampled from "Palm Pilot Professional 01" by Museo8bits (CC BY-SA 3.0).
+* New `theme_visor()`: the Handspring Visor, with a pale lavender background, a translucent green frame, a gray LCD panel, green, gray, mint, and silver marks, and a Trebuchet MS title. The palette is sampled from "Handspring Visor DeLuxe Green" by Waldohreule (CC BY-SA 3.0).
+* New `theme_pager()`: two-way pagers, with a concrete background, a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate marks, and an Arial Black title. The palette is sampled from "RIM BlackBerry 950" by Ruben de Rijcke (CC BY-SA 4.0).
+* New `theme_cuseeme()`: CU-SeeMe, with a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Tahoma title. The palette is sampled from "CU-SeeMe application screenshot" by Lt Georgios Floros, HN (public domain).
+* New `theme_vrml()`: VRML, with a tan wall background, a floor brown frame, a pale panel, sofa red, lamp green, black, and glass marks, and an Andale Mono title. The palette is sampled from "Interior" by Jan Křivka (public domain).
+* New `theme_javaapplet()`: Java applets, with a gray AWT window background and frame, a white panel, red, blue, purple, and gray marks, and a blue Verdana title. The palette is sampled from "Java applet" by Audrius Meskauskas (public domain).
+* New `theme_cuecat()`: the :CueCat, with a pale paper background, a putty frame, a red title, red, ink, LED orange, and putty marks, and a Marker Felt title. The palette is sampled from "CueCat-upside" by Shaddack (public domain).
+* New `theme_audrey()`: the 3Com Audrey, with a white plastic background, a black tile frame, a teal title, teal, navy, tan, brown, and aqua marks, and an Arial Rounded title. The palette is sampled from "3Com Audrey" by Andrew Turner (CC BY 2.0).
+
 # fmggp2 0.56.1
 
 * `theme_goosebumps()` puts pale green before moss in its discrete palette, so a third group stands out on the dark purple panel.

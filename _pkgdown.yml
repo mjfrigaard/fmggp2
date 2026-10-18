@@ -75,6 +75,17 @@ reference:
   - theme_bopit
   - theme_geocities
   - theme_surge
+  - theme_microdrive
+  - theme_netware
+  - theme_j2me
+  - theme_palmpilot
+  - theme_visor
+  - theme_pager
+  - theme_cuseeme
+  - theme_vrml
+  - theme_javaapplet
+  - theme_cuecat
+  - theme_audrey
   - theme_fmggp2
 - title: Book helpers
   contents:
