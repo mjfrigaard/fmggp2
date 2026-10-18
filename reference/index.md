@@ -86,6 +86,28 @@
   : GeoCities theme
 - [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md)
   : Surge theme
+- [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md)
+  : IBM Microdrive theme
+- [`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md)
+  : Novell NetWare theme
+- [`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md)
+  : J2ME theme
+- [`theme_palmpilot()`](https://mjfrigaard.github.io/fmggp2/reference/theme_palmpilot.md)
+  : Palm Pilot theme
+- [`theme_visor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_visor.md)
+  : Handspring Visor theme
+- [`theme_pager()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pager.md)
+  : Two-way pager theme
+- [`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md)
+  : CU-SeeMe theme
+- [`theme_vrml()`](https://mjfrigaard.github.io/fmggp2/reference/theme_vrml.md)
+  : VRML theme
+- [`theme_javaapplet()`](https://mjfrigaard.github.io/fmggp2/reference/theme_javaapplet.md)
+  : Java applet theme
+- [`theme_cuecat()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuecat.md)
+  : CueCat theme
+- [`theme_audrey()`](https://mjfrigaard.github.io/fmggp2/reference/theme_audrey.md)
+  : 3Com Audrey theme
 - [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md)
   : fmggp2 Styling Theme
 

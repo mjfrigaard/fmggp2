@@ -1144,6 +1144,309 @@ ggplot(teens, aes(x = cans, y = hours)) +
 
 ![](themes_files/figure-html/surge-1.png)
 
+## IBM Microdrive
+
+[`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md)
+uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, a red
+title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New
+Roman title. Below we simulate photo file sizes from three digital
+cameras that wrote to a Microdrive.
+
+![](../reference/figures/theme_microdrive/ibm-340mb-microdrive.jpg)
+
+Image: MiNe, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:IBM_340MB_Microdrive_and_Hitachi_1GB_Microdrive_sold_from_Weikeng_Industrial_20080327.jpg),
+CC BY 2.0.
+
+``` r
+
+set.seed(1999)
+photos <- data.frame(camera = rep(c("2 MP", "3 MP", "4 MP"), each = 100))
+photos$mb <- rlnorm(300, log(c("2 MP" = 0.9, "3 MP" = 1.4, "4 MP" = 2)[photos$camera]), 0.25)
+ggplot(photos, aes(x = camera, y = mb, fill = camera)) +
+  geom_boxplot(show.legend = FALSE) +
+  labs(title = "Microdrive photos", caption = "Simulated data", x = NULL, y = "Photo size (MB)") +
+  theme_microdrive(base_size = 13)
+```
+
+![](themes_files/figure-html/microdrive-1.png)
+
+## Novell NetWare
+
+[`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md)
+uses three NetWare 2.0 boxes: a NetWare red background with white text,
+a maroon frame, maroon, red, rose, and blush marks, and a Gill Sans
+title. Below we simulate the file servers running each NetWare version
+from 1990 to 1998.
+
+![](../reference/figures/theme_netware/novell-netware-2-0-packages.jpg)
+
+Image: diaper on Flickr, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg),
+CC BY 2.0.
+
+``` r
+
+set.seed(1990)
+servers <- expand.grid(year = 1990:1998, version = c("2.x", "3.x", "4.x"))
+servers$peak <- c("2.x" = 1990, "3.x" = 1994, "4.x" = 1998)[servers$version]
+servers$n <- rpois(nrow(servers), 400 * exp(-((servers$year - servers$peak) / 2.5)^2))
+ggplot(servers, aes(x = year, y = n, fill = version)) +
+  geom_col() +
+  labs(title = "NetWare servers", caption = "Simulated data", x = NULL, y = "Servers", fill = "Version") +
+  theme_netware(base_size = 13)
+```
+
+![](themes_files/figure-html/netware-1.png)
+
+## J2ME
+
+[`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md)
+uses a Nokia N73 running a J2ME app: a black phone background, a silver
+frame, a pale screen panel, Ushahidi red, tan, brown, and black marks,
+and an Arial Narrow title. Below we simulate monthly downloads of four
+kinds of phone games.
+
+![](../reference/figures/theme_j2me/ushahidi-j2me-app.jpg)
+
+Image: Erik (HASH) Hersman, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Ushahidi_J2ME_App.jpg),
+CC BY 2.0.
+
+``` r
+
+set.seed(2003)
+games <- expand.grid(month = 1:24, genre = c("Puzzle", "Racing", "Sports", "Arcade"))
+games$downloads <- rpois(nrow(games), c(Puzzle = 60, Racing = 40, Sports = 30, Arcade = 20)[games$genre] * (1 + games$month / 12))
+ggplot(games, aes(x = month, y = downloads, color = genre)) +
+  geom_line(linewidth = 1) +
+  labs(title = "J2ME game downloads", caption = "Simulated data", x = "Month", y = "Downloads (thousands)", color = NULL) +
+  theme_j2me(base_size = 13)
+```
+
+![](themes_files/figure-html/j2me-1.png)
+
+## Palm Pilot
+
+[`theme_palmpilot()`](https://mjfrigaard.github.io/fmggp2/reference/theme_palmpilot.md)
+uses a PalmPilot Professional: a charcoal case background, a HotSync
+teal frame, a white title, a green LCD panel, ink, LCD green, plum, and
+teal marks, and a Futura title. Below we simulate how Graffiti accuracy
+improves over a user’s first ten weeks.
+
+![](../reference/figures/theme_palmpilot/palm-pilot-professional-01.jpg)
+
+Image: Museo8bits, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG),
+CC BY-SA 3.0.
+
+``` r
+
+set.seed(1997)
+graffiti <- data.frame(week = runif(200, 0, 10))
+graffiti$accuracy <- pmin(100, 98 - 30 * exp(-graffiti$week / 2) + rnorm(200, 0, 3))
+ggplot(graffiti, aes(x = week, y = accuracy)) +
+  geom_point(alpha = 1 / 2) +
+  geom_smooth(method = "loess", formula = y ~ x, se = FALSE) +
+  labs(title = "Learning Graffiti", caption = "Simulated data", x = "Weeks of use", y = "Characters recognized (%)") +
+  theme_palmpilot(base_size = 13)
+```
+
+![](themes_files/figure-html/palmpilot-1.png)
+
+## Handspring Visor
+
+[`theme_visor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_visor.md)
+uses a green Handspring Visor Deluxe: a pale lavender background, a
+translucent green frame, a gray LCD panel, green, gray, mint, and silver
+marks, and a Trebuchet MS title. Below we simulate sales of four
+Springboard modules.
+
+![](../reference/figures/theme_visor/handspring-visor-deluxe-green.jpg)
+
+Image: Waldohreule, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Handspring_Visor_DeLuxe_Green.jpg),
+CC BY-SA 3.0.
+
+``` r
+
+set.seed(2000)
+modules <- data.frame(module = sample(c("Games", "MP3 player", "Modem", "Phone"),
+  size = 500, replace = TRUE, prob = c(0.35, 0.25, 0.25, 0.15)))
+ggplot(modules, aes(y = module, fill = module)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Springboard modules", caption = "Simulated data", x = "Modules sold", y = NULL) +
+  theme_visor(base_size = 13)
+```
+
+![](themes_files/figure-html/visor-1.png)
+
+## Two-way pagers
+
+[`theme_pager()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pager.md)
+uses a RIM 950 pager on concrete: a charcoal frame and title, a pale LCD
+panel, charcoal, orange, and slate marks, and an Arial Black title.
+Below we simulate the messages one pager received in each hour of a
+workday.
+
+![](../reference/figures/theme_pager/rim-blackberry-950.jpg)
+
+Image: Ruben de Rijcke, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:RIM_BlackBerry_950.jpg),
+CC BY-SA 4.0.
+
+``` r
+
+set.seed(1998)
+pages <- data.frame(hour = 7:20)
+pages$messages <- rpois(nrow(pages), 2 + 10 * dnorm(pages$hour, 13, 3) / dnorm(0, 0, 3))
+ggplot(pages, aes(x = hour, y = messages)) +
+  geom_col() +
+  labs(title = "Messages by hour", caption = "Simulated data", x = "Hour", y = "Messages") +
+  theme_pager(base_size = 13)
+```
+
+![](themes_files/figure-html/pager-1.png)
+
+## CU-SeeMe
+
+[`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md)
+uses the CU-SeeMe phone book window: a dithered gray background, a black
+frame, a white panel, black, magenta, and gray marks, and a magenta
+Tahoma title. Below we simulate video call frame rates over three kinds
+of connections.
+
+![](../reference/figures/theme_cuseeme/cu-seeme-application-screenshot.png)
+
+Image: Lt Georgios Floros, HN, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:CU-SeeMe_application_screenshot.png),
+public domain.
+
+``` r
+
+set.seed(1995)
+calls <- data.frame(connection = rep(c("28.8k modem", "ISDN", "T1"), each = 60))
+calls$fps <- pmax(0.5, rnorm(180, c("28.8k modem" = 2, "ISDN" = 6, "T1" = 14)[calls$connection], 1.5))
+ggplot(calls, aes(x = connection, y = fps, color = connection)) +
+  geom_jitter(width = 0.2, show.legend = FALSE) +
+  labs(title = "CU-SeeMe frame rates", caption = "Simulated data", x = NULL, y = "Frames per second") +
+  theme_cuseeme(base_size = 13)
+```
+
+![](themes_files/figure-html/cuseeme-1.png)
+
+## VRML
+
+[`theme_vrml()`](https://mjfrigaard.github.io/fmggp2/reference/theme_vrml.md)
+uses a VRML living room: a tan wall background, a floor brown frame, a
+pale panel, sofa red, lamp green, black, and glass marks, and an Andale
+Mono title. Below we simulate render times for four VRML scenes.
+
+![](../reference/figures/theme_vrml/interior.png)
+
+Image: Jan Křivka, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Interior.png), public
+domain.
+
+``` r
+
+set.seed(1996)
+scenes <- data.frame(scene = rep(c("Living room", "Garden", "Office", "Museum"), each = 40),
+  polygons = round(runif(160, 500, 20000)))
+scenes$seconds <- 0.5 + scenes$polygons / 4000 + rnorm(160, 0, 0.4)
+ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
+  geom_point() +
+  labs(title = "VRML render times", caption = "Simulated data", x = "Polygons", y = "Seconds to render", color = NULL) +
+  theme_vrml(base_size = 13)
+```
+
+![](themes_files/figure-html/vrml-1.png)
+
+## Java applets
+
+[`theme_javaapplet()`](https://mjfrigaard.github.io/fmggp2/reference/theme_javaapplet.md)
+uses a Java AWT applet window: a gray window background, a gray frame, a
+white panel, red, blue, purple, and gray marks, and a blue Verdana
+title. Like the applet in the screenshot, below we simulate measurements
+with error bars and a fitted curve.
+
+![](../reference/figures/theme_javaapplet/java-applet.png)
+
+Image: Audrius Meskauskas, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:Java_applet.png),
+public domain.
+
+``` r
+
+set.seed(1995)
+model <- data.frame(time = seq(0, 6, by = 0.1))
+model$angle <- 48 * (1 - exp(-model$time / 1.2))
+obs <- data.frame(time = seq(0, 6, by = 0.8))
+obs$angle <- 48 * (1 - exp(-obs$time / 1.2)) + rnorm(nrow(obs), 0, 4)
+ggplot(obs, aes(x = time, y = angle)) +
+  geom_line(data = model, aes(color = "Model")) +
+  geom_pointrange(aes(ymin = angle - 6, ymax = angle + 6, color = "Observed")) +
+  labs(title = "Root bending angle", caption = "Simulated data", x = "Time (h)", y = "Angle (degrees)", color = NULL) +
+  theme_javaapplet(base_size = 13)
+```
+
+![](themes_files/figure-html/javaapplet-1.png)
+
+## CueCat
+
+[`theme_cuecat()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuecat.md)
+uses the :CueCat barcode scanner: a pale paper background, a putty
+frame, a red title, red, ink, LED orange, and putty marks, and a Marker
+Felt title. Below we simulate weekly barcode scans after the free
+scanners shipped in 2000.
+
+![](../reference/figures/theme_cuecat/cuecat-upside.jpg)
+
+Image: Shaddack, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg),
+public domain.
+
+``` r
+
+set.seed(2000)
+scans <- data.frame(week = 1:52)
+scans$scans <- rpois(52, 5000 * exp(-scans$week / 10))
+ggplot(scans, aes(x = week, y = scans)) +
+  geom_area(alpha = 0.8) +
+  labs(title = "CueCat scans", caption = "Simulated data", x = "Week", y = "Barcodes scanned") +
+  theme_cuecat(base_size = 13)
+```
+
+![](themes_files/figure-html/cuecat-1.png)
+
+## 3Com Audrey
+
+[`theme_audrey()`](https://mjfrigaard.github.io/fmggp2/reference/theme_audrey.md)
+uses a 3Com Audrey on a kitchen counter: a white plastic background, a
+black tile frame, a teal title, teal, navy, tan, brown, and aqua marks,
+and an Arial Rounded title. Below we simulate what 300 households used
+their Audrey for.
+
+![](../reference/figures/theme_audrey/3com-audrey.jpg)
+
+Image: Andrew Turner, [Wikimedia
+Commons](https://commons.wikimedia.org/wiki/File:3Com_Audrey.jpg), CC BY
+2.0.
+
+``` r
+
+set.seed(2000)
+uses <- data.frame(month = rep(c("Oct", "Nov", "Dec"), each = 300),
+  task = sample(c("Email", "Weather", "Recipes", "Calendar", "Browsing"), 900, replace = TRUE))
+uses$month <- factor(uses$month, levels = c("Oct", "Nov", "Dec"))
+ggplot(uses, aes(x = month, fill = task)) +
+  geom_bar(position = "fill") +
+  labs(title = "Audrey at home", caption = "Simulated data", x = NULL, y = "Share of households", fill = NULL) +
+  theme_audrey(base_size = 13)
+```
+
+![](themes_files/figure-html/audrey-1.png)
+
 ## Fonts
 
 [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
@@ -1239,6 +1542,28 @@ title:
   ([`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md))
 - DIN Alternate
   ([`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md))
+- Times New Roman
+  ([`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md))
+- Gill Sans
+  ([`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md))
+- Arial Narrow
+  ([`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md))
+- Futura
+  ([`theme_palmpilot()`](https://mjfrigaard.github.io/fmggp2/reference/theme_palmpilot.md))
+- Trebuchet MS
+  ([`theme_visor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_visor.md))
+- Arial Black
+  ([`theme_pager()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pager.md))
+- Tahoma
+  ([`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md))
+- Andale Mono
+  ([`theme_vrml()`](https://mjfrigaard.github.io/fmggp2/reference/theme_vrml.md))
+- Verdana
+  ([`theme_javaapplet()`](https://mjfrigaard.github.io/fmggp2/reference/theme_javaapplet.md))
+- Marker Felt
+  ([`theme_cuecat()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuecat.md))
+- Arial Rounded
+  ([`theme_audrey()`](https://mjfrigaard.github.io/fmggp2/reference/theme_audrey.md))
 
 When a font file can’t be found, the theme falls back to `"sans"`, so
 the plots above still render on Linux. You can also pass any family
