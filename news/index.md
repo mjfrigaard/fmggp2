@@ -1,5 +1,23 @@
 # Changelog
 
+## fmggp2 0.58.0
+
+- Removed `theme_beanie()`, `theme_friends()`, `theme_toysrus()`,
+  `theme_furby()`, `theme_boyband()`, and `theme_clueless()`. The book
+  chapters that used them now use
+  [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md)
+  (violin plots),
+  [`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md)
+  (overlapping bar graphs),
+  [`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md)
+  (treemaps),
+  [`theme_pager()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pager.md)
+  (overlapping and stacked densities),
+  [`theme_visor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_visor.md)
+  (bump charts), and
+  [`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md)
+  (parallel sets).
+
 ## fmggp2 0.57.0
 
 - New
@@ -188,17 +206,14 @@
   has a new palette sampled from “Remember Pogs?” by MTSOfan (CC
   BY-NC-SA 2.0), which the vignette now shows.
 
-- [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
-  has a new palette sampled from “Furby” by Amanda (blamethecrane, CC
-  BY-ND 2.0), which the vignette now shows.
+- `theme_furby()` has a new palette sampled from “Furby” by Amanda
+  (blamethecrane, CC BY-ND 2.0), which the vignette now shows.
 
-- [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
-  has a new palette sampled from “Monica’s Apartment, Friends” by Rob
-  Young (CC BY 2.0), which the vignette now shows.
+- `theme_friends()` has a new palette sampled from “Monica’s Apartment,
+  Friends” by Rob Young (CC BY 2.0), which the vignette now shows.
 
-- [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-  has a new palette sampled from “Beanie Baby” by ajay_suresh (CC BY
-  2.0), which the vignette now shows.
+- `theme_beanie()` has a new palette sampled from “Beanie Baby” by
+  ajay_suresh (CC BY 2.0), which the vignette now shows.
 
 ## fmggp2 0.46.0
 
@@ -222,8 +237,7 @@
   [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md),
   [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md),
   [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md),
-  [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md),
-  `theme_trl()`,
+  `theme_furby()`, `theme_trl()`,
   [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md),
   `theme_magiceye()`,
   [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md),
@@ -235,11 +249,10 @@
 ## fmggp2 0.43.0
 
 - New reference images and palettes for `theme_win98()`,
-  `theme_napster()`, `theme_spice()`,
-  [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md),
+  `theme_napster()`, `theme_spice()`, `theme_beanie()`,
   [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md),
   [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md),
-  [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md),
+  `theme_friends()`,
   [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md),
   [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md),
   and
@@ -286,10 +299,9 @@
 
 ## fmggp2 0.38.0
 
-- New
-  [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md):
-  Cher’s yellow plaid, with a black frame, a cornsilk panel, black, red,
-  tartan green, navy, and gray marks, and a Didot title.
+- New `theme_clueless()`: Cher’s yellow plaid, with a black frame, a
+  cornsilk panel, black, red, tartan green, navy, and gray marks, and a
+  Didot title.
 
 ## fmggp2 0.37.0
 
@@ -355,11 +367,9 @@
 
 ## fmggp2 0.29.0
 
-- New
-  [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md):
-  late 90s boy band album covers, with a midnight navy background, a
-  chrome frame, ice blue, hot pink, gold, lavender, and mint marks, and
-  a Silom title.
+- New `theme_boyband()`: late 90s boy band album covers, with a midnight
+  navy background, a chrome frame, ice blue, hot pink, gold, lavender,
+  and mint marks, and a Silom title.
 
 ## fmggp2 0.28.0
 
@@ -402,10 +412,8 @@
 
 ## fmggp2 0.22.0
 
-- New
-  [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
-  purple Furby fur with a soft white plot area and a Chalkboard SE
-  title.
+- New `theme_furby()`: purple Furby fur with a soft white plot area and
+  a Chalkboard SE title.
 
 ## fmggp2 0.21.0
 
@@ -453,10 +461,8 @@
 
 ## fmggp2 0.17.0
 
-- New
-  [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md):
-  Toys”R”Us white and blue with the multicolored logo letters as marks
-  and a Phosphate title.
+- New `theme_toysrus()`: Toys”R”Us white and blue with the multicolored
+  logo letters as marks and a Phosphate title.
 
 ## fmggp2 0.16.0
 
@@ -506,10 +512,8 @@
 
 ## fmggp2 0.9.0
 
-- New
-  [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md):
-  Monica’s purple apartment, the red, yellow, and blue logo dots, and a
-  Chalkduster title.
+- New `theme_friends()`: Monica’s purple apartment, the red, yellow, and
+  blue logo dots, and a Chalkduster title.
 
 ## fmggp2 0.8.0
 
@@ -533,9 +537,8 @@
 
 ## fmggp2 0.5.0
 
-- New
-  [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md):
-  Beanie Babies heart tag red and gold with Comic Sans MS text.
+- New `theme_beanie()`: Beanie Babies heart tag red and gold with Comic
+  Sans MS text.
 
 ## fmggp2 0.4.0
 

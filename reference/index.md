@@ -12,16 +12,12 @@
   : Blockbuster theme
 - [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
   : Crystal Pepsi theme
-- [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-  : Beanie Babies theme
 - [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
   : Nintendo 64 theme
 - [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)
   : Jurassic Park theme
 - [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md)
   : Happy Meal theme
-- [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
-  : Friends theme
 - [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
   : Fresh Prince theme
 - [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md)
@@ -36,8 +32,6 @@
   : Titanic theme
 - [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md)
   : Koosh ball theme
-- [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md)
-  : Toys R Us theme
 - [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md)
   : Tamagotchi theme
 - [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md)
@@ -46,8 +40,6 @@
   : Goosebumps theme
 - [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
   : Tetris theme
-- [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md)
-  : Furby theme
 - [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md)
   : Squeezit theme
 - [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md)
@@ -60,8 +52,6 @@
   : Batman theme
 - [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md)
   : SNICK theme
-- [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md)
-  : Boy band theme
 - [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md)
   : Saved by the Bell theme
 - [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md)
@@ -78,8 +68,6 @@
   : Seinfeld theme
 - [`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md)
   : Power Rangers theme
-- [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md)
-  : Clueless theme
 - [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md)
   : Bop It theme
 - [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md)

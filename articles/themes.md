@@ -156,32 +156,6 @@ ggplot(tasters, aes(x = age, fill = group)) +
 
 ![](themes_files/figure-html/crystalpepsi-1.png)
 
-## Beanie Babies
-
-[`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-uses a Ty heart tag red with the blanket teal and fur colors of a
-Beanie. Below we simulate 300 resale prices from a log normal
-distribution.
-
-![](../reference/figures/theme_beanie/beanie-baby.jpg)
-
-Image: “[Beanie
-Baby](https://www.flickr.com/photos/ajay_suresh/51819429583)” by
-ajay_suresh, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
-
-``` r
-
-set.seed(1996)
-beanie_prices <- data.frame(price = rlnorm(n = 300, meanlog = log(15), sdlog = 0.8))
-ggplot(beanie_prices, aes(x = "", y = price)) +
-  geom_violin() +
-  labs(title = "Beanie Babies resale prices (simulated)",
-       x = NULL, y = "Price (USD)") +
-  theme_beanie(base_size = 13)
-```
-
-![](themes_files/figure-html/beanie-1.png)
-
 ## Nintendo 64
 
 [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
@@ -257,32 +231,6 @@ ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
 ```
 
 ![](themes_files/figure-html/happymeal-1.png)
-
-## Friends
-
-[`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md)
-uses Monica’s apartment: purple walls, a cream sofa, a latte frame, and
-poppy red, navy, wood, rust, and rose marks. Below we simulate viewers
-per episode for three seasons.
-
-![](../reference/figures/theme_friends/monicas-apartment.jpg)
-
-Image: “[Monica’s Apartment,
-Friends](https://www.flickr.com/photos/rob-young/30987418062)” by Rob
-Young, [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/).
-
-``` r
-
-set.seed(1994)
-friends_episodes <- data.frame(season = rep(c("Season 1", "Season 3", "Season 5"), each = 24))
-friends_episodes$viewers_m <- round(rnorm(72, rep(c(22, 27, 24), each = 24), 2.5))
-ggplot(friends_episodes, aes(x = viewers_m, fill = season)) +
-  geom_bar() +
-  labs(title = "Friends (simulated)", x = "Viewers (millions)", y = "Episodes", fill = "Season") +
-  theme_friends(base_size = 13)
-```
-
-![](themes_files/figure-html/friends-1.png)
 
 ## Fresh Prince
 
@@ -470,31 +418,6 @@ ggplot(koosh_balls, aes(x = style, fill = style)) +
 
 ![](themes_files/figure-html/koosh-1.png)
 
-## Toys”R”Us
-
-[`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md):
-Toys”R”Us white and blue with the multicolored logo letters as marks and
-a Phosphate title.
-
-![](../reference/figures/theme_toysrus/logo-of-toys-r-us-1986-2007.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Logo_of_Toys_%22R%22_Us_(1986%E2%80%932007).png),
-public domain.
-
-``` r
-
-set.seed(1999)
-toys <- data.frame(toy = c("Furby", "Beanie Babies", "Game Boy Color", "Nintendo 64"),
-  units = rpois(4, c(1800, 2400, 1200, 1000)))
-ggplot(toys, aes(x = toy, y = units, fill = toy)) +
-  geom_col(show.legend = FALSE) +
-  labs(title = "Toys\"R\"Us 1998 (simulated)", x = NULL, y = "Units sold") +
-  theme_toysrus(base_size = 13)
-```
-
-![](themes_files/figure-html/toysrus-1.png)
-
 ## Tamagotchi
 
 [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md):
@@ -589,31 +512,6 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 ```
 
 ![](themes_files/figure-html/tetris-1.png)
-
-## Furby
-
-[`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md):
-a 1998 Furby’s teal fur, gray belly, beak yellow, and pink. Below we
-simulate Furby chatter in two languages.
-
-![](../reference/figures/theme_furby/furby.jpg)
-
-Image: “[Furby](https://www.flickr.com/photos/66376272@N07/6137468129)”
-by Amanda (blamethecrane), [CC BY-ND
-2.0](https://creativecommons.org/licenses/by-nd/2.0/).
-
-``` r
-
-set.seed(1998)
-chatter <- data.frame(language = rep(c("Furbish", "English"), times = c(180, 120)))
-chatter$words <- rnorm(300, ifelse(chatter$language == "Furbish", 45, 30), ifelse(chatter$language == "Furbish", 8, 10))
-ggplot(chatter, aes(x = words, after_stat(count), fill = language)) +
-  geom_density(alpha = 1/2) +
-  labs(title = "Furby chatter (simulated)", x = "Words per hour", fill = "Language") +
-  theme_furby(base_size = 13)
-```
-
-![](themes_files/figure-html/furby-1.png)
 
 ## Squeezit
 
@@ -803,31 +701,6 @@ ggplot(nights, aes(x = week, y = rating, color = night)) +
 ```
 
 ![](themes_files/figure-html/snick-1.png)
-
-## Boy bands
-
-[`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md):
-midnight navy, chrome, and frosted tip colors. Below we simulate a week
-of radio spins for four bands.
-
-![](../reference/figures/theme_boyband/n-sync-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:%27N_Sync_Logo.svg),
-public domain.
-
-``` r
-
-set.seed(1999)
-spins <- data.frame(band = c("Backstreet Boys", "*NSYNC", "98 Degrees", "LFO"))
-spins$spins <- rpois(4, c(420, 380, 330, 300))
-ggplot(spins, aes(x = band, y = spins, fill = band)) +
-  geom_col(show.legend = FALSE) +
-  labs(title = "Boy band spins (simulated)", x = NULL, y = "Spins") +
-  theme_boyband(base_size = 13)
-```
-
-![](themes_files/figure-html/boyband-1.png)
 
 ## Saved by the Bell
 
@@ -1043,31 +916,6 @@ ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
 ```
 
 ![](themes_files/figure-html/powerrangers-1.png)
-
-## Clueless
-
-[`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md):
-yellow plaid with black, red, and tartan green. Below we simulate the
-styles in three cliques.
-
-![](../reference/figures/theme_clueless/clueless-1995-film-logo.png)
-
-Image: [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Clueless_(1995_film)_logo.svg),
-public domain.
-
-``` r
-
-set.seed(1995)
-students <- data.frame(clique = sample(c("Popular", "Skaters", "Drama"), 200, replace = TRUE))
-students$style <- ifelse(students$clique == "Skaters", sample(c("Grunge", "Plaid"), 200, TRUE, c(0.8, 0.2)), sample(c("Grunge", "Plaid"), 200, TRUE, c(0.2, 0.8)))
-ggplot(students, aes(x = clique, fill = style)) +
-  geom_bar() +
-  labs(title = "Bronson Alcott High", caption = "Simulated data", x = NULL, y = "Students", fill = NULL) +
-  theme_clueless(base_size = 13)
-```
-
-![](themes_files/figure-html/clueless-1.png)
 
 ## Bop It
 
@@ -1455,12 +1303,6 @@ and
 use Press Start 2P, which ships with `fmggp2`. The other themes use
 fonts that ship with macOS and Windows.
 
-[`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md)
-uses a single font family:
-
-- Comic Sans MS
-  ([`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md))
-
 These themes use Arial for the body text and a display font for the
 title:
 
@@ -1474,8 +1316,6 @@ title:
   ([`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md))
 - Arial Rounded
   ([`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md))
-- Chalkduster
-  ([`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md))
 - Bradley Hand
   ([`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md))
 - DIN Condensed
@@ -1494,16 +1334,12 @@ title:
   ([`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md))
 - Arial Rounded
   ([`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md))
-- Phosphate
-  ([`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md))
 - Futura
   ([`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md))
 - Arial Black
   ([`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md))
 - Trattatello
   ([`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md))
-- Chalkboard SE
-  ([`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md))
 - Skia
   ([`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md))
 - Andale Mono
@@ -1516,8 +1352,6 @@ title:
   ([`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md))
 - Arial Black
   ([`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md))
-- Silom
-  ([`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md))
 - SignPainter
   ([`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md))
 - Gill Sans
@@ -1534,8 +1368,6 @@ title:
   ([`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md))
 - Copperplate
   ([`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md))
-- Didot
-  ([`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md))
 - Rockwell
   ([`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md))
 - Comic Sans MS

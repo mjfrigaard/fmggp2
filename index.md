@@ -25,7 +25,7 @@ each dataset gets a theme to match.
 | [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md) | Surge | Hexagon bins (cans vs. gaming hours) |
 | [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md) | GeoCities | 2D histograms (page load times) |
 | [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md) | Bop It | Density contours (reaction times) |
-| [`theme_clueless()`](https://mjfrigaard.github.io/fmggp2/reference/theme_clueless.md) | Clueless | Parallel sets (Bronson Alcott cliques) |
+| [`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md) | CU-SeeMe | Parallel sets (video calls by connection and outcome) |
 | [`theme_powerrangers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_powerrangers.md) | Power Rangers | Grouped bubble charts (putties defeated) |
 | [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md) | Seinfeld | Bubble charts (Seinfeld episodes) |
 | [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md) | Console wars | Grouped scatter plots (Sega vs. Nintendo) |
@@ -34,19 +34,19 @@ each dataset gets a theme to match.
 | [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md) | Y2K | Alluvial charts (Y2K prep surveys) |
 | [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md) | Hypercolor | Stream plots (90s fad sales) |
 | [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md) | Saved by the Bell | Slope graphs (Bayside quiz averages) |
-| [`theme_boyband()`](https://mjfrigaard.github.io/fmggp2/reference/theme_boyband.md) | Boy bands | Bump charts (weekly radio spins) |
+| [`theme_visor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_visor.md) | Handspring Visor | Bump charts (PDA sales rank by year) |
 | [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md) | SNICK | Grouped line graphs (nightly Nickelodeon ratings) |
 | [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md) | Batman (1989) | Line graphs (weekly box office) |
 | [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md) | Tiger R-Zone | Raincloud plots (seconds to clear the first level) |
 | [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md) | AOL Instant Messenger | Grouped violin plots (buddy list sizes) |
 | [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md) | The Oregon Trail | Grouped box plots (days to reach Oregon) |
 | [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md) | Squeezit | Ridgeline plots (seconds to finish a bottle) |
-| [`theme_furby()`](https://mjfrigaard.github.io/fmggp2/reference/theme_furby.md) | Furby | Overlapping and stacked densities (Furby chatter) |
+| [`theme_pager()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pager.md) | Two-way pagers | Overlapping and stacked densities (message lengths by pager) |
 | [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md) | Tetris | Beeswarm plots (lines cleared by player) |
 | [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md) | Goosebumps books | Overlapping dot plots (books read by grade) |
 | [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md) | Super Soaker | Overlapping frequency polygons (range by model) |
 | [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md) | Tamagotchi | Overlapping histograms (virtual pet lifespans) |
-| [`theme_toysrus()`](https://mjfrigaard.github.io/fmggp2/reference/theme_toysrus.md) | Toys”R”Us | Treemaps (1998 toy sales) |
+| [`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md) | J2ME phone games | Treemaps (game downloads by carrier and genre) |
 | [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md) | Koosh ball | Pie charts (Koosh ball styles) |
 | [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md) | Titanic (1997) | Mosaic plots (moviegoers and viewings) |
 | [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md) | Netscape Navigator | Stacked filled densities (modem speeds) |
@@ -54,11 +54,11 @@ each dataset gets a theme to match.
 | [`theme_walkman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_walkman.md) | Sony Walkman Sports | Cleveland dot plots (battery life by model) |
 | [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md) | Pogs milk caps | Waffle charts (a collection of 100 Pogs) |
 | [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md) | The Fresh Prince of Bel-Air | Heatmaps (running gags per season) |
-| [`theme_friends()`](https://mjfrigaard.github.io/fmggp2/reference/theme_friends.md) | Friends (Monica’s apartment) | Overlapping bar graphs (viewers per episode) |
+| [`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md) | Novell NetWare | Overlapping bar graphs (LAN protocols by office) |
 | [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md) | McDonald’s Happy Meal box | Summary bar graphs (Happy Meals sold per promotion) |
 | [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md) | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md) | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
-| [`theme_beanie()`](https://mjfrigaard.github.io/fmggp2/reference/theme_beanie.md) | Beanie Babies heart tag | Violin plots (resale prices) |
+| [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md) | IBM Microdrive | Violin plots (photo file sizes) |
 | [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md) | Crystal Pepsi | Density plots (taste test ages) |
 | [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md) | Blockbuster Video | Dot plots (weekly rentals) |
 | [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md) | Original Game Boy screen | Bar graphs (Pokémon starters) |
