@@ -23,379 +23,22 @@ library(ggplot2)
 showtext::showtext_auto()
 ```
 
-## Game Boy
+## 3Com Audrey
 
-`theme_gameboy()` uses the four shades of green from the original Game Boy screen and the pixel font Press Start 2P, which ships with `fmggp2`. Below we simulate the starter chosen by 300 *Pokémon Red and Blue* players.
+`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, a teal title, teal, navy, tan, brown, and aqua marks, and an Arial Rounded title. Below we simulate what 300 households used their Audrey for.
 
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg), public domain.](../man/figures/theme_gameboy/game-boy-fl.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: gameboy
-set.seed(1998)
-pokemon_starters <- data.frame(
-  starter = sample(c("Bulbasaur", "Charmander", "Squirtle"),
-    size = 300, replace = TRUE, prob = c(0.30, 0.42, 0.28))
-)
-ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
-  geom_bar(show.legend = FALSE) +
-  labs(title = "Pokemon Red and Blue (simulated)",
-       subtitle = "Starter chosen by 300 players",
-       x = "Starter", y = "Count") +
-  theme_gameboy(base_size = 13)
-```
-
-## OK Soda
-
-`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars and title, and slate and brick accents, with a Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
-
-![Image: TeemPlayer, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg), CC BY-SA 3.0.](../man/figures/theme_oksoda/ok-soda-original-4.jpg){width="60%" fig-align="center"}
+![Image: Andrew Turner, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:3Com_Audrey.jpg), CC BY 2.0.](../man/figures/theme_audrey/3com-audrey.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: oksoda
-set.seed(1014)
-ok_soda_sales <- data.frame(
-  cans = round(rnorm(n = 300, mean = 45, sd = 12))
-)
-ggplot(ok_soda_sales, aes(x = cans)) +
-  geom_histogram(bins = 30) +
-  labs(title = "OK Soda", caption = "Simulated data",
-       subtitle = "Cans sold per store in one day",
-       x = "Cans sold") +
-  theme_oksoda(base_size = 13)
-```
-
-## Talkboy
-
-`theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Brush Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
-
-![Image: Y2kcrazyjoker4, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg), CC BY-SA 4.0.](../man/figures/theme_talkboy/deluxe-talkboy-on-table.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: talkboy
-set.seed(1999)
-talkboy_clips <- data.frame(
-  seconds = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
-)
-ggplot(talkboy_clips, aes(x = seconds)) +
-  geom_freqpoly(bins = 30) +
-  labs(title = "Talkboy", caption = "Simulated data",
-       subtitle = "Length of 300 recorded messages",
-       x = "Message length (seconds)") +
-  theme_talkboy(base_size = 13)
-```
-
-## Blockbuster
-
-`theme_blockbuster()` uses Blockbuster Video blue and yellow. Below we simulate weekly rentals for 60 households from a Poisson distribution.
-
-![Image: Jon Konrath from Oakland, USA, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Anchorage_Blockbuster_video_store_sign_(41219885734).jpg), CC BY 2.0.](../man/figures/theme_blockbuster/anchorage-blockbuster-video-store-sign-41219885734.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: blockbuster
-set.seed(1993)
-blockbuster_rentals <- data.frame(rentals = rpois(n = 60, lambda = 3))
-ggplot(blockbuster_rentals, aes(x = rentals)) +
-  geom_dotplot(binwidth = 1, dotsize = 0.3) +
-  labs(title = "Blockbuster Video (simulated)",
-       x = "Number of rentals") +
-  theme_blockbuster(base_size = 13)
-```
-
-## Crystal Pepsi
-
-`theme_crystalpepsi()` uses the clear bottle and its label: a cream background, a navy frame, Pepsi red and navy marks, and a Futura title. Below we simulate the ages of 400 people at a 1992 mall taste test as a mix of kids and parents.
-
-![Image: Mike Mozart, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg), CC BY 2.0.](../man/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: crystalpepsi
-set.seed(1998)
-kid <- runif(400) < 0.65
-tasters <- data.frame(group = ifelse(kid, "Kid", "Parent"),
-  age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
-ggplot(tasters, aes(x = age, fill = group)) +
-  geom_density(alpha = 2/3) +
-  labs(title = "Crystal Pepsi", caption = "Simulated data",
-       x = "Age (years)", fill = NULL) +
-  theme_crystalpepsi(base_size = 13)
-```
-
-## Nintendo 64
-
-`theme_n64()` uses controller gray and the four logo colors. Below we simulate 200 Mario Kart 64 lap times from a heavy tailed t distribution.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:N64-Console-Set.png), public domain.](../man/figures/theme_n64/n64-console-set.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: n64
-set.seed(64)
-mario_kart_laps <- data.frame(seconds = 45 + 2 * rt(n = 200, df = 3))
-ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
-  geom_boxplot() +
-  labs(title = "Mario Kart 64 (simulated)",
-       x = NULL, y = "Lap time (seconds)") +
-  theme_n64(base_size = 13)
-```
-
-## Jurassic Park
-
-`theme_jurassic()` uses the Jurassic Park Post Office souvenir sheet: black, logo red, stamp yellow, and sunset orange. Below we simulate the total weight of the dinosaurs in each paddock.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jurassic_Park_icon.svg), CC0.](../man/figures/theme_jurassic/jurassic-park-icon.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: jurassic
-set.seed(1993)
-jp_paddocks <- data.frame(species = c("Brachiosaurus", "Triceratops", "Tyrannosaurus"),
-  total_tons = c(sum(rnorm(3, 40, 5)), sum(rnorm(5, 9, 1.2)), sum(rnorm(2, 8, 1))))
-ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
-  geom_col(show.legend = FALSE) +
-  labs(title = "Jurassic Park (simulated)", x = "Paddock", y = "Total weight (tons)") +
-  theme_jurassic(base_size = 13)
-```
-
-## Happy Meals
-
-`theme_happymeal()` uses the red and yellow of a Happy Meal box. Below we simulate average daily Happy Meal sales for four toy promotions.
-
-![Image: Newtown grafitti from Sydney, Australia, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Happy_meal_(6955434713).jpg), CC BY 2.0.](../man/figures/theme_happymeal/happy-meal-6955434713.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: happymeal
-set.seed(1997)
-happy_meals <- data.frame(promotion = c("Teenie Beanie Babies", "Furby", "Hot Wheels", "Inspector Gadget"),
-  avg_sold = sapply(c(420, 310, 220, 180), function(l) mean(rpois(28, l))))
-ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
-  geom_col(show.legend = FALSE) +
-  labs(title = "Happy Meals (simulated)", x = "Toy promotion", y = "Average sold per day") +
-  theme_happymeal(base_size = 13)
-```
-
-## Fresh Prince
-
-`theme_freshprince()` uses the logo: graffiti greens on a pink glow, and its continuous fill runs from teal to lime. Below we simulate how often the Carlton dance shows up each season.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fresh_Prince_Bel_Aire_logo.png), public domain.](../man/figures/theme_freshprince/fresh-prince-bel-aire-logo.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: freshprince
-set.seed(1990)
-fp <- expand.grid(season = 1:6, gag = c("Will flirts", "Carlton dance"))
-fp$occurrences <- rbinom(12, 24, ifelse(fp$gag == "Will flirts", 0.9, plogis(-2.2 + 0.5 * (fp$season - 3.5))))
-ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
-  geom_tile() +
-  labs(title = "Fresh Prince (simulated)", x = "Season", y = NULL, fill = "Episodes") +
-  theme_freshprince(base_size = 13)
-```
-
-## Pogs
-
-`theme_pogs()` uses a cardboard background and the red, sky blue, yellow, teal, purple, and rust milk cap prints. Below we simulate a collection of 100 Pogs.
-
-![Image: "[Remember Pogs?](https://www.flickr.com/photos/mtsofan/6077181975/)" by MTSOfan, [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/).](../man/figures/theme_pogs/remember-pogs.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: pogs
-set.seed(1993)
-pogs <- data.frame(type = sample(c("Milk caps", "Printed pogs", "Holographic", "Slammers"),
-  100, replace = TRUE, prob = c(0.45, 0.30, 0.15, 0.10)))
-ggplot(pogs, aes(x = type, fill = type)) +
-  geom_bar(show.legend = FALSE) +
-  labs(title = "A Pogs collection (simulated)", x = NULL, y = "Pieces") +
-  theme_pogs(base_size = 13)
-```
-
-## Sony Walkman
-
-`theme_walkman()` uses the Sports Walkman: a sports yellow body, blue buttons, a charcoal display, and an orange SPORTS label. Below we simulate median battery life for three models and two battery types.
-
-![Image: Itsramon, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sony_Walkman02.jpg), CC BY-SA 3.0.](../man/figures/theme_walkman/sony-walkman02.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: walkman
-set.seed(1979)
-walkman <- data.frame(model = rep(c("WM-2", "WM-F45 Sports", "WM-EX194 Mega Bass"), times = 2),
-  battery = rep(c("Alkaline", "Rechargeable"), each = 3), hours = c(10, 16, 22, 7, 12, 17) + rnorm(6, 0, 0.5))
-ggplot(walkman, aes(x = hours, y = model)) +
-  geom_line(aes(group = model)) +
-  geom_point(aes(color = battery), size = 3) +
-  labs(title = "Sony Walkman (simulated)", x = "Median battery life (hours)", y = NULL, color = "Battery") +
-  theme_walkman(base_size = 13)
-```
-
-## Orbitz
-
-`theme_orbitz()` uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black background, a gold frame, gold and magenta marks, and a Marker Felt title. Below we compare the share of kids buying Orbitz and Surge each week after Orbitz arrived.
-
-![Image: Jesse! S?, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg), CC BY 2.0.](../man/figures/theme_orbitz/bottle-of-orbitz-drink.jpg){width="40%" fig-align="center"}
-
-```{r}
-#| label: orbitz
-p_surge <- 0.8 * plogis(-2 + 0.6 * (0:6))
-drinks <- data.frame(week = factor(rep(1:7, 2)),
-  choice = factor(rep(c("Surge", "Orbitz"), each = 7), levels = c("Surge", "Orbitz")),
-  share = c(p_surge, -(0.8 - p_surge)))
-ggplot(drinks, aes(x = week, y = share, fill = choice)) +
-  geom_col(width = 0.5) +
-  labs(title = "Orbitz vs. Surge", caption = "Simulated data",
-       x = "Week", y = "Share of kids", fill = NULL) +
-  theme_orbitz(base_size = 13)
-```
-
-## Netscape
-
-`theme_netscape()`: the Netscape Navigator logo, with a night sky and teal, aurora green, sea glass, and deep teal marks, and a Times New Roman title.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg), CC0.](../man/figures/theme_netscape/netscape-navigator-icon.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: netscape
-set.seed(1996)
-modem <- sample(c("14.4k", "28.8k", "56k"), 600, replace = TRUE, prob = c(0.25, 0.45, 0.30))
-speeds <- data.frame(modem = modem,
-  kbps = rnorm(600, c(`14.4k` = 13, `28.8k` = 26, `56k` = 44)[modem], c(`14.4k` = 1.2, `28.8k` = 2.5, `56k` = 5)[modem]))
-ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
-  geom_density(position = "fill") +
-  labs(title = "Dial up speeds (simulated)", x = "Speed (kbps)", fill = "Modem") +
-  theme_netscape(base_size = 13)
-```
-
-## Titanic
-
-`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon title.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Titanic_in_color.png), public domain.](../man/figures/theme_titanic/titanic-in-color.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: titanic
-set.seed(1997)
-fans <- data.frame(age_group = sample(c("Teen", "Adult"), 300, replace = TRUE),
-  viewings = sample(c("Once", "Twice", "3+ times"), 300, replace = TRUE))
-ggplot(fans, aes(x = age_group, fill = viewings)) +
+#| label: audrey
+set.seed(2000)
+uses <- data.frame(month = rep(c("Oct", "Nov", "Dec"), each = 300),
+  task = sample(c("Email", "Weather", "Recipes", "Calendar", "Browsing"), 900, replace = TRUE))
+uses$month <- factor(uses$month, levels = c("Oct", "Nov", "Dec"))
+ggplot(uses, aes(x = month, fill = task)) +
   geom_bar(position = "fill") +
-  labs(title = "Titanic (simulated)", x = NULL, y = "Share", fill = "Viewings") +
-  theme_titanic(base_size = 13)
-```
-
-## Koosh ball
-
-`theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
-
-![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg), public domain.](../man/figures/theme_koosh/koosh-ball-tricolor.jpg){width="50%" fig-align="center"}
-
-```{r}
-#| label: koosh
-set.seed(1993)
-koosh_balls <- data.frame(style = factor(sample(c("Tri color", "Rainbow", "Neon", "Glow"),
-  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)),
-  levels = c("Tri color", "Rainbow", "Neon", "Glow")))
-ggplot(koosh_balls, aes(x = style, fill = style)) +
-  geom_bar(show.legend = FALSE) +
-  labs(title = "Koosh balls", caption = "Simulated data", x = NULL, y = "Sold") +
-  theme_koosh(base_size = 13)
-```
-
-## Tamagotchi
-
-`theme_tamagotchi()`: a lilac egg shell and a gray green LCD screen. Below we simulate Tamagotchi lifespans from a Weibull distribution.
-
-![Image: Dex Vintage, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Various_Tamagotchi_virtual_pet_devices.png), CC BY 3.0.](../man/figures/theme_tamagotchi/various-tamagotchi-virtual-pet-devices.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: tamagotchi
-set.seed(1997)
-pets <- data.frame(care = rep(c("Neglected", "Pampered"), each = 150))
-pets$days <- rweibull(300, shape = 2.2, scale = ifelse(pets$care == "Neglected", 6, 21))
-ggplot(pets, aes(x = days, fill = care)) +
-  geom_histogram(alpha = 2/3, position = "identity", bins = 40) +
-  labs(title = "Tamagotchi lifespans (simulated)", x = "Days", fill = "Care") +
-  theme_tamagotchi(base_size = 13)
-```
-
-## Super Soaker
-
-`theme_supersoaker()`: neon orange plastic, water blue, and neon green. Below we simulate Super Soaker ranges for two models.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cps2000front.jpg), CC BY-SA 3.0.](../man/figures/theme_supersoaker/cps2000front.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: supersoaker
-set.seed(1990)
-shots <- data.frame(model = rep(c("SS 50", "CPS 2000"), each = 200))
-shots$feet <- rnorm(400, ifelse(shots$model == "SS 50", 25, 45), ifelse(shots$model == "SS 50", 3, 5.4))
-ggplot(shots, aes(x = feet, color = model)) +
-  geom_freqpoly(binwidth = 2, linewidth = 1) +
-  labs(title = "Super Soaker range (simulated)", x = "Range (feet)", color = "Model") +
-  theme_supersoaker(base_size = 13)
-```
-
-## Goosebumps
-
-`theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.
-
-```{r}
-#| label: goosebumps
-set.seed(1992)
-readers <- data.frame(grade = rep(c("3rd grade", "5th grade"), each = 40))
-readers$books <- rpois(80, ifelse(readers$grade == "3rd grade", 3, 9))
-ggplot(readers, aes(x = books, fill = grade)) +
-  geom_dotplot(method = "histodot", binwidth = 1, stackgroups = TRUE, binpositions = "all") +
-  labs(title = "Goosebumps (simulated)", x = "Books read", fill = "Grade") +
-  theme_goosebumps(base_size = 13)
-```
-
-## Tetris
-
-`theme_tetris()`: a black well and the tetromino block colors. Below we simulate lines cleared from a negative binomial distribution.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tetrominoes_IJLO_STZ_Worlds.svg), public domain.](../man/figures/theme_tetris/tetrominoes-ijlo-stz-worlds.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: tetris
-set.seed(1989)
-games <- data.frame(player = rep(c("Casual", "Expert"), each = 80))
-games$lines <- rnbinom(160, size = 5, mu = ifelse(games$player == "Casual", 25, 120))
-ggplot(games, aes(x = player, y = lines, color = player)) +
-  geom_jitter(width = 0.2, show.legend = FALSE) +
-  labs(title = "Tetris (simulated)", x = NULL, y = "Lines cleared") +
-  theme_tetris(base_size = 13)
-```
-
-## Squeezit
-
-`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we simulate the seconds it took to squeeze out three flavors from a gamma distribution.
-
-![Image: ZolHaj, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg), CC BY-SA 4.0.](../man/figures/theme_squeezit/squeezeit-flavours.jpg){width="40%" fig-align="center"}
-
-```{r}
-#| label: squeezit
-set.seed(1998)
-bottles <- data.frame(flavor = factor(rep(c("Cherry", "Orange", "Green punch"), each = 60),
-  levels = c("Cherry", "Orange", "Green punch")))
-bottles$seconds <- rgamma(180, shape = 2.5,
-  scale = c(Cherry = 12, Orange = 18, `Green punch` = 22)[as.character(bottles$flavor)] / 2.5)
-ggplot(bottles, aes(x = seconds, fill = flavor)) +
-  geom_density(alpha = 2/3) +
-  labs(title = "Squeezit", caption = "Simulated data",
-       x = "Seconds to finish", fill = "Flavor") +
-  theme_squeezit(base_size = 13)
-```
-
-## Oregon Trail
-
-`theme_oregontrail()`: The Oregon Trail running in an Apple II emulator, with a gray window frame, a black screen, and three shades of phosphor green. Below we simulate days to reach Oregon from a log normal distribution.
-
-![Image: The Pug Father, [Flickr](https://www.flickr.com/photos/fleur-design/1155468051), CC BY 2.0.](../man/figures/theme_oregontrail/nicole-has-dysentary.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: oregontrail
-set.seed(1985)
-trips <- data.frame(profession = rep(c("Banker", "Carpenter", "Farmer"), each = 100))
-trips$days <- rlnorm(300, log(c(Banker = 140, Carpenter = 155, Farmer = 170)[trips$profession]), 0.2)
-ggplot(trips, aes(x = profession, y = days, fill = profession)) +
-  geom_boxplot(alpha = 2/3, show.legend = FALSE) +
-  labs(title = "The Oregon Trail (simulated)", x = NULL, y = "Days") +
-  theme_oregontrail(base_size = 13)
+  labs(title = "Audrey at home", caption = "Simulated data", x = NULL, y = "Share of households", fill = NULL) +
+  theme_audrey(base_size = 13)
 ```
 
 ## AIM
@@ -413,24 +56,6 @@ ggplot(buddies, aes(x = school, y = n, fill = school)) +
   geom_violin(alpha = 2/3, show.legend = FALSE) +
   labs(title = "AIM buddy lists (simulated)", x = NULL, y = "Buddies") +
   theme_aim(base_size = 13)
-```
-
-## Tiger R-Zone
-
-`theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Arial Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
-
-![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg), public domain.](../man/figures/theme_rzone/tiger-rzone-headset.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: rzone
-set.seed(1993)
-tries <- data.frame(try = rep(c("First", "Second"), each = 100))
-tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
-ggplot(tries, aes(x = seconds, y = try, fill = try)) +
-  geom_boxplot(width = 0.3, show.legend = FALSE) +
-  labs(title = "Tiger R-Zone", caption = "Simulated data",
-       x = "Seconds to clear the first level", y = NULL) +
-  theme_rzone(base_size = 13)
 ```
 
 ## Batman
@@ -473,40 +98,248 @@ ggplot(signals, aes(x = night, y = sightings)) +
   theme_batman(base_size = 13, version = "darknight")
 ```
 
-## SNICK
+## Blockbuster
 
-`theme_snick()`: Nickelodeon orange and slime green on a night purple sky. Below we simulate 20 weeks of ratings for three nights.
+`theme_blockbuster()` uses Blockbuster Video blue and yellow. Below we simulate weekly rentals for 60 households from a Poisson distribution.
 
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SNICK_logo.svg), public domain.](../man/figures/theme_snick/snick-logo.png){width="60%" fig-align="center"}
+![Image: Jon Konrath from Oakland, USA, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Anchorage_Blockbuster_video_store_sign_(41219885734).jpg), CC BY 2.0.](../man/figures/theme_blockbuster/anchorage-blockbuster-video-store-sign-41219885734.jpg){width="60%" fig-align="center"}
 
 ```{r}
-#| label: snick
-set.seed(1992)
-nights <- expand.grid(week = 1:20, night = c("Fri", "Sat", "Sun"))
-nights$rating <- c(Fri = 2.8, Sat = 4.2, Sun = 3.0)[as.character(nights$night)] + rnorm(60, 0, 0.3)
-ggplot(nights, aes(x = week, y = rating, color = night)) +
-  geom_line(linewidth = 1) +
-  labs(title = "SNICK ratings (simulated)", x = "Week", y = "Rating", color = NULL) +
-  theme_snick(base_size = 13)
+#| label: blockbuster
+set.seed(1993)
+blockbuster_rentals <- data.frame(rentals = rpois(n = 60, lambda = 3))
+ggplot(blockbuster_rentals, aes(x = rentals)) +
+  geom_dotplot(binwidth = 1, dotsize = 0.3) +
+  labs(title = "Blockbuster Video (simulated)",
+       x = "Number of rentals") +
+  theme_blockbuster(base_size = 13)
 ```
 
-## Saved by the Bell
+## Bop It
 
-`theme_savedbythebell()`: the logo's sky blue, pink, yellow, and orange on black. Below we simulate fall and spring quiz averages for three students.
+`theme_bopit()`: Bop It yellow on deep purple, with a purple to yellow continuous scale. Below we simulate reaction times to two commands.
 
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo_(2).svg), public domain.](../man/figures/theme_savedbythebell/saved-by-the-bell-original-series-logo-2.png){width="60%" fig-align="center"}
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bop_It_logo.svg), public domain.](../man/figures/theme_bopit/bop-it-logo.png){width="60%" fig-align="center"}
 
 ```{r}
-#| label: savedbythebell
-set.seed(1989)
-grades <- data.frame(student = rep(c("Zack", "Kelly", "Screech"), 2),
-                     semester = rep(c("Fall", "Spring"), each = 3))
-grades$score <- c(70, 82, 93, 80, 82, 95) + rnorm(6, 0, 2)
-ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
-  geom_line(linewidth = 2) +
-  geom_point(size = 4) +
-  labs(title = "Bayside quizzes (simulated)", x = NULL, y = "Average score", color = NULL) +
-  theme_savedbythebell(base_size = 13)
+#| label: bopit
+set.seed(1996)
+players <- data.frame(bop = rnorm(300, 450, 60))
+players$twist <- 60 + 0.9 * players$bop + rnorm(300, 0, 40)
+ggplot(players, aes(x = bop, y = twist)) +
+  geom_point(aes(color = twist), show.legend = FALSE) +
+  labs(title = "Bop It reaction times", caption = "Simulated data", x = "Bop it! (ms)", y = "Twist it! (ms)") +
+  theme_bopit(base_size = 13)
+```
+
+## Console wars
+
+`theme_consolewars()`: Sega blue vs. Nintendo red on charcoal. Below we simulate games owned and hours played for two consoles.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sega-Genesis-NA-Mk2-Console-Set.png), public domain.](../man/figures/theme_consolewars/sega-genesis-na-mk2-console-set.png){width="60%" fig-align="center"}
+
+![Image: Digital Game Museum, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Super_Nintendo_(7973380020).jpg), CC BY 2.0.](../man/figures/theme_consolewars/super-nintendo-7973380020.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: consolewars
+set.seed(1991)
+kids <- data.frame(console = rep(c("Genesis", "SNES"), each = 60), games = rnorm(120, 11, 3))
+kids$hours <- 2 + 0.6 * kids$games + ifelse(kids$console == "SNES", 2, 0) + rnorm(120, 0, 2)
+ggplot(kids, aes(x = games, y = hours, color = console)) +
+  geom_point() +
+  labs(title = "The console wars", caption = "Simulated data", x = "Games owned", y = "Hours per week", color = NULL) +
+  theme_consolewars(base_size = 13)
+```
+
+## Crystal Pepsi
+
+`theme_crystalpepsi()` uses the clear bottle and its label: a cream background, a navy frame, Pepsi red and navy marks, and a Futura title. Below we simulate the ages of 400 people at a 1992 mall taste test as a mix of kids and parents.
+
+![Image: Mike Mozart, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg), CC BY 2.0.](../man/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: crystalpepsi
+set.seed(1998)
+kid <- runif(400) < 0.65
+tasters <- data.frame(group = ifelse(kid, "Kid", "Parent"),
+  age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
+ggplot(tasters, aes(x = age, fill = group)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "Crystal Pepsi", caption = "Simulated data",
+       x = "Age (years)", fill = NULL) +
+  theme_crystalpepsi(base_size = 13)
+```
+
+## CU-SeeMe
+
+`theme_cuseeme()` uses the CU-SeeMe phone book window: a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Tahoma title. Below we simulate video call frame rates over three kinds of connections.
+
+![Image: Lt Georgios Floros, HN, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CU-SeeMe_application_screenshot.png), public domain.](../man/figures/theme_cuseeme/cu-seeme-application-screenshot.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: cuseeme
+set.seed(1995)
+calls <- data.frame(connection = rep(c("28.8k modem", "ISDN", "T1"), each = 60))
+calls$fps <- pmax(0.5, rnorm(180, c("28.8k modem" = 2, "ISDN" = 6, "T1" = 14)[calls$connection], 1.5))
+ggplot(calls, aes(x = connection, y = fps, color = connection)) +
+  geom_jitter(width = 0.2, show.legend = FALSE) +
+  labs(title = "CU-SeeMe frame rates", caption = "Simulated data", x = NULL, y = "Frames per second") +
+  theme_cuseeme(base_size = 13)
+```
+
+## CueCat
+
+`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, a red title, red, ink, LED orange, and putty marks, and a Marker Felt title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
+
+![Image: Shaddack, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg), public domain.](../man/figures/theme_cuecat/cuecat-upside.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: cuecat
+set.seed(2000)
+scans <- data.frame(week = 1:52)
+scans$scans <- rpois(52, 5000 * exp(-scans$week / 10))
+ggplot(scans, aes(x = week, y = scans)) +
+  geom_area(alpha = 0.8) +
+  labs(title = "CueCat scans", caption = "Simulated data", x = "Week", y = "Barcodes scanned") +
+  theme_cuecat(base_size = 13)
+```
+
+## Doom
+
+`theme_doom()`: hellfire red and orange on scorched brown. Below we simulate Doom frame rates by processor speed.
+
+![Image: Bethesda, Copyright Microsoft, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Doom_classic_box_art.png), CC BY 3.0.](../man/figures/theme_doom/doom-classic-box-art.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: doom
+set.seed(1993)
+pcs <- data.frame(mhz = runif(100, 25, 100))
+pcs$fps <- pmin(35, 0.45 * pcs$mhz + rnorm(100, 0, 3))
+ggplot(pcs, aes(x = mhz, y = fps)) +
+  geom_point() +
+  labs(title = "Doom frame rates", caption = "Simulated data", x = "CPU (MHz)", y = "Frames per second") +
+  theme_doom(base_size = 13)
+```
+
+## Fresh Prince
+
+`theme_freshprince()` uses the logo: graffiti greens on a pink glow, and its continuous fill runs from teal to lime. Below we simulate how often the Carlton dance shows up each season.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fresh_Prince_Bel_Aire_logo.png), public domain.](../man/figures/theme_freshprince/fresh-prince-bel-aire-logo.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: freshprince
+set.seed(1990)
+fp <- expand.grid(season = 1:6, gag = c("Will flirts", "Carlton dance"))
+fp$occurrences <- rbinom(12, 24, ifelse(fp$gag == "Will flirts", 0.9, plogis(-2.2 + 0.5 * (fp$season - 3.5))))
+ggplot(fp, aes(x = season, y = gag, fill = occurrences)) +
+  geom_tile() +
+  labs(title = "Fresh Prince (simulated)", x = "Season", y = NULL, fill = "Episodes") +
+  theme_freshprince(base_size = 13)
+```
+
+## Fruit Gushers
+
+`theme_gushers()` uses a pile of Fruit Gushers on a white plate: a red frame and title, red, green, teal, orange, and pink marks, and a Chalkboard title. Below we simulate fruit snack trades at one lunch table before and after Gushers arrived in 1991.
+
+![Image: Thomson200, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg), CC0.](../man/figures/theme_gushers/betty-crocker-fruit-gushers-pieces.jpg){width="50%" fig-align="center"}
+
+```{r}
+#| label: gushers
+set.seed(1993)
+trades <- expand.grid(year = 1985:2000, flavor = c("Strawberry", "Lime", "Blue raspberry"))
+trades$n <- rpois(nrow(trades), ifelse(trades$year < 1991, 0.5, 3))
+ggplot(subset(trades, n > 0), aes(x = year, y = flavor, color = flavor, alpha = n)) +
+  geom_point(shape = 124, size = 6, show.legend = FALSE) +
+  labs(title = "Fruit Gushers", caption = "Simulated data", x = NULL, y = NULL) +
+  theme_gushers(base_size = 13)
+```
+
+## Game Boy
+
+`theme_gameboy()` uses the four shades of green from the original Game Boy screen and the pixel font Press Start 2P, which ships with `fmggp2`. Below we simulate the starter chosen by 300 *Pokémon Red and Blue* players.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg), public domain.](../man/figures/theme_gameboy/game-boy-fl.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: gameboy
+set.seed(1998)
+pokemon_starters <- data.frame(
+  starter = sample(c("Bulbasaur", "Charmander", "Squirtle"),
+    size = 300, replace = TRUE, prob = c(0.30, 0.42, 0.28))
+)
+ggplot(pokemon_starters, aes(x = starter, fill = starter)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Pokemon Red and Blue (simulated)",
+       subtitle = "Starter chosen by 300 players",
+       x = "Starter", y = "Count") +
+  theme_gameboy(base_size = 13)
+```
+
+## GeoCities
+
+`theme_geocities()`: lime text and a yellow Comic Sans title on a dark navy panel. Below we simulate GeoCities page loads.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:GeoCities_logo.svg), public domain.](../man/figures/theme_geocities/geocities-logo.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: geocities
+set.seed(1997)
+pages <- data.frame(kb = rlnorm(2000, log(60), 0.45))
+pages$seconds <- 2 + pages$kb * 8 / 44 + rnorm(2000, 0, 1.5)
+ggplot(pages, aes(x = kb, y = seconds)) +
+  geom_bin2d(bins = 25) +
+  labs(title = "GeoCities page loads", caption = "Simulated data", x = "Page size (KB)", y = "Seconds to load") +
+  theme_geocities(base_size = 13)
+```
+
+## Goosebumps
+
+`theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.
+
+```{r}
+#| label: goosebumps
+set.seed(1992)
+readers <- data.frame(grade = rep(c("3rd grade", "5th grade"), each = 40))
+readers$books <- rpois(80, ifelse(readers$grade == "3rd grade", 3, 9))
+ggplot(readers, aes(x = books, fill = grade)) +
+  geom_dotplot(method = "histodot", binwidth = 1, stackgroups = TRUE, binpositions = "all") +
+  labs(title = "Goosebumps (simulated)", x = "Books read", fill = "Grade") +
+  theme_goosebumps(base_size = 13)
+```
+
+## Handspring Visor
+
+`theme_visor()` uses a green Handspring Visor Deluxe: a pale lavender background, a translucent green frame, a gray LCD panel, green, gray, mint, and silver marks, and a Trebuchet MS title. Below we simulate sales of four Springboard modules.
+
+![Image: Waldohreule, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Handspring_Visor_DeLuxe_Green.jpg), CC BY-SA 3.0.](../man/figures/theme_visor/handspring-visor-deluxe-green.jpg){width="40%" fig-align="center"}
+
+```{r}
+#| label: visor
+set.seed(2000)
+modules <- data.frame(module = sample(c("Games", "MP3 player", "Modem", "Phone"),
+  size = 500, replace = TRUE, prob = c(0.35, 0.25, 0.25, 0.15)))
+ggplot(modules, aes(y = module, fill = module)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Springboard modules", caption = "Simulated data", x = "Modules sold", y = NULL) +
+  theme_visor(base_size = 13)
+```
+
+## Happy Meals
+
+`theme_happymeal()` uses the red and yellow of a Happy Meal box. Below we simulate average daily Happy Meal sales for four toy promotions.
+
+![Image: Newtown grafitti from Sydney, Australia, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Happy_meal_(6955434713).jpg), CC BY 2.0.](../man/figures/theme_happymeal/happy-meal-6955434713.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: happymeal
+set.seed(1997)
+happy_meals <- data.frame(promotion = c("Teenie Beanie Babies", "Furby", "Hot Wheels", "Inspector Gadget"),
+  avg_sold = sapply(c(420, 310, 220, 180), function(l) mean(rpois(28, l))))
+ggplot(happy_meals, aes(x = promotion, y = avg_sold, fill = promotion)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Happy Meals (simulated)", x = "Toy promotion", y = "Average sold per day") +
+  theme_happymeal(base_size = 13)
 ```
 
 ## Hypercolor
@@ -529,163 +362,6 @@ ggplot(fads, aes(x = month, y = sales, fill = fad)) +
   theme_hypercolor(base_size = 13)
 ```
 
-## Y2K
-
-`theme_y2k()`: LED red, terminal amber and green on black. Below we show how 300 households prepared for Y2K across three surveys.
-
-![Image: Bug de l'an 2000, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bug_de_l%27an_2000.jpg), CC BY-SA 3.0.](../man/figures/theme_y2k/bug-de-l-an-2000.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: y2k
-prep <- data.frame(
-  survey = factor(rep(c("Jan", "Jul", "Dec"), each = 3), levels = c("Jan", "Jul", "Dec")),
-  level = factor(rep(c("Not worried", "Some supplies", "Bunker ready"), 3),
-                 levels = c("Not worried", "Some supplies", "Bunker ready")),
-  households = c(163, 100, 37, 124, 119, 57, 108, 117, 75))
-ggplot(prep, aes(x = survey, y = households, fill = level)) +
-  geom_col() +
-  labs(title = "Y2K prep (simulated)", x = NULL, y = "Households", fill = NULL) +
-  theme_y2k(base_size = 13)
-```
-
-## Fruit Gushers
-
-`theme_gushers()` uses a pile of Fruit Gushers on a white plate: a red frame and title, red, green, teal, orange, and pink marks, and a Chalkboard title. Below we simulate fruit snack trades at one lunch table before and after Gushers arrived in 1991.
-
-![Image: Thomson200, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg), CC0.](../man/figures/theme_gushers/betty-crocker-fruit-gushers-pieces.jpg){width="50%" fig-align="center"}
-
-```{r}
-#| label: gushers
-set.seed(1993)
-trades <- expand.grid(year = 1985:2000, flavor = c("Strawberry", "Lime", "Blue raspberry"))
-trades$n <- rpois(nrow(trades), ifelse(trades$year < 1991, 0.5, 3))
-ggplot(subset(trades, n > 0), aes(x = year, y = flavor, color = flavor, alpha = n)) +
-  geom_point(shape = 124, size = 6, show.legend = FALSE) +
-  labs(title = "Fruit Gushers", caption = "Simulated data", x = NULL, y = NULL) +
-  theme_gushers(base_size = 13)
-```
-
-## Doom
-
-`theme_doom()`: hellfire red and orange on scorched brown. Below we simulate Doom frame rates by processor speed.
-
-![Image: Bethesda, Copyright Microsoft, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Doom_classic_box_art.png), CC BY 3.0.](../man/figures/theme_doom/doom-classic-box-art.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: doom
-set.seed(1993)
-pcs <- data.frame(mhz = runif(100, 25, 100))
-pcs$fps <- pmin(35, 0.45 * pcs$mhz + rnorm(100, 0, 3))
-ggplot(pcs, aes(x = mhz, y = fps)) +
-  geom_point() +
-  labs(title = "Doom frame rates", caption = "Simulated data", x = "CPU (MHz)", y = "Frames per second") +
-  theme_doom(base_size = 13)
-```
-
-## Console wars
-
-`theme_consolewars()`: Sega blue vs. Nintendo red on charcoal. Below we simulate games owned and hours played for two consoles.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sega-Genesis-NA-Mk2-Console-Set.png), public domain.](../man/figures/theme_consolewars/sega-genesis-na-mk2-console-set.png){width="60%" fig-align="center"}
-
-![Image: Digital Game Museum, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Super_Nintendo_(7973380020).jpg), CC BY 2.0.](../man/figures/theme_consolewars/super-nintendo-7973380020.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: consolewars
-set.seed(1991)
-kids <- data.frame(console = rep(c("Genesis", "SNES"), each = 60), games = rnorm(120, 11, 3))
-kids$hours <- 2 + 0.6 * kids$games + ifelse(kids$console == "SNES", 2, 0) + rnorm(120, 0, 2)
-ggplot(kids, aes(x = games, y = hours, color = console)) +
-  geom_point() +
-  labs(title = "The console wars", caption = "Simulated data", x = "Games owned", y = "Hours per week", color = NULL) +
-  theme_consolewars(base_size = 13)
-```
-
-## Seinfeld
-
-`theme_seinfeld()`: comedy club brick with the logo colors. Below we simulate laughs and viewers for 60 episodes.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Seinfeld.svg), public domain.](../man/figures/theme_seinfeld/seinfeld.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: seinfeld
-set.seed(1989)
-eps <- data.frame(kramer = rgamma(60, 6, 1.5), viewers = rlnorm(60, log(20), 0.3))
-eps$laughs <- 2 + 0.3 * eps$kramer + rnorm(60, 0, 0.5)
-ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
-  geom_point(alpha = 1 / 2) +
-  labs(title = "Seinfeld episodes", caption = "Simulated data", x = "Kramer minutes", y = "Laughs per minute", size = "Viewers") +
-  theme_seinfeld(base_size = 13)
-```
-
-## Power Rangers
-
-`theme_powerrangers()`: the six Ranger suits on light gray. Below we simulate putties defeated by each Ranger.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Power_Rangers_logo.svg), public domain.](../man/figures/theme_powerrangers/power-rangers-logo.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: powerrangers
-set.seed(1993)
-fights <- data.frame(ranger = factor(rep(c("Red", "Blue", "Yellow", "Pink", "Black"), each = 20), levels = c("Red", "Blue", "Yellow", "Pink", "Black")), minutes = rgamma(100, 4, 1))
-fights$putties <- rpois(100, 1.6 * fights$minutes)
-ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
-  geom_point(shape = 21, size = 3, color = "#000000") +
-  labs(title = "Power Rangers", caption = "Simulated data", x = "Fight minutes", y = "Putties defeated", fill = NULL) +
-  theme_powerrangers(base_size = 13)
-```
-
-## Bop It
-
-`theme_bopit()`: Bop It yellow on deep purple, with a purple to yellow continuous scale. Below we simulate reaction times to two commands.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bop_It_logo.svg), public domain.](../man/figures/theme_bopit/bop-it-logo.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: bopit
-set.seed(1996)
-players <- data.frame(bop = rnorm(300, 450, 60))
-players$twist <- 60 + 0.9 * players$bop + rnorm(300, 0, 40)
-ggplot(players, aes(x = bop, y = twist)) +
-  geom_point(aes(color = twist), show.legend = FALSE) +
-  labs(title = "Bop It reaction times", caption = "Simulated data", x = "Bop it! (ms)", y = "Twist it! (ms)") +
-  theme_bopit(base_size = 13)
-```
-
-## GeoCities
-
-`theme_geocities()`: lime text and a yellow Comic Sans title on a dark navy panel. Below we simulate GeoCities page loads.
-
-![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:GeoCities_logo.svg), public domain.](../man/figures/theme_geocities/geocities-logo.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: geocities
-set.seed(1997)
-pages <- data.frame(kb = rlnorm(2000, log(60), 0.45))
-pages$seconds <- 2 + pages$kb * 8 / 44 + rnorm(2000, 0, 1.5)
-ggplot(pages, aes(x = kb, y = seconds)) +
-  geom_bin2d(bins = 25) +
-  labs(title = "GeoCities page loads", caption = "Simulated data", x = "Page size (KB)", y = "Seconds to load") +
-  theme_geocities(base_size = 13)
-```
-
-## Surge
-
-`theme_surge()`: Surge green on black, with a dark to bright green continuous scale. Below we simulate cans of Surge and hours of video games.
-
-![Image: theimpulsivebuy, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Burger_King_Frozen_Surge_(22789420399).jpg), CC BY-SA 2.0.](../man/figures/theme_surge/burger-king-frozen-surge-22789420399.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: surge
-set.seed(1996)
-teens <- data.frame(cans = rgamma(2000, 2, 0.5))
-teens$hours <- 3 + 1.5 * teens$cans + rnorm(2000, 0, 3)
-ggplot(teens, aes(x = cans, y = hours)) +
-  geom_bin2d(bins = 20) +
-  labs(title = "Surge and video games", caption = "Simulated data", x = "Cans per week", y = "Gaming hours") +
-  theme_surge(base_size = 13)
-```
-
 ## IBM Microdrive
 
 `theme_microdrive()` uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, a red title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New Roman title. Below we simulate photo file sizes from three digital cameras that wrote to a Microdrive.
@@ -703,24 +379,6 @@ ggplot(photos, aes(x = camera, y = mb, fill = camera)) +
   theme_microdrive(base_size = 13)
 ```
 
-## Novell NetWare
-
-`theme_netware()` uses three NetWare 2.0 boxes: a NetWare red background with white text, a maroon frame, maroon, red, rose, and blush marks, and a Gill Sans title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
-
-![Image: diaper on Flickr, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg), CC BY 2.0.](../man/figures/theme_netware/novell-netware-2-0-packages.jpg){width="50%" fig-align="center"}
-
-```{r}
-#| label: netware
-set.seed(1990)
-servers <- expand.grid(year = 1990:1998, version = c("2.x", "3.x", "4.x"))
-servers$peak <- c("2.x" = 1990, "3.x" = 1994, "4.x" = 1998)[servers$version]
-servers$n <- rpois(nrow(servers), 400 * exp(-((servers$year - servers$peak) / 2.5)^2))
-ggplot(servers, aes(x = year, y = n, fill = version)) +
-  geom_col() +
-  labs(title = "NetWare servers", caption = "Simulated data", x = NULL, y = "Servers", fill = "Version") +
-  theme_netware(base_size = 13)
-```
-
 ## J2ME
 
 `theme_j2me()` uses a Nokia N73 running a J2ME app: a black phone background, a silver frame, a pale screen panel, Ushahidi red, tan, brown, and black marks, and an Arial Narrow title. Below we simulate monthly downloads of four kinds of phone games.
@@ -736,93 +394,6 @@ ggplot(games, aes(x = month, y = downloads, color = genre)) +
   geom_line(linewidth = 1) +
   labs(title = "J2ME game downloads", caption = "Simulated data", x = "Month", y = "Downloads (thousands)", color = NULL) +
   theme_j2me(base_size = 13)
-```
-
-## Palm Pilot
-
-`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a white title, a green LCD panel, ink, LCD green, plum, and teal marks, and a Futura title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
-
-![Image: Museo8bits, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG), CC BY-SA 3.0.](../man/figures/theme_palmpilot/palm-pilot-professional-01.jpg){width="40%" fig-align="center"}
-
-```{r}
-#| label: palmpilot
-set.seed(1997)
-graffiti <- data.frame(week = runif(200, 0, 10))
-graffiti$accuracy <- pmin(100, 98 - 30 * exp(-graffiti$week / 2) + rnorm(200, 0, 3))
-ggplot(graffiti, aes(x = week, y = accuracy)) +
-  geom_point(alpha = 1 / 2) +
-  geom_smooth(method = "loess", formula = y ~ x, se = FALSE) +
-  labs(title = "Learning Graffiti", caption = "Simulated data", x = "Weeks of use", y = "Characters recognized (%)") +
-  theme_palmpilot(base_size = 13)
-```
-
-## Handspring Visor
-
-`theme_visor()` uses a green Handspring Visor Deluxe: a pale lavender background, a translucent green frame, a gray LCD panel, green, gray, mint, and silver marks, and a Trebuchet MS title. Below we simulate sales of four Springboard modules.
-
-![Image: Waldohreule, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Handspring_Visor_DeLuxe_Green.jpg), CC BY-SA 3.0.](../man/figures/theme_visor/handspring-visor-deluxe-green.jpg){width="40%" fig-align="center"}
-
-```{r}
-#| label: visor
-set.seed(2000)
-modules <- data.frame(module = sample(c("Games", "MP3 player", "Modem", "Phone"),
-  size = 500, replace = TRUE, prob = c(0.35, 0.25, 0.25, 0.15)))
-ggplot(modules, aes(y = module, fill = module)) +
-  geom_bar(show.legend = FALSE) +
-  labs(title = "Springboard modules", caption = "Simulated data", x = "Modules sold", y = NULL) +
-  theme_visor(base_size = 13)
-```
-
-## Two-way pagers
-
-`theme_pager()` uses a RIM 950 pager on concrete: a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate marks, and an Arial Black title. Below we simulate the messages one pager received in each hour of a workday.
-
-![Image: Ruben de Rijcke, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RIM_BlackBerry_950.jpg), CC BY-SA 4.0.](../man/figures/theme_pager/rim-blackberry-950.jpg){width="60%" fig-align="center"}
-
-```{r}
-#| label: pager
-set.seed(1998)
-pages <- data.frame(hour = 7:20)
-pages$messages <- rpois(nrow(pages), 2 + 10 * dnorm(pages$hour, 13, 3) / dnorm(0, 0, 3))
-ggplot(pages, aes(x = hour, y = messages)) +
-  geom_col() +
-  labs(title = "Messages by hour", caption = "Simulated data", x = "Hour", y = "Messages") +
-  theme_pager(base_size = 13)
-```
-
-## CU-SeeMe
-
-`theme_cuseeme()` uses the CU-SeeMe phone book window: a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Tahoma title. Below we simulate video call frame rates over three kinds of connections.
-
-![Image: Lt Georgios Floros, HN, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CU-SeeMe_application_screenshot.png), public domain.](../man/figures/theme_cuseeme/cu-seeme-application-screenshot.png){width="60%" fig-align="center"}
-
-```{r}
-#| label: cuseeme
-set.seed(1995)
-calls <- data.frame(connection = rep(c("28.8k modem", "ISDN", "T1"), each = 60))
-calls$fps <- pmax(0.5, rnorm(180, c("28.8k modem" = 2, "ISDN" = 6, "T1" = 14)[calls$connection], 1.5))
-ggplot(calls, aes(x = connection, y = fps, color = connection)) +
-  geom_jitter(width = 0.2, show.legend = FALSE) +
-  labs(title = "CU-SeeMe frame rates", caption = "Simulated data", x = NULL, y = "Frames per second") +
-  theme_cuseeme(base_size = 13)
-```
-
-## VRML
-
-`theme_vrml()` uses a VRML living room: a tan wall background, a floor brown frame, a pale panel, sofa red, lamp green, black, and glass marks, and an Andale Mono title. Below we simulate render times for four VRML scenes.
-
-![Image: Jan Křivka, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Interior.png), public domain.](../man/figures/theme_vrml/interior.png){width="50%" fig-align="center"}
-
-```{r}
-#| label: vrml
-set.seed(1996)
-scenes <- data.frame(scene = rep(c("Living room", "Garden", "Office", "Museum"), each = 40),
-  polygons = round(runif(160, 500, 20000)))
-scenes$seconds <- 0.5 + scenes$polygons / 4000 + rnorm(160, 0, 0.4)
-ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
-  geom_point() +
-  labs(title = "VRML render times", caption = "Simulated data", x = "Polygons", y = "Seconds to render", color = NULL) +
-  theme_vrml(base_size = 13)
 ```
 
 ## Java applets
@@ -845,39 +416,468 @@ ggplot(obs, aes(x = time, y = angle)) +
   theme_javaapplet(base_size = 13)
 ```
 
-## CueCat
+## Jurassic Park
 
-`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, a red title, red, ink, LED orange, and putty marks, and a Marker Felt title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
+`theme_jurassic()` uses the Jurassic Park Post Office souvenir sheet: black, logo red, stamp yellow, and sunset orange. Below we simulate the total weight of the dinosaurs in each paddock.
 
-![Image: Shaddack, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg), public domain.](../man/figures/theme_cuecat/cuecat-upside.jpg){width="60%" fig-align="center"}
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Jurassic_Park_icon.svg), CC0.](../man/figures/theme_jurassic/jurassic-park-icon.png){width="60%" fig-align="center"}
 
 ```{r}
-#| label: cuecat
-set.seed(2000)
-scans <- data.frame(week = 1:52)
-scans$scans <- rpois(52, 5000 * exp(-scans$week / 10))
-ggplot(scans, aes(x = week, y = scans)) +
-  geom_area(alpha = 0.8) +
-  labs(title = "CueCat scans", caption = "Simulated data", x = "Week", y = "Barcodes scanned") +
-  theme_cuecat(base_size = 13)
+#| label: jurassic
+set.seed(1993)
+jp_paddocks <- data.frame(species = c("Brachiosaurus", "Triceratops", "Tyrannosaurus"),
+  total_tons = c(sum(rnorm(3, 40, 5)), sum(rnorm(5, 9, 1.2)), sum(rnorm(2, 8, 1))))
+ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
+  geom_col(show.legend = FALSE) +
+  labs(title = "Jurassic Park (simulated)", x = "Paddock", y = "Total weight (tons)") +
+  theme_jurassic(base_size = 13)
 ```
 
-## 3Com Audrey
+## Koosh ball
 
-`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, a teal title, teal, navy, tan, brown, and aqua marks, and an Arial Rounded title. Below we simulate what 300 households used their Audrey for.
+`theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
 
-![Image: Andrew Turner, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:3Com_Audrey.jpg), CC BY 2.0.](../man/figures/theme_audrey/3com-audrey.jpg){width="60%" fig-align="center"}
+![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg), public domain.](../man/figures/theme_koosh/koosh-ball-tricolor.jpg){width="50%" fig-align="center"}
 
 ```{r}
-#| label: audrey
-set.seed(2000)
-uses <- data.frame(month = rep(c("Oct", "Nov", "Dec"), each = 300),
-  task = sample(c("Email", "Weather", "Recipes", "Calendar", "Browsing"), 900, replace = TRUE))
-uses$month <- factor(uses$month, levels = c("Oct", "Nov", "Dec"))
-ggplot(uses, aes(x = month, fill = task)) +
+#| label: koosh
+set.seed(1993)
+koosh_balls <- data.frame(style = factor(sample(c("Tri color", "Rainbow", "Neon", "Glow"),
+  200, replace = TRUE, prob = c(1/2, 1/4, 1/8, 1/8)),
+  levels = c("Tri color", "Rainbow", "Neon", "Glow")))
+ggplot(koosh_balls, aes(x = style, fill = style)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "Koosh balls", caption = "Simulated data", x = NULL, y = "Sold") +
+  theme_koosh(base_size = 13)
+```
+
+## Netscape
+
+`theme_netscape()`: the Netscape Navigator logo, with a night sky and teal, aurora green, sea glass, and deep teal marks, and a Times New Roman title.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg), CC0.](../man/figures/theme_netscape/netscape-navigator-icon.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: netscape
+set.seed(1996)
+modem <- sample(c("14.4k", "28.8k", "56k"), 600, replace = TRUE, prob = c(0.25, 0.45, 0.30))
+speeds <- data.frame(modem = modem,
+  kbps = rnorm(600, c(`14.4k` = 13, `28.8k` = 26, `56k` = 44)[modem], c(`14.4k` = 1.2, `28.8k` = 2.5, `56k` = 5)[modem]))
+ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
+  geom_density(position = "fill") +
+  labs(title = "Dial up speeds (simulated)", x = "Speed (kbps)", fill = "Modem") +
+  theme_netscape(base_size = 13)
+```
+
+## Nintendo 64
+
+`theme_n64()` uses controller gray and the four logo colors. Below we simulate 200 Mario Kart 64 lap times from a heavy tailed t distribution.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:N64-Console-Set.png), public domain.](../man/figures/theme_n64/n64-console-set.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: n64
+set.seed(64)
+mario_kart_laps <- data.frame(seconds = 45 + 2 * rt(n = 200, df = 3))
+ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
+  geom_boxplot() +
+  labs(title = "Mario Kart 64 (simulated)",
+       x = NULL, y = "Lap time (seconds)") +
+  theme_n64(base_size = 13)
+```
+
+## Novell NetWare
+
+`theme_netware()` uses three NetWare 2.0 boxes: a NetWare red background with white text, a maroon frame, maroon, red, rose, and blush marks, and a Gill Sans title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
+
+![Image: diaper on Flickr, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg), CC BY 2.0.](../man/figures/theme_netware/novell-netware-2-0-packages.jpg){width="50%" fig-align="center"}
+
+```{r}
+#| label: netware
+set.seed(1990)
+servers <- expand.grid(year = 1990:1998, version = c("2.x", "3.x", "4.x"))
+servers$peak <- c("2.x" = 1990, "3.x" = 1994, "4.x" = 1998)[servers$version]
+servers$n <- rpois(nrow(servers), 400 * exp(-((servers$year - servers$peak) / 2.5)^2))
+ggplot(servers, aes(x = year, y = n, fill = version)) +
+  geom_col() +
+  labs(title = "NetWare servers", caption = "Simulated data", x = NULL, y = "Servers", fill = "Version") +
+  theme_netware(base_size = 13)
+```
+
+## OK Soda
+
+`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars and title, and slate and brick accents, with a Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
+
+![Image: TeemPlayer, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg), CC BY-SA 3.0.](../man/figures/theme_oksoda/ok-soda-original-4.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: oksoda
+set.seed(1014)
+ok_soda_sales <- data.frame(
+  cans = round(rnorm(n = 300, mean = 45, sd = 12))
+)
+ggplot(ok_soda_sales, aes(x = cans)) +
+  geom_histogram(bins = 30) +
+  labs(title = "OK Soda", caption = "Simulated data",
+       subtitle = "Cans sold per store in one day",
+       x = "Cans sold") +
+  theme_oksoda(base_size = 13)
+```
+
+## Orbitz
+
+`theme_orbitz()` uses a bottle of Orbitz, the 1997 drink with floating gel balls: a black background, a gold frame, gold and magenta marks, and a Marker Felt title. Below we compare the share of kids buying Orbitz and Surge each week after Orbitz arrived.
+
+![Image: Jesse! S?, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg), CC BY 2.0.](../man/figures/theme_orbitz/bottle-of-orbitz-drink.jpg){width="40%" fig-align="center"}
+
+```{r}
+#| label: orbitz
+p_surge <- 0.8 * plogis(-2 + 0.6 * (0:6))
+drinks <- data.frame(week = factor(rep(1:7, 2)),
+  choice = factor(rep(c("Surge", "Orbitz"), each = 7), levels = c("Surge", "Orbitz")),
+  share = c(p_surge, -(0.8 - p_surge)))
+ggplot(drinks, aes(x = week, y = share, fill = choice)) +
+  geom_col(width = 0.5) +
+  labs(title = "Orbitz vs. Surge", caption = "Simulated data",
+       x = "Week", y = "Share of kids", fill = NULL) +
+  theme_orbitz(base_size = 13)
+```
+
+## Oregon Trail
+
+`theme_oregontrail()`: The Oregon Trail running in an Apple II emulator, with a gray window frame, a black screen, and three shades of phosphor green. Below we simulate days to reach Oregon from a log normal distribution.
+
+![Image: The Pug Father, [Flickr](https://www.flickr.com/photos/fleur-design/1155468051), CC BY 2.0.](../man/figures/theme_oregontrail/nicole-has-dysentary.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: oregontrail
+set.seed(1985)
+trips <- data.frame(profession = rep(c("Banker", "Carpenter", "Farmer"), each = 100))
+trips$days <- rlnorm(300, log(c(Banker = 140, Carpenter = 155, Farmer = 170)[trips$profession]), 0.2)
+ggplot(trips, aes(x = profession, y = days, fill = profession)) +
+  geom_boxplot(alpha = 2/3, show.legend = FALSE) +
+  labs(title = "The Oregon Trail (simulated)", x = NULL, y = "Days") +
+  theme_oregontrail(base_size = 13)
+```
+
+## Palm Pilot
+
+`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a white title, a green LCD panel, ink, LCD green, plum, and teal marks, and a Futura title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
+
+![Image: Museo8bits, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG), CC BY-SA 3.0.](../man/figures/theme_palmpilot/palm-pilot-professional-01.jpg){width="40%" fig-align="center"}
+
+```{r}
+#| label: palmpilot
+set.seed(1997)
+graffiti <- data.frame(week = runif(200, 0, 10))
+graffiti$accuracy <- pmin(100, 98 - 30 * exp(-graffiti$week / 2) + rnorm(200, 0, 3))
+ggplot(graffiti, aes(x = week, y = accuracy)) +
+  geom_point(alpha = 1 / 2) +
+  geom_smooth(method = "loess", formula = y ~ x, se = FALSE) +
+  labs(title = "Learning Graffiti", caption = "Simulated data", x = "Weeks of use", y = "Characters recognized (%)") +
+  theme_palmpilot(base_size = 13)
+```
+
+## Pogs
+
+`theme_pogs()` uses a cardboard background and the red, sky blue, yellow, teal, purple, and rust milk cap prints. Below we simulate a collection of 100 Pogs.
+
+![Image: "[Remember Pogs?](https://www.flickr.com/photos/mtsofan/6077181975/)" by MTSOfan, [CC BY-NC-SA 2.0](https://creativecommons.org/licenses/by-nc-sa/2.0/).](../man/figures/theme_pogs/remember-pogs.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: pogs
+set.seed(1993)
+pogs <- data.frame(type = sample(c("Milk caps", "Printed pogs", "Holographic", "Slammers"),
+  100, replace = TRUE, prob = c(0.45, 0.30, 0.15, 0.10)))
+ggplot(pogs, aes(x = type, fill = type)) +
+  geom_bar(show.legend = FALSE) +
+  labs(title = "A Pogs collection (simulated)", x = NULL, y = "Pieces") +
+  theme_pogs(base_size = 13)
+```
+
+## Power Rangers
+
+`theme_powerrangers()`: the six Ranger suits on light gray. Below we simulate putties defeated by each Ranger.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Power_Rangers_logo.svg), public domain.](../man/figures/theme_powerrangers/power-rangers-logo.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: powerrangers
+set.seed(1993)
+fights <- data.frame(ranger = factor(rep(c("Red", "Blue", "Yellow", "Pink", "Black"), each = 20), levels = c("Red", "Blue", "Yellow", "Pink", "Black")), minutes = rgamma(100, 4, 1))
+fights$putties <- rpois(100, 1.6 * fights$minutes)
+ggplot(fights, aes(x = minutes, y = putties, fill = ranger)) +
+  geom_point(shape = 21, size = 3, color = "#000000") +
+  labs(title = "Power Rangers", caption = "Simulated data", x = "Fight minutes", y = "Putties defeated", fill = NULL) +
+  theme_powerrangers(base_size = 13)
+```
+
+## Saved by the Bell
+
+`theme_savedbythebell()`: the logo's sky blue, pink, yellow, and orange on black. Below we simulate fall and spring quiz averages for three students.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo_(2).svg), public domain.](../man/figures/theme_savedbythebell/saved-by-the-bell-original-series-logo-2.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: savedbythebell
+set.seed(1989)
+grades <- data.frame(student = rep(c("Zack", "Kelly", "Screech"), 2),
+                     semester = rep(c("Fall", "Spring"), each = 3))
+grades$score <- c(70, 82, 93, 80, 82, 95) + rnorm(6, 0, 2)
+ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
+  geom_line(linewidth = 2) +
+  geom_point(size = 4) +
+  labs(title = "Bayside quizzes (simulated)", x = NULL, y = "Average score", color = NULL) +
+  theme_savedbythebell(base_size = 13)
+```
+
+## Seinfeld
+
+`theme_seinfeld()`: comedy club brick with the logo colors. Below we simulate laughs and viewers for 60 episodes.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Seinfeld.svg), public domain.](../man/figures/theme_seinfeld/seinfeld.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: seinfeld
+set.seed(1989)
+eps <- data.frame(kramer = rgamma(60, 6, 1.5), viewers = rlnorm(60, log(20), 0.3))
+eps$laughs <- 2 + 0.3 * eps$kramer + rnorm(60, 0, 0.5)
+ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
+  geom_point(alpha = 1 / 2) +
+  labs(title = "Seinfeld episodes", caption = "Simulated data", x = "Kramer minutes", y = "Laughs per minute", size = "Viewers") +
+  theme_seinfeld(base_size = 13)
+```
+
+## SNICK
+
+`theme_snick()`: Nickelodeon orange and slime green on a night purple sky. Below we simulate 20 weeks of ratings for three nights.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SNICK_logo.svg), public domain.](../man/figures/theme_snick/snick-logo.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: snick
+set.seed(1992)
+nights <- expand.grid(week = 1:20, night = c("Fri", "Sat", "Sun"))
+nights$rating <- c(Fri = 2.8, Sat = 4.2, Sun = 3.0)[as.character(nights$night)] + rnorm(60, 0, 0.3)
+ggplot(nights, aes(x = week, y = rating, color = night)) +
+  geom_line(linewidth = 1) +
+  labs(title = "SNICK ratings (simulated)", x = "Week", y = "Rating", color = NULL) +
+  theme_snick(base_size = 13)
+```
+
+## Sony Walkman
+
+`theme_walkman()` uses the Sports Walkman: a sports yellow body, blue buttons, a charcoal display, and an orange SPORTS label. Below we simulate median battery life for three models and two battery types.
+
+![Image: Itsramon, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sony_Walkman02.jpg), CC BY-SA 3.0.](../man/figures/theme_walkman/sony-walkman02.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: walkman
+set.seed(1979)
+walkman <- data.frame(model = rep(c("WM-2", "WM-F45 Sports", "WM-EX194 Mega Bass"), times = 2),
+  battery = rep(c("Alkaline", "Rechargeable"), each = 3), hours = c(10, 16, 22, 7, 12, 17) + rnorm(6, 0, 0.5))
+ggplot(walkman, aes(x = hours, y = model)) +
+  geom_line(aes(group = model)) +
+  geom_point(aes(color = battery), size = 3) +
+  labs(title = "Sony Walkman (simulated)", x = "Median battery life (hours)", y = NULL, color = "Battery") +
+  theme_walkman(base_size = 13)
+```
+
+## Squeezit
+
+`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we simulate the seconds it took to squeeze out three flavors from a gamma distribution.
+
+![Image: ZolHaj, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg), CC BY-SA 4.0.](../man/figures/theme_squeezit/squeezeit-flavours.jpg){width="40%" fig-align="center"}
+
+```{r}
+#| label: squeezit
+set.seed(1998)
+bottles <- data.frame(flavor = factor(rep(c("Cherry", "Orange", "Green punch"), each = 60),
+  levels = c("Cherry", "Orange", "Green punch")))
+bottles$seconds <- rgamma(180, shape = 2.5,
+  scale = c(Cherry = 12, Orange = 18, `Green punch` = 22)[as.character(bottles$flavor)] / 2.5)
+ggplot(bottles, aes(x = seconds, fill = flavor)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "Squeezit", caption = "Simulated data",
+       x = "Seconds to finish", fill = "Flavor") +
+  theme_squeezit(base_size = 13)
+```
+
+## Super Soaker
+
+`theme_supersoaker()`: neon orange plastic, water blue, and neon green. Below we simulate Super Soaker ranges for two models.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Cps2000front.jpg), CC BY-SA 3.0.](../man/figures/theme_supersoaker/cps2000front.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: supersoaker
+set.seed(1990)
+shots <- data.frame(model = rep(c("SS 50", "CPS 2000"), each = 200))
+shots$feet <- rnorm(400, ifelse(shots$model == "SS 50", 25, 45), ifelse(shots$model == "SS 50", 3, 5.4))
+ggplot(shots, aes(x = feet, color = model)) +
+  geom_freqpoly(binwidth = 2, linewidth = 1) +
+  labs(title = "Super Soaker range (simulated)", x = "Range (feet)", color = "Model") +
+  theme_supersoaker(base_size = 13)
+```
+
+## Surge
+
+`theme_surge()`: Surge green on black, with a dark to bright green continuous scale. Below we simulate cans of Surge and hours of video games.
+
+![Image: theimpulsivebuy, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Burger_King_Frozen_Surge_(22789420399).jpg), CC BY-SA 2.0.](../man/figures/theme_surge/burger-king-frozen-surge-22789420399.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: surge
+set.seed(1996)
+teens <- data.frame(cans = rgamma(2000, 2, 0.5))
+teens$hours <- 3 + 1.5 * teens$cans + rnorm(2000, 0, 3)
+ggplot(teens, aes(x = cans, y = hours)) +
+  geom_bin2d(bins = 20) +
+  labs(title = "Surge and video games", caption = "Simulated data", x = "Cans per week", y = "Gaming hours") +
+  theme_surge(base_size = 13)
+```
+
+## Talkboy
+
+`theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Brush Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
+
+![Image: Y2kcrazyjoker4, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg), CC BY-SA 4.0.](../man/figures/theme_talkboy/deluxe-talkboy-on-table.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: talkboy
+set.seed(1999)
+talkboy_clips <- data.frame(
+  seconds = round(rgamma(n = 300, shape = 4, rate = 0.5), 1)
+)
+ggplot(talkboy_clips, aes(x = seconds)) +
+  geom_freqpoly(bins = 30) +
+  labs(title = "Talkboy", caption = "Simulated data",
+       subtitle = "Length of 300 recorded messages",
+       x = "Message length (seconds)") +
+  theme_talkboy(base_size = 13)
+```
+
+## Tamagotchi
+
+`theme_tamagotchi()`: a lilac egg shell and a gray green LCD screen. Below we simulate Tamagotchi lifespans from a Weibull distribution.
+
+![Image: Dex Vintage, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Various_Tamagotchi_virtual_pet_devices.png), CC BY 3.0.](../man/figures/theme_tamagotchi/various-tamagotchi-virtual-pet-devices.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: tamagotchi
+set.seed(1997)
+pets <- data.frame(care = rep(c("Neglected", "Pampered"), each = 150))
+pets$days <- rweibull(300, shape = 2.2, scale = ifelse(pets$care == "Neglected", 6, 21))
+ggplot(pets, aes(x = days, fill = care)) +
+  geom_histogram(alpha = 2/3, position = "identity", bins = 40) +
+  labs(title = "Tamagotchi lifespans (simulated)", x = "Days", fill = "Care") +
+  theme_tamagotchi(base_size = 13)
+```
+
+## Tetris
+
+`theme_tetris()`: a black well and the tetromino block colors. Below we simulate lines cleared from a negative binomial distribution.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tetrominoes_IJLO_STZ_Worlds.svg), public domain.](../man/figures/theme_tetris/tetrominoes-ijlo-stz-worlds.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: tetris
+set.seed(1989)
+games <- data.frame(player = rep(c("Casual", "Expert"), each = 80))
+games$lines <- rnbinom(160, size = 5, mu = ifelse(games$player == "Casual", 25, 120))
+ggplot(games, aes(x = player, y = lines, color = player)) +
+  geom_jitter(width = 0.2, show.legend = FALSE) +
+  labs(title = "Tetris (simulated)", x = NULL, y = "Lines cleared") +
+  theme_tetris(base_size = 13)
+```
+
+## Tiger R-Zone
+
+`theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Arial Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
+
+![Image: Evan-Amos, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg), public domain.](../man/figures/theme_rzone/tiger-rzone-headset.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: rzone
+set.seed(1993)
+tries <- data.frame(try = rep(c("First", "Second"), each = 100))
+tries$seconds <- rlnorm(200, log(ifelse(tries$try == "First", 40, 20)), 0.5)
+ggplot(tries, aes(x = seconds, y = try, fill = try)) +
+  geom_boxplot(width = 0.3, show.legend = FALSE) +
+  labs(title = "Tiger R-Zone", caption = "Simulated data",
+       x = "Seconds to clear the first level", y = NULL) +
+  theme_rzone(base_size = 13)
+```
+
+## Titanic
+
+`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon title.
+
+![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Titanic_in_color.png), public domain.](../man/figures/theme_titanic/titanic-in-color.png){width="60%" fig-align="center"}
+
+```{r}
+#| label: titanic
+set.seed(1997)
+fans <- data.frame(age_group = sample(c("Teen", "Adult"), 300, replace = TRUE),
+  viewings = sample(c("Once", "Twice", "3+ times"), 300, replace = TRUE))
+ggplot(fans, aes(x = age_group, fill = viewings)) +
   geom_bar(position = "fill") +
-  labs(title = "Audrey at home", caption = "Simulated data", x = NULL, y = "Share of households", fill = NULL) +
-  theme_audrey(base_size = 13)
+  labs(title = "Titanic (simulated)", x = NULL, y = "Share", fill = "Viewings") +
+  theme_titanic(base_size = 13)
+```
+
+## Two-way pagers
+
+`theme_pager()` uses a RIM 950 pager on concrete: a charcoal frame and title, a pale LCD panel, charcoal, orange, and slate marks, and an Arial Black title. Below we simulate the messages one pager received in each hour of a workday.
+
+![Image: Ruben de Rijcke, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:RIM_BlackBerry_950.jpg), CC BY-SA 4.0.](../man/figures/theme_pager/rim-blackberry-950.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: pager
+set.seed(1998)
+pages <- data.frame(hour = 7:20)
+pages$messages <- rpois(nrow(pages), 2 + 10 * dnorm(pages$hour, 13, 3) / dnorm(0, 0, 3))
+ggplot(pages, aes(x = hour, y = messages)) +
+  geom_col() +
+  labs(title = "Messages by hour", caption = "Simulated data", x = "Hour", y = "Messages") +
+  theme_pager(base_size = 13)
+```
+
+## VRML
+
+`theme_vrml()` uses a VRML living room: a tan wall background, a floor brown frame, a pale panel, sofa red, lamp green, black, and glass marks, and an Andale Mono title. Below we simulate render times for four VRML scenes.
+
+![Image: Jan Křivka, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Interior.png), public domain.](../man/figures/theme_vrml/interior.png){width="50%" fig-align="center"}
+
+```{r}
+#| label: vrml
+set.seed(1996)
+scenes <- data.frame(scene = rep(c("Living room", "Garden", "Office", "Museum"), each = 40),
+  polygons = round(runif(160, 500, 20000)))
+scenes$seconds <- 0.5 + scenes$polygons / 4000 + rnorm(160, 0, 0.4)
+ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
+  geom_point() +
+  labs(title = "VRML render times", caption = "Simulated data", x = "Polygons", y = "Seconds to render", color = NULL) +
+  theme_vrml(base_size = 13)
+```
+
+## Y2K
+
+`theme_y2k()`: LED red, terminal amber and green on black. Below we show how 300 households prepared for Y2K across three surveys.
+
+![Image: Bug de l'an 2000, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bug_de_l%27an_2000.jpg), CC BY-SA 3.0.](../man/figures/theme_y2k/bug-de-l-an-2000.jpg){width="60%" fig-align="center"}
+
+```{r}
+#| label: y2k
+prep <- data.frame(
+  survey = factor(rep(c("Jan", "Jul", "Dec"), each = 3), levels = c("Jan", "Jul", "Dec")),
+  level = factor(rep(c("Not worried", "Some supplies", "Bunker ready"), 3),
+                 levels = c("Not worried", "Some supplies", "Bunker ready")),
+  households = c(163, 100, 37, 124, 119, 57, 108, 117, 75))
+ggplot(prep, aes(x = survey, y = households, fill = level)) +
+  geom_col() +
+  labs(title = "Y2K prep (simulated)", x = NULL, y = "Households", fill = NULL) +
+  theme_y2k(base_size = 13)
 ```
 
 ## Fonts
