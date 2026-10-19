@@ -4,11 +4,14 @@
 #' green frame and title, green, red, orange, yellow, and white marks, a
 #' dark to bright green continuous scale, and a DIN Alternate title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to DIN Alternate when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_surge <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("DIN Alternate", "DIN Alternate Bold.ttf")) {
-  cols <- surge_cols
+                      title_family = register_font("DIN Alternate", "DIN Alternate Bold.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- surge_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["fizz"]]),
@@ -66,16 +71,31 @@ theme_surge <- function(base_size = 11,
 }
 
 # the Surge can green and red splash
-surge_cols <- c(
-  black = "#000000",
-  can = "#0D1A0D",
-  grid = "#1F3A1F",
-  fizz = "#E8FFE0",
-  green = "#7ED321",
-  red = "#E41E26",
-  orange = "#FF7A00",
-  yellow = "#FFE600",
-  dark = "#1B5E20",
-  bright = "#C8FF4D"
+surge_cols <- list(
+  dark = c(
+    black = "#000000",
+    can = "#0D1A0D",
+    grid = "#1F3A1F",
+    fizz = "#E8FFE0",
+    green = "#7ED321",
+    red = "#E41E26",
+    orange = "#FF7A00",
+    yellow = "#FFE600",
+    dark = "#1B5E20",
+    bright = "#C8FF4D"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#E6EDE2",
+    can = "#F9FCF8",
+    grid = "#D1DACD",
+    fizz = "#1E3110",
+    green = "#197A00",
+    red = "#E41E26",
+    orange = "#EC6A00",
+    yellow = "#A89100",
+    dark = "#1B5E20",
+    bright = "#6CA000"
+  )
 )
 

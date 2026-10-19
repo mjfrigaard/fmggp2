@@ -7,7 +7,8 @@
 theme_netscape(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Times New Roman", "Times New Roman Bold.ttf")
+  title_family = register_font("Times New Roman", "Times New Roman Bold.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Times New Roman Bold when
 it's available on the system, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A late 90s \code{ggplot2} theme modeled on the Netscape Navigator logo: a night
 sky background, a teal frame, a glowing teal title, and teal, aurora
 green, sea glass, and deep teal marks, and a Times New Roman title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

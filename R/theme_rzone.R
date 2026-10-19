@@ -4,11 +4,14 @@
 #' plastic, a red frame and title, red LCD, purple logo, and pink marks, a
 #' pale blue visor text color, and an Arial Narrow title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Arial Narrow when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_rzone <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf")) {
-  cols <- rzone_cols
+                      title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- rzone_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["visor"]]),
@@ -46,7 +51,7 @@ theme_rzone <- function(base_size = 11,
       axis.text = ggplot2::element_text(colour = cols[["visor"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["purple"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["visor"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["strip"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
@@ -63,15 +68,32 @@ theme_rzone <- function(base_size = 11,
 }
 
 # the Tiger R-Zone headset and controller
-rzone_cols <- c(
-  black = "#1D1D1E",
-  panel = "#2F2E2F",
-  grid = "#454345",
-  visor = "#D7E4F4",
-  red = "#F0382A",
-  purple = "#966EBB",
-  pink = "#F9938A",
-  plum = "#7F4E7D",
-  rose = "#BF3A40",
-  gray = "#848186"
+rzone_cols <- list(
+  dark = c(
+    black = "#1D1D1E",
+    panel = "#2F2E2F",
+    grid = "#454345",
+    visor = "#D7E4F4",
+    red = "#F0382A",
+    purple = "#966EBB",
+    pink = "#F9938A",
+    plum = "#7F4E7D",
+    rose = "#BF3A40",
+    gray = "#848186",
+    strip = "#D7E4F4"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#F6E8E7",
+    panel = "#FFFAF9",
+    grid = "#E4D4D3",
+    visor = "#422423",
+    red = "#D31000",
+    purple = "#8056A5",
+    pink = "#D9756C",
+    plum = "#7F4E7D",
+    rose = "#BF3A40",
+    gray = "#848186",
+    strip = "#FFFAF9"
+  )
 )

@@ -7,7 +7,8 @@
 theme_blockbuster(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Impact", "Impact.ttf")
+  title_family = register_font("Impact", "Impact.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Impact when it's
 available on the system, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A late 90s \code{ggplot2} theme modeled on a Blockbuster Video store: royal
 blue background, yellow ticket stub marks, white Arial text, and an
 Impact title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

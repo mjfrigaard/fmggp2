@@ -5,11 +5,14 @@
 #' title, slime green, purple, blue, yellow, and pink marks, and an Arial
 #' Black title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Arial Black when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -24,8 +27,10 @@
 theme_snick <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Arial Black", "Arial Black.ttf")) {
-  cols <- snick_cols
+                      title_family = register_font("Arial Black", "Arial Black.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- snick_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
@@ -64,16 +69,31 @@ theme_snick <- function(base_size = 11,
 }
 
 # Nickelodeon orange, slime green, and the SNICK night sky
-snick_cols <- c(
-  night = "#1E1238",
-  couch = "#2C1D52",
-  grid = "#46356F",
-  orange = "#F57D0D",
-  slime = "#8CC63F",
-  purple = "#B07CE8",
-  blue = "#29B6F6",
-  yellow = "#FFD200",
-  pink = "#FF5FA2",
-  white = "#F4F1FA"
+snick_cols <- list(
+  dark = c(
+    night = "#1E1238",
+    couch = "#2C1D52",
+    grid = "#46356F",
+    orange = "#F57D0D",
+    slime = "#8CC63F",
+    purple = "#B07CE8",
+    blue = "#29B6F6",
+    yellow = "#FFD200",
+    pink = "#FF5FA2",
+    white = "#F4F1FA"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    night = "#EDE9FB",
+    couch = "#FBFAFF",
+    grid = "#D9D4E9",
+    orange = "#B54600",
+    slime = "#66A000",
+    purple = "#AD79E5",
+    blue = "#0099D8",
+    yellow = "#B58C00",
+    pink = "#F6569A",
+    white = "#2F2843"
+  )
 )
 

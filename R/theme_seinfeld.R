@@ -4,11 +4,14 @@
 #' a yellow frame and title, the yellow, red, blue, and green logo colors
 #' for marks, cream text, and an American Typewriter title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to American Typewriter when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_seinfeld <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("American Typewriter", "AmericanTypewriter.ttc")) {
-  cols <- seinfeld_cols
+                      title_family = register_font("American Typewriter", "AmericanTypewriter.ttc"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- seinfeld_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["cream"]]),
@@ -63,15 +68,29 @@ theme_seinfeld <- function(base_size = 11,
 }
 
 # the comedy club bricks and the logo letters
-seinfeld_cols <- c(
-  brick = "#3B1E17",
-  wall = "#4A2620",
-  grid = "#6A3A30",
-  cream = "#F5E6C8",
-  yellow = "#F7C33C",
-  red = "#E2402B",
-  blue = "#4C8DDB",
-  green = "#4CAF6A",
-  orange = "#F08A24"
+seinfeld_cols <- list(
+  dark = c(
+    brick = "#3B1E17",
+    wall = "#4A2620",
+    grid = "#6A3A30",
+    cream = "#F5E6C8",
+    yellow = "#F7C33C",
+    red = "#E2402B",
+    blue = "#4C8DDB",
+    green = "#4CAF6A",
+    orange = "#F08A24"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    brick = "#FCE6E3",
+    wall = "#FFF9F8",
+    grid = "#EAD2CE",
+    cream = "#41251E",
+    yellow = "#8C6000",
+    red = "#E2402B",
+    blue = "#4C8DDB",
+    green = "#3EA45F",
+    orange = "#DB7800"
+  )
 )
 

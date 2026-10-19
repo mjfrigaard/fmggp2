@@ -1,3 +1,9 @@
+# fmggp2 0.59.0
+
+* The seventeen dark themes (`theme_blockbuster()`, `theme_bopit()`, `theme_consolewars()`, `theme_doom()`, `theme_geocities()`, `theme_goosebumps()`, `theme_hypercolor()`, `theme_jurassic()`, `theme_netscape()`, `theme_orbitz()`, `theme_oregontrail()`, `theme_rzone()`, `theme_seinfeld()`, `theme_snick()`, `theme_surge()`, `theme_tetris()`, and `theme_y2k()`) gain `mode = c("dark", "light")`. The light palette tints the background and panel with the theme's hue, uses dark text, and darkens the frame, title, and marks so they hold contrast on a light panel.
+* `theme_batman()` gains the same `mode` argument for its `"movie"` and `"darknight"` versions. `"classic"` is already light, so `mode` doesn't change it.
+* The themes vignette shows each light version.
+
 # fmggp2 0.58.0
 
 * Removed `theme_beanie()`, `theme_friends()`, `theme_toysrus()`, `theme_furby()`, `theme_boyband()`, and `theme_clueless()`. The book chapters that used them now use `theme_microdrive()` (violin plots), `theme_netware()` (overlapping bar graphs), `theme_j2me()` (treemaps), `theme_pager()` (overlapping and stacked densities), `theme_visor()` (bump charts), and `theme_cuseeme()` (parallel sets).

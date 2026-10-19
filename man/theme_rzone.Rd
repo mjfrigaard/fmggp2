@@ -7,7 +7,8 @@
 theme_rzone(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf")
+  title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Arial Narrow when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A \code{ggplot2} theme built from the Tiger R-Zone headset (1995): black
 plastic, a red frame and title, red LCD, purple logo, and pink marks, a
 pale blue visor text color, and an Arial Narrow title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

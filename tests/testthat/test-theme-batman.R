@@ -20,3 +20,20 @@ test_that("theme_batman versions build a plot", {
   expect_no_error(ggplot2::ggplotGrob(p + darknight))
   expect_error(theme_batman(version = "nolan"))
 })
+
+test_that("theme_batman has light modes", {
+  p <- ggplot2::ggplot(data.frame(x = c("a", "b", "b")), ggplot2::aes(x = x, fill = x)) +
+    ggplot2::geom_bar() +
+    ggplot2::labs(title = "title")
+  movie <- theme_batman(base_family = "sans", title_family = "sans", mode = "light")
+  darknight <- theme_batman(base_family = "sans", title_family = "sans",
+                            version = "darknight", mode = "light")
+  classic <- theme_batman(base_family = "sans", title_family = "sans",
+                          version = "classic", mode = "light")
+  expect_equal(movie$plot.background$fill, "#F1EAE2")
+  expect_equal(darknight$plot.background$fill, "#ECECE1")
+  expect_equal(classic$plot.background$fill, "#C6C6C6")
+  expect_no_error(ggplot2::ggplotGrob(p + movie))
+  expect_no_error(ggplot2::ggplotGrob(p + darknight))
+  expect_error(theme_batman(mode = "dim"))
+})

@@ -4,11 +4,14 @@
 #' background, a red LED frame and title, red, amber, green, silver, and
 #' blue screen marks, and a PT Mono title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to PT Mono when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_y2k <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("PT Mono", "PTMono.ttc")) {
-  cols <- y2k_cols
+                      title_family = register_font("PT Mono", "PTMono.ttc"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- y2k_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["silver"]]),
@@ -63,14 +68,27 @@ theme_y2k <- function(base_size = 11,
 }
 
 # LED countdown red, terminal amber and green, and the blue screen
-y2k_cols <- c(
-  black = "#000000",
-  screen = "#0C0C0C",
-  grid = "#262626",
-  silver = "#C8C8C8",
-  red = "#FF2A2A",
-  amber = "#FFB000",
-  green = "#00E05A",
-  blue = "#3D7BFF"
+y2k_cols <- list(
+  dark = c(
+    black = "#000000",
+    screen = "#0C0C0C",
+    grid = "#262626",
+    silver = "#C8C8C8",
+    red = "#FF2A2A",
+    amber = "#FFB000",
+    green = "#00E05A",
+    blue = "#3D7BFF"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#F6E8E8",
+    screen = "#FFFAFA",
+    grid = "#E4D3D3",
+    silver = "#422323",
+    red = "#D60000",
+    amber = "#CA8000",
+    green = "#00A800",
+    blue = "#3D7BFF"
+  )
 )
 

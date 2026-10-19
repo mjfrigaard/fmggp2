@@ -4,11 +4,14 @@
 #' blue background, yellow ticket stub marks, white Arial text, and an
 #' Impact title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Impact when it's
 #'     available on the system, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_blockbuster <- function(base_size = 11,
                               base_family = register_font("Arial", "Arial.ttf",
                                                           "Arial Bold.ttf"),
-                              title_family = register_font("Impact", "Impact.ttf")) {
-  cols <- blockbuster_cols
+                              title_family = register_font("Impact", "Impact.ttf"),
+                              mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- blockbuster_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
@@ -60,11 +65,22 @@ theme_blockbuster <- function(base_size = 11,
     )
 }
 
-blockbuster_cols <- c(
-  blue = "#0B3A8C",
-  navy = "#072A6B",
-  grid = "#2F5BA8",
-  sky = "#7FB2FF",
-  yellow = "#FFD200",
-  white = "#FFFFFF"
+blockbuster_cols <- list(
+  dark = c(
+    blue = "#0B3A8C",
+    navy = "#072A6B",
+    grid = "#2F5BA8",
+    sky = "#7FB2FF",
+    yellow = "#FFD200",
+    white = "#FFFFFF"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    blue = "#E7EAFB",
+    navy = "#F9FAFF",
+    grid = "#D3D6EA",
+    sky = "#5992DF",
+    yellow = "#896300",
+    white = "#252B44"
+  )
 )

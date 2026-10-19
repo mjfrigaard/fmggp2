@@ -7,7 +7,8 @@
 theme_goosebumps(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Trattatello", "Trattatello.ttf")
+  title_family = register_font("Trattatello", "Trattatello.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Trattatello when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A late 90s \code{ggplot2} theme modeled on the Goosebumps books: a black
 background, a slime green frame and title, a dark purple plot area, slime
 green, purple, pale green, orchid, and moss marks, and a Trattatello title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

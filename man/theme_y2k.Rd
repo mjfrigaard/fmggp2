@@ -7,7 +7,8 @@
 theme_y2k(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("PT Mono", "PTMono.ttc")
+  title_family = register_font("PT Mono", "PTMono.ttc"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to PT Mono when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A \code{ggplot2} theme built from the Y2K countdown: a black terminal
 background, a red LED frame and title, red, amber, green, silver, and
 blue screen marks, and a PT Mono title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

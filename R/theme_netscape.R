@@ -4,11 +4,14 @@
 #' sky background, a teal frame, a glowing teal title, and teal, aurora
 #' green, sea glass, and deep teal marks, and a Times New Roman title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Times New Roman Bold when
 #'     it's available on the system, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_netscape <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Times New Roman", "Times New Roman Bold.ttf")) {
-  cols <- netscape_cols
+                      title_family = register_font("Times New Roman", "Times New Roman Bold.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- netscape_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
@@ -62,14 +67,28 @@ theme_netscape <- function(base_size = 11,
     )
 }
 
-netscape_cols <- c(
-  night = "#19171F",
-  panel = "#163040",
-  grid = "#2C4A4F",
-  white = "#EFF6F5",
-  glow = "#5EC0AF",
-  teal = "#38AAB0",
-  aurora = "#17986F",
-  sea = "#90B3A9",
-  deep = "#1F7275"
+netscape_cols <- list(
+  dark = c(
+    night = "#19171F",
+    panel = "#163040",
+    grid = "#2C4A4F",
+    white = "#EFF6F5",
+    glow = "#5EC0AF",
+    teal = "#38AAB0",
+    aurora = "#17986F",
+    sea = "#90B3A9",
+    deep = "#1F7275"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    night = "#DFEEEB",
+    panel = "#F6FCFB",
+    grid = "#C9DBD7",
+    white = "#00342C",
+    glow = "#007767",
+    teal = "#00757A",
+    aurora = "#17986F",
+    sea = "#75988E",
+    deep = "#1F7275"
+  )
 )

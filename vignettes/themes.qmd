@@ -74,6 +74,13 @@ ggplot(signals, aes(x = night, y = sightings)) +
   theme_batman(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: batman-light
+last_plot() + theme_batman(base_size = 13, mode = "light")
+```
+
 `version = "classic"` uses the 1966 TV series palette: gray, blue, yellow, black, and cream.
 
 ![](../man/figures/theme_batman/classic-pal.png){width="60%" fig-align="center"}
@@ -98,6 +105,13 @@ ggplot(signals, aes(x = night, y = sightings)) +
   theme_batman(base_size = 13, version = "darknight")
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: batman-darknight-light
+last_plot() + theme_batman(base_size = 13, version = "darknight", mode = "light")
+```
+
 ## Blockbuster
 
 `theme_blockbuster()` uses Blockbuster Video blue and yellow. Below we simulate weekly rentals for 60 households from a Poisson distribution.
@@ -113,6 +127,13 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
   labs(title = "Blockbuster Video (simulated)",
        x = "Number of rentals") +
   theme_blockbuster(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: blockbuster-light
+last_plot() + theme_blockbuster(base_size = 13, mode = "light")
 ```
 
 ## Bop It
@@ -132,6 +153,13 @@ ggplot(players, aes(x = bop, y = twist)) +
   theme_bopit(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: bopit-light
+last_plot() + theme_bopit(base_size = 13, mode = "light")
+```
+
 ## Console wars
 
 `theme_consolewars()`: Sega blue vs. Nintendo red on charcoal. Below we simulate games owned and hours played for two consoles.
@@ -149,6 +177,13 @@ ggplot(kids, aes(x = games, y = hours, color = console)) +
   geom_point() +
   labs(title = "The console wars", caption = "Simulated data", x = "Games owned", y = "Hours per week", color = NULL) +
   theme_consolewars(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: consolewars-light
+last_plot() + theme_consolewars(base_size = 13, mode = "light")
 ```
 
 ## Crystal Pepsi
@@ -219,6 +254,13 @@ ggplot(pcs, aes(x = mhz, y = fps)) +
   geom_point() +
   labs(title = "Doom frame rates", caption = "Simulated data", x = "CPU (MHz)", y = "Frames per second") +
   theme_doom(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: doom-light
+last_plot() + theme_doom(base_size = 13, mode = "light")
 ```
 
 ## Fresh Prince
@@ -293,6 +335,13 @@ ggplot(pages, aes(x = kb, y = seconds)) +
   theme_geocities(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: geocities-light
+last_plot() + theme_geocities(base_size = 13, mode = "light")
+```
+
 ## Goosebumps
 
 `theme_goosebumps()`: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.
@@ -306,6 +355,13 @@ ggplot(readers, aes(x = books, fill = grade)) +
   geom_dotplot(method = "histodot", binwidth = 1, stackgroups = TRUE, binpositions = "all") +
   labs(title = "Goosebumps (simulated)", x = "Books read", fill = "Grade") +
   theme_goosebumps(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: goosebumps-light
+last_plot() + theme_goosebumps(base_size = 13, mode = "light")
 ```
 
 ## Handspring Visor
@@ -360,6 +416,13 @@ ggplot(fads, aes(x = month, y = sales, fill = fad)) +
   geom_area(alpha = 0.8) +
   labs(title = "90s fads (simulated)", x = NULL, y = "Sales (thousands)", fill = NULL) +
   theme_hypercolor(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: hypercolor-light
+last_plot() + theme_hypercolor(base_size = 13, mode = "light")
 ```
 
 ## IBM Microdrive
@@ -433,6 +496,13 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
   theme_jurassic(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: jurassic-light
+last_plot() + theme_jurassic(base_size = 13, mode = "light")
+```
+
 ## Koosh ball
 
 `theme_koosh()` uses a tri color Koosh ball: a white background, an orange frame, orange, purple, and black marks, and an Arial Rounded title. Below we simulate the styles of 200 Koosh balls sold at a toy store.
@@ -467,6 +537,13 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
   geom_density(position = "fill") +
   labs(title = "Dial up speeds (simulated)", x = "Speed (kbps)", fill = "Modem") +
   theme_netscape(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: netscape-light
+last_plot() + theme_netscape(base_size = 13, mode = "light")
 ```
 
 ## Nintendo 64
@@ -543,6 +620,13 @@ ggplot(drinks, aes(x = week, y = share, fill = choice)) +
   theme_orbitz(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: orbitz-light
+last_plot() + theme_orbitz(base_size = 13, mode = "light")
+```
+
 ## Oregon Trail
 
 `theme_oregontrail()`: The Oregon Trail running in an Apple II emulator, with a gray window frame, a black screen, and three shades of phosphor green. Below we simulate days to reach Oregon from a log normal distribution.
@@ -558,6 +642,13 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
   geom_boxplot(alpha = 2/3, show.legend = FALSE) +
   labs(title = "The Oregon Trail (simulated)", x = NULL, y = "Days") +
   theme_oregontrail(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: oregontrail-light
+last_plot() + theme_oregontrail(base_size = 13, mode = "light")
 ```
 
 ## Palm Pilot
@@ -648,6 +739,13 @@ ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
   theme_seinfeld(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: seinfeld-light
+last_plot() + theme_seinfeld(base_size = 13, mode = "light")
+```
+
 ## SNICK
 
 `theme_snick()`: Nickelodeon orange and slime green on a night purple sky. Below we simulate 20 weeks of ratings for three nights.
@@ -663,6 +761,13 @@ ggplot(nights, aes(x = week, y = rating, color = night)) +
   geom_line(linewidth = 1) +
   labs(title = "SNICK ratings (simulated)", x = "Week", y = "Rating", color = NULL) +
   theme_snick(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: snick-light
+last_plot() + theme_snick(base_size = 13, mode = "light")
 ```
 
 ## Sony Walkman
@@ -737,6 +842,13 @@ ggplot(teens, aes(x = cans, y = hours)) +
   theme_surge(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: surge-light
+last_plot() + theme_surge(base_size = 13, mode = "light")
+```
+
 ## Talkboy
 
 `theme_talkboy()` uses the Deluxe Talkboy from *Home Alone 2* sitting on a walnut table: a silver panel, button blue marks, and a Brush Script title. Below we simulate the length of 300 recorded messages from a right skewed gamma distribution.
@@ -791,6 +903,13 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
   theme_tetris(base_size = 13)
 ```
 
+With `mode = "light"`:
+
+```{r}
+#| label: tetris-light
+last_plot() + theme_tetris(base_size = 13, mode = "light")
+```
+
 ## Tiger R-Zone
 
 `theme_rzone()` uses Tiger's 1995 R-Zone headset: black plastic, a red frame and title, red LCD, purple, and pink marks, pale blue visor text, and an Arial Narrow title. Below we simulate the seconds 100 players needed to clear the first level on two tries.
@@ -807,6 +926,13 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
   labs(title = "Tiger R-Zone", caption = "Simulated data",
        x = "Seconds to clear the first level", y = NULL) +
   theme_rzone(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: rzone-light
+last_plot() + theme_rzone(base_size = 13, mode = "light")
 ```
 
 ## Titanic
@@ -878,6 +1004,13 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
   geom_col() +
   labs(title = "Y2K prep (simulated)", x = NULL, y = "Households", fill = NULL) +
   theme_y2k(base_size = 13)
+```
+
+With `mode = "light"`:
+
+```{r}
+#| label: y2k-light
+last_plot() + theme_y2k(base_size = 13, mode = "light")
 ```
 
 ## Fonts

@@ -4,11 +4,14 @@
 #' emulator: a gray window frame, a black screen, phosphor green text and
 #' marks in three shades, and an Andale Mono title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Andale Mono when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_oregontrail <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Andale Mono", "Andale Mono.ttf")) {
-  cols <- oregontrail_cols
+                      title_family = register_font("Andale Mono", "Andale Mono.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- oregontrail_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["green"]]),
@@ -62,13 +67,26 @@ theme_oregontrail <- function(base_size = 11,
     )
 }
 
-oregontrail_cols <- c(
-  black = "#010201",
-  panel = "#143913",
-  grid = "#1D5E1D",
-  green = "#32FE33",
-  mid = "#33A233",
-  pale = "#4CDF4C",
-  dim = "#278027",
-  window = "#B9B9B9"
+oregontrail_cols <- list(
+  dark = c(
+    black = "#010201",
+    panel = "#143913",
+    grid = "#1D5E1D",
+    green = "#32FE33",
+    mid = "#33A233",
+    pale = "#4CDF4C",
+    dim = "#278027",
+    window = "#B9B9B9"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#E4EEE4",
+    panel = "#F8FCF8",
+    grid = "#CFDACF",
+    green = "#005900",
+    mid = "#2B8A2B",
+    pale = "#45B545",
+    dim = "#278027",
+    window = "#919191"
+  )
 )

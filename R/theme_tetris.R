@@ -4,11 +4,14 @@
 #' block colors as marks, and the pixel font Press Start 2P (bundled with the
 #' package) for the title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Press Start 2P when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_tetris <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = gameboy_font()) {
-  cols <- tetris_cols
+                      title_family = gameboy_font(),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- tetris_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
@@ -62,19 +67,38 @@ theme_tetris <- function(base_size = 11,
     )
 }
 
-tetris_cols <- c(
-  black = "#000000",
-  panel = "#0B0B0B",
-  grid = "#333333",
-  white = "#F5F5F5",
-  cyan = "#009999",
-  yellow = "#999900",
-  purple = "#990099",
-  green = "#009900",
-  red = "#990000",
-  blue = "#0000BB",
-  orange = "#996600",
-  gray = "#999999",
-  pink = "#FF75A2",
-  lavender = "#8672CB"
+tetris_cols <- list(
+  dark = c(
+    black = "#000000",
+    panel = "#0B0B0B",
+    grid = "#333333",
+    white = "#F5F5F5",
+    cyan = "#009999",
+    yellow = "#999900",
+    purple = "#990099",
+    green = "#009900",
+    red = "#990000",
+    blue = "#0000BB",
+    orange = "#996600",
+    gray = "#999999",
+    pink = "#FF75A2",
+    lavender = "#8672CB"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#ECECE1",
+    panel = "#FBFBF7",
+    grid = "#D8D8CB",
+    white = "#2E2E07",
+    cyan = "#007676",
+    yellow = "#6E6E00",
+    purple = "#990099",
+    green = "#009900",
+    red = "#990000",
+    blue = "#0000BB",
+    orange = "#996600",
+    gray = "#919191",
+    pink = "#EA6190",
+    lavender = "#8672CB"
+  )
 )

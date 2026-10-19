@@ -7,7 +7,8 @@
 theme_surge(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("DIN Alternate", "DIN Alternate Bold.ttf")
+  title_family = register_font("DIN Alternate", "DIN Alternate Bold.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to DIN Alternate when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A \code{ggplot2} theme built from Surge soda: a black background, a Surge
 green frame and title, green, red, orange, yellow, and white marks, a
 dark to bright green continuous scale, and a DIN Alternate title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

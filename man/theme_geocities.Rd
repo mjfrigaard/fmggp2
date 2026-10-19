@@ -7,7 +7,8 @@
 theme_geocities(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf")
+  title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Comic Sans MS when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A \code{ggplot2} theme built from a GeoCities home page: a black background,
 a web gray frame, a dark navy panel, lime green text, a yellow Comic
 Sans title, web safe marks, and a blue to yellow continuous scale.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

@@ -7,7 +7,8 @@
 theme_consolewars(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Krungthep", "Krungthep.ttf")
+  title_family = register_font("Krungthep", "Krungthep.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Krungthep when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -27,6 +30,9 @@ A \code{ggplot2} theme built from the Sega vs. Nintendo console wars: a
 charcoal background, a Sega blue frame, a Nintendo red title, Sega
 blue, Nintendo red, Super Nintendo purple, gray, and gold marks, and a
 Krungthep title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

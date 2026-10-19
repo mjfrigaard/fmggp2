@@ -4,11 +4,14 @@
 #' a hellfire red frame and title, red, orange, gunmetal, armor green,
 #' blue key, and yellow key marks, and an Impact title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Impact when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_doom <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Impact", "Impact.ttf")) {
-  cols <- doom_cols
+                      title_family = register_font("Impact", "Impact.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- doom_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["bone"]]),
@@ -46,7 +51,7 @@ theme_doom <- function(base_size = 11,
       axis.text = ggplot2::element_text(colour = cols[["bone"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["red"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["bone"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["strip"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["scorch"]], colour = NA),
       # discrete fills and colours
@@ -63,16 +68,33 @@ theme_doom <- function(base_size = 11,
 }
 
 # the hell textures, the status bar, and the keycards
-doom_cols <- c(
-  scorch = "#1A0F0A",
-  floor = "#2B1A12",
-  grid = "#4A2E20",
-  bone = "#E8D5B5",
-  red = "#D63A1E",
-  orange = "#F28C28",
-  gunmetal = "#8A8D8F",
-  armor = "#4CAF50",
-  bluekey = "#2E6FD8",
-  yellowkey = "#F2C14E"
+doom_cols <- list(
+  dark = c(
+    scorch = "#1A0F0A",
+    floor = "#2B1A12",
+    grid = "#4A2E20",
+    bone = "#E8D5B5",
+    red = "#D63A1E",
+    orange = "#F28C28",
+    gunmetal = "#8A8D8F",
+    armor = "#4CAF50",
+    bluekey = "#2E6FD8",
+    yellowkey = "#F2C14E",
+    strip = "#E8D5B5"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    scorch = "#FBE7E0",
+    floor = "#FFF9F7",
+    grid = "#E9D3CB",
+    bone = "#3F2619",
+    red = "#CA2D01",
+    orange = "#DA7700",
+    gunmetal = "#8A8D8F",
+    armor = "#3FA443",
+    bluekey = "#2E6FD8",
+    yellowkey = "#B68900",
+    strip = "#FFF9F7"
+  )
 )
 

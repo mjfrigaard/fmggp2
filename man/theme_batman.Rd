@@ -8,7 +8,8 @@ theme_batman(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
-  version = c("movie", "classic", "darknight")
+  version = c("movie", "classic", "darknight"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -21,6 +22,8 @@ available on the system, otherwise \code{"sans"}.}
 it's available, otherwise \code{"sans"}.}
 
 \item{version}{One of \code{"movie"}, \code{"classic"}, or \code{"darknight"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -39,7 +42,9 @@ a blue title, a cream plot area, and blue, yellow, black, and gray marks.
 frame and title, a navy plot area, and yellow, olive, and slate marks.
 }
 
-All three use a DIN Condensed title.
+All three use a DIN Condensed title. Use \code{mode = "light"} for a light
+version of \code{"movie"} or \code{"darknight"}; \code{"classic"} is already light, so
+\code{mode} doesn't change it.
 }
 \examples{
 library(ggplot2)
@@ -51,4 +56,6 @@ p + theme_batman(base_family = "sans", title_family = "sans",
                  version = "classic")
 p + theme_batman(base_family = "sans", title_family = "sans",
                  version = "darknight")
+p + theme_batman(base_family = "sans", title_family = "sans",
+                 mode = "light")
 }

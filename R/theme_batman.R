@@ -10,7 +10,9 @@
 #' * `"darknight"`: The Dark Knight, with a charcoal background, a yellow
 #'   frame and title, a navy plot area, and yellow, olive, and slate marks.
 #'
-#' All three use a DIN Condensed title.
+#' All three use a DIN Condensed title. Use `mode = "light"` for a light
+#' version of `"movie"` or `"darknight"`; `"classic"` is already light, so
+#' `mode` doesn't change it.
 #'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -18,6 +20,7 @@
 #' @param title_family Title font family. Defaults to DIN Condensed when
 #'     it's available, otherwise `"sans"`.
 #' @param version One of `"movie"`, `"classic"`, or `"darknight"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -33,13 +36,18 @@
 #'                  version = "classic")
 #' p + theme_batman(base_family = "sans", title_family = "sans",
 #'                  version = "darknight")
+#' p + theme_batman(base_family = "sans", title_family = "sans",
+#'                  mode = "light")
 theme_batman <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
-                      version = c("movie", "classic", "darknight")) {
+                      version = c("movie", "classic", "darknight"),
+                      mode = c("dark", "light")) {
   version <- match.arg(version)
-  cols <- batman_cols[[version]]
+  mode <- match.arg(mode)
+  key <- if (mode == "light" && version != "classic") paste0(version, "_light") else version
+  cols <- batman_cols[[key]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["text"]]),
@@ -65,8 +73,8 @@ theme_batman <- function(base_size = 11,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["background"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = batman_marks[[version]],
-      palette.colour.discrete = batman_marks[[version]],
+      palette.fill.discrete = batman_marks[[key]],
+      palette.colour.discrete = batman_marks[[key]],
       # default marks
       geom = ggplot2::element_geom(ink = cols[["text"]],
                                    paper = cols[["panel"]],
@@ -77,7 +85,8 @@ theme_batman <- function(base_size = 11,
     )
 }
 
-# the Batman (1989) palette swatches, the 1966 TV series, and The Dark Knight
+# the Batman (1989) palette swatches, the 1966 TV series, and The Dark Knight,
+# plus light versions of the movie and The Dark Knight
 batman_cols <- list(
   movie = c(
     background = "#050203",
@@ -87,6 +96,16 @@ batman_cols <- list(
     grid = "#5A4B44",
     text = "#E9EBE8",
     outline = "#050203",
+    fill = "#E96A23"
+  ),
+  movie_light = c(
+    background = "#F1EAE2",
+    frame = "#925E00",
+    title = "#925E00",
+    panel = "#FDFAF7",
+    grid = "#DED6CD",
+    text = "#392A0D",
+    outline = "#F1EAE2",
     fill = "#E96A23"
   ),
   classic = c(
@@ -108,11 +127,23 @@ batman_cols <- list(
     text = "#FEFD55",
     outline = "#292929",
     fill = "#94873D"
+  ),
+  darknight_light = c(
+    background = "#ECECE1",
+    frame = "#6E6E00",
+    title = "#6E6E00",
+    panel = "#FBFBF7",
+    grid = "#D8D8CB",
+    text = "#4F4E00",
+    outline = "#ECECE1",
+    fill = "#94873D"
   )
 )
 
 batman_marks <- list(
   movie = c("#E96A23", "#F9BB2C", "#8C939B", "#A95B2B", "#F3D07F", "#F48E20"),
   classic = c("#58C0F9", "#FFFD62", "#000000", "#C6C6C6"),
-  darknight = c("#FEFD55", "#94873D", "#535D79")
+  darknight = c("#FEFD55", "#94873D", "#535D79"),
+  movie_light = c("#E96A23", "#BF8600", "#899098", "#A95B2B", "#AD8C29", "#D97600"),
+  darknight_light = c("#979700", "#94873D", "#535D79")
 )

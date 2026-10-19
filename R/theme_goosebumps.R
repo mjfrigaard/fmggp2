@@ -4,11 +4,14 @@
 #' background, a slime green frame and title, a dark purple plot area, slime
 #' green, purple, pale green, orchid, and moss marks, and a Trattatello title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Trattatello when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_goosebumps <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Trattatello", "Trattatello.ttf")) {
-  cols <- goosebumps_cols
+                      title_family = register_font("Trattatello", "Trattatello.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- goosebumps_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["bone"]]),
@@ -62,14 +67,28 @@ theme_goosebumps <- function(base_size = 11,
     )
 }
 
-goosebumps_cols <- c(
-  night = "#040304",
-  panel = "#2A1A2B",
-  grid = "#492A48",
-  slime = "#46A664",
-  purple = "#965491",
-  moss = "#22664E",
-  pale = "#99C661",
-  orchid = "#BD6CA7",
-  bone = "#F2E8CF"
+goosebumps_cols <- list(
+  dark = c(
+    night = "#040304",
+    panel = "#2A1A2B",
+    grid = "#492A48",
+    slime = "#46A664",
+    purple = "#965491",
+    moss = "#22664E",
+    pale = "#99C661",
+    orchid = "#BD6CA7",
+    bone = "#F2E8CF"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    night = "#E2EEE5",
+    panel = "#F8FCF8",
+    grid = "#CDDBD0",
+    slime = "#007A34",
+    purple = "#965491",
+    moss = "#22664E",
+    pale = "#719D2B",
+    orchid = "#BD6CA7",
+    bone = "#0E331A"
+  )
 )

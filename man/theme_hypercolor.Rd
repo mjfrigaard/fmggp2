@@ -7,7 +7,8 @@
 theme_hypercolor(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Gill Sans", "GillSans.ttc")
+  title_family = register_font("Gill Sans", "GillSans.ttc"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Gill Sans when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -26,6 +29,9 @@ A \code{ggplot2} theme object.
 A \code{ggplot2} theme built from Generra Hypercolor shirts: a deep purple
 background, a magenta frame, heat changing magenta, orange, purple,
 blue, green, and yellow marks, and a Gill Sans title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)

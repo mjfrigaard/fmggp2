@@ -4,11 +4,14 @@
 #' a yellow frame and title, yellow, blue, green, orange, and pink marks,
 #' a purple to yellow continuous scale, and a Rockwell title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Rockwell when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -23,8 +26,10 @@
 theme_bopit <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Rockwell", "Rockwell.ttc")) {
-  cols <- bopit_cols
+                      title_family = register_font("Rockwell", "Rockwell.ttc"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- bopit_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["cream"]]),
@@ -66,16 +71,31 @@ theme_bopit <- function(base_size = 11,
 }
 
 # the Bop It body and handles
-bopit_cols <- c(
-  night = "#23123F",
-  panel = "#2E1A52",
-  grid = "#4A3473",
-  cream = "#FFF6D6",
-  purple = "#5B2A9A",
-  yellow = "#FFD400",
-  blue = "#1E90FF",
-  green = "#3CB043",
-  orange = "#FF8C00",
-  pink = "#FF5FA2"
+bopit_cols <- list(
+  dark = c(
+    night = "#23123F",
+    panel = "#2E1A52",
+    grid = "#4A3473",
+    cream = "#FFF6D6",
+    purple = "#5B2A9A",
+    yellow = "#FFD400",
+    blue = "#1E90FF",
+    green = "#3CB043",
+    orange = "#FF8C00",
+    pink = "#FF5FA2"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    night = "#EDE8FB",
+    panel = "#FBFAFF",
+    grid = "#DAD4E9",
+    cream = "#302743",
+    purple = "#5B2A9A",
+    yellow = "#866300",
+    blue = "#1E90FF",
+    green = "#2CA534",
+    orange = "#E07200",
+    pink = "#F6569A"
+  )
 )
 

@@ -5,11 +5,14 @@
 #' blue, Nintendo red, Super Nintendo purple, gray, and gold marks, and a
 #' Krungthep title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Krungthep when
 #'     it's available, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -24,8 +27,10 @@
 theme_consolewars <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Krungthep", "Krungthep.ttf")) {
-  cols <- consolewars_cols
+                      title_family = register_font("Krungthep", "Krungthep.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- consolewars_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
@@ -47,7 +52,7 @@ theme_consolewars <- function(base_size = 11,
       axis.text = ggplot2::element_text(colour = cols[["white"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["sega"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["white"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["strip"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["charcoal"]], colour = NA),
       # discrete fills and colours
@@ -64,15 +69,31 @@ theme_consolewars <- function(base_size = 11,
 }
 
 # Sega blue, Nintendo red, and the Super Nintendo buttons
-consolewars_cols <- c(
-  charcoal = "#1C1C1C",
-  screen = "#2A2A2A",
-  grid = "#444444",
-  white = "#EEEEEE",
-  sega = "#3D7BFF",
-  nintendo = "#E60012",
-  snes = "#9B8CF2",
-  gray = "#B0B0B0",
-  gold = "#FFD700"
+consolewars_cols <- list(
+  dark = c(
+    charcoal = "#1C1C1C",
+    screen = "#2A2A2A",
+    grid = "#444444",
+    white = "#EEEEEE",
+    sega = "#3D7BFF",
+    nintendo = "#E60012",
+    snes = "#9B8CF2",
+    gray = "#B0B0B0",
+    gold = "#FFD700",
+    strip = "#EEEEEE"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    charcoal = "#F6E8E8",
+    screen = "#FFFAFA",
+    grid = "#E4D3D4",
+    white = "#422324",
+    sega = "#0061EA",
+    nintendo = "#D40000",
+    snes = "#9384EA",
+    gray = "#909090",
+    gold = "#B28E00",
+    strip = "#FFFAFA"
+  )
 )
 

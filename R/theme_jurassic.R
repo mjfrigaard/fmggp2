@@ -5,11 +5,14 @@
 #' plot area, stamp yellow titles, red, yellow, sunset orange, cream, and tan
 #' marks, and a Herculanum title.
 #'
+#' Use `mode = "light"` for a light background with darker text and marks.
+#'
 #' @param base_size Base font size. Defaults to `11`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Herculanum when
 #'     it's available on the system, otherwise `"sans"`.
+#' @param mode `"dark"` (the default) or `"light"`.
 #'
 #' @return A `ggplot2` theme object.
 #'
@@ -24,8 +27,10 @@
 theme_jurassic <- function(base_size = 11,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
-                      title_family = register_font("Herculanum", "Herculanum.ttf")) {
-  cols <- jurassic_cols
+                      title_family = register_font("Herculanum", "Herculanum.ttf"),
+                      mode = c("dark", "light")) {
+  mode <- match.arg(mode)
+  cols <- jurassic_cols[[mode]]
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["cream"]]),
@@ -63,13 +68,26 @@ theme_jurassic <- function(base_size = 11,
     )
 }
 
-jurassic_cols <- c(
-  black = "#101011",
-  panel = "#1F1A17",
-  grid = "#431F14",
-  red = "#B3142A",
-  yellow = "#F2D900",
-  orange = "#C38F32",
-  cream = "#F2E7D8",
-  tan = "#D0BC94"
+jurassic_cols <- list(
+  dark = c(
+    black = "#101011",
+    panel = "#1F1A17",
+    grid = "#431F14",
+    red = "#B3142A",
+    yellow = "#F2D900",
+    orange = "#C38F32",
+    cream = "#F2E7D8",
+    tan = "#D0BC94"
+  ),
+  # the light palette keeps the dark role names
+  light = c(
+    black = "#EEEBE1",
+    panel = "#FCFBF7",
+    grid = "#DAD7CC",
+    red = "#B3142A",
+    yellow = "#7C6700",
+    orange = "#BB8724",
+    cream = "#322C07",
+    tan = "#A28F65"
+  )
 )

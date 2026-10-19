@@ -7,7 +7,8 @@
 theme_snick(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Black", "Arial Black.ttf")
+  title_family = register_font("Arial Black", "Arial Black.ttf"),
+  mode = c("dark", "light")
 )
 }
 \arguments{
@@ -18,6 +19,8 @@ available on the system, otherwise \code{"sans"}.}
 
 \item{title_family}{Title font family. Defaults to Arial Black when
 it's available, otherwise \code{"sans"}.}
+
+\item{mode}{\code{"dark"} (the default) or \code{"light"}.}
 }
 \value{
 A \code{ggplot2} theme object.
@@ -27,6 +30,9 @@ A \code{ggplot2} theme built from Nickelodeon's Saturday night block
 (SNICK): a night purple background, a Nickelodeon orange frame and
 title, slime green, purple, blue, yellow, and pink marks, and an Arial
 Black title.
+}
+\details{
+Use \code{mode = "light"} for a light background with darker text and marks.
 }
 \examples{
 library(ggplot2)
