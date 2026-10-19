@@ -6,6 +6,11 @@ a late 90s theme, and each dataset gets a `ggplot2` theme to match. This
 vignette shows each theme with the data from the chapter that introduced
 it.
 
+Themes with a dark background also have a light version. Set
+`mode = "light"` to get a light background with darker text and marks.
+Dark is the default. Each dark theme’s section below shows both
+versions.
+
 ``` r
 
 library(fmggp2)
@@ -1587,4 +1592,11 @@ so the plotting code in the chapter doesn’t need a `theme_*()` call.
 ``` r
 
 ggplot2::theme_set(fmggp2::theme_oksoda(base_size = 15))
+```
+
+The same works for the light version of a dark theme:
+
+``` r
+
+ggplot2::theme_set(fmggp2::theme_doom(base_size = 15, mode = "light"))
 ```
