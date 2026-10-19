@@ -1,8 +1,8 @@
 #' Novell NetWare theme
 #'
-#' A `ggplot2` theme built from Novell NetWare 2.0 boxes: a NetWare red
-#' background with white text, a maroon frame, maroon, red, rose, and blush
-#' marks, and a Gill Sans title.
+#' A `ggplot2` theme built from Novell NetWare 2.0 boxes: a pale blush
+#' background with dark ink text, a NetWare red frame and title, maroon, red,
+#' rose, and blush marks, and a Gill Sans title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -27,23 +27,23 @@ theme_netware <- function(base_size = 15,
   cols <- netware_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
-      text = ggplot2::element_text(colour = cols[["white"]]),
-      plot.background = ggplot2::element_rect(fill = cols[["red"]],
-                                              colour = cols[["maroon"]],
+      text = ggplot2::element_text(colour = cols[["ink"]]),
+      plot.background = ggplot2::element_rect(fill = cols[["paper"]],
+                                              colour = cols[["red"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family, face = "bold",
-                                         colour = cols[["white"]],
+                                         colour = cols[["red"]],
                                          size = ggplot2::rel(1.5)),
-      plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
+      plot.subtitle = ggplot2::element_text(colour = cols[["maroon"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
       panel.background = ggplot2::element_rect(fill = cols[["panel"]]),
       panel.border = ggplot2::element_blank(),
       panel.grid.major = ggplot2::element_line(colour = cols[["grid"]],
                                                linewidth = 0.4),
       panel.grid.minor = ggplot2::element_blank(),
-      axis.text = ggplot2::element_text(colour = cols[["white"]]),
+      axis.text = ggplot2::element_text(colour = cols[["ink"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["ink"]], colour = NA),
       strip.text = ggplot2::element_text(colour = cols[["panel"]], face = "bold"),
@@ -65,10 +65,10 @@ theme_netware <- function(base_size = 15,
 # Novell NetWare 2.0 boxes
 netware_cols <- c(
   red = "#A91E28",
-  panel = "#F6EEEE",
+  paper = "#F6EEEE",
+  panel = "#FFFFFF",
   grid = "#E0C9CA",
   ink = "#3A0A06",
-  white = "#FFFFFF",
   maroon = "#69100A",
   rose = "#B3575A",
   blush = "#C4AAAD"

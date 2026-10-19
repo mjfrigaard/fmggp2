@@ -567,7 +567,7 @@ ggplot(mario_kart_laps, aes(x = "", y = seconds)) +
 
 ## Novell NetWare
 
-`theme_netware()` uses three NetWare 2.0 boxes: a NetWare red background with white text, a maroon frame, maroon, red, rose, and blush marks, and a Gill Sans title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
+`theme_netware()` uses three NetWare 2.0 boxes: a pale blush background with dark ink text, a NetWare red frame and title, maroon, red, rose, and blush marks, and a Gill Sans title. Below we simulate the file servers running each NetWare version from 1990 to 1998.
 
 ![Image: diaper on Flickr, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg), CC BY 2.0.](../man/figures/theme_netware/novell-netware-2-0-packages.jpg){width="50%" fig-align="center"}
 
