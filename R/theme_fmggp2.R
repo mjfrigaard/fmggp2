@@ -5,7 +5,7 @@
 #' margins, and legends to incorporate the Ubuntu font and customized visual
 #' elements.
 #'
-#' @param base_size The base font size for text elements. Defaults to 11.
+#' @param base_size The base font size for text elements. Defaults to 15.
 #' @param base_family The base font family for text elements. Defaults to
 #'     NULL.
 #' @param base_line_size The default size for line elements, calculated as a
@@ -48,7 +48,7 @@
 #'   theme_fmggp2(base_size = 15)
 #'
 #' @seealso \code{\link[ggplot2]{theme_minimal}}, \code{\link[ggplot2]{theme_void}}
-theme_fmggp2 <- function(base_size = 11, base_family = "Ubuntu",
+theme_fmggp2 <- function(base_size = 15, base_family = "Ubuntu",
                         base_line_size = base_size / 22,
                         base_rect_size = base_size / 22) {
 

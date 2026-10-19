@@ -4,7 +4,7 @@
 #' background, a putty frame, a red title, red, ink, LED orange, and putty
 #' marks, and a Marker Felt title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Marker Felt when
@@ -20,7 +20,7 @@
 #'   geom_bar() +
 #'   labs(title = "CueCat") +
 #'   theme_cuecat(base_family = "sans", title_family = "sans")
-theme_cuecat <- function(base_size = 11,
+theme_cuecat <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("Marker Felt", "MarkerFelt.ttc",

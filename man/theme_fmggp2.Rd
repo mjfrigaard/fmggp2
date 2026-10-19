@@ -5,14 +5,14 @@
 \title{fmggp2 Styling Theme}
 \usage{
 theme_fmggp2(
-  base_size = 11,
+  base_size = 15,
   base_family = "Ubuntu",
   base_line_size = base_size/22,
   base_rect_size = base_size/22
 )
 }
 \arguments{
-\item{base_size}{The base font size for text elements. Defaults to 11.}
+\item{base_size}{The base font size for text elements. Defaults to 15.}
 
 \item{base_family}{The base font family for text elements. Defaults to
 NULL.}

@@ -5,7 +5,7 @@
 #' title and text, blue, charcoal, orange, gold, and silver marks, and a DIN
 #' Condensed title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to DIN Condensed when
@@ -21,7 +21,7 @@
 #'   geom_point(size = 3) +
 #'   labs(title = "Walkman") +
 #'   theme_walkman(base_family = "sans", title_family = "sans")
-theme_walkman <- function(base_size = 11,
+theme_walkman <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf")) {

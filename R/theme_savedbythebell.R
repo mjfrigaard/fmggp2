@@ -5,7 +5,7 @@
 #' panel, sky blue, pink, yellow, orange, royal blue, and navy marks, and a
 #' SignPainter title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to SignPainter when
@@ -21,7 +21,7 @@
 #'   geom_bar() +
 #'   labs(title = "Saved by the Bell") +
 #'   theme_savedbythebell(base_family = "sans", title_family = "sans")
-theme_savedbythebell <- function(base_size = 11,
+theme_savedbythebell <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("SignPainter", "SignPainter.ttc")) {

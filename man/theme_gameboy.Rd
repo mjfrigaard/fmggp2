@@ -4,11 +4,10 @@
 \alias{theme_gameboy}
 \title{Game Boy theme}
 \usage{
-theme_gameboy(base_size = 11, base_family = gameboy_font())
+theme_gameboy(base_size = 15, base_family = gameboy_font())
 }
 \arguments{
-\item{base_size}{Base font size. Defaults to \code{11}. Pixel fonts run wide,
-so the text elements are scaled down relative to \code{base_size}.}
+\item{base_size}{Base font size. Defaults to \code{15}.}
 
 \item{base_family}{Base font family. Defaults to Press Start 2P, or
 \code{"sans"} if the font file can't be found.}

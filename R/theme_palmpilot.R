@@ -4,7 +4,7 @@
 #' background, a teal frame, a white title, a green LCD panel, ink, LCD green,
 #' plum, and teal marks, and a Futura title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Futura when
@@ -20,7 +20,7 @@
 #'   geom_bar() +
 #'   labs(title = "Palm Pilot") +
 #'   theme_palmpilot(base_family = "sans", title_family = "sans")
-theme_palmpilot <- function(base_size = 11,
+theme_palmpilot <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("Futura", "Futura.ttc")) {

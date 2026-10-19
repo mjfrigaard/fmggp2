@@ -1,3 +1,8 @@
+# fmggp2 0.60.0
+
+* Every theme now defaults to `base_size = 15`, the size most book chapters use (was `11`).
+* `theme_gameboy()` no longer scales its text down for the pixel font, so its title, subtitle, caption, axis, and legend text match the other themes. `theme_tetris()` gets the same 1.5x title as the other themes (was 0.9x).
+
 # fmggp2 0.59.0
 
 * The seventeen dark themes (`theme_blockbuster()`, `theme_bopit()`, `theme_consolewars()`, `theme_doom()`, `theme_geocities()`, `theme_goosebumps()`, `theme_hypercolor()`, `theme_jurassic()`, `theme_netscape()`, `theme_orbitz()`, `theme_oregontrail()`, `theme_rzone()`, `theme_seinfeld()`, `theme_snick()`, `theme_surge()`, `theme_tetris()`, and `theme_y2k()`) gain `mode = c("dark", "light")`. The light palette tints the background and panel with the theme's hue, uses dark text, and darkens the frame, title, and marks so they hold contrast on a light panel.

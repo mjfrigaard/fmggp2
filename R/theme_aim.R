@@ -5,7 +5,7 @@
 #' blue, sky, running man yellow, and slate marks, and an Arial Rounded
 #' title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Arial Rounded when
@@ -21,7 +21,7 @@
 #'   geom_bar() +
 #'   labs(title = "AIM") +
 #'   theme_aim(base_family = "sans", title_family = "sans")
-theme_aim <- function(base_size = 11,
+theme_aim <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("Arial Rounded", "Arial Rounded Bold.ttf")) {

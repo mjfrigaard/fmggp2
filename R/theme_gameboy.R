@@ -4,8 +4,7 @@
 #' four shade green palette, a dark green frame, and the pixel font
 #' Press Start 2P (bundled with the package).
 #'
-#' @param base_size Base font size. Defaults to `11`. Pixel fonts run wide,
-#'     so the text elements are scaled down relative to `base_size`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Press Start 2P, or
 #'     `"sans"` if the font file can't be found.
 #'
@@ -19,7 +18,7 @@
 #'   geom_bar() +
 #'   labs(title = "Game Boy") +
 #'   theme_gameboy(base_family = "sans")
-theme_gameboy <- function(base_size = 11, base_family = gameboy_font()) {
+theme_gameboy <- function(base_size = 15, base_family = gameboy_font()) {
   cols <- gameboy_cols
   ggplot2::theme_bw(base_size = base_size, base_family = base_family) +
     ggplot2::theme(
@@ -30,15 +29,11 @@ theme_gameboy <- function(base_size = 11, base_family = gameboy_font()) {
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
-      plot.title = ggplot2::element_text(size = ggplot2::rel(0.8),
+      plot.title = ggplot2::element_text(size = ggplot2::rel(1.5),
                                          margin = ggplot2::margin(0, 0, 6, 0)),
-      plot.subtitle = ggplot2::element_text(size = ggplot2::rel(0.6),
-                                            colour = cols[["dark"]],
+      plot.subtitle = ggplot2::element_text(colour = cols[["dark"]],
                                             margin = ggplot2::margin(0, 0, 8, 0)),
-      plot.caption = ggplot2::element_text(size = ggplot2::rel(0.5)),
-      axis.title = ggplot2::element_text(size = ggplot2::rel(0.65)),
-      axis.text = ggplot2::element_text(size = ggplot2::rel(0.55),
-                                        colour = cols[["darkest"]]),
+      axis.text = ggplot2::element_text(colour = cols[["darkest"]]),
       axis.ticks = ggplot2::element_blank(),
       panel.background = ggplot2::element_rect(fill = cols[["lightest"]]),
       panel.border = ggplot2::element_rect(colour = cols[["dark"]],
@@ -48,8 +43,6 @@ theme_gameboy <- function(base_size = 11, base_family = gameboy_font()) {
       panel.grid.minor = ggplot2::element_blank(),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["lightest"]], colour = NA),
-      legend.title = ggplot2::element_text(size = ggplot2::rel(0.6)),
-      legend.text = ggplot2::element_text(size = ggplot2::rel(0.55)),
       # darkest to lightest for discrete fills and colours
       palette.fill.discrete = unname(cols[c("darkest", "dark", "light")]),
       palette.colour.discrete = unname(cols[c("darkest", "dark", "light")]),

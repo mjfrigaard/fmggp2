@@ -6,7 +6,7 @@
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Press Start 2P when
@@ -23,7 +23,7 @@
 #'   geom_bar() +
 #'   labs(title = "Tetris") +
 #'   theme_tetris(base_family = "sans", title_family = "sans")
-theme_tetris <- function(base_size = 11,
+theme_tetris <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = gameboy_font(),
@@ -40,7 +40,7 @@ theme_tetris <- function(base_size = 11,
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
                                          colour = cols[["yellow"]],
-                                         size = ggplot2::rel(0.9)),
+                                         size = ggplot2::rel(1.5)),
       plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
       panel.background = ggplot2::element_rect(fill = cols[["panel"]]),

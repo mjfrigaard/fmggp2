@@ -4,7 +4,7 @@
 #' gray background, a lightning gold frame, a red Copperplate title, and
 #' red, blue, yellow, pink, black, and green Ranger marks.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Copperplate when
@@ -20,7 +20,7 @@
 #'   geom_bar() +
 #'   labs(title = "Power Rangers") +
 #'   theme_powerrangers(base_family = "sans", title_family = "sans")
-theme_powerrangers <- function(base_size = 11,
+theme_powerrangers <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("Copperplate", "Copperplate.ttc")) {

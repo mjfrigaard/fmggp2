@@ -5,13 +5,13 @@
 \title{Saved by the Bell theme}
 \usage{
 theme_savedbythebell(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("SignPainter", "SignPainter.ttc")
 )
 }
 \arguments{
-\item{base_size}{Base font size. Defaults to \code{11}.}
+\item{base_size}{Base font size. Defaults to \code{15}.}
 
 \item{base_family}{Base font family. Defaults to Arial when it's
 available on the system, otherwise \code{"sans"}.}

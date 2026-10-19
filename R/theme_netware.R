@@ -4,7 +4,7 @@
 #' background with white text, a maroon frame, maroon, red, rose, and blush
 #' marks, and a Gill Sans title.
 #'
-#' @param base_size Base font size. Defaults to `11`.
+#' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
 #'     available on the system, otherwise `"sans"`.
 #' @param title_family Title font family. Defaults to Gill Sans when
@@ -20,7 +20,7 @@
 #'   geom_bar() +
 #'   labs(title = "Novell NetWare") +
 #'   theme_netware(base_family = "sans", title_family = "sans")
-theme_netware <- function(base_size = 11,
+theme_netware <- function(base_size = 15,
                       base_family = register_font("Arial", "Arial.ttf",
                                                   "Arial Bold.ttf"),
                       title_family = register_font("Gill Sans", "GillSans.ttc")) {
