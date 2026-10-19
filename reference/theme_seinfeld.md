@@ -1,8 +1,8 @@
 # Seinfeld theme
 
-A `ggplot2` theme built from Seinfeld: a comedy club brick background, a
-yellow frame and title, the yellow, red, blue, and green logo colors for
-marks, cream text, and an American Typewriter title.
+A `ggplot2` theme built from the Seinfeld logo: the black drop shadow
+background, a yellow frame, a red American Typewriter title, white text,
+and yellow, red, cyan, and white marks.
 
 ## Usage
 
@@ -41,7 +41,9 @@ A `ggplot2` theme object.
 
 ## Details
 
-Use `mode = "light"` for a light background with darker text and marks.
+Use `mode = "light"` for the logo's yellow oval as the background, with
+a black frame, a white panel, black text, and red, cyan, yellow, and
+black marks outlined in black.
 
 ## Examples
 

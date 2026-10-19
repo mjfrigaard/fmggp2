@@ -1048,8 +1048,9 @@ ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
 ## Seinfeld
 
 [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md):
-comedy club brick with the logo colors. Below we simulate laughs and
-viewers for 60 episodes.
+the Seinfeld logo, with a yellow frame and a red title on the black drop
+shadow. The light version puts the plot on the yellow oval. Below we
+simulate laughs and viewers for 60 episodes.
 
 ![](../reference/figures/theme_seinfeld/seinfeld.png)
 
@@ -1287,7 +1288,7 @@ ggplot(pets, aes(x = days, fill = care)) +
 ## Tetris
 
 [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md):
-a black well and the tetromino block colors. Below we simulate lines
+a black well and the seven tetromino colors. Below we simulate lines
 cleared from a negative binomial distribution.
 
 ![](../reference/figures/theme_tetris/tetrominoes-ijlo-stz-worlds.png)
