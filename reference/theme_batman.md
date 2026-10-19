@@ -9,7 +9,8 @@ theme_batman(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
-  version = c("movie", "classic", "darknight")
+  version = c("movie", "classic", "darknight"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -33,6 +34,10 @@ theme_batman(
 
   One of `"movie"`, `"classic"`, or `"darknight"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
@@ -50,7 +55,9 @@ A `ggplot2` theme object.
 - `"darknight"`: The Dark Knight, with a charcoal background, a yellow
   frame and title, a navy plot area, and yellow, olive, and slate marks.
 
-All three use a DIN Condensed title.
+All three use a DIN Condensed title. Use `mode = "light"` for a light
+version of `"movie"` or `"darknight"`; `"classic"` is already light, so
+`mode` doesn't change it.
 
 ## Examples
 
@@ -66,4 +73,7 @@ p + theme_batman(base_family = "sans", title_family = "sans",
 
 p + theme_batman(base_family = "sans", title_family = "sans",
                  version = "darknight")
+
+p + theme_batman(base_family = "sans", title_family = "sans",
+                 mode = "light")
 ```

@@ -1,5 +1,34 @@
 # Changelog
 
+## fmggp2 0.59.0
+
+- The seventeen dark themes
+  ([`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md),
+  [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md),
+  [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md),
+  [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md),
+  [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md),
+  [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md),
+  [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md),
+  [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md),
+  [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md),
+  [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md),
+  [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md),
+  [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md),
+  [`theme_seinfeld()`](https://mjfrigaard.github.io/fmggp2/reference/theme_seinfeld.md),
+  [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md),
+  [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md),
+  [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md),
+  and
+  [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md))
+  gain `mode = c("dark", "light")`. The light palette tints the
+  background and panel with the theme’s hue, uses dark text, and darkens
+  the frame, title, and marks so they hold contrast on a light panel.
+- [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md)
+  gains the same `mode` argument for its `"movie"` and `"darknight"`
+  versions. `"classic"` is already light, so `mode` doesn’t change it.
+- The themes vignette shows each light version.
+
 ## fmggp2 0.58.0
 
 - Removed `theme_beanie()`, `theme_friends()`, `theme_toysrus()`,

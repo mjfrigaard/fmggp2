@@ -91,6 +91,15 @@ ggplot(signals, aes(x = night, y = sightings)) +
 
 ![](themes_files/figure-html/batman-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_batman(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/batman-light-1.png)
+
 `version = "classic"` uses the 1966 TV series palette: gray, blue,
 yellow, black, and cream.
 
@@ -121,6 +130,15 @@ ggplot(signals, aes(x = night, y = sightings)) +
 
 ![](themes_files/figure-html/batman-darknight-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_batman(base_size = 13, version = "darknight", mode = "light")
+```
+
+![](themes_files/figure-html/batman-darknight-light-1.png)
+
 ## Blockbuster
 
 [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
@@ -146,6 +164,15 @@ ggplot(blockbuster_rentals, aes(x = rentals)) +
 
 ![](themes_files/figure-html/blockbuster-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_blockbuster(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/blockbuster-light-1.png)
+
 ## Bop It
 
 [`theme_bopit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_bopit.md):
@@ -170,6 +197,15 @@ ggplot(players, aes(x = bop, y = twist)) +
 ```
 
 ![](themes_files/figure-html/bopit-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_bopit(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/bopit-light-1.png)
 
 ## Console wars
 
@@ -201,6 +237,15 @@ ggplot(kids, aes(x = games, y = hours, color = console)) +
 ```
 
 ![](themes_files/figure-html/consolewars-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_consolewars(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/consolewars-light-1.png)
 
 ## Crystal Pepsi
 
@@ -308,6 +353,15 @@ ggplot(pcs, aes(x = mhz, y = fps)) +
 ```
 
 ![](themes_files/figure-html/doom-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_doom(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/doom-light-1.png)
 
 ## Fresh Prince
 
@@ -417,6 +471,15 @@ ggplot(pages, aes(x = kb, y = seconds)) +
 
 ![](themes_files/figure-html/geocities-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_geocities(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/geocities-light-1.png)
+
 ## Goosebumps
 
 [`theme_goosebumps()`](https://mjfrigaard.github.io/fmggp2/reference/theme_goosebumps.md):
@@ -436,6 +499,15 @@ ggplot(readers, aes(x = books, fill = grade)) +
 ```
 
 ![](themes_files/figure-html/goosebumps-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_goosebumps(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/goosebumps-light-1.png)
 
 ## Handspring Visor
 
@@ -516,6 +588,15 @@ ggplot(fads, aes(x = month, y = sales, fill = fad)) +
 ```
 
 ![](themes_files/figure-html/hypercolor-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_hypercolor(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/hypercolor-light-1.png)
 
 ## IBM Microdrive
 
@@ -627,6 +708,15 @@ ggplot(jp_paddocks, aes(x = species, y = total_tons, fill = species)) +
 
 ![](themes_files/figure-html/jurassic-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_jurassic(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/jurassic-light-1.png)
+
 ## Koosh ball
 
 [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md)
@@ -679,6 +769,15 @@ ggplot(speeds, aes(x = kbps, after_stat(count), fill = modem)) +
 ```
 
 ![](themes_files/figure-html/netscape-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_netscape(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/netscape-light-1.png)
 
 ## Nintendo 64
 
@@ -792,6 +891,15 @@ ggplot(drinks, aes(x = week, y = share, fill = choice)) +
 
 ![](themes_files/figure-html/orbitz-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_orbitz(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/orbitz-light-1.png)
+
 ## Oregon Trail
 
 [`theme_oregontrail()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oregontrail.md):
@@ -817,6 +925,15 @@ ggplot(trips, aes(x = profession, y = days, fill = profession)) +
 ```
 
 ![](themes_files/figure-html/oregontrail-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_oregontrail(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/oregontrail-light-1.png)
 
 ## Palm Pilot
 
@@ -948,6 +1065,15 @@ ggplot(eps, aes(x = kramer, y = laughs, size = viewers)) +
 
 ![](themes_files/figure-html/seinfeld-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_seinfeld(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/seinfeld-light-1.png)
+
 ## SNICK
 
 [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md):
@@ -972,6 +1098,15 @@ ggplot(nights, aes(x = week, y = rating, color = night)) +
 ```
 
 ![](themes_files/figure-html/snick-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_snick(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/snick-light-1.png)
 
 ## Sony Walkman
 
@@ -1080,6 +1215,15 @@ ggplot(teens, aes(x = cans, y = hours)) +
 
 ![](themes_files/figure-html/surge-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_surge(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/surge-light-1.png)
+
 ## Talkboy
 
 [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md)
@@ -1160,6 +1304,15 @@ ggplot(games, aes(x = player, y = lines, color = player)) +
 
 ![](themes_files/figure-html/tetris-1.png)
 
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_tetris(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/tetris-light-1.png)
+
 ## Tiger R-Zone
 
 [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md)
@@ -1187,6 +1340,15 @@ ggplot(tries, aes(x = seconds, y = try, fill = try)) +
 ```
 
 ![](themes_files/figure-html/rzone-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_rzone(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/rzone-light-1.png)
 
 ## Titanic
 
@@ -1294,6 +1456,15 @@ ggplot(prep, aes(x = survey, y = households, fill = level)) +
 ```
 
 ![](themes_files/figure-html/y2k-1.png)
+
+With `mode = "light"`:
+
+``` r
+
+last_plot() + theme_y2k(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/y2k-light-1.png)
 
 ## Fonts
 

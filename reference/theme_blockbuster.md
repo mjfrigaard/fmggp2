@@ -10,7 +10,8 @@ Impact title.
 theme_blockbuster(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Impact", "Impact.ttf")
+  title_family = register_font("Impact", "Impact.ttf"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_blockbuster(
   Title font family. Defaults to Impact when it's available on the
   system, otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

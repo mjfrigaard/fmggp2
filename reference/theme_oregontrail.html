@@ -11,7 +11,7 @@ marks in three shades, and an Andale Mono title."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">fmggp2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.58.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.59.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +52,8 @@ marks in three shades, and an Andale Mono title.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">theme_oregontrail</span><span class="op">(</span></span>
 <span>  base_size <span class="op">=</span> <span class="fl">11</span>,</span>
 <span>  base_family <span class="op">=</span> <span class="fu">register_font</span><span class="op">(</span><span class="st">"Arial"</span>, <span class="st">"Arial.ttf"</span>, <span class="st">"Arial Bold.ttf"</span><span class="op">)</span>,</span>
-<span>  title_family <span class="op">=</span> <span class="fu">register_font</span><span class="op">(</span><span class="st">"Andale Mono"</span>, <span class="st">"Andale Mono.ttf"</span><span class="op">)</span></span>
+<span>  title_family <span class="op">=</span> <span class="fu">register_font</span><span class="op">(</span><span class="st">"Andale Mono"</span>, <span class="st">"Andale Mono.ttf"</span><span class="op">)</span>,</span>
+<span>  mode <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"dark"</span>, <span class="st">"light"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -73,10 +74,18 @@ available on the system, otherwise <code>"sans"</code>.</p></dd>
 <dd><p>Title font family. Defaults to Andale Mono when
 it's available, otherwise <code>"sans"</code>.</p></dd>
 
+
+<dt id="arg-mode">mode<a class="anchor" aria-label="anchor" href="#arg-mode"></a></dt>
+<dd><p><code>"dark"</code> (the default) or <code>"light"</code>.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
     <p>A <code>ggplot2</code> theme object.</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>Use <code>mode = "light"</code> for a light background with darker text and marks.</p>
     </div>
 
     <div class="section level2">

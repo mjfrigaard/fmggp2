@@ -10,7 +10,8 @@ marks, cream text, and an American Typewriter title.
 theme_seinfeld(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("American Typewriter", "AmericanTypewriter.ttc")
+  title_family = register_font("American Typewriter", "AmericanTypewriter.ttc"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_seinfeld(
   Title font family. Defaults to American Typewriter when it's
   available, otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

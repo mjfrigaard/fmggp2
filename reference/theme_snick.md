@@ -10,7 +10,8 @@ green, purple, blue, yellow, and pink marks, and an Arial Black title.
 theme_snick(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Black", "Arial Black.ttf")
+  title_family = register_font("Arial Black", "Arial Black.ttf"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_snick(
   Title font family. Defaults to Arial Black when it's available,
   otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

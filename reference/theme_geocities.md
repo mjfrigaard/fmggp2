@@ -10,7 +10,8 @@ Sans title, web safe marks, and a blue to yellow continuous scale.
 theme_geocities(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf")
+  title_family = register_font("Comic Sans MS", "Comic Sans MS Bold.ttf"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_geocities(
   Title font family. Defaults to Comic Sans MS when it's available,
   otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

@@ -10,7 +10,8 @@ pale blue visor text color, and an Arial Narrow title.
 theme_rzone(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf")
+  title_family = register_font("Arial Narrow", "Arial Narrow Bold.ttf"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_rzone(
   Title font family. Defaults to Arial Narrow when it's available,
   otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

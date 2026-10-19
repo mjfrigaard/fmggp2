@@ -10,7 +10,8 @@ tetromino block colors as marks, and the pixel font Press Start 2P
 theme_tetris(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = gameboy_font()
+  title_family = gameboy_font(),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_tetris(
   Title font family. Defaults to Press Start 2P when it's available,
   otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

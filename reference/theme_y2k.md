@@ -10,7 +10,8 @@ blue screen marks, and a PT Mono title.
 theme_y2k(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("PT Mono", "PTMono.ttc")
+  title_family = register_font("PT Mono", "PTMono.ttc"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -30,9 +31,17 @@ theme_y2k(
   Title font family. Defaults to PT Mono when it's available, otherwise
   `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 

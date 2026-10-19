@@ -11,7 +11,8 @@ title.
 theme_netscape(
   base_size = 11,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
-  title_family = register_font("Times New Roman", "Times New Roman Bold.ttf")
+  title_family = register_font("Times New Roman", "Times New Roman Bold.ttf"),
+  mode = c("dark", "light")
 )
 ```
 
@@ -31,9 +32,17 @@ theme_netscape(
   Title font family. Defaults to Times New Roman Bold when it's
   available on the system, otherwise `"sans"`.
 
+- mode:
+
+  `"dark"` (the default) or `"light"`.
+
 ## Value
 
 A `ggplot2` theme object.
+
+## Details
+
+Use `mode = "light"` for a light background with darker text and marks.
 
 ## Examples
 
