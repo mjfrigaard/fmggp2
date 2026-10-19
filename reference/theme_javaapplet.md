@@ -8,7 +8,7 @@ marks, and a blue Verdana title.
 
 ``` r
 theme_javaapplet(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Verdana", "Verdana Bold.ttf")
 )
@@ -18,7 +18,7 @@ theme_javaapplet(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

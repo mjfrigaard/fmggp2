@@ -8,7 +8,7 @@ Hitachi sky blue marks, and a Times New Roman title.
 
 ``` r
 theme_microdrive(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Times New Roman", "Times New Roman Bold.ttf")
 )
@@ -18,7 +18,7 @@ theme_microdrive(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

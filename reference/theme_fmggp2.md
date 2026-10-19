@@ -9,7 +9,7 @@ customized visual elements.
 
 ``` r
 theme_fmggp2(
-  base_size = 11,
+  base_size = 15,
   base_family = "Ubuntu",
   base_line_size = base_size/22,
   base_rect_size = base_size/22
@@ -20,7 +20,7 @@ theme_fmggp2(
 
 - base_size:
 
-  The base font size for text elements. Defaults to 11.
+  The base font size for text elements. Defaults to 15.
 
 - base_family:
 

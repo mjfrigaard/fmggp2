@@ -8,7 +8,7 @@ maroon, and amber accents, and a Marker Felt title.
 
 ``` r
 theme_orbitz(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Marker Felt", "MarkerFelt.ttc", dir =
     "/System/Library/Fonts"),
@@ -20,7 +20,7 @@ theme_orbitz(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

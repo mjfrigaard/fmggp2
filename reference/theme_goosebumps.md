@@ -9,7 +9,7 @@ Trattatello title.
 
 ``` r
 theme_goosebumps(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Trattatello", "Trattatello.ttf"),
   mode = c("dark", "light")
@@ -20,7 +20,7 @@ theme_goosebumps(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

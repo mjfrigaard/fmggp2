@@ -8,7 +8,7 @@ marks in three shades, and an Andale Mono title.
 
 ``` r
 theme_oregontrail(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Andale Mono", "Andale Mono.ttf"),
   mode = c("dark", "light")
@@ -19,7 +19,7 @@ theme_oregontrail(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

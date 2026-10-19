@@ -1,5 +1,15 @@
 # Changelog
 
+## fmggp2 0.60.0
+
+- Every theme now defaults to `base_size = 15`, the size most book
+  chapters use (was `11`).
+- [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+  no longer scales its text down for the pixel font, so its title,
+  subtitle, caption, axis, and legend text match the other themes.
+  [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
+  gets the same 1.5x title as the other themes (was 0.9x).
+
 ## fmggp2 0.59.0
 
 - The seventeen dark themes

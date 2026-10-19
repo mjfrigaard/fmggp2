@@ -7,15 +7,14 @@ Start 2P (bundled with the package).
 ## Usage
 
 ``` r
-theme_gameboy(base_size = 11, base_family = gameboy_font())
+theme_gameboy(base_size = 15, base_family = gameboy_font())
 ```
 
 ## Arguments
 
 - base_size:
 
-  Base font size. Defaults to `11`. Pixel fonts run wide, so the text
-  elements are scaled down relative to `base_size`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

@@ -8,7 +8,7 @@ gray, mint, and silver marks, and a Trebuchet MS title.
 
 ``` r
 theme_visor(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Trebuchet MS", "Trebuchet MS Bold.ttf")
 )
@@ -18,7 +18,7 @@ theme_visor(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

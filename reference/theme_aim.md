@@ -9,7 +9,7 @@ title.
 
 ``` r
 theme_aim(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("Arial Rounded", "Arial Rounded Bold.ttf")
 )
@@ -19,7 +19,7 @@ theme_aim(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 

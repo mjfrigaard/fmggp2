@@ -6,7 +6,7 @@ A `ggplot2` theme built from three Batman color palettes:
 
 ``` r
 theme_batman(
-  base_size = 11,
+  base_size = 15,
   base_family = register_font("Arial", "Arial.ttf", "Arial Bold.ttf"),
   title_family = register_font("DIN Condensed", "DIN Condensed Bold.ttf"),
   version = c("movie", "classic", "darknight"),
@@ -18,7 +18,7 @@ theme_batman(
 
 - base_size:
 
-  Base font size. Defaults to `11`.
+  Base font size. Defaults to `15`.
 
 - base_family:
 
