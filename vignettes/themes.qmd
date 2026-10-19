@@ -890,7 +890,7 @@ ggplot(pets, aes(x = days, fill = care)) +
 
 ## Tetris
 
-`theme_tetris()`: a black well and the tetromino block colors. Below we simulate lines cleared from a negative binomial distribution.
+`theme_tetris()`: a black well and the seven tetromino colors. Below we simulate lines cleared from a negative binomial distribution.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Tetrominoes_IJLO_STZ_Worlds.svg), public domain.](../man/figures/theme_tetris/tetrominoes-ijlo-stz-worlds.png){width="60%" fig-align="center"}
 

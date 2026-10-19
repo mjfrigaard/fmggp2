@@ -1,3 +1,7 @@
+# fmggp2 0.63.0
+
+* `theme_tetris()` now uses the seven tetromino colors from its reference image: cyan `#00F0F0`, yellow `#F0F000`, purple `#A000F0`, green `#00F000`, red `#F00000`, blue `#0000F0`, and orange `#F0A000`. The gray, pink, and lavender marks are gone. The light version has a light gray background, a blue title, and darker cyan, yellow, green, and orange marks.
+
 # fmggp2 0.62.0
 
 * `theme_seinfeld()` now uses the Seinfeld logo colors: a black drop shadow background, a yellow frame, a bold red title, white text, and yellow, red, cyan, and white marks. The light version puts the plot on the yellow oval, with a black frame, a white panel, a red strip, and red, cyan, yellow, and black marks outlined in black. The brick background and the blue, green, and orange marks are gone.

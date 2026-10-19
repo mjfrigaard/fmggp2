@@ -26,12 +26,14 @@ it's available, otherwise \code{"sans"}.}
 A \code{ggplot2} theme object.
 }
 \description{
-A late 90s \code{ggplot2} theme modeled on Tetris: a black well, the tetromino
-block colors as marks, and the pixel font Press Start 2P (bundled with the
-package) for the title.
+A late 90s \code{ggplot2} theme modeled on Tetris: a black well, a cyan frame,
+a yellow title, the seven tetromino colors (cyan, yellow, purple, green,
+red, blue, and orange) as marks, and the pixel font Press Start 2P (bundled
+with the package) for the title.
 }
 \details{
-Use \code{mode = "light"} for a light background with darker text and marks.
+Use \code{mode = "light"} for a light gray background with dark text, a blue
+title, and darker cyan, yellow, green, and orange marks.
 }
 \examples{
 library(ggplot2)

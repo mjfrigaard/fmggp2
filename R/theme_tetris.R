@@ -1,10 +1,12 @@
 #' Tetris theme
 #'
-#' A late 90s `ggplot2` theme modeled on Tetris: a black well, the tetromino
-#' block colors as marks, and the pixel font Press Start 2P (bundled with the
-#' package) for the title.
+#' A late 90s `ggplot2` theme modeled on Tetris: a black well, a cyan frame,
+#' a yellow title, the seven tetromino colors (cyan, yellow, purple, green,
+#' red, blue, and orange) as marks, and the pixel font Press Start 2P (bundled
+#' with the package) for the title.
 #'
-#' Use `mode = "light"` for a light background with darker text and marks.
+#' Use `mode = "light"` for a light gray background with dark text, a blue
+#' title, and darker cyan, yellow, green, and orange marks.
 #'
 #' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -34,12 +36,12 @@ theme_tetris <- function(base_size = 15,
     ggplot2::theme(
       text = ggplot2::element_text(colour = cols[["white"]]),
       plot.background = ggplot2::element_rect(fill = cols[["black"]],
-                                              colour = cols[["cyan"]],
+                                              colour = cols[["frame"]],
                                               linewidth = base_size / 2),
       plot.margin = ggplot2::margin(base_size, base_size, base_size, base_size),
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(family = title_family,
-                                         colour = cols[["yellow"]],
+                                         colour = cols[["title"]],
                                          size = ggplot2::rel(1.5)),
       plot.subtitle = ggplot2::element_text(colour = cols[["white"]],
                                             margin = ggplot2::margin(2, 0, 8, 0)),
@@ -50,13 +52,13 @@ theme_tetris <- function(base_size = 15,
       panel.grid.minor = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = cols[["white"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["cyan"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["black"]], face = "bold"),
+      strip.background = ggplot2::element_rect(fill = cols[["frame"]], colour = NA),
+      strip.text = ggplot2::element_text(colour = cols[["striptext"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange", "gray", "pink", "lavender")]),
-      palette.colour.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange", "gray", "pink", "lavender")]),
+      palette.fill.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange")]),
+      palette.colour.discrete = unname(cols[c("cyan", "yellow", "purple", "green", "red", "blue", "orange")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["white"]],
                                    paper = cols[["panel"]],
@@ -67,38 +69,39 @@ theme_tetris <- function(base_size = 15,
     )
 }
 
+# the seven tetromino colors
 tetris_cols <- list(
   dark = c(
     black = "#000000",
     panel = "#0B0B0B",
     grid = "#333333",
     white = "#F5F5F5",
-    cyan = "#009999",
-    yellow = "#999900",
-    purple = "#990099",
-    green = "#009900",
-    red = "#990000",
-    blue = "#0000BB",
-    orange = "#996600",
-    gray = "#999999",
-    pink = "#FF75A2",
-    lavender = "#8672CB"
+    frame = "#00F0F0",
+    title = "#F0F000",
+    striptext = "#000000",
+    cyan = "#00F0F0",
+    yellow = "#F0F000",
+    purple = "#A000F0",
+    green = "#00F000",
+    red = "#F00000",
+    blue = "#0000F0",
+    orange = "#F0A000"
   ),
   # the light palette keeps the dark role names
   light = c(
-    black = "#ECECE1",
-    panel = "#FBFBF7",
-    grid = "#D8D8CB",
-    white = "#2E2E07",
-    cyan = "#007676",
-    yellow = "#6E6E00",
-    purple = "#990099",
-    green = "#009900",
-    red = "#990000",
-    blue = "#0000BB",
-    orange = "#996600",
-    gray = "#919191",
-    pink = "#EA6190",
-    lavender = "#8672CB"
+    black = "#EDEDED",
+    panel = "#FBFBFB",
+    grid = "#D9D9D9",
+    white = "#1A1A1A",
+    frame = "#00A0A0",
+    title = "#0000F0",
+    striptext = "#1A1A1A",
+    cyan = "#00A0A0",
+    yellow = "#959500",
+    purple = "#A000F0",
+    green = "#00A700",
+    red = "#F00000",
+    blue = "#0000F0",
+    orange = "#CD8000"
   )
 )
