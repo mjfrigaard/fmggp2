@@ -1,5 +1,12 @@
 # Changelog
 
+## fmggp2 0.61.0
+
+- [`theme_netware()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netware.md)
+  is now a light theme: a pale blush background with dark ink text, a
+  white panel, and a NetWare red frame and title. The maroon, red, rose,
+  and blush marks are unchanged.
+
 ## fmggp2 0.60.0
 
 - Every theme now defaults to `base_size = 15`, the size most book

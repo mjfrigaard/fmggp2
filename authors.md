@@ -10,12 +10,12 @@ Source:
 [`DESCRIPTION`](https://github.com/mjfrigaard/fmggp2/blob/main/DESCRIPTION)
 
 Frigaard M (2026). *fmggp2: Support package for ggplot2: field manual*.
-R package version 0.60.0, <https://mjfrigaard.github.io/fmggp2/>.
+R package version 0.61.0, <https://mjfrigaard.github.io/fmggp2/>.
 
     @Manual{,
       title = {fmggp2: Support package for ggplot2: field manual},
       author = {Martin Frigaard},
       year = {2026},
-      note = {R package version 0.60.0},
+      note = {R package version 0.61.0},
       url = {https://mjfrigaard.github.io/fmggp2/},
     }

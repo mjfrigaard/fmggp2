@@ -1,8 +1,8 @@
 # Novell NetWare theme
 
-A `ggplot2` theme built from Novell NetWare 2.0 boxes: a NetWare red
-background with white text, a maroon frame, maroon, red, rose, and blush
-marks, and a Gill Sans title.
+A `ggplot2` theme built from Novell NetWare 2.0 boxes: a pale blush
+background with dark ink text, a NetWare red frame and title, maroon,
+red, rose, and blush marks, and a Gill Sans title.
 
 ## Usage
 
