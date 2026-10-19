@@ -1,3 +1,7 @@
+# fmggp2 0.62.0
+
+* `theme_seinfeld()` now uses the Seinfeld logo colors: a black drop shadow background, a yellow frame, a bold red title, white text, and yellow, red, cyan, and white marks. The light version puts the plot on the yellow oval, with a black frame, a white panel, a red strip, and red, cyan, yellow, and black marks outlined in black. The brick background and the blue, green, and orange marks are gone.
+
 # fmggp2 0.61.0
 
 * `theme_netware()` is now a light theme: a pale blush background with dark ink text, a white panel, and a NetWare red frame and title. The maroon, red, rose, and blush marks are unchanged.

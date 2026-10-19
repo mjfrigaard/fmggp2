@@ -726,7 +726,7 @@ ggplot(grades, aes(x = semester, y = score, group = student, color = student)) +
 
 ## Seinfeld
 
-`theme_seinfeld()`: comedy club brick with the logo colors. Below we simulate laughs and viewers for 60 episodes.
+`theme_seinfeld()`: the Seinfeld logo, with a yellow frame and a red title on the black drop shadow. The light version puts the plot on the yellow oval. Below we simulate laughs and viewers for 60 episodes.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Seinfeld.svg), public domain.](../man/figures/theme_seinfeld/seinfeld.png){width="60%" fig-align="center"}
 
