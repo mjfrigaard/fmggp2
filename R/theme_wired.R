@@ -83,7 +83,7 @@ wired_cols <- list(
     strip = "#FFFFFF",
     striptext = "#040404",
     accent = "#0490E2",
-    outline = "#040404",
+    outline = "#FFFFFF",
     fill = "#E4180A"
   ),
   light = c(
