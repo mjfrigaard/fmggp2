@@ -1,5 +1,11 @@
 # Changelog
 
+## fmggp2 0.66.0
+
+- The themes vignette now shows the WIRED cover for
+  [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md),
+  linked from Wikipedia rather than stored in the package.
+
 ## fmggp2 0.65.0
 
 - [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)

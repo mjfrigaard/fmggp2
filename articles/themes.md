@@ -1413,9 +1413,14 @@ ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
 [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)
 uses the WIRED (US) November/December 2024 “Big Interview” cover: a
 black background, a white frame, a bold Helvetica Neue title, and the
-cover’s red, blue, pink, gray, and steel blue marks. The cover is
-copyrighted, so it isn’t shown here. Below we simulate the lengths of
-400 interviews in two formats.
+cover’s red, blue, pink, gray, and steel blue marks. Below we simulate
+the lengths of 400 interviews in two formats.
+
+![](https://upload.wikimedia.org/wikipedia/en/8/86/Wired_US_magazine_November-December_2024_cover.webp)
+
+Image: WIRED (US), November/December 2024 cover, via
+[Wikipedia](https://en.wikipedia.org/wiki/File:Wired_US_magazine_November-December_2024_cover.webp)
+(non-free, linked rather than hosted).
 
 ``` r
 

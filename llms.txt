@@ -59,7 +59,7 @@ each dataset gets a theme to match.
 | [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md) | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md) | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md) | IBM Microdrive | Violin plots (photo file sizes) |
-| [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md) | WIRED magazine | Density plots (taste test ages) |
+| [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md) | WIRED magazine | Density plots (story reading times) |
 | [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md) | Blockbuster Video | Dot plots (weekly rentals) |
 | [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md) | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md) | OK Soda | Histograms (cans sold per store) |
