@@ -1,3 +1,8 @@
+# fmggp2 0.64.0
+
+* New `theme_wired()`, built from the WIRED (US) November/December 2024 cover: a black background, a white frame and bold Helvetica Neue title, and red, blue, pink, gray, and steel blue marks. `mode = "light"` gives a light gray background, black text and frame, and red, blue, pink, navy, and darker gray marks. The cover is copyrighted, so the vignette doesn't show it.
+* Removed `theme_crystalpepsi()`; `theme_wired()` replaces it in the density plots chapter.
+
 # fmggp2 0.63.0
 
 * `theme_tetris()` now uses the seven tetromino colors from its reference image: cyan `#00F0F0`, yellow `#F0F000`, purple `#A000F0`, green `#00F000`, red `#F00000`, blue `#0000F0`, and orange `#F0A000`. The gray, pink, and lavender marks are gone. The light version has a light gray background, a blue title, and darker cyan, yellow, green, and orange marks.
