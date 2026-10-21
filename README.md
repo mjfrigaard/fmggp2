@@ -64,7 +64,7 @@ each dataset gets a theme to match.
 | `theme_jurassic()` | Jurassic Park (1993) | Grouped bar graphs (dinosaur weights per paddock) |
 | `theme_n64()` | Nintendo 64 | Box plots (Mario Kart 64 lap times) |
 | `theme_microdrive()` | IBM Microdrive | Violin plots (photo file sizes) |
-| `theme_wired()` | WIRED magazine | Density plots (taste test ages) |
+| `theme_wired()` | WIRED magazine | Density plots (story reading times) |
 | `theme_blockbuster()` | Blockbuster Video | Dot plots (weekly rentals) |
 | `theme_gameboy()` | Original Game Boy screen | Bar graphs (Pokémon starters) |
 | `theme_oksoda()` | OK Soda | Histograms (cans sold per store) |

@@ -1,3 +1,7 @@
+# fmggp2 0.66.0
+
+* The themes vignette now shows the WIRED cover for `theme_wired()`, linked from Wikipedia rather than stored in the package.
+
 # fmggp2 0.65.0
 
 * `theme_wired()` now draws dark mode lines and outlines in white instead of black, so lines show against the black panel.
