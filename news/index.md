@@ -1,5 +1,11 @@
 # Changelog
 
+## fmggp2 0.65.0
+
+- [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)
+  now draws dark mode lines and outlines in white instead of black, so
+  lines show against the black panel.
+
 ## fmggp2 0.64.0
 
 - New
