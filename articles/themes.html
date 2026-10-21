@@ -25,7 +25,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">fmggp2</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.63.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.64.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -312,31 +312,6 @@
 </div>
 </div>
 </div>
-</section><section class="level2"><h2 id="crystal-pepsi">Crystal Pepsi<a class="anchor" aria-label="anchor" href="#crystal-pepsi"></a>
-</h2>
-<p><code><a href="../reference/theme_crystalpepsi.html">theme_crystalpepsi()</a></code> uses the clear bottle and its label: a cream background, a navy frame, Pepsi red and navy marks, and a Futura title. Below we simulate the ages of 400 people at a 1992 mall taste test as a mix of kids and parents.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img src="../reference/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg" style="width:60.0%"></p>
-<figcaption>Image: Mike Mozart, <a href="https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
-<span><span class="va">kid</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">400</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.65</span></span>
-<span><span class="va">tasters</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">kid</span>, <span class="st">"Kid"</span>, <span class="st">"Parent"</span><span class="op">)</span>,</span>
-<span>  age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">kid</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fl">11</span>, <span class="fl">2.5</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fl">37</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">tasters</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">age</span>, fill <span class="op">=</span> <span class="va">group</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Crystal Pepsi"</span>, caption <span class="op">=</span> <span class="st">"Simulated data"</span>,</span>
-<span>       x <span class="op">=</span> <span class="st">"Age (years)"</span>, fill <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="../reference/theme_crystalpepsi.html">theme_crystalpepsi</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img src="themes_files/figure-html/crystalpepsi-1.png" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
 </section><section class="level2"><h2 id="cu-seeme">CU-SeeMe<a class="anchor" aria-label="anchor" href="#cu-seeme"></a>
 </h2>
 <p><code><a href="../reference/theme_cuseeme.html">theme_cuseeme()</a></code> uses the CU-SeeMe phone book window: a dithered gray background, a black frame, a white panel, black, magenta, and gray marks, and a magenta Tahoma title. Below we simulate video call frame rates over three kinds of connections.</p>
@@ -345,7 +320,7 @@
 <figcaption>Image: Lt Georgios Floros, HN, <a href="https://commons.wikimedia.org/wiki/File:CU-SeeMe_application_screenshot.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1995</span><span class="op">)</span></span>
 <span><span class="va">calls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>connection <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"28.8k modem"</span>, <span class="st">"ISDN"</span>, <span class="st">"T1"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">60</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">calls</span><span class="op">$</span><span class="va">fps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">pmax</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">180</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"28.8k modem"</span> <span class="op">=</span> <span class="fl">2</span>, <span class="st">"ISDN"</span> <span class="op">=</span> <span class="fl">6</span>, <span class="st">"T1"</span> <span class="op">=</span> <span class="fl">14</span><span class="op">)</span><span class="op">[</span><span class="va">calls</span><span class="op">$</span><span class="va">connection</span><span class="op">]</span>, <span class="fl">1.5</span><span class="op">)</span><span class="op">)</span></span>
@@ -368,7 +343,7 @@
 <figcaption>Image: Shaddack, <a href="https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">)</span></span>
 <span><span class="va">scans</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>week <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">52</span><span class="op">)</span></span>
 <span><span class="va">scans</span><span class="op">$</span><span class="va">scans</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">52</span>, <span class="fl">5000</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">scans</span><span class="op">$</span><span class="va">week</span> <span class="op">/</span> <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
@@ -391,7 +366,7 @@
 <figcaption>Image: Bethesda, Copyright Microsoft, <a href="https://commons.wikimedia.org/wiki/File:Doom_classic_box_art.png" class="external-link">Wikimedia Commons</a>, CC BY 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">pcs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>mhz <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">25</span>, <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">pcs</span><span class="op">$</span><span class="va">fps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">pmin</a></span><span class="op">(</span><span class="fl">35</span>, <span class="fl">0.45</span> <span class="op">*</span> <span class="va">pcs</span><span class="op">$</span><span class="va">mhz</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">0</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -408,7 +383,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_doom.html">theme_doom</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -425,7 +400,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Fresh_Prince_Bel_Aire_logo.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">)</span></span>
 <span><span class="va">fp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>season <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, gag <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Will flirts"</span>, <span class="st">"Carlton dance"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">fp</span><span class="op">$</span><span class="va">occurrences</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html" class="external-link">rbinom</a></span><span class="op">(</span><span class="fl">12</span>, <span class="fl">24</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">fp</span><span class="op">$</span><span class="va">gag</span> <span class="op">==</span> <span class="st">"Will flirts"</span>, <span class="fl">0.9</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Logistic.html" class="external-link">plogis</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2.2</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="op">(</span><span class="va">fp</span><span class="op">$</span><span class="va">season</span> <span class="op">-</span> <span class="fl">3.5</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -448,7 +423,7 @@
 <figcaption>Image: Thomson200, <a href="https://commons.wikimedia.org/wiki/File:Betty_Crocker_Fruit_Gushers_pieces.jpg" class="external-link">Wikimedia Commons</a>, CC0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">trades</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">1985</span><span class="op">:</span><span class="fl">2000</span>, flavor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Strawberry"</span>, <span class="st">"Lime"</span>, <span class="st">"Blue raspberry"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">trades</span><span class="op">$</span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">trades</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">trades</span><span class="op">$</span><span class="va">year</span> <span class="op">&lt;</span> <span class="fl">1991</span>, <span class="fl">0.5</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -471,7 +446,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
 <span><span class="va">pokemon_starters</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  starter <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bulbasaur"</span>, <span class="st">"Charmander"</span>, <span class="st">"Squirtle"</span><span class="op">)</span>,</span>
@@ -498,7 +473,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:GeoCities_logo.svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb22"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
 <span><span class="va">pages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>kb <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">60</span><span class="op">)</span>, <span class="fl">0.45</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">pages</span><span class="op">$</span><span class="va">seconds</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">+</span> <span class="va">pages</span><span class="op">$</span><span class="va">kb</span> <span class="op">*</span> <span class="fl">8</span> <span class="op">/</span> <span class="fl">44</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">0</span>, <span class="fl">1.5</span><span class="op">)</span></span>
@@ -515,7 +490,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb23"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_geocities.html">theme_geocities</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -528,7 +503,7 @@
 </h2>
 <p><code><a href="../reference/theme_goosebumps.html">theme_goosebumps()</a></code>: the slime green logo and purple covers of the Goosebumps books on black, with a Trattatello title. Below we simulate Goosebumps books read by two grades.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1992</span><span class="op">)</span></span>
 <span><span class="va">readers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>grade <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"3rd grade"</span>, <span class="st">"5th grade"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">40</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">readers</span><span class="op">$</span><span class="va">books</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">80</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">readers</span><span class="op">$</span><span class="va">grade</span> <span class="op">==</span> <span class="st">"3rd grade"</span>, <span class="fl">3</span>, <span class="fl">9</span><span class="op">)</span><span class="op">)</span></span>
@@ -545,7 +520,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_goosebumps.html">theme_goosebumps</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -562,7 +537,7 @@
 <figcaption>Image: Waldohreule, <a href="https://commons.wikimedia.org/wiki/File:Handspring_Visor_DeLuxe_Green.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2000</span><span class="op">)</span></span>
 <span><span class="va">modules</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>module <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Games"</span>, <span class="st">"MP3 player"</span>, <span class="st">"Modem"</span>, <span class="st">"Phone"</span><span class="op">)</span>,</span>
 <span>  size <span class="op">=</span> <span class="fl">500</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.35</span>, <span class="fl">0.25</span>, <span class="fl">0.25</span>, <span class="fl">0.15</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -585,7 +560,7 @@
 <figcaption>Image: Newtown grafitti from Sydney, Australia, <a href="https://commons.wikimedia.org/wiki/File:Happy_meal_(6955434713).jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
 <span><span class="va">happy_meals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>promotion <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Teenie Beanie Babies"</span>, <span class="st">"Furby"</span>, <span class="st">"Hot Wheels"</span>, <span class="st">"Inspector Gadget"</span><span class="op">)</span>,</span>
 <span>  avg_sold <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">420</span>, <span class="fl">310</span>, <span class="fl">220</span>, <span class="fl">180</span><span class="op">)</span>, <span class="kw">function</span><span class="op">(</span><span class="va">l</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">28</span>, <span class="va">l</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -608,7 +583,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Generra_Hypercolor_2.jpg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb28"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">months</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">1990</span>, <span class="fl">1995</span>, by <span class="op">=</span> <span class="fl">1</span> <span class="op">/</span> <span class="fl">12</span><span class="op">)</span></span>
 <span><span class="va">fads</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>month <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="va">months</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>                   fad <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Hypercolor"</span>, <span class="st">"Slap bracelets"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">months</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -628,7 +603,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb29"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_hypercolor.html">theme_hypercolor</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -645,7 +620,7 @@
 <figcaption>Image: MiNe, <a href="https://commons.wikimedia.org/wiki/File:IBM_340MB_Microdrive_and_Hitachi_1GB_Microdrive_sold_from_Weikeng_Industrial_20080327.jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1999</span><span class="op">)</span></span>
 <span><span class="va">photos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>camera <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2 MP"</span>, <span class="st">"3 MP"</span>, <span class="st">"4 MP"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">photos</span><span class="op">$</span><span class="va">mb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2 MP"</span> <span class="op">=</span> <span class="fl">0.9</span>, <span class="st">"3 MP"</span> <span class="op">=</span> <span class="fl">1.4</span>, <span class="st">"4 MP"</span> <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">[</span><span class="va">photos</span><span class="op">$</span><span class="va">camera</span><span class="op">]</span><span class="op">)</span>, <span class="fl">0.25</span><span class="op">)</span></span>
@@ -668,7 +643,7 @@
 <figcaption>Image: Erik (HASH) Hersman, <a href="https://commons.wikimedia.org/wiki/File:Ushahidi_J2ME_App.jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2003</span><span class="op">)</span></span>
 <span><span class="va">games</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>month <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, genre <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Puzzle"</span>, <span class="st">"Racing"</span>, <span class="st">"Sports"</span>, <span class="st">"Arcade"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">games</span><span class="op">$</span><span class="va">downloads</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">games</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Puzzle <span class="op">=</span> <span class="fl">60</span>, Racing <span class="op">=</span> <span class="fl">40</span>, Sports <span class="op">=</span> <span class="fl">30</span>, Arcade <span class="op">=</span> <span class="fl">20</span><span class="op">)</span><span class="op">[</span><span class="va">games</span><span class="op">$</span><span class="va">genre</span><span class="op">]</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">+</span> <span class="va">games</span><span class="op">$</span><span class="va">month</span> <span class="op">/</span> <span class="fl">12</span><span class="op">)</span><span class="op">)</span></span>
@@ -691,7 +666,7 @@
 <figcaption>Image: Audrius Meskauskas, <a href="https://commons.wikimedia.org/wiki/File:Java_applet.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1995</span><span class="op">)</span></span>
 <span><span class="va">model</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>time <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6</span>, by <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">model</span><span class="op">$</span><span class="va">angle</span> <span class="op">&lt;-</span> <span class="fl">48</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">model</span><span class="op">$</span><span class="va">time</span> <span class="op">/</span> <span class="fl">1.2</span><span class="op">)</span><span class="op">)</span></span>
@@ -717,7 +692,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Jurassic_Park_icon.svg" class="external-link">Wikimedia Commons</a>, CC0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">jp_paddocks</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>species <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Brachiosaurus"</span>, <span class="st">"Triceratops"</span>, <span class="st">"Tyrannosaurus"</span><span class="op">)</span>,</span>
 <span>  total_tons <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">40</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">9</span>, <span class="fl">1.2</span><span class="op">)</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">8</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -734,7 +709,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb34"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_jurassic.html">theme_jurassic</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -751,7 +726,7 @@
 <figcaption>Image: Evan-Amos, <a href="https://commons.wikimedia.org/wiki/File:Koosh-Ball-TriColor.jpg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb35"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">koosh_balls</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>style <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Tri color"</span>, <span class="st">"Rainbow"</span>, <span class="st">"Neon"</span>, <span class="st">"Glow"</span><span class="op">)</span>,</span>
 <span>  <span class="fl">200</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">/</span><span class="fl">2</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">4</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">8</span>, <span class="fl">1</span><span class="op">/</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -775,7 +750,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg" class="external-link">Wikimedia Commons</a>, CC0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb36"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1996</span><span class="op">)</span></span>
 <span><span class="va">modem</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"14.4k"</span>, <span class="st">"28.8k"</span>, <span class="st">"56k"</span><span class="op">)</span>, <span class="fl">600</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.25</span>, <span class="fl">0.45</span>, <span class="fl">0.30</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">speeds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>modem <span class="op">=</span> <span class="va">modem</span>,</span>
@@ -793,7 +768,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_netscape.html">theme_netscape</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -810,7 +785,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:N64-Console-Set.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">64</span><span class="op">)</span></span>
 <span><span class="va">mario_kart_laps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>seconds <span class="op">=</span> <span class="fl">45</span> <span class="op">+</span> <span class="fl">2</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/TDist.html" class="external-link">rt</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">200</span>, df <span class="op">=</span> <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mario_kart_laps</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="va">seconds</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -833,7 +808,7 @@
 <figcaption>Image: diaper on Flickr, <a href="https://commons.wikimedia.org/wiki/File:Novell_NetWare_2.0_packages.jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">)</span></span>
 <span><span class="va">servers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>year <span class="op">=</span> <span class="fl">1990</span><span class="op">:</span><span class="fl">1998</span>, version <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2.x"</span>, <span class="st">"3.x"</span>, <span class="st">"4.x"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">servers</span><span class="op">$</span><span class="va">peak</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"2.x"</span> <span class="op">=</span> <span class="fl">1990</span>, <span class="st">"3.x"</span> <span class="op">=</span> <span class="fl">1994</span>, <span class="st">"4.x"</span> <span class="op">=</span> <span class="fl">1998</span><span class="op">)</span><span class="op">[</span><span class="va">servers</span><span class="op">$</span><span class="va">version</span><span class="op">]</span></span>
@@ -857,7 +832,7 @@
 <figcaption>Image: TeemPlayer, <a href="https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb40"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1014</span><span class="op">)</span></span>
 <span><span class="va">ok_soda_sales</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  cans <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">300</span>, mean <span class="op">=</span> <span class="fl">45</span>, sd <span class="op">=</span> <span class="fl">12</span><span class="op">)</span><span class="op">)</span></span>
@@ -883,7 +858,7 @@
 <figcaption>Image: Jesse! S?, <a href="https://commons.wikimedia.org/wiki/File:Bottle_of_Orbitz_drink.jpg" class="external-link">Wikimedia Commons</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb41"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">p_surge</span> <span class="op">&lt;-</span> <span class="fl">0.8</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Logistic.html" class="external-link">plogis</a></span><span class="op">(</span><span class="op">-</span><span class="fl">2</span> <span class="op">+</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="op">(</span><span class="fl">0</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">drinks</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>week <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">7</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>  choice <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Surge"</span>, <span class="st">"Orbitz"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">7</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Surge"</span>, <span class="st">"Orbitz"</span><span class="op">)</span><span class="op">)</span>,</span>
@@ -902,7 +877,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb42"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_orbitz.html">theme_orbitz</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -919,7 +894,7 @@
 <figcaption>Image: The Pug Father, <a href="https://www.flickr.com/photos/fleur-design/1155468051" class="external-link">Flickr</a>, CC BY 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb43"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1985</span><span class="op">)</span></span>
 <span><span class="va">trips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>profession <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Banker"</span>, <span class="st">"Carpenter"</span>, <span class="st">"Farmer"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">trips</span><span class="op">$</span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">300</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Banker <span class="op">=</span> <span class="fl">140</span>, Carpenter <span class="op">=</span> <span class="fl">155</span>, Farmer <span class="op">=</span> <span class="fl">170</span><span class="op">)</span><span class="op">[</span><span class="va">trips</span><span class="op">$</span><span class="va">profession</span><span class="op">]</span><span class="op">)</span>, <span class="fl">0.2</span><span class="op">)</span></span>
@@ -936,7 +911,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb44"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_oregontrail.html">theme_oregontrail</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -953,7 +928,7 @@
 <figcaption>Image: Museo8bits, <a href="https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb45"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
 <span><span class="va">graffiti</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>week <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">0</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">graffiti</span><span class="op">$</span><span class="va">accuracy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">pmin</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">98</span> <span class="op">-</span> <span class="fl">30</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">graffiti</span><span class="op">$</span><span class="va">week</span> <span class="op">/</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fl">0</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -977,7 +952,7 @@
 <figcaption>Image: “<a href="https://www.flickr.com/photos/mtsofan/6077181975/" class="external-link">Remember Pogs?</a>” by MTSOfan, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/" class="external-link">CC BY-NC-SA 2.0</a>.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">pogs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Milk caps"</span>, <span class="st">"Printed pogs"</span>, <span class="st">"Holographic"</span>, <span class="st">"Slammers"</span><span class="op">)</span>,</span>
 <span>  <span class="fl">100</span>, replace <span class="op">=</span> <span class="cn">TRUE</span>, prob <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.45</span>, <span class="fl">0.30</span>, <span class="fl">0.15</span>, <span class="fl">0.10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -1000,7 +975,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Power_Rangers_logo.svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">fights</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>ranger <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Red"</span>, <span class="st">"Blue"</span>, <span class="st">"Yellow"</span>, <span class="st">"Pink"</span>, <span class="st">"Black"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Red"</span>, <span class="st">"Blue"</span>, <span class="st">"Yellow"</span>, <span class="st">"Pink"</span>, <span class="st">"Black"</span><span class="op">)</span><span class="op">)</span>, minutes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">4</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">fights</span><span class="op">$</span><span class="va">putties</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fl">100</span>, <span class="fl">1.6</span> <span class="op">*</span> <span class="va">fights</span><span class="op">$</span><span class="va">minutes</span><span class="op">)</span></span>
@@ -1023,7 +998,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Saved_by_the_Bell_(original_series)_logo_(2).svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb48"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1989</span><span class="op">)</span></span>
 <span><span class="va">grades</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>student <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Zack"</span>, <span class="st">"Kelly"</span>, <span class="st">"Screech"</span><span class="op">)</span>, <span class="fl">2</span><span class="op">)</span>,</span>
 <span>                     semester <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Fall"</span>, <span class="st">"Spring"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -1048,7 +1023,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Seinfeld.svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb49"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1989</span><span class="op">)</span></span>
 <span><span class="va">eps</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>kramer <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">6</span>, <span class="fl">1.5</span><span class="op">)</span>, viewers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">20</span><span class="op">)</span>, <span class="fl">0.3</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">eps</span><span class="op">$</span><span class="va">laughs</span> <span class="op">&lt;-</span> <span class="fl">2</span> <span class="op">+</span> <span class="fl">0.3</span> <span class="op">*</span> <span class="va">eps</span><span class="op">$</span><span class="va">kramer</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">0</span>, <span class="fl">0.5</span><span class="op">)</span></span>
@@ -1065,7 +1040,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb50"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_seinfeld.html">theme_seinfeld</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1082,7 +1057,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:SNICK_logo.svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb51"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1992</span><span class="op">)</span></span>
 <span><span class="va">nights</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/expand.grid.html" class="external-link">expand.grid</a></span><span class="op">(</span>week <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20</span>, night <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Fri"</span>, <span class="st">"Sat"</span>, <span class="st">"Sun"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">nights</span><span class="op">$</span><span class="va">rating</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>Fri <span class="op">=</span> <span class="fl">2.8</span>, Sat <span class="op">=</span> <span class="fl">4.2</span>, Sun <span class="op">=</span> <span class="fl">3.0</span><span class="op">)</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">nights</span><span class="op">$</span><span class="va">night</span><span class="op">)</span><span class="op">]</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">0</span>, <span class="fl">0.3</span><span class="op">)</span></span>
@@ -1099,7 +1074,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_snick.html">theme_snick</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1116,7 +1091,7 @@
 <figcaption>Image: Itsramon, <a href="https://commons.wikimedia.org/wiki/File:Sony_Walkman02.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb53"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1979</span><span class="op">)</span></span>
 <span><span class="va">walkman</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"WM-2"</span>, <span class="st">"WM-F45 Sports"</span>, <span class="st">"WM-EX194 Mega Bass"</span><span class="op">)</span>, times <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>,</span>
 <span>  battery <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Alkaline"</span>, <span class="st">"Rechargeable"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>, hours <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">16</span>, <span class="fl">22</span>, <span class="fl">7</span>, <span class="fl">12</span>, <span class="fl">17</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">6</span>, <span class="fl">0</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
@@ -1140,7 +1115,7 @@
 <figcaption>Image: ZolHaj, <a href="https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 4.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
 <span><span class="va">bottles</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>flavor <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Cherry"</span>, <span class="st">"Orange"</span>, <span class="st">"Green punch"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">60</span><span class="op">)</span>,</span>
 <span>  levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Cherry"</span>, <span class="st">"Orange"</span>, <span class="st">"Green punch"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -1166,7 +1141,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Cps2000front.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1990</span><span class="op">)</span></span>
 <span><span class="va">shots</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>model <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SS 50"</span>, <span class="st">"CPS 2000"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">200</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">shots</span><span class="op">$</span><span class="va">feet</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">$</span><span class="va">model</span> <span class="op">==</span> <span class="st">"SS 50"</span>, <span class="fl">25</span>, <span class="fl">45</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">$</span><span class="va">model</span> <span class="op">==</span> <span class="st">"SS 50"</span>, <span class="fl">3</span>, <span class="fl">5.4</span><span class="op">)</span><span class="op">)</span></span>
@@ -1189,7 +1164,7 @@
 <figcaption>Image: theimpulsivebuy, <a href="https://commons.wikimedia.org/wiki/File:Burger_King_Frozen_Surge_(22789420399).jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 2.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb56"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1996</span><span class="op">)</span></span>
 <span><span class="va">teens</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>cans <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">2</span>, <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">teens</span><span class="op">$</span><span class="va">hours</span> <span class="op">&lt;-</span> <span class="fl">3</span> <span class="op">+</span> <span class="fl">1.5</span> <span class="op">*</span> <span class="va">teens</span><span class="op">$</span><span class="va">cans</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">2000</span>, <span class="fl">0</span>, <span class="fl">3</span><span class="op">)</span></span>
@@ -1206,7 +1181,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb57"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_surge.html">theme_surge</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1223,7 +1198,7 @@
 <figcaption>Image: Y2kcrazyjoker4, <a href="https://commons.wikimedia.org/wiki/File:Deluxe_Talkboy_on_table.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 4.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb58"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1999</span><span class="op">)</span></span>
 <span><span class="va">talkboy_clips</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  seconds <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html" class="external-link">rgamma</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">300</span>, shape <span class="op">=</span> <span class="fl">4</span>, rate <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, <span class="fl">1</span><span class="op">)</span></span>
@@ -1249,7 +1224,7 @@
 <figcaption>Image: Dex Vintage, <a href="https://commons.wikimedia.org/wiki/File:Various_Tamagotchi_virtual_pet_devices.png" class="external-link">Wikimedia Commons</a>, CC BY 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb59"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
 <span><span class="va">pets</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>care <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Neglected"</span>, <span class="st">"Pampered"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">150</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">pets</span><span class="op">$</span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Weibull.html" class="external-link">rweibull</a></span><span class="op">(</span><span class="fl">300</span>, shape <span class="op">=</span> <span class="fl">2.2</span>, scale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">pets</span><span class="op">$</span><span class="va">care</span> <span class="op">==</span> <span class="st">"Neglected"</span>, <span class="fl">6</span>, <span class="fl">21</span><span class="op">)</span><span class="op">)</span></span>
@@ -1272,7 +1247,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Tetrominoes_IJLO_STZ_Worlds.svg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb60"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1989</span><span class="op">)</span></span>
 <span><span class="va">games</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>player <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Casual"</span>, <span class="st">"Expert"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">80</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">games</span><span class="op">$</span><span class="va">lines</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/NegBinomial.html" class="external-link">rnbinom</a></span><span class="op">(</span><span class="fl">160</span>, size <span class="op">=</span> <span class="fl">5</span>, mu <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">games</span><span class="op">$</span><span class="va">player</span> <span class="op">==</span> <span class="st">"Casual"</span>, <span class="fl">25</span>, <span class="fl">120</span><span class="op">)</span><span class="op">)</span></span>
@@ -1289,7 +1264,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb61"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_tetris.html">theme_tetris</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1306,7 +1281,7 @@
 <figcaption>Image: Evan-Amos, <a href="https://commons.wikimedia.org/wiki/File:Tiger-RZone-Headset.jpg" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb62"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1993</span><span class="op">)</span></span>
 <span><span class="va">tries</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>try <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"First"</span>, <span class="st">"Second"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">100</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">tries</span><span class="op">$</span><span class="va">seconds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Lognormal.html" class="external-link">rlnorm</a></span><span class="op">(</span><span class="fl">200</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">tries</span><span class="op">$</span><span class="va">try</span> <span class="op">==</span> <span class="st">"First"</span>, <span class="fl">40</span>, <span class="fl">20</span><span class="op">)</span><span class="op">)</span>, <span class="fl">0.5</span><span class="op">)</span></span>
@@ -1324,7 +1299,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb63"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_rzone.html">theme_rzone</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1341,7 +1316,7 @@
 <figcaption>Image: <a href="https://commons.wikimedia.org/wiki/File:Titanic_in_color.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb64"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1997</span><span class="op">)</span></span>
 <span><span class="va">fans</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>age_group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Teen"</span>, <span class="st">"Adult"</span><span class="op">)</span>, <span class="fl">300</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
 <span>  viewings <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Once"</span>, <span class="st">"Twice"</span>, <span class="st">"3+ times"</span><span class="op">)</span>, <span class="fl">300</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
@@ -1364,7 +1339,7 @@
 <figcaption>Image: Ruben de Rijcke, <a href="https://commons.wikimedia.org/wiki/File:RIM_BlackBerry_950.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 4.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb65"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1998</span><span class="op">)</span></span>
 <span><span class="va">pages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>hour <span class="op">=</span> <span class="fl">7</span><span class="op">:</span><span class="fl">20</span><span class="op">)</span></span>
 <span><span class="va">pages</span><span class="op">$</span><span class="va">messages</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html" class="external-link">rpois</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">pages</span><span class="op">)</span>, <span class="fl">2</span> <span class="op">+</span> <span class="fl">10</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">dnorm</a></span><span class="op">(</span><span class="va">pages</span><span class="op">$</span><span class="va">hour</span>, <span class="fl">13</span>, <span class="fl">3</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">dnorm</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
@@ -1387,7 +1362,7 @@
 <figcaption>Image: Jan Křivka, <a href="https://commons.wikimedia.org/wiki/File:Interior.png" class="external-link">Wikimedia Commons</a>, public domain.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb66"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1996</span><span class="op">)</span></span>
 <span><span class="va">scenes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>scene <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Living room"</span>, <span class="st">"Garden"</span>, <span class="st">"Office"</span>, <span class="st">"Museum"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">40</span><span class="op">)</span>,</span>
 <span>  polygons <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">160</span>, <span class="fl">500</span>, <span class="fl">20000</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
@@ -1403,6 +1378,37 @@
 </div>
 </div>
 </div>
+</section><section class="level2"><h2 id="wired">WIRED<a class="anchor" aria-label="anchor" href="#wired"></a>
+</h2>
+<p><code><a href="../reference/theme_wired.html">theme_wired()</a></code> uses the WIRED (US) November/December 2024 “Big Interview” cover: a black background, a white frame, a bold Helvetica Neue title, and the cover’s red, blue, pink, gray, and steel blue marks. The cover is copyrighted, so it isn’t shown here. Below we simulate the lengths of 400 interviews in two formats.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">2024</span><span class="op">)</span></span>
+<span><span class="va">qa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">400</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">0.6</span></span>
+<span><span class="va">interviews</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">qa</span>, <span class="st">"Q&amp;A"</span>, <span class="st">"Profile"</span><span class="op">)</span>,</span>
+<span>  minutes <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">qa</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fl">45</span>, <span class="fl">10</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span><span class="fl">400</span>, <span class="fl">90</span>, <span class="fl">20</span><span class="op">)</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">interviews</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">minutes</span>, fill <span class="op">=</span> <span class="va">format</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">2</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"WIRED interviews"</span>, caption <span class="op">=</span> <span class="st">"Simulated data"</span>,</span>
+<span>       x <span class="op">=</span> <span class="st">"Interview length (minutes)"</span>, fill <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/theme_wired.html">theme_wired</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/wired-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_wired.html">theme_wired</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img src="themes_files/figure-html/wired-light-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
 </section><section class="level2"><h2 id="y2k">Y2K<a class="anchor" aria-label="anchor" href="#y2k"></a>
 </h2>
 <p><code><a href="../reference/theme_y2k.html">theme_y2k()</a></code>: LED red, terminal amber and green on black. Below we show how 300 households prepared for Y2K across three surveys.</p>
@@ -1411,7 +1417,7 @@
 <figcaption>Image: Bug de l’an 2000, <a href="https://commons.wikimedia.org/wiki/File:Bug_de_l%27an_2000.jpg" class="external-link">Wikimedia Commons</a>, CC BY-SA 3.0.</figcaption></figure>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb69"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">prep</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span>
 <span>  survey <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Jan"</span>, <span class="st">"Jul"</span>, <span class="st">"Dec"</span><span class="op">)</span>, each <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Jan"</span>, <span class="st">"Jul"</span>, <span class="st">"Dec"</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>  level <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Not worried"</span>, <span class="st">"Some supplies"</span>, <span class="st">"Bunker ready"</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span>,</span>
@@ -1430,7 +1436,7 @@
 </div>
 <p>With <code>mode = "light"</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb70"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_last_plot.html" class="external-link">last_plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="../reference/theme_y2k.html">theme_y2k</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">13</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span></span></code></pre></div>
 <div class="cell-output-display">
 <div>
@@ -1452,7 +1458,7 @@
 <li>DIN Condensed (<code><a href="../reference/theme_walkman.html">theme_walkman()</a></code>)</li>
 <li>Courier New (<code><a href="../reference/theme_oksoda.html">theme_oksoda()</a></code>)</li>
 <li>Brush Script (<code><a href="../reference/theme_talkboy.html">theme_talkboy()</a></code>)</li>
-<li>Futura (<code><a href="../reference/theme_crystalpepsi.html">theme_crystalpepsi()</a></code>)</li>
+<li>Helvetica Neue (<code><a href="../reference/theme_wired.html">theme_wired()</a></code>)</li>
 <li>Marker Felt (<code><a href="../reference/theme_orbitz.html">theme_orbitz()</a></code>)</li>
 <li>Times New Roman (<code><a href="../reference/theme_netscape.html">theme_netscape()</a></code>)</li>
 <li>Big Caslon (<code><a href="../reference/theme_titanic.html">theme_titanic()</a></code>)</li>
@@ -1491,19 +1497,19 @@
 </ul>
 <p>When a font file can’t be found, the theme falls back to <code>"sans"</code>, so the plots above still render on Linux. You can also pass any family you’ve registered with <code><a href="https://rdrr.io/pkg/sysfonts/man/font_add.html" class="external-link">sysfonts::font_add()</a></code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb71"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/theme_oksoda.html">theme_oksoda</a></span><span class="op">(</span>base_family <span class="op">=</span> <span class="st">"sans"</span>, title_family <span class="op">=</span> <span class="st">"sans"</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><section class="level2"><h2 id="using-a-theme-for-a-whole-chapter">Using a theme for a whole chapter<a class="anchor" aria-label="anchor" href="#using-a-theme-for-a-whole-chapter"></a>
 </h2>
 <p>Each chapter sets its theme once in the setup chunk with <code><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set()</a></code>, so the plotting code in the chapter doesn’t need a <code>theme_*()</code> call.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb72"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu">fmggp2</span><span class="fu">::</span><span class="fu"><a href="../reference/theme_oksoda.html">theme_oksoda</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 <p>The same works for the light version of a dark theme:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb72"><pre class="downlit sourceCode r">
+<div class="sourceCode cell-code" id="cb73"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/get_theme.html" class="external-link">theme_set</a></span><span class="op">(</span><span class="fu">fmggp2</span><span class="fu">::</span><span class="fu"><a href="../reference/theme_doom.html">theme_doom</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">15</span>, mode <span class="op">=</span> <span class="st">"light"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </section><script id="quarto-html-after-body" type="application/javascript">

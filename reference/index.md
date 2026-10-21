@@ -10,8 +10,8 @@
   : Talkboy theme
 - [`theme_blockbuster()`](https://mjfrigaard.github.io/fmggp2/reference/theme_blockbuster.md)
   : Blockbuster theme
-- [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
-  : Crystal Pepsi theme
+- [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)
+  : WIRED theme
 - [`theme_n64()`](https://mjfrigaard.github.io/fmggp2/reference/theme_n64.md)
   : Nintendo 64 theme
 - [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md)

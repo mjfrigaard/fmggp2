@@ -1,5 +1,19 @@
 # Changelog
 
+## fmggp2 0.64.0
+
+- New
+  [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md),
+  built from the WIRED (US) November/December 2024 cover: a black
+  background, a white frame and bold Helvetica Neue title, and red,
+  blue, pink, gray, and steel blue marks. `mode = "light"` gives a light
+  gray background, black text and frame, and red, blue, pink, navy, and
+  darker gray marks. The cover is copyrighted, so the vignette doesn’t
+  show it.
+- Removed `theme_crystalpepsi()`;
+  [`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)
+  replaces it in the density plots chapter.
+
 ## fmggp2 0.63.0
 
 - [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
@@ -166,7 +180,7 @@
   reference image. The book chapters that used them now use
   [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md),
   [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md),
-  [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md),
+  `theme_crystalpepsi()`,
   [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md),
   [`theme_koosh()`](https://mjfrigaard.github.io/fmggp2/reference/theme_koosh.md),
   [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md),
@@ -233,11 +247,10 @@
 
 ## fmggp2 0.50.0
 
-- New
-  [`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md):
-  Crystal Pepsi, with a clear bottle cream background, a navy frame,
-  Pepsi red and navy marks, and a Futura title. The palette is sampled
-  from “Crystal Pepsi” by Mike Mozart (CC BY 2.0).
+- New `theme_crystalpepsi()`: Crystal Pepsi, with a clear bottle cream
+  background, a navy frame, Pepsi red and navy marks, and a Futura
+  title. The palette is sampled from “Crystal Pepsi” by Mike Mozart (CC
+  BY 2.0).
 
 ## fmggp2 0.49.0
 

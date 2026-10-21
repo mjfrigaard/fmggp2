@@ -252,34 +252,6 @@ last_plot() + theme_consolewars(base_size = 13, mode = "light")
 
 ![](themes_files/figure-html/consolewars-light-1.png)
 
-## Crystal Pepsi
-
-[`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md)
-uses the clear bottle and its label: a cream background, a navy frame,
-Pepsi red and navy marks, and a Futura title. Below we simulate the ages
-of 400 people at a 1992 mall taste test as a mix of kids and parents.
-
-![](../reference/figures/theme_crystalpepsi/crystal-pepsi-29001084616.jpg)
-
-Image: Mike Mozart, [Wikimedia
-Commons](https://commons.wikimedia.org/wiki/File:Crystal_Pepsi_(29001084616).jpg),
-CC BY 2.0.
-
-``` r
-
-set.seed(1998)
-kid <- runif(400) < 0.65
-tasters <- data.frame(group = ifelse(kid, "Kid", "Parent"),
-  age = round(ifelse(kid, rnorm(400, 11, 2.5), rnorm(400, 37, 6))))
-ggplot(tasters, aes(x = age, fill = group)) +
-  geom_density(alpha = 2/3) +
-  labs(title = "Crystal Pepsi", caption = "Simulated data",
-       x = "Age (years)", fill = NULL) +
-  theme_crystalpepsi(base_size = 13)
-```
-
-![](themes_files/figure-html/crystalpepsi-1.png)
-
 ## CU-SeeMe
 
 [`theme_cuseeme()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuseeme.md)
@@ -1436,6 +1408,37 @@ ggplot(scenes, aes(x = polygons, y = seconds, color = scene)) +
 
 ![](themes_files/figure-html/vrml-1.png)
 
+## WIRED
+
+[`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md)
+uses the WIRED (US) November/December 2024 “Big Interview” cover: a
+black background, a white frame, a bold Helvetica Neue title, and the
+cover’s red, blue, pink, gray, and steel blue marks. The cover is
+copyrighted, so it isn’t shown here. Below we simulate the lengths of
+400 interviews in two formats.
+
+``` r
+
+set.seed(2024)
+qa <- runif(400) < 0.6
+interviews <- data.frame(format = ifelse(qa, "Q&A", "Profile"),
+  minutes = round(ifelse(qa, rnorm(400, 45, 10), rnorm(400, 90, 20))))
+ggplot(interviews, aes(x = minutes, fill = format)) +
+  geom_density(alpha = 2/3) +
+  labs(title = "WIRED interviews", caption = "Simulated data",
+       x = "Interview length (minutes)", fill = NULL) +
+  theme_wired(base_size = 13)
+```
+
+![](themes_files/figure-html/wired-1.png)
+
+``` r
+
+last_plot() + theme_wired(base_size = 13, mode = "light")
+```
+
+![](themes_files/figure-html/wired-light-1.png)
+
 ## Y2K
 
 [`theme_y2k()`](https://mjfrigaard.github.io/fmggp2/reference/theme_y2k.md):
@@ -1501,8 +1504,8 @@ title:
   ([`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md))
 - Brush Script
   ([`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md))
-- Futura
-  ([`theme_crystalpepsi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_crystalpepsi.md))
+- Helvetica Neue
+  ([`theme_wired()`](https://mjfrigaard.github.io/fmggp2/reference/theme_wired.md))
 - Marker Felt
   ([`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md))
 - Times New Roman
