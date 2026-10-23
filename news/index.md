@@ -1,5 +1,13 @@
 # Changelog
 
+## fmggp2 0.68.0
+
+- [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+  has a slightly darker green title and the dark
+  [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md)
+  has black strip text, so both now meet the contrast targets from
+  0.67.0.
+
 ## fmggp2 0.67.0
 
 - Text now meets a 4.5:1 contrast ratio against its background (3:1 for
