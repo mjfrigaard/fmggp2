@@ -106,7 +106,7 @@ batman_cols <- list(
     grid = "#DED6CD",
     text = "#392A0D",
     outline = "#F1EAE2",
-    fill = "#E96A23"
+    fill = "#D75A00"
   ),
   classic = c(
     background = "#C6C6C6",
@@ -144,6 +144,6 @@ batman_marks <- list(
   movie = c("#E96A23", "#F9BB2C", "#8C939B", "#A95B2B", "#F3D07F", "#F48E20"),
   classic = c("#58C0F9", "#FFFD62", "#000000", "#C6C6C6"),
   darknight = c("#FEFD55", "#94873D", "#535D79"),
-  movie_light = c("#E96A23", "#BF8600", "#899098", "#A95B2B", "#AD8C29", "#D97600"),
+  movie_light = c("#D75A00", "#935E00", "#899098", "#A95B2B", "#AD8C29", "#D97600"),
   darknight_light = c("#979700", "#94873D", "#535D79")
 )

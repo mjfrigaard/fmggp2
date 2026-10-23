@@ -27,7 +27,7 @@ showtext::showtext_auto()
 
 ## 3Com Audrey
 
-`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, a teal title, teal, navy, tan, brown, and aqua marks, and an Arial Rounded title. Below we simulate what 300 households used their Audrey for.
+`theme_audrey()` uses a 3Com Audrey on a kitchen counter: a white plastic background, a black tile frame, teal, navy, tan, brown, and aqua marks, and a teal Arial Rounded title. Below we simulate what 300 households used their Audrey for.
 
 ![Image: Andrew Turner, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:3Com_Audrey.jpg), CC BY 2.0.](../man/figures/theme_audrey/3com-audrey.jpg){width="60%" fig-align="center"}
 
@@ -207,7 +207,7 @@ ggplot(calls, aes(x = connection, y = fps, color = connection)) +
 
 ## CueCat
 
-`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, a red title, red, ink, LED orange, and putty marks, and a Marker Felt title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
+`theme_cuecat()` uses the :CueCat barcode scanner: a pale paper background, a putty frame, red, ink, LED orange, and putty marks, and a red Marker Felt title. Below we simulate weekly barcode scans after the free scanners shipped in 2000.
 
 ![Image: Shaddack, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:CueCat-upside.jpg), public domain.](../man/figures/theme_cuecat/cuecat-upside.jpg){width="60%" fig-align="center"}
 
@@ -248,7 +248,7 @@ last_plot() + theme_doom(base_size = 13, mode = "light")
 
 ## Fresh Prince
 
-`theme_freshprince()` uses the logo: graffiti greens on a pink glow, and its continuous fill runs from teal to lime. Below we simulate how often the Carlton dance shows up each season.
+`theme_freshprince()` uses The Fresh Prince of Bel-Air logo: graffiti greens on a pink glow, with a continuous fill that runs from teal to lime. Below we simulate how often the Carlton dance shows up each season.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Fresh_Prince_Bel_Aire_logo.png), public domain.](../man/figures/theme_freshprince/fresh-prince-bel-aire-logo.png){width="60%" fig-align="center"}
 
@@ -410,7 +410,7 @@ last_plot() + theme_hypercolor(base_size = 13, mode = "light")
 
 ## IBM Microdrive
 
-`theme_microdrive()` uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, a red title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New Roman title. Below we simulate photo file sizes from three digital cameras that wrote to a Microdrive.
+`theme_microdrive()` uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, IBM blue, red, navy, and Hitachi sky blue marks, and a red Times New Roman title. Below we simulate photo file sizes from three digital cameras that wrote to a Microdrive.
 
 ![Image: MiNe, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:IBM_340MB_Microdrive_and_Hitachi_1GB_Microdrive_sold_from_Weikeng_Industrial_20080327.jpg), CC BY 2.0.](../man/figures/theme_microdrive/ibm-340mb-microdrive.jpg){width="60%" fig-align="center"}
 
@@ -444,7 +444,7 @@ ggplot(games, aes(x = month, y = downloads, color = genre)) +
 
 ## Java applets
 
-`theme_javaapplet()` uses a Java AWT applet window: a gray window background, a gray frame, a white panel, red, blue, purple, and gray marks, and a blue Verdana title. Like the applet in the screenshot, below we simulate measurements with error bars and a fitted curve.
+`theme_javaapplet()` uses a Java AWT applet window: a gray window background, a gray frame, a white panel, red, blue, purple, and gray marks, and a blue Verdana title. Below we simulate measurements with error bars and a fitted curve, like the applet in the screenshot.
 
 ![Image: Audrius Meskauskas, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Java_applet.png), public domain.](../man/figures/theme_javaapplet/java-applet.png){width="60%" fig-align="center"}
 
@@ -506,7 +506,7 @@ ggplot(koosh_balls, aes(x = style, fill = style)) +
 
 ## Netscape
 
-`theme_netscape()`: the Netscape Navigator logo, with a night sky and teal, aurora green, sea glass, and deep teal marks, and a Times New Roman title.
+`theme_netscape()`: the Netscape Navigator logo, with a night sky background, teal, aurora green, sea glass, and deep teal marks, and a Times New Roman title. Below we simulate dial up speeds for three modems.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Netscape_Navigator_Icon.svg), CC0.](../man/figures/theme_netscape/netscape-navigator-icon.png){width="60%" fig-align="center"}
 
@@ -566,7 +566,7 @@ ggplot(servers, aes(x = year, y = n, fill = version)) +
 
 ## OK Soda
 
-`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars and title, and slate and brick accents, with a Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
+`theme_oksoda()` uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed silver, black ink, OK red bars, slate and brick accents, and an OK red Courier New title. Below we simulate one day of sales at 300 test market stores from a normal distribution.
 
 ![Image: TeemPlayer, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:OK_Soda_Original_4.jpg), CC BY-SA 3.0.](../man/figures/theme_oksoda/ok-soda-original-4.jpg){width="60%" fig-align="center"}
 
@@ -636,7 +636,7 @@ last_plot() + theme_oregontrail(base_size = 13, mode = "light")
 
 ## Palm Pilot
 
-`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a white title, a green LCD panel, ink, LCD green, plum, and teal marks, and a Futura title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
+`theme_palmpilot()` uses a PalmPilot Professional: a charcoal case background, a HotSync teal frame, a green LCD panel, ink, LCD green, plum, and teal marks, and a white Futura title. Below we simulate how Graffiti accuracy improves over a user's first ten weeks.
 
 ![Image: Museo8bits, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Palm_Pilot_Professional_01.JPG), CC BY-SA 3.0.](../man/figures/theme_palmpilot/palm-pilot-professional-01.jpg){width="40%" fig-align="center"}
 
@@ -773,7 +773,7 @@ ggplot(walkman, aes(x = hours, y = model)) +
 
 ## Squeezit
 
-`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we simulate the seconds it took to squeeze out three flavors from a gamma distribution.
+`theme_squeezit()` uses Squeezit bottles standing in gravel: a gravel background, a red frame and title, red, orange, green, pink, blue, and gold marks, and a Skia title. Below we use a gamma distribution to simulate the seconds it took to finish three flavors.
 
 ![Image: ZolHaj, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Squeezeit-flavours.jpg), CC BY-SA 4.0.](../man/figures/theme_squeezit/squeezeit-flavours.jpg){width="40%" fig-align="center"}
 
@@ -920,7 +920,7 @@ last_plot() + theme_rzone(base_size = 13, mode = "light")
 
 ## Titanic
 
-`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon title.
+`theme_titanic()`: the Vallejo Titanic Colors paint set (black, yellow, canvas, anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon title. Below we simulate how many times teens and adults saw the movie.
 
 ![Image: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Titanic_in_color.png), public domain.](../man/figures/theme_titanic/titanic-in-color.png){width="60%" fig-align="center"}
 
@@ -989,6 +989,8 @@ ggplot(interviews, aes(x = minutes, fill = format)) +
   theme_wired(base_size = 13)
 ```
 
+With `mode = "light"`:
+
 ```{r}
 #| label: wired-light
 last_plot() + theme_wired(base_size = 13, mode = "light")
@@ -1026,50 +1028,50 @@ last_plot() + theme_y2k(base_size = 13, mode = "light")
 
 These themes use Arial for the body text and a display font for the title:
 
-- Impact (`theme_blockbuster()`)
-- Arial Black (`theme_n64()` and `theme_freshprince()`)
-- Herculanum (`theme_jurassic()`)
-- Arial Rounded (`theme_happymeal()`)
-- Bradley Hand (`theme_pogs()`)
-- DIN Condensed (`theme_walkman()`)
-- Courier New (`theme_oksoda()`)
-- Brush Script (`theme_talkboy()`)
-- Helvetica Neue (`theme_wired()`)
-- Marker Felt (`theme_orbitz()`)
-- Times New Roman (`theme_netscape()`)
-- Big Caslon (`theme_titanic()`)
-- Arial Rounded (`theme_koosh()`)
-- Futura (`theme_tamagotchi()`)
-- Arial Black (`theme_supersoaker()`)
-- Trattatello (`theme_goosebumps()`)
-- Skia (`theme_squeezit()`)
-- Andale Mono (`theme_oregontrail()`)
-- Arial Rounded (`theme_aim()`)
-- Arial Narrow (`theme_rzone()`)
-- DIN Condensed (`theme_batman()`)
-- Arial Black (`theme_snick()`)
-- SignPainter (`theme_savedbythebell()`)
-- Gill Sans (`theme_hypercolor()`)
-- PT Mono (`theme_y2k()`)
-- Chalkboard (`theme_gushers()`)
-- Impact (`theme_doom()`)
-- Krungthep (`theme_consolewars()`)
-- American Typewriter (`theme_seinfeld()`)
-- Copperplate (`theme_powerrangers()`)
-- Rockwell (`theme_bopit()`)
-- Comic Sans MS (`theme_geocities()`)
-- DIN Alternate (`theme_surge()`)
-- Times New Roman (`theme_microdrive()`)
-- Gill Sans (`theme_netware()`)
-- Arial Narrow (`theme_j2me()`)
-- Futura (`theme_palmpilot()`)
-- Trebuchet MS (`theme_visor()`)
-- Arial Black (`theme_pager()`)
-- Tahoma (`theme_cuseeme()`)
-- Andale Mono (`theme_vrml()`)
-- Verdana (`theme_javaapplet()`)
-- Marker Felt (`theme_cuecat()`)
-- Arial Rounded (`theme_audrey()`)
+* Impact (`theme_blockbuster()`)
+* Arial Black (`theme_n64()` and `theme_freshprince()`)
+* Herculanum (`theme_jurassic()`)
+* Arial Rounded (`theme_happymeal()`)
+* Bradley Hand (`theme_pogs()`)
+* DIN Condensed (`theme_walkman()`)
+* Courier New (`theme_oksoda()`)
+* Brush Script (`theme_talkboy()`)
+* Helvetica Neue (`theme_wired()`)
+* Marker Felt (`theme_orbitz()`)
+* Times New Roman (`theme_netscape()`)
+* Big Caslon (`theme_titanic()`)
+* Arial Rounded (`theme_koosh()`)
+* Futura (`theme_tamagotchi()`)
+* Arial Black (`theme_supersoaker()`)
+* Trattatello (`theme_goosebumps()`)
+* Skia (`theme_squeezit()`)
+* Andale Mono (`theme_oregontrail()`)
+* Arial Rounded (`theme_aim()`)
+* Arial Narrow (`theme_rzone()`)
+* DIN Condensed (`theme_batman()`)
+* Arial Black (`theme_snick()`)
+* SignPainter (`theme_savedbythebell()`)
+* Gill Sans (`theme_hypercolor()`)
+* PT Mono (`theme_y2k()`)
+* Chalkboard (`theme_gushers()`)
+* Impact (`theme_doom()`)
+* Krungthep (`theme_consolewars()`)
+* American Typewriter (`theme_seinfeld()`)
+* Copperplate (`theme_powerrangers()`)
+* Rockwell (`theme_bopit()`)
+* Comic Sans MS (`theme_geocities()`)
+* DIN Alternate (`theme_surge()`)
+* Times New Roman (`theme_microdrive()`)
+* Gill Sans (`theme_netware()`)
+* Arial Narrow (`theme_j2me()`)
+* Futura (`theme_palmpilot()`)
+* Trebuchet MS (`theme_visor()`)
+* Arial Black (`theme_pager()`)
+* Tahoma (`theme_cuseeme()`)
+* Andale Mono (`theme_vrml()`)
+* Verdana (`theme_javaapplet()`)
+* Marker Felt (`theme_cuecat()`)
+* Arial Rounded (`theme_audrey()`)
 
 When a font file can't be found, the theme falls back to `"sans"`, so the plots above still render on Linux. You can also pass any family you've registered with `sysfonts::font_add()`:
 

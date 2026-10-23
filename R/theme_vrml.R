@@ -64,7 +64,7 @@ theme_vrml <- function(base_size = 15,
 
 # A VRML living room render
 vrml_cols <- c(
-  wall = "#7D6540",
+  wall = "#947C59",
   panel = "#E9E2D3",
   grid = "#C9BBA0",
   ink = "#151616",

@@ -11,7 +11,7 @@ test_that("theme_netscape returns a complete theme that builds a plot", {
 test_that("theme_netscape has a light mode", {
   thm <- theme_netscape(base_family = "sans", title_family = "sans", mode = "light")
   expect_equal(thm$plot.background$fill, "#DFEEEB")
-  expect_equal(thm$geom$fill, "#00757A")
+  expect_equal(thm$geom$fill, "#006267")
   p <- ggplot2::ggplot(data.frame(x = c("a", "b", "b")), ggplot2::aes(x = x, fill = x)) +
     ggplot2::geom_bar() +
     ggplot2::labs(title = "title")

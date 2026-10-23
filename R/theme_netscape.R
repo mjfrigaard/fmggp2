@@ -1,8 +1,8 @@
 #' Netscape theme
 #'
 #' A late 90s `ggplot2` theme modeled on the Netscape Navigator logo: a night
-#' sky background, a teal frame, a glowing teal title, and teal, aurora
-#' green, sea glass, and deep teal marks, and a Times New Roman title.
+#' sky background, a teal frame, teal, aurora green, sea glass, and deep teal
+#' marks, and a glowing teal Times New Roman title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
@@ -86,7 +86,7 @@ netscape_cols <- list(
     grid = "#C9DBD7",
     white = "#00342C",
     glow = "#007767",
-    teal = "#00757A",
+    teal = "#006267",
     aurora = "#17986F",
     sea = "#75988E",
     deep = "#1F7275"

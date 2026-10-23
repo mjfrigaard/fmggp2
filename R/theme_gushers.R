@@ -74,6 +74,6 @@ gushers_cols <- c(
   orange = "#E06A2A",
   pink = "#D16165",
   maroon = "#63291F",
-  moss = "#3A4D20",
+  moss = "#223700",
   gray = "#7B7A7B"
 )

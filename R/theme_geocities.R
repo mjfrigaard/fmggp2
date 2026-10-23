@@ -80,7 +80,7 @@ geocities_cols <- list(
     lime = "#00FF00",
     yellow = "#FFFF00",
     cyan = "#00FFFF",
-    magenta = "#FF00FF",
+    magenta = "#E600E6",
     red = "#FF3333",
     link = "#3366FF"
   ),
@@ -93,7 +93,7 @@ geocities_cols <- list(
     lime = "#005B00",
     yellow = "#6D6D00",
     cyan = "#00A2A2",
-    magenta = "#FF00FF",
+    magenta = "#E300E3",
     red = "#FF3333",
     link = "#3366FF"
   )

@@ -7,7 +7,7 @@
 font_path()
 }
 \value{
-Returns the file path to the font assets directory in the fmggp2 package.
+The file path to the font assets directory in the fmggp2 package.
 }
 \description{
 Retrieves the path to the font assets in the fmggp2 package.

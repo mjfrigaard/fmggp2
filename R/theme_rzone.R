@@ -75,12 +75,12 @@ rzone_cols <- list(
     grid = "#454345",
     visor = "#D7E4F4",
     red = "#F0382A",
-    purple = "#966EBB",
+    purple = "#9B73C0",
     pink = "#F9938A",
     plum = "#7F4E7D",
     rose = "#BF3A40",
     gray = "#848186",
-    strip = "#D7E4F4"
+    strip = "#1D1D1E"
   ),
   # the light palette keeps the dark role names
   light = c(

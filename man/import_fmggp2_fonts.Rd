@@ -7,26 +7,26 @@
 import_fmggp2_fonts()
 }
 \value{
-The function returns invisibly. If all fonts are installed, it simply prints
-an informational message. If fonts are missing and the import is successful, no
-output is generated.
+The function returns invisibly. If all fonts are installed, it prints
+an informational message. If fonts are missing and the import succeeds, it
+prints nothing.
 }
 \description{
-The function first calls \code{check_fonts} to determine if the necessary
-fonts are installed. If all fonts are installed, it prints a message and exits.
-If any fonts are missing, it retrieves the font assets path from \code{font_path} and
-uses \code{extrafont::font_import} to import the fonts into the system without prompting
-the user, following a procedure similar to the one used in the hrbrthemes package.
+The function first calls \code{check_fonts()} to see whether the
+fonts are installed. If they are, it prints a message and exits. If any
+fonts are missing, it gets the font assets path from \code{font_path()} and
+imports the fonts with \code{extrafont::font_import()} without prompting the
+user (similar to the approach in the \code{hrbrthemes} package).
 }
 \details{
-This function checks for the required Ubuntu fonts used in the fmggp2 package
-and imports them if they are not already installed.
+Checks for the Ubuntu fonts the fmggp2 package uses and imports them if
+they aren't already installed.
 }
 \section{Note}{
 
-The function is designed to work without user interaction. It assumes that the
-font files are present in the specified \code{assets} directory of the fmggp2 package.
-It is dependent on the \code{extrafont} package for the font import process.
+The function runs without user interaction. It assumes the font files are
+in the \code{assets} directory of the fmggp2 package, and it depends on
+\code{extrafont} to import them.
 }
 
 \examples{

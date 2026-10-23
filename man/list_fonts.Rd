@@ -7,11 +7,11 @@
 list_fonts(include_path = FALSE)
 }
 \arguments{
-\item{include_path}{Logical; if TRUE, the full paths of font files are returned.}
+\item{include_path}{Logical; if \code{TRUE}, the full paths of font files are returned.}
 }
 \value{
-A character vector containing the names of the font files.
-If include_path is TRUE, the paths will be included.
+A character vector of font file names. If \code{include_path} is
+\code{TRUE}, the paths are included.
 }
 \description{
 Lists all TrueType font files available in the fmggp2 package's assets directory.

@@ -45,7 +45,7 @@ theme_happymeal <- function(base_size = 15,
       axis.text = ggplot2::element_text(colour = cols[["white"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["yellow"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["red"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["brown"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["red"]], colour = NA),
       # discrete fills and colours

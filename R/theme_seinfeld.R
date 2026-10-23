@@ -90,15 +90,15 @@ seinfeld_cols <- list(
     grid = "#F1E6B8",
     text = "#0F0803",
     frame = "#0F0803",
-    title = "#EC1D2F",
-    strip = "#EC1D2F",
+    title = "#E9172B",
+    strip = "#E9172B",
     striptext = "#FFFFFF",
     outline = "#0F0803",
-    fill = "#EC1D2F"
+    fill = "#E9172B"
   )
 )
 
 seinfeld_marks <- list(
   dark = c("#F7D524", "#EC1D2F", "#2EB8CA", "#FFFFFF"),
-  light = c("#EC1D2F", "#2EB8CA", "#F7D524", "#0F0803")
+  light = c("#E9172B", "#2EB8CA", "#D6B500", "#0F0803")
 )

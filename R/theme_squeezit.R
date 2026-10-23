@@ -70,7 +70,7 @@ squeezit_cols <- c(
   ink = "#43332D",
   red = "#B21527",
   orange = "#BB5E03",
-  green = "#297819",
+  green = "#026400",
   pink = "#D36165",
   blue = "#4B9ACB",
   gold = "#BE974F"

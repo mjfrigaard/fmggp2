@@ -1,3 +1,10 @@
+# fmggp2 0.67.0
+
+* Text now meets a 4.5:1 contrast ratio against its background (3:1 for titles). `theme_supersoaker()` uses dark text on the orange background and green strip. `theme_vrml()` has a lighter wall, `theme_microdrive()` a slightly darker red, and `theme_freshprince()` a darker green title and olive subtitle and strip text. Strip text or strip fills changed in `theme_tamagotchi()`, `theme_happymeal()`, `theme_savedbythebell()`, `theme_talkboy()`, `theme_jurassic()`, and the dark versions of `theme_rzone()`, `theme_doom()`, `theme_consolewars()`, `theme_orbitz()`, and `theme_hypercolor()`. The `theme_gameboy()` subtitle uses the darkest green, and `theme_seinfeld(mode = "light")` uses a slightly darker red.
+* Marks that were hard to tell apart with red green color blindness now differ in lightness (hues are unchanged): `theme_batman()`, `theme_doom()`, `theme_netscape()`, `theme_orbitz()`, `theme_snick()`, and `theme_surge()` light versions, both `theme_geocities()` versions, `theme_snick()` and `theme_surge()` dark versions, and `theme_gushers()`, `theme_j2me()`, and `theme_squeezit()`.
+* Yellow marks that almost disappeared on light panels are darker in `theme_aim()`, `theme_pogs()`, `theme_seinfeld(mode = "light")`, and `theme_tamagotchi()`.
+* `theme_tetris()` and `theme_gameboy()` keep their original game colors, so some of their marks are still close under color blindness (Tetris) or against the panel (Game Boy). The `theme_freshprince()` lime mark is also still faint on the white panel.
+
 # fmggp2 0.66.0
 
 * The themes vignette now shows the WIRED cover for `theme_wired()`, linked from Wikipedia rather than stored in the package.

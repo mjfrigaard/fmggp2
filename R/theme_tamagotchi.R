@@ -45,7 +45,7 @@ theme_tamagotchi <- function(base_size = 15,
       panel.grid.minor = ggplot2::element_blank(),
       axis.text = ggplot2::element_text(colour = cols[["pixel"]]),
       axis.ticks = ggplot2::element_blank(),
-      strip.background = ggplot2::element_rect(fill = cols[["pink"]], colour = NA),
+      strip.background = ggplot2::element_rect(fill = cols[["pixel"]], colour = NA),
       strip.text = ggplot2::element_text(colour = cols[["egg"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["egg"]], colour = NA),
@@ -69,6 +69,6 @@ tamagotchi_cols <- c(
   pixel = "#2F3A2F",
   pink = "#E84A8A",
   teal = "#1F9E8F",
-  yellow = "#F2B807",
+  yellow = "#B07B00",
   white = "#FFFFFF"
 )

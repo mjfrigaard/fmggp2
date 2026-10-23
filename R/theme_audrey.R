@@ -1,8 +1,8 @@
 #' 3Com Audrey theme
 #'
 #' A `ggplot2` theme built from the 3Com Audrey internet appliance: a white
-#' plastic background, a black tile frame, a teal title, teal, navy, tan,
-#' brown, and aqua marks, and an Arial Rounded title.
+#' plastic background, a black tile frame, teal, navy, tan, brown, and aqua
+#' marks, and a teal Arial Rounded title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's

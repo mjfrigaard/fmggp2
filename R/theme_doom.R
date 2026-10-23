@@ -74,13 +74,13 @@ doom_cols <- list(
     floor = "#2B1A12",
     grid = "#4A2E20",
     bone = "#E8D5B5",
-    red = "#D63A1E",
+    red = "#E1452D",
     orange = "#F28C28",
     gunmetal = "#8A8D8F",
     armor = "#4CAF50",
     bluekey = "#2E6FD8",
     yellowkey = "#F2C14E",
-    strip = "#E8D5B5"
+    strip = "#1A0F0A"
   ),
   # the light palette keeps the dark role names
   light = c(
@@ -89,7 +89,7 @@ doom_cols <- list(
     grid = "#E9D3CB",
     bone = "#3F2619",
     red = "#CA2D01",
-    orange = "#DA7700",
+    orange = "#C26200",
     gunmetal = "#8A8D8F",
     armor = "#3FA443",
     bluekey = "#2E6FD8",

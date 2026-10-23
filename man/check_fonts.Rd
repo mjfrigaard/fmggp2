@@ -7,14 +7,14 @@
 check_fonts(font = NULL)
 }
 \arguments{
-\item{font}{Optionally specify an additional font to include in the check.}
+\item{font}{An optional additional font to include in the check.}
 }
 \value{
-Returns TRUE if all required fmggp2 fonts and the optionally specified font are installed.
-If not, calls check_assets to inform about missing fonts.
+\code{TRUE} if all required fmggp2 fonts (and \code{font}, if supplied) are installed.
+Otherwise, it calls \code{check_assets()} to report the missing fonts.
 }
 \description{
-Checks if the required fonts are installed in the system or not.
+Checks whether the required fonts are installed on the system.
 }
 \examples{
 check_fonts()

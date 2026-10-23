@@ -77,6 +77,8 @@ Every example in the book uses simulated data with a 90s throwback, and each dat
 | `theme_talkboy()` | Talkboy | Frequency polygons (recorded message lengths) |
 | `theme_fmggp2()` | Original book theme | Chapters not yet converted |
 
+The two graphs below use `theme_oksoda()` and `theme_talkboy()` with simulated data like the data in their chapters.
+
 ```{r}
 #| label: readme-oksoda
 #| message: false

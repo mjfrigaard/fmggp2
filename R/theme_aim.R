@@ -51,8 +51,8 @@ theme_aim <- function(base_size = 15,
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["window_gray"]], colour = NA),
       # discrete fills and colours
-      palette.fill.discrete = unname(cols[c("blue", "sky", "yellow", "slate")]),
-      palette.colour.discrete = unname(cols[c("blue", "sky", "yellow", "slate")]),
+      palette.fill.discrete = unname(cols[c("blue", "sky", "gold", "slate")]),
+      palette.colour.discrete = unname(cols[c("blue", "sky", "gold", "slate")]),
       # default marks
       geom = ggplot2::element_geom(ink = cols[["ink"]],
                                    paper = cols[["window"]],
@@ -71,5 +71,6 @@ aim_cols <- c(
   ink = "#13151D",
   sky = "#396AE1",
   yellow = "#F1D359",
+  gold = "#D3B62A",
   slate = "#525F71"
 )

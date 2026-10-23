@@ -24,8 +24,8 @@ A \code{ggplot2} theme object.
 }
 \description{
 A \code{ggplot2} theme built from IBM and Hitachi Microdrive cards: a tan desk
-background, a black frame, a red title, IBM blue, red, navy, and Hitachi sky
-blue marks, and a Times New Roman title.
+background, a black frame, IBM blue, red, navy, and Hitachi sky blue marks,
+and a red Times New Roman title.
 }
 \examples{
 library(ggplot2)

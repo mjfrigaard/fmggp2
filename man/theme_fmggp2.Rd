@@ -15,38 +15,35 @@ theme_fmggp2(
 \item{base_size}{The base font size for text elements. Defaults to 15.}
 
 \item{base_family}{The base font family for text elements. Defaults to
-NULL.}
+\code{"Ubuntu"}.}
 
 \item{base_line_size}{The default size for line elements, calculated as a
-proportion of the base_size. Defaults to base_size / 22.}
+proportion of \code{base_size}. Defaults to \code{base_size / 22}.}
 
 \item{base_rect_size}{The default size for rectangle elements, calculated
-as a proportion of the base_size. Defaults to base_size / 22.}
+as a proportion of \code{base_size}. Defaults to \code{base_size / 22}.}
 }
 \value{
-A ggplot2 theme object that can be applied to ggplot2 charts to
-enforce the fmggp2 style.
+A \code{ggplot2} theme object with the fmggp2 style.
 }
 \description{
-Applies a custom styling theme for ggplot2 charts, inspired by
-theme_minimal() and theme_void() from ggplot2, with adjustments to panels,
-margins, and legends to incorporate the Ubuntu font and customized visual
-elements.
+The original \code{ggplot2} theme for the book. It borrows from
+\code{theme_minimal()} and \code{theme_void()}, then adjusts the panels, margins, and
+legends and sets the text in the Ubuntu font.
 }
 \section{Theme Elements}{
 
-The function defines a suite of ggplot2 theme settings that include text,
-axis, panel, and legend formatting:
+The theme sets the text, axis, panel, and legend formatting:
 \itemize{
-\item Text elements use the specified \code{base_family} font
-\item The size is set relative to the \code{base_size} parameter
+\item Text elements use the \code{base_family} font
+\item Text sizes are set relative to \code{base_size}
 \item Axis titles and text are positioned and sized for clarity
 \item Tick marks are removed for a cleaner look
-\item Panel grids are defined with subtle lines
-\item Strip text and background are styled to differentiate facets
+\item Panel grids use subtle lines
+\item Strip text and backgrounds are styled to separate facets
 \item The plot title, subtitle, caption, and tag are formatted for prominence and readability
-\item Legend aesthetics are simplified, with font sizes relative to the base size and unobtrusive margins
-\item The overall plot margin is adjusted for a balanced layout.
+\item Legends are simplified, with font sizes relative to \code{base_size} and unobtrusive margins
+\item The plot margin is adjusted for a balanced layout
 }
 }
 

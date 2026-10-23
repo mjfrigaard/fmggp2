@@ -1,8 +1,8 @@
 #' IBM Microdrive theme
 #'
 #' A `ggplot2` theme built from IBM and Hitachi Microdrive cards: a tan desk
-#' background, a black frame, a red title, IBM blue, red, navy, and Hitachi sky
-#' blue marks, and a Times New Roman title.
+#' background, a black frame, IBM blue, red, navy, and Hitachi sky blue marks,
+#' and a red Times New Roman title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -69,7 +69,7 @@ microdrive_cols <- c(
   grid = "#B8A694",
   ink = "#1F1F1E",
   blue = "#3D6BD6",
-  red = "#DB2033",
+  red = "#CE0525",
   navy = "#344D60",
   sky = "#75A2C3"
 )

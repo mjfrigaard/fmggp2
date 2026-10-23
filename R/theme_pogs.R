@@ -70,7 +70,7 @@ pogs_cols <- c(
   navy = "#343F5D",
   red = "#CA1E26",
   blue = "#06BAF3",
-  yellow = "#E2DC54",
+  yellow = "#B4AE00",
   teal = "#239E8C",
   purple = "#6F627C",
   rust = "#713F2A"

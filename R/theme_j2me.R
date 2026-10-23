@@ -68,7 +68,7 @@ j2me_cols <- c(
   screen = "#C7D9E1",
   grid = "#A9BEC8",
   silver = "#9A9791",
-  red = "#A7191F",
+  red = "#960000",
   tan = "#BF9155",
   brown = "#6C3C24"
 )

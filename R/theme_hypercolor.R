@@ -74,7 +74,7 @@ hypercolor_cols <- list(
     shirt = "#3A1552",
     grid = "#5A2D75",
     white = "#FDF6FF",
-    magenta = "#E0218A",
+    magenta = "#D90F84",
     orange = "#FF8C1A",
     purple = "#8E4BE0",
     blue = "#1F9BFF",

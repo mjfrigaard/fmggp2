@@ -24,8 +24,8 @@ A \code{ggplot2} theme object.
 }
 \description{
 A \code{ggplot2} theme built from a PalmPilot Professional: a charcoal case
-background, a teal frame, a white title, a green LCD panel, ink, LCD green,
-plum, and teal marks, and a Futura title.
+background, a teal frame, a green LCD panel, ink, LCD green, plum, and
+teal marks, and a white Futura title.
 }
 \examples{
 library(ggplot2)

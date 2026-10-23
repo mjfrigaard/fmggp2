@@ -88,9 +88,9 @@ snick_cols <- list(
     couch = "#FBFAFF",
     grid = "#D9D4E9",
     orange = "#B54600",
-    slime = "#66A000",
+    slime = "#3B7700",
     purple = "#AD79E5",
-    blue = "#0099D8",
+    blue = "#0085C3",
     yellow = "#B58C00",
     pink = "#F6569A",
     white = "#2F2843"

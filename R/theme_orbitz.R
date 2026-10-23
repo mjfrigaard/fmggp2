@@ -76,12 +76,12 @@ orbitz_cols <- list(
     grid = "#3A3A36",
     cream = "#E2E0DB",
     gold = "#EFBA09",
-    magenta = "#DB086D",
+    magenta = "#E21D73",
     sand = "#E0C66C",
     maroon = "#A20549",
     amber = "#B27F20",
     navy = "#163F6F",
-    strip = "#E2E0DB"
+    strip = "#070506"
   ),
   # the light palette keeps the dark role names
   light = c(
@@ -91,7 +91,7 @@ orbitz_cols <- list(
     cream = "#372A0B",
     gold = "#8D5F00",
     magenta = "#CF0063",
-    sand = "#A99020",
+    sand = "#8E7600",
     maroon = "#A20549",
     amber = "#B27F20",
     navy = "#163F6F",

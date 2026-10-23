@@ -91,8 +91,8 @@ surge_cols <- list(
     grid = "#D1DACD",
     fizz = "#1E3110",
     green = "#197A00",
-    red = "#E41E26",
-    orange = "#EC6A00",
+    red = "#EA272E",
+    orange = "#BB3F00",
     yellow = "#A89100",
     dark = "#1B5E20",
     bright = "#6CA000"

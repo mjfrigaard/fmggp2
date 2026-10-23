@@ -52,7 +52,7 @@ theme_jurassic <- function(base_size = 15,
       axis.text = ggplot2::element_text(colour = cols[["cream"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["red"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["black"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["strip"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours
@@ -77,7 +77,8 @@ jurassic_cols <- list(
     yellow = "#F2D900",
     orange = "#C38F32",
     cream = "#F2E7D8",
-    tan = "#D0BC94"
+    tan = "#D0BC94",
+    strip = "#F2E7D8"
   ),
   # the light palette keeps the dark role names
   light = c(
@@ -88,6 +89,7 @@ jurassic_cols <- list(
     yellow = "#7C6700",
     orange = "#BB8724",
     cream = "#322C07",
-    tan = "#A28F65"
+    tan = "#A28F65",
+    strip = "#EEEBE1"
   )
 )

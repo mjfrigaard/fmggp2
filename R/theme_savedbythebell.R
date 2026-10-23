@@ -1,9 +1,9 @@
 #' Saved by the Bell theme
 #'
 #' A `ggplot2` theme built from the Saved by the Bell logo: a black
-#' background with a royal blue frame, a yellow title, a white classroom
-#' panel, sky blue, pink, yellow, orange, royal blue, and navy marks, and a
-#' SignPainter title.
+#' background with a royal blue frame, a white classroom panel, sky blue,
+#' pink, yellow, orange, royal blue, and navy marks, and a yellow SignPainter
+#' title.
 #'
 #' @param base_size Base font size. Defaults to `15`.
 #' @param base_family Base font family. Defaults to Arial when it's
@@ -47,7 +47,7 @@ theme_savedbythebell <- function(base_size = 15,
       axis.text = ggplot2::element_text(colour = cols[["chalk"]]),
       axis.ticks = ggplot2::element_blank(),
       strip.background = ggplot2::element_rect(fill = cols[["sky"]], colour = NA),
-      strip.text = ggplot2::element_text(colour = cols[["white"]], face = "bold"),
+      strip.text = ggplot2::element_text(colour = cols[["black"]], face = "bold"),
       legend.background = ggplot2::element_blank(),
       legend.key = ggplot2::element_rect(fill = cols[["black"]], colour = NA),
       # discrete fills and colours

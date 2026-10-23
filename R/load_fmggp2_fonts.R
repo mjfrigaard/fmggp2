@@ -1,26 +1,24 @@
 #' Load Ubuntu Fonts for fmggp2 Package
 #'
-#' This function imports the Ubuntu font from the 'fmggp2' package assets,
-#' adds it to the available system fonts, and sets it up for use with
-#' graphing tools by enabling automatic font loading via 'showtext'.
+#' Imports the Ubuntu font from the `fmggp2` package assets, adds it to the
+#' available system fonts, and turns on automatic font loading with
+#' `showtext` so graphs can use it.
 #'
-#' @return Invisible NULL. The function is called for its side effects.
+#' @return Invisible `NULL`. The function is called for its side effects.
 #'
 #' @export
 #'
 #' @section Fonts Import:
-#' The fonts are imported using the `font_import` function from the `extrafont`
-#' package, which allows for the use of fonts in PDF and PostScript graphics.
-#' The function does not prompt the user during the font import process.
+#' `extrafont::font_import()` imports the fonts, which makes them available
+#' in PDF and PostScript graphics. The import runs without prompting the user.
 #'
 #' @section Fonts Addition:
 #' Once imported, the Ubuntu font is added to the available system fonts with
-#' the `font_add` function from the `sysfonts` package.
+#' `sysfonts::font_add()`.
 #'
 #' @section Enabling Font in Graphics:
-#' Finally, the `showtext_auto` function from the `showtext` package is used
-#' to automatically use the font in graphs, facilitating the immediate
-#' application of the font in graphical devices.
+#' Finally, `showtext::showtext_auto()` turns on automatic font rendering, so
+#' graphics devices use the font right away.
 #'
 #' @seealso \code{\link[extrafont]{font_import}},
 #' \code{\link[sysfonts]{font_add}},
@@ -43,14 +41,14 @@ load_fmggp2_fonts <- function() {
 
 #' Check Assets in Specified Directory
 #'
-#' Verifies the presence of required assets in a specified directory relative to the fmggp2 package's assets directory.
+#' Checks a directory for the required assets, relative to the fmggp2 package's assets directory.
 #'
 #' @param dir The directory path to check for required assets.
-#' @param include_path Logical; if TRUE, the full names of directories are included.
-#' @param recursive Logical; if TRUE, the directory check is recursive.
+#' @param include_path Logical; if `TRUE`, the full names of directories are included.
+#' @param recursive Logical; if `TRUE`, the directory check is recursive.
 #'
-#' @return Returns TRUE if the assets in the specified directory match the package's assets.
-#' If not, it informs about the missing font files and suggests actions to the user.
+#' @return `TRUE` if the assets in `dir` match the package's assets.
+#' Otherwise, it lists the missing font files and tells the user how to install them.
 #'
 #' @export
 #'
@@ -76,10 +74,10 @@ check_assets <- function(dir, include_path = FALSE, recursive = FALSE) {
 #'
 #' Lists all TrueType font files available in the fmggp2 package's assets directory.
 #'
-#' @param include_path Logical; if TRUE, the full paths of font files are returned.
+#' @param include_path Logical; if `TRUE`, the full paths of font files are returned.
 #'
-#' @return A character vector containing the names of the font files.
-#' If include_path is TRUE, the paths will be included.
+#' @return A character vector of font file names. If `include_path` is
+#' `TRUE`, the paths are included.
 #'
 #' @export
 #'
@@ -116,12 +114,12 @@ list_fonts <- function(include_path = FALSE) {
 
 #' Check for Required Fonts
 #'
-#' Checks if the required fonts are installed in the system or not.
+#' Checks whether the required fonts are installed on the system.
 #'
-#' @param font Optionally specify an additional font to include in the check.
+#' @param font An optional additional font to include in the check.
 #'
-#' @return Returns TRUE if all required fmggp2 fonts and the optionally specified font are installed.
-#' If not, calls check_assets to inform about missing fonts.
+#' @return `TRUE` if all required fmggp2 fonts (and `font`, if supplied) are installed.
+#' Otherwise, it calls `check_assets()` to report the missing fonts.
 #'
 #' @export
 #'
@@ -146,7 +144,7 @@ check_fonts <- function(font = NULL) {
 #'
 #' Retrieves the path to the font assets in the fmggp2 package.
 #'
-#' @return Returns the file path to the font assets directory in the fmggp2 package.
+#' @return The file path to the font assets directory in the fmggp2 package.
 #'
 #' @export
 #'
@@ -158,13 +156,13 @@ font_path <- function() {
 
 #' Add Fonts to the System
 #'
-#' Adds specified TrueType fonts to the available system fonts from the fmggp2 package.
+#' Adds TrueType fonts from the fmggp2 package to the available system fonts.
 #'
 #' @param font The name of the font to add to the system.
-#' @param ... Additional arguments passed to sysfonts::font_add.
+#' @param ... Additional arguments passed to `sysfonts::font_add()`.
 #'
-#' @return Invisibly returns NULL if the font is already installed or after the font is added.
-#' If the font is not found, an error message is displayed and the function is aborted.
+#' @return Invisibly returns `NULL` if the font is already installed or after the font is added.
+#' If the font isn't found, the function displays an error message and aborts.
 #'
 #' @export
 #'
@@ -204,25 +202,25 @@ add_fonts <- function(font, ...) {
 
 #' Import fmggp2 Package Fonts
 #'
-#' This function checks for the required Ubuntu fonts used in the fmggp2 package
-#' and imports them if they are not already installed.
+#' Checks for the Ubuntu fonts the fmggp2 package uses and imports them if
+#' they aren't already installed.
 #'
-#' @description The function first calls `check_fonts` to determine if the necessary
-#' fonts are installed. If all fonts are installed, it prints a message and exits.
-#' If any fonts are missing, it retrieves the font assets path from `font_path` and
-#' uses `extrafont::font_import` to import the fonts into the system without prompting
-#' the user, following a procedure similar to the one used in the hrbrthemes package.
+#' @description The function first calls `check_fonts()` to see whether the
+#' fonts are installed. If they are, it prints a message and exits. If any
+#' fonts are missing, it gets the font assets path from `font_path()` and
+#' imports the fonts with `extrafont::font_import()` without prompting the
+#' user (similar to the approach in the `hrbrthemes` package).
 #'
-#' @return The function returns invisibly. If all fonts are installed, it simply prints
-#' an informational message. If fonts are missing and the import is successful, no
-#' output is generated.
+#' @return The function returns invisibly. If all fonts are installed, it prints
+#' an informational message. If fonts are missing and the import succeeds, it
+#' prints nothing.
 #'
 #' @export
 #'
 #' @section Note:
-#' The function is designed to work without user interaction. It assumes that the
-#' font files are present in the specified `assets` directory of the fmggp2 package.
-#' It is dependent on the `extrafont` package for the font import process.
+#' The function runs without user interaction. It assumes the font files are
+#' in the `assets` directory of the fmggp2 package, and it depends on
+#' `extrafont` to import them.
 #'
 #' @examples
 #' import_fmggp2_fonts()

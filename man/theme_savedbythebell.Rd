@@ -24,9 +24,9 @@ A \code{ggplot2} theme object.
 }
 \description{
 A \code{ggplot2} theme built from the Saved by the Bell logo: a black
-background with a royal blue frame, a yellow title, a white classroom
-panel, sky blue, pink, yellow, orange, royal blue, and navy marks, and a
-SignPainter title.
+background with a royal blue frame, a white classroom panel, sky blue,
+pink, yellow, orange, royal blue, and navy marks, and a yellow SignPainter
+title.
 }
 \examples{
 library(ggplot2)

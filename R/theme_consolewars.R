@@ -1,9 +1,8 @@
 #' Console wars theme
 #'
 #' A `ggplot2` theme built from the Sega vs. Nintendo console wars: a
-#' charcoal background, a Sega blue frame, a Nintendo red title, Sega
-#' blue, Nintendo red, Super Nintendo purple, gray, and gold marks, and a
-#' Krungthep title.
+#' charcoal background, a Sega blue frame, Sega blue, Nintendo red, Super
+#' Nintendo purple, gray, and gold marks, and a Nintendo red Krungthep title.
 #'
 #' Use `mode = "light"` for a light background with darker text and marks.
 #'
@@ -75,12 +74,12 @@ consolewars_cols <- list(
     screen = "#2A2A2A",
     grid = "#444444",
     white = "#EEEEEE",
-    sega = "#3D7BFF",
+    sega = "#427EFF",
     nintendo = "#E60012",
     snes = "#9B8CF2",
     gray = "#B0B0B0",
     gold = "#FFD700",
-    strip = "#EEEEEE"
+    strip = "#1C1C1C"
   ),
   # the light palette keeps the dark role names
   light = c(

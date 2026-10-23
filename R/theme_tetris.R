@@ -1,9 +1,9 @@
 #' Tetris theme
 #'
 #' A late 90s `ggplot2` theme modeled on Tetris: a black well, a cyan frame,
-#' a yellow title, the seven tetromino colors (cyan, yellow, purple, green,
-#' red, blue, and orange) as marks, and the pixel font Press Start 2P (bundled
-#' with the package) for the title.
+#' the seven tetromino colors (cyan, yellow, purple, green, red, blue, and
+#' orange) as marks, and a yellow title in the pixel font Press Start 2P
+#' (bundled with the package).
 #'
 #' Use `mode = "light"` for a light gray background with dark text, a blue
 #' title, and darker cyan, yellow, green, and orange marks.

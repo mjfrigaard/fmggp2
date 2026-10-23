@@ -31,7 +31,7 @@ theme_gameboy <- function(base_size = 15, base_family = gameboy_font()) {
       plot.title.position = "plot",
       plot.title = ggplot2::element_text(size = ggplot2::rel(1.5),
                                          margin = ggplot2::margin(0, 0, 6, 0)),
-      plot.subtitle = ggplot2::element_text(colour = cols[["dark"]],
+      plot.subtitle = ggplot2::element_text(colour = cols[["darkest"]],
                                             margin = ggplot2::margin(0, 0, 8, 0)),
       axis.text = ggplot2::element_text(colour = cols[["darkest"]]),
       axis.ticks = ggplot2::element_blank(),

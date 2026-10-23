@@ -27,9 +27,8 @@ A \code{ggplot2} theme object.
 }
 \description{
 A \code{ggplot2} theme built from the Sega vs. Nintendo console wars: a
-charcoal background, a Sega blue frame, a Nintendo red title, Sega
-blue, Nintendo red, Super Nintendo purple, gray, and gold marks, and a
-Krungthep title.
+charcoal background, a Sega blue frame, Sega blue, Nintendo red, Super
+Nintendo purple, gray, and gold marks, and a Nintendo red Krungthep title.
 }
 \details{
 Use \code{mode = "light"} for a light background with darker text and marks.
