@@ -1,3 +1,7 @@
+# fmggp2 0.68.0
+
+* `theme_freshprince()` has a slightly darker green title and the dark `theme_rzone()` has black strip text, so both now meet the contrast targets from 0.67.0.
+
 # fmggp2 0.67.0
 
 * Text now meets a 4.5:1 contrast ratio against its background (3:1 for titles). `theme_supersoaker()` uses dark text on the orange background and green strip. `theme_vrml()` has a lighter wall, `theme_microdrive()` a slightly darker red, and `theme_freshprince()` a darker green title and olive subtitle and strip text. Strip text or strip fills changed in `theme_tamagotchi()`, `theme_happymeal()`, `theme_savedbythebell()`, `theme_talkboy()`, `theme_jurassic()`, and the dark versions of `theme_rzone()`, `theme_doom()`, `theme_consolewars()`, `theme_orbitz()`, and `theme_hypercolor()`. The `theme_gameboy()` subtitle uses the darkest green, and `theme_seinfeld(mode = "light")` uses a slightly darker red.

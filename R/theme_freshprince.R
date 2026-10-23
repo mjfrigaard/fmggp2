@@ -72,7 +72,7 @@ freshprince_cols <- c(
   panel = "#FFFFFF",
   grid = "#F4BDE3",
   green = "#3CD039",
-  title = "#009500",
+  title = "#009200",
   lime = "#BCF22A",
   teal = "#33B6B7",
   olive = "#3A4D21"
