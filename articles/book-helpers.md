@@ -18,7 +18,7 @@ and
 print the markdown for a [Quarto
 callout](https://quarto.org/docs/authoring/callouts.html). They return
 nothing; the markdown is the side effect. That means you’ll need
-`results: asis` in the chunk options, otherwise Quarto shows the raw
+`results: asis` in the chunk options; otherwise, Quarto shows the raw
 markdown instead of the callout.
 
 ### `co_box()`

@@ -1,8 +1,8 @@
 # IBM Microdrive theme
 
 A `ggplot2` theme built from IBM and Hitachi Microdrive cards: a tan
-desk background, a black frame, a red title, IBM blue, red, navy, and
-Hitachi sky blue marks, and a Times New Roman title.
+desk background, a black frame, IBM blue, red, navy, and Hitachi sky
+blue marks, and a red Times New Roman title.
 
 ## Usage
 

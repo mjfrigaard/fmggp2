@@ -22,9 +22,9 @@ showtext::showtext_auto()
 
 [`theme_audrey()`](https://mjfrigaard.github.io/fmggp2/reference/theme_audrey.md)
 uses a 3Com Audrey on a kitchen counter: a white plastic background, a
-black tile frame, a teal title, teal, navy, tan, brown, and aqua marks,
-and an Arial Rounded title. Below we simulate what 300 households used
-their Audrey for.
+black tile frame, teal, navy, tan, brown, and aqua marks, and a teal
+Arial Rounded title. Below we simulate what 300 households used their
+Audrey for.
 
 ![](../reference/figures/theme_audrey/3com-audrey.jpg)
 
@@ -283,9 +283,9 @@ ggplot(calls, aes(x = connection, y = fps, color = connection)) +
 
 [`theme_cuecat()`](https://mjfrigaard.github.io/fmggp2/reference/theme_cuecat.md)
 uses the :CueCat barcode scanner: a pale paper background, a putty
-frame, a red title, red, ink, LED orange, and putty marks, and a Marker
-Felt title. Below we simulate weekly barcode scans after the free
-scanners shipped in 2000.
+frame, red, ink, LED orange, and putty marks, and a red Marker Felt
+title. Below we simulate weekly barcode scans after the free scanners
+shipped in 2000.
 
 ![](../reference/figures/theme_cuecat/cuecat-upside.jpg)
 
@@ -343,9 +343,9 @@ last_plot() + theme_doom(base_size = 13, mode = "light")
 ## Fresh Prince
 
 [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
-uses the logo: graffiti greens on a pink glow, and its continuous fill
-runs from teal to lime. Below we simulate how often the Carlton dance
-shows up each season.
+uses The Fresh Prince of Bel-Air logo: graffiti greens on a pink glow,
+with a continuous fill that runs from teal to lime. Below we simulate
+how often the Carlton dance shows up each season.
 
 ![](../reference/figures/theme_freshprince/fresh-prince-bel-aire-logo.png)
 
@@ -578,10 +578,10 @@ last_plot() + theme_hypercolor(base_size = 13, mode = "light")
 ## IBM Microdrive
 
 [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md)
-uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, a red
-title, IBM blue, red, navy, and Hitachi sky blue marks, and a Times New
-Roman title. Below we simulate photo file sizes from three digital
-cameras that wrote to a Microdrive.
+uses an IBM and a Hitachi Microdrive on a tan desk: a black frame, IBM
+blue, red, navy, and Hitachi sky blue marks, and a red Times New Roman
+title. Below we simulate photo file sizes from three digital cameras
+that wrote to a Microdrive.
 
 ![](../reference/figures/theme_microdrive/ibm-340mb-microdrive.jpg)
 
@@ -634,8 +634,8 @@ ggplot(games, aes(x = month, y = downloads, color = genre)) +
 [`theme_javaapplet()`](https://mjfrigaard.github.io/fmggp2/reference/theme_javaapplet.md)
 uses a Java AWT applet window: a gray window background, a gray frame, a
 white panel, red, blue, purple, and gray marks, and a blue Verdana
-title. Like the applet in the screenshot, below we simulate measurements
-with error bars and a fitted curve.
+title. Below we simulate measurements with error bars and a fitted
+curve, like the applet in the screenshot.
 
 ![](../reference/figures/theme_javaapplet/java-applet.png)
 
@@ -724,8 +724,9 @@ ggplot(koosh_balls, aes(x = style, fill = style)) +
 ## Netscape
 
 [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md):
-the Netscape Navigator logo, with a night sky and teal, aurora green,
-sea glass, and deep teal marks, and a Times New Roman title.
+the Netscape Navigator logo, with a night sky background, teal, aurora
+green, sea glass, and deep teal marks, and a Times New Roman title.
+Below we simulate dial up speeds for three modems.
 
 ![](../reference/figures/theme_netscape/netscape-navigator-icon.png)
 
@@ -813,9 +814,9 @@ ggplot(servers, aes(x = year, y = n, fill = version)) +
 
 [`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md)
 uses the gray comic book cans Coca-Cola sold from 1993 to 1995: brushed
-silver, black ink, OK red bars and title, and slate and brick accents,
-with a Courier New title. Below we simulate one day of sales at 300 test
-market stores from a normal distribution.
+silver, black ink, OK red bars, slate and brick accents, and an OK red
+Courier New title. Below we simulate one day of sales at 300 test market
+stores from a normal distribution.
 
 ![](../reference/figures/theme_oksoda/ok-soda-original-4.jpg)
 
@@ -916,9 +917,9 @@ last_plot() + theme_oregontrail(base_size = 13, mode = "light")
 
 [`theme_palmpilot()`](https://mjfrigaard.github.io/fmggp2/reference/theme_palmpilot.md)
 uses a PalmPilot Professional: a charcoal case background, a HotSync
-teal frame, a white title, a green LCD panel, ink, LCD green, plum, and
-teal marks, and a Futura title. Below we simulate how Graffiti accuracy
-improves over a user’s first ten weeks.
+teal frame, a green LCD panel, ink, LCD green, plum, and teal marks, and
+a white Futura title. Below we simulate how Graffiti accuracy improves
+over a user’s first ten weeks.
 
 ![](../reference/figures/theme_palmpilot/palm-pilot-professional-01.jpg)
 
@@ -1118,8 +1119,8 @@ ggplot(walkman, aes(x = hours, y = model)) +
 [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md)
 uses Squeezit bottles standing in gravel: a gravel background, a red
 frame and title, red, orange, green, pink, blue, and gold marks, and a
-Skia title. Below we simulate the seconds it took to squeeze out three
-flavors from a gamma distribution.
+Skia title. Below we use a gamma distribution to simulate the seconds it
+took to finish three flavors.
 
 ![](../reference/figures/theme_squeezit/squeezeit-flavours.jpg)
 
@@ -1333,7 +1334,7 @@ last_plot() + theme_rzone(base_size = 13, mode = "light")
 [`theme_titanic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_titanic.md):
 the Vallejo Titanic Colors paint set (black, yellow, canvas,
 anti-fouling red, faded yellow, stone, and wood deck) with a Big Caslon
-title.
+title. Below we simulate how many times teens and adults saw the movie.
 
 ![](../reference/figures/theme_titanic/titanic-in-color.png)
 
@@ -1436,6 +1437,8 @@ ggplot(interviews, aes(x = minutes, fill = format)) +
 ```
 
 ![](themes_files/figure-html/wired-1.png)
+
+With `mode = "light"`:
 
 ``` r
 

@@ -13,12 +13,12 @@ list_fonts(include_path = FALSE)
 
 - include_path:
 
-  Logical; if TRUE, the full paths of font files are returned.
+  Logical; if `TRUE`, the full paths of font files are returned.
 
 ## Value
 
-A character vector containing the names of the font files. If
-include_path is TRUE, the paths will be included.
+A character vector of font file names. If `include_path` is `TRUE`, the
+paths are included.
 
 ## Examples
 

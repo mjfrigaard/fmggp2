@@ -66,6 +66,12 @@ each dataset gets a theme to match.
 | [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md) | Talkboy | Frequency polygons (recorded message lengths) |
 | [`theme_fmggp2()`](https://mjfrigaard.github.io/fmggp2/reference/theme_fmggp2.md) | Original book theme | Chapters not yet converted |
 
+The two graphs below use
+[`theme_oksoda()`](https://mjfrigaard.github.io/fmggp2/reference/theme_oksoda.md)
+and
+[`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md)
+with simulated data like the data in their chapters.
+
 ``` r
 
 library(fmggp2)

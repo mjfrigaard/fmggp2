@@ -1,6 +1,6 @@
 # Check for Required Fonts
 
-Checks if the required fonts are installed in the system or not.
+Checks whether the required fonts are installed on the system.
 
 ## Usage
 
@@ -12,13 +12,14 @@ check_fonts(font = NULL)
 
 - font:
 
-  Optionally specify an additional font to include in the check.
+  An optional additional font to include in the check.
 
 ## Value
 
-Returns TRUE if all required fmggp2 fonts and the optionally specified
-font are installed. If not, calls check_assets to inform about missing
-fonts.
+`TRUE` if all required fmggp2 fonts (and `font`, if supplied) are
+installed. Otherwise, it calls
+[`check_assets()`](https://mjfrigaard.github.io/fmggp2/reference/check_assets.md)
+to report the missing fonts.
 
 ## Examples
 

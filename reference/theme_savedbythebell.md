@@ -1,8 +1,8 @@
 # Saved by the Bell theme
 
 A `ggplot2` theme built from the Saved by the Bell logo: a black
-background with a royal blue frame, a yellow title, a white classroom
-panel, sky blue, pink, yellow, orange, royal blue, and navy marks, and a
+background with a royal blue frame, a white classroom panel, sky blue,
+pink, yellow, orange, royal blue, and navy marks, and a yellow
 SignPainter title.
 
 ## Usage

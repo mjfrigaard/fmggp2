@@ -1,8 +1,8 @@
 # CueCat theme
 
 A `ggplot2` theme built from the :CueCat barcode scanner: a pale paper
-background, a putty frame, a red title, red, ink, LED orange, and putty
-marks, and a Marker Felt title.
+background, a putty frame, red, ink, LED orange, and putty marks, and a
+red Marker Felt title.
 
 ## Usage
 

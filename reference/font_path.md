@@ -10,8 +10,7 @@ font_path()
 
 ## Value
 
-Returns the file path to the font assets directory in the fmggp2
-package.
+The file path to the font assets directory in the fmggp2 package.
 
 ## Examples
 

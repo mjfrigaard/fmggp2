@@ -1,7 +1,7 @@
 # Add Fonts to the System
 
-Adds specified TrueType fonts to the available system fonts from the
-fmggp2 package.
+Adds TrueType fonts from the fmggp2 package to the available system
+fonts.
 
 ## Usage
 
@@ -17,13 +17,14 @@ add_fonts(font, ...)
 
 - ...:
 
-  Additional arguments passed to sysfonts::font_add.
+  Additional arguments passed to
+  [`sysfonts::font_add()`](https://rdrr.io/pkg/sysfonts/man/font_add.html).
 
 ## Value
 
-Invisibly returns NULL if the font is already installed or after the
-font is added. If the font is not found, an error message is displayed
-and the function is aborted.
+Invisibly returns `NULL` if the font is already installed or after the
+font is added. If the font isn't found, the function displays an error
+message and aborts.
 
 ## Examples
 

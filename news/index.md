@@ -1,5 +1,68 @@
 # Changelog
 
+## fmggp2 0.67.0
+
+- Text now meets a 4.5:1 contrast ratio against its background (3:1 for
+  titles).
+  [`theme_supersoaker()`](https://mjfrigaard.github.io/fmggp2/reference/theme_supersoaker.md)
+  uses dark text on the orange background and green strip.
+  [`theme_vrml()`](https://mjfrigaard.github.io/fmggp2/reference/theme_vrml.md)
+  has a lighter wall,
+  [`theme_microdrive()`](https://mjfrigaard.github.io/fmggp2/reference/theme_microdrive.md)
+  a slightly darker red, and
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+  a darker green title and olive subtitle and strip text. Strip text or
+  strip fills changed in
+  [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md),
+  [`theme_happymeal()`](https://mjfrigaard.github.io/fmggp2/reference/theme_happymeal.md),
+  [`theme_savedbythebell()`](https://mjfrigaard.github.io/fmggp2/reference/theme_savedbythebell.md),
+  [`theme_talkboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_talkboy.md),
+  [`theme_jurassic()`](https://mjfrigaard.github.io/fmggp2/reference/theme_jurassic.md),
+  and the dark versions of
+  [`theme_rzone()`](https://mjfrigaard.github.io/fmggp2/reference/theme_rzone.md),
+  [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md),
+  [`theme_consolewars()`](https://mjfrigaard.github.io/fmggp2/reference/theme_consolewars.md),
+  [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md),
+  and
+  [`theme_hypercolor()`](https://mjfrigaard.github.io/fmggp2/reference/theme_hypercolor.md).
+  The
+  [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+  subtitle uses the darkest green, and `theme_seinfeld(mode = "light")`
+  uses a slightly darker red.
+- Marks that were hard to tell apart with red green color blindness now
+  differ in lightness (hues are unchanged):
+  [`theme_batman()`](https://mjfrigaard.github.io/fmggp2/reference/theme_batman.md),
+  [`theme_doom()`](https://mjfrigaard.github.io/fmggp2/reference/theme_doom.md),
+  [`theme_netscape()`](https://mjfrigaard.github.io/fmggp2/reference/theme_netscape.md),
+  [`theme_orbitz()`](https://mjfrigaard.github.io/fmggp2/reference/theme_orbitz.md),
+  [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md),
+  and
+  [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md)
+  light versions, both
+  [`theme_geocities()`](https://mjfrigaard.github.io/fmggp2/reference/theme_geocities.md)
+  versions,
+  [`theme_snick()`](https://mjfrigaard.github.io/fmggp2/reference/theme_snick.md)
+  and
+  [`theme_surge()`](https://mjfrigaard.github.io/fmggp2/reference/theme_surge.md)
+  dark versions, and
+  [`theme_gushers()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gushers.md),
+  [`theme_j2me()`](https://mjfrigaard.github.io/fmggp2/reference/theme_j2me.md),
+  and
+  [`theme_squeezit()`](https://mjfrigaard.github.io/fmggp2/reference/theme_squeezit.md).
+- Yellow marks that almost disappeared on light panels are darker in
+  [`theme_aim()`](https://mjfrigaard.github.io/fmggp2/reference/theme_aim.md),
+  [`theme_pogs()`](https://mjfrigaard.github.io/fmggp2/reference/theme_pogs.md),
+  `theme_seinfeld(mode = "light")`, and
+  [`theme_tamagotchi()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tamagotchi.md).
+- [`theme_tetris()`](https://mjfrigaard.github.io/fmggp2/reference/theme_tetris.md)
+  and
+  [`theme_gameboy()`](https://mjfrigaard.github.io/fmggp2/reference/theme_gameboy.md)
+  keep their original game colors, so some of their marks are still
+  close under color blindness (Tetris) or against the panel (Game Boy).
+  The
+  [`theme_freshprince()`](https://mjfrigaard.github.io/fmggp2/reference/theme_freshprince.md)
+  lime mark is also still faint on the white panel.
+
 ## fmggp2 0.66.0
 
 - The themes vignette now shows the WIRED cover for

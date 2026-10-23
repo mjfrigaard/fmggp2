@@ -1,7 +1,7 @@
 # Check Assets in Specified Directory
 
-Verifies the presence of required assets in a specified directory
-relative to the fmggp2 package's assets directory.
+Checks a directory for the required assets, relative to the fmggp2
+package's assets directory.
 
 ## Usage
 
@@ -17,17 +17,16 @@ check_assets(dir, include_path = FALSE, recursive = FALSE)
 
 - include_path:
 
-  Logical; if TRUE, the full names of directories are included.
+  Logical; if `TRUE`, the full names of directories are included.
 
 - recursive:
 
-  Logical; if TRUE, the directory check is recursive.
+  Logical; if `TRUE`, the directory check is recursive.
 
 ## Value
 
-Returns TRUE if the assets in the specified directory match the
-package's assets. If not, it informs about the missing font files and
-suggests actions to the user.
+`TRUE` if the assets in `dir` match the package's assets. Otherwise, it
+lists the missing font files and tells the user how to install them.
 
 ## Examples
 

@@ -1,9 +1,8 @@
 # Netscape theme
 
 A late 90s `ggplot2` theme modeled on the Netscape Navigator logo: a
-night sky background, a teal frame, a glowing teal title, and teal,
-aurora green, sea glass, and deep teal marks, and a Times New Roman
-title.
+night sky background, a teal frame, teal, aurora green, sea glass, and
+deep teal marks, and a glowing teal Times New Roman title.
 
 ## Usage
 
